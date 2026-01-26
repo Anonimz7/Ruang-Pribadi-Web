@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ruang Pribadi Web</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        background: linear-gradient(160deg, #0f172a, #1e293b 45%, #0f766e);
+        color: #f8fafc;
+        min-height: 100vh;
+        padding: 48px 24px 64px;
+      }
+
+      header {
+        max-width: 980px;
+        margin: 0 auto 40px;
+        text-align: center;
+      }
+
+      header h1 {
+        font-size: clamp(2rem, 3vw, 3rem);
+        margin-bottom: 12px;
+      }
+
+      header p {
+        color: #cbd5f5;
+        font-size: 1rem;
+        line-height: 1.6;
+      }
+
+      main {
+        max-width: 1100px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 20px;
+      }
+
+      a.card {
+        background: rgba(255, 255, 255, 0.08);
+        border-radius: 16px;
+        padding: 20px;
+        text-decoration: none;
+        color: #f8fafc;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        min-height: 150px;
+        border: 1px solid rgba(148, 163, 184, 0.2);
+        transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+      }
+
+      a.card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 24px rgba(15, 23, 42, 0.4);
+        border-color: rgba(148, 163, 184, 0.6);
+      }
+
+      .card span {
+        font-size: 0.75rem;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #7dd3fc;
+      }
+
+      .card strong {
+        font-size: 1.1rem;
+      }
+
+      .card p {
+        font-size: 0.9rem;
+        color: #e2e8f0;
+        line-height: 1.5;
+      }
+
+      footer {
+        max-width: 980px;
+        margin: 48px auto 0;
+        text-align: center;
+        color: #cbd5f5;
+        font-size: 0.85rem;
+      }
+
+      footer a {
+        color: inherit;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Ruang Pribadi Web</h1>
+      <p>
+        Selamat datang di pusat semua eksperimen kecil dan mini-app. Pilih modul yang ingin kamu
+        buka, mirip seperti software center versi ringan.
+      </p>
+    </header>
+
+    <main>
+      <a class="card" href="./Color-Palate/">
+        <span>Color</span>
+        <strong>Color Palate</strong>
+        <p>Eksplorasi palet warna untuk inspirasi desain dan eksperimen visual.</p>
+      </a>
+      <a class="card" href="./Color-Tint-Shade/">
+        <span>Color</span>
+        <strong>Color Tint &amp; Shade</strong>
+        <p>Generator tint dan shade untuk variasi warna yang lebih dinamis.</p>
+      </a>
+      <a class="card" href="./Jurnal/">
+        <span>Catatan</span>
+        <strong>Jurnal</strong>
+        <p>Ruang untuk mencatat ide atau jurnal harian sederhana.</p>
+      </a>
+      <a class="card" href="./Math-Dasar/">
+        <span>Math</span>
+        <strong>Math Dasar</strong>
+        <p>Latihan konsep matematika dasar dengan tampilan sederhana.</p>
+      </a>
+      <a class="card" href="./Pembelajaran-Bahasa-Interaktif/">
+        <span>Bahasa</span>
+        <strong>Pembelajaran Bahasa</strong>
+        <p>Latihan bahasa interaktif untuk belajar kosakata dan frasa.</p>
+      </a>
+      <a class="card" href="./bacak/">
+        <span>Tools</span>
+        <strong>Bacak</strong>
+        <p>Mini-tools untuk membantu kegiatan ringan sehari-hari.</p>
+      </a>
+      <a class="card" href="./color-blind/">
+        <span>Accessibility</span>
+        <strong>Color Blind Helper</strong>
+        <p>Simulasi dan panduan warna untuk aksesibilitas.</p>
+      </a>
+      <a class="card" href="./gacha/">
+        <span>Fun</span>
+        <strong>Gacha</strong>
+        <p>Eksperimen gacha sederhana untuk hiburan cepat.</p>
+      </a>
+      <a class="card" href="./jepunese/">
+        <span>Bahasa</span>
+        <strong>Jepunese</strong>
+        <p>Latihan bahasa Jepang dengan pendekatan praktis.</p>
+      </a>
+      <a class="card" href="./k0nt4n/">
+        <span>Konten</span>
+        <strong>K0nt4n</strong>
+        <p>Ruang konten ringan dan eksperimen UI.</p>
+      </a>
+      <a class="card" href="./math-speed/">
+        <span>Math</span>
+        <strong>Math Speed</strong>
+        <p>Uji kecepatan berhitung dengan tantangan singkat.</p>
+      </a>
+      <a class="card" href="./type-writing/">
+        <span>Typing</span>
+        <strong>Type Writing</strong>
+        <p>Latihan mengetik dan tes kecepatan dengan UI simpel.</p>
+      </a>
+    </main>
+
+    <footer>
+      <p>
+        Jika ada modul baru, cukup tambah di folder ini dan update daftar di halaman ini.
+      </p>
+    </footer>
+  </body>
+</html>
