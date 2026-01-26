@@ -1,0 +1,9273 @@
+[
+  {
+    "kanji": "哀",
+    "furigana": "あわ-れ",
+    "romaji": "aware",
+    "indo": "sedih / simpati",
+    "inggris": "sorrow / pity",
+    "onyomi": [
+      {
+        "kana": "アイ",
+        "romaji": "(ai)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "あわ-れ",
+        "romaji": "(aware)"
+      }
+    ],
+    "kategori": "Emosi / Perasaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "圧",
+    "furigana": "あつ",
+    "romaji": "atsu",
+    "indo": "tekanan",
+    "inggris": "pressure",
+    "onyomi": [
+      {
+        "kana": "アツ",
+        "romaji": "(atsu)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "扱",
+    "furigana": "あつか-う",
+    "romaji": "atsukau",
+    "indo": "menangani",
+    "inggris": "to handle",
+    "onyomi": [
+      {
+        "kana": "ソウ",
+        "romaji": "(sō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "あつか-う",
+        "romaji": "(atsukau)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "以",
+    "furigana": "い",
+    "romaji": "i",
+    "indo": "dengan/dari",
+    "inggris": "by/from",
+    "onyomi": [
+      {
+        "kana": "イ",
+        "romaji": "(i)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "もっ.て",
+        "romaji": "(motte)"
+      }
+    ],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "衣",
+    "furigana": "ころも/い",
+    "romaji": "koromo/i",
+    "indo": "pakaian",
+    "inggris": "clothes",
+    "onyomi": [
+      {
+        "kana": "イ",
+        "romaji": "(i)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "ころも",
+        "romaji": "(koromo)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "囲",
+    "furigana": "かこ.む",
+    "romaji": "kakomu",
+    "indo": "mengelilingi",
+    "inggris": "to surround",
+    "onyomi": [
+      {
+        "kana": "イ",
+        "romaji": "(i)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "かこ.む",
+        "romaji": "(kakomu)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "委",
+    "furigana": "い",
+    "romaji": "i",
+    "indo": "menyerahkan",
+    "inggris": "entrust",
+    "onyomi": [
+      {
+        "kana": "イ",
+        "romaji": "(i)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "ゆだ.ねる",
+        "romaji": "(yudaneru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "異",
+    "furigana": "い",
+    "romaji": "i",
+    "indo": "berbeda",
+    "inggris": "different",
+    "onyomi": [
+      {
+        "kana": "イ",
+        "romaji": "(i)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "こと",
+        "romaji": "(koto)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "慰",
+    "furigana": "い",
+    "romaji": "i",
+    "indo": "menghibur",
+    "inggris": "comfort",
+    "onyomi": [
+      {
+        "kana": "イ",
+        "romaji": "(i)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "なぐさ-める",
+        "romaji": "(nagusameru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "域",
+    "furigana": "いき",
+    "romaji": "iki",
+    "indo": "wilayah",
+    "inggris": "region",
+    "onyomi": [
+      {
+        "kana": "イキ",
+        "romaji": "(iki)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Lokasi / Arah",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "芋",
+    "furigana": "いも",
+    "romaji": "imo",
+    "indo": "umbi-umbian",
+    "inggris": "potato",
+    "onyomi": [],
+    "kunyomi": [
+      {
+        "kana": "いも",
+        "romaji": "(imo)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "因",
+    "furigana": "いん",
+    "romaji": "in",
+    "indo": "penyebab",
+    "inggris": "cause",
+    "onyomi": [
+      {
+        "kana": "イン",
+        "romaji": "(in)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "よ-る",
+        "romaji": "(yoru)"
+      }
+    ],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "陰",
+    "furigana": "いん",
+    "romaji": "in",
+    "indo": "bayangan",
+    "inggris": "shadow",
+    "onyomi": [
+      {
+        "kana": "イン",
+        "romaji": "(in)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "かげ",
+        "romaji": "(kage)"
+      }
+    ],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "隠",
+    "furigana": "かく-す",
+    "romaji": "kakusu",
+    "indo": "menyembunyikan",
+    "inggris": "to hide",
+    "onyomi": [
+      {
+        "kana": "イン",
+        "romaji": "(in)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "かく-す",
+        "romaji": "(kakusu)"
+      },
+      {
+        "kana": "かく-れる",
+        "romaji": "(kakureru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "永",
+    "furigana": "なが-い",
+    "romaji": "nagai",
+    "indo": "abadi",
+    "inggris": "eternal",
+    "onyomi": [
+      {
+        "kana": "エイ",
+        "romaji": "(ei)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "なが-い",
+        "romaji": "(nagai)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "栄",
+    "furigana": "さか-える",
+    "romaji": "sakaeru",
+    "indo": "makmur",
+    "inggris": "prosper",
+    "onyomi": [
+      {
+        "kana": "エイ",
+        "romaji": "(ei)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "さか-える",
+        "romaji": "(sakaeru)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "営",
+    "furigana": "いとな-む",
+    "romaji": "itonamu",
+    "indo": "mengoperasikan",
+    "inggris": "operate",
+    "onyomi": [
+      {
+        "kana": "エイ",
+        "romaji": "(ei)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "いとな-む",
+        "romaji": "(itonamu)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "影",
+    "furigana": "かげ",
+    "romaji": "kage",
+    "indo": "bayangan",
+    "inggris": "shadow",
+    "onyomi": [
+      {
+        "kana": "エイ",
+        "romaji": "(ei)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "かげ",
+        "romaji": "(kage)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "衛",
+    "furigana": "えい",
+    "romaji": "ei",
+    "indo": "pertahanan",
+    "inggris": "defense",
+    "onyomi": [
+      {
+        "kana": "エイ",
+        "romaji": "(ei)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "益",
+    "furigana": "えき",
+    "romaji": "eki",
+    "indo": "manfaat",
+    "inggris": "benefit",
+    "onyomi": [
+      {
+        "kana": "エキ",
+        "romaji": "(eki)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "ます",
+        "romaji": "(masu)"
+      }
+    ],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "液",
+    "furigana": "えき",
+    "romaji": "eki",
+    "indo": "cairan",
+    "inggris": "liquid",
+    "onyomi": [
+      {
+        "kana": "エキ",
+        "romaji": "(eki)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "越",
+    "furigana": "こ-す / えつ",
+    "romaji": "kosu / etsu",
+    "indo": "melewati, melebihi",
+    "inggris": "cross, exceed",
+    "onyomi": [
+      {
+        "kana": "エツ",
+        "romaji": "(etsu)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "こ-す",
+        "romaji": "(kosu)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "延",
+    "furigana": "の-びる / えん",
+    "romaji": "nobiru / en",
+    "indo": "memperpanjang",
+    "inggris": "extend",
+    "onyomi": [
+      {
+        "kana": "エン",
+        "romaji": "(en)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "の-びる",
+        "romaji": "(nobiru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "沿",
+    "furigana": "そ-う / えん",
+    "romaji": "sou / en",
+    "indo": "mengikuti",
+    "inggris": "along",
+    "onyomi": [
+      {
+        "kana": "エン",
+        "romaji": "(en)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "そ-う",
+        "romaji": "(sou)"
+      }
+    ],
+    "kategori": "Lokasi / Arah",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "援",
+    "furigana": "えん",
+    "romaji": "en",
+    "indo": "bantuan",
+    "inggris": "aid",
+    "onyomi": [
+      {
+        "kana": "エン",
+        "romaji": "(en)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "煙",
+    "furigana": "けむり",
+    "romaji": "kemuri",
+    "indo": "asap",
+    "inggris": "smoke",
+    "onyomi": [
+      {
+        "kana": "エン",
+        "romaji": "(en)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "けむり",
+        "romaji": "(kemuri)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "汚",
+    "furigana": "けが-す",
+    "romaji": "kegasu",
+    "indo": "mengotori",
+    "inggris": "dirty",
+    "onyomi": [
+      {
+        "kana": "オ",
+        "romaji": "(o)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "けが-す",
+        "romaji": "(kegasu)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "央",
+    "furigana": "おう",
+    "romaji": "ou",
+    "indo": "pusat",
+    "inggris": "center",
+    "onyomi": [
+      {
+        "kana": "オウ",
+        "romaji": "(ou)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Lokasi / Arah",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "往",
+    "furigana": "おう",
+    "romaji": "ou",
+    "indo": "pergi",
+    "inggris": "going",
+    "onyomi": [
+      {
+        "kana": "オウ",
+        "romaji": "(ou)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "欧",
+    "furigana": "おう",
+    "romaji": "ou",
+    "indo": "Eropa",
+    "inggris": "Europe",
+    "onyomi": [
+      {
+        "kana": "オウ",
+        "romaji": "(ou)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Lokasi / Arah",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "奥",
+    "furigana": "おく",
+    "romaji": "oku",
+    "indo": "bagian dalam",
+    "inggris": "interior",
+    "onyomi": [
+      {
+        "kana": "オウ",
+        "romaji": "(ou)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "おく",
+        "romaji": "(oku)"
+      }
+    ],
+    "kategori": "Lokasi / Arah",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "億",
+    "furigana": "おく",
+    "romaji": "oku",
+    "indo": "seratus juta",
+    "inggris": "hundred million",
+    "onyomi": [
+      {
+        "kana": "オク",
+        "romaji": "(oku)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "恩",
+    "furigana": "おん",
+    "romaji": "on",
+    "indo": "kebaikan",
+    "inggris": "kindness, favor",
+    "onyomi": [
+      {
+        "kana": "オン",
+        "romaji": "(on)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "仮",
+    "furigana": "かり",
+    "romaji": "kari",
+    "indo": "sementara",
+    "inggris": "temporary",
+    "onyomi": [
+      {
+        "kana": "カ",
+        "romaji": "(ka)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "かり",
+        "romaji": "(kari)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "菓",
+    "furigana": "か",
+    "romaji": "ka",
+    "indo": "kue",
+    "inggris": "confectionery",
+    "onyomi": [
+      {
+        "kana": "カ",
+        "romaji": "(ka)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "稼",
+    "furigana": "かせぐ",
+    "romaji": "kasegu",
+    "indo": "mencari nafkah",
+    "inggris": "earn a living",
+    "onyomi": [
+      {
+        "kana": "カ",
+        "romaji": "(ka)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "かせぐ",
+        "romaji": "(kasegu)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "我",
+    "furigana": "われ",
+    "romaji": "ware",
+    "indo": "aku, diri sendiri",
+    "inggris": "I, self",
+    "onyomi": [
+      {
+        "kana": "ガ",
+        "romaji": "(ga)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "われ",
+        "romaji": "(ware)"
+      }
+    ],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "芽",
+    "furigana": "め",
+    "romaji": "me",
+    "indo": "tunas",
+    "inggris": "sprout",
+    "onyomi": [
+      {
+        "kana": "ガ",
+        "romaji": "(ga)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "め",
+        "romaji": "(me)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "賀",
+    "furigana": "が",
+    "romaji": "ga",
+    "indo": "ucapan selamat",
+    "inggris": "congratulation",
+    "onyomi": [
+      {
+        "kana": "ガ",
+        "romaji": "(ga)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Emosi / Perasaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "介",
+    "furigana": "かい",
+    "romaji": "kai",
+    "indo": "perantara",
+    "inggris": "mediate",
+    "onyomi": [
+      {
+        "kana": "カイ",
+        "romaji": "(kai)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "灰",
+    "furigana": "はい",
+    "romaji": "hai",
+    "indo": "abu",
+    "inggris": "ash",
+    "onyomi": [
+      {
+        "kana": "カイ",
+        "romaji": "(kai)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "はい",
+        "romaji": "(hai)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "快",
+    "furigana": "かい",
+    "romaji": "kai",
+    "indo": "nyaman, cepat",
+    "inggris": "pleasant, fast",
+    "onyomi": [
+      {
+        "kana": "カイ",
+        "romaji": "(kai)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "こころよい",
+        "romaji": "(kokoroyoi)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "怪",
+    "furigana": "かい",
+    "romaji": "kai",
+    "indo": "aneh",
+    "inggris": "strange",
+    "onyomi": [
+      {
+        "kana": "カイ",
+        "romaji": "(kai)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "あやしい",
+        "romaji": "(ayashii)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "械",
+    "furigana": "かい",
+    "romaji": "kai",
+    "indo": "mesin, alat",
+    "inggris": "machine, tool",
+    "onyomi": [
+      {
+        "kana": "カイ",
+        "romaji": "(kai)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "貝",
+    "furigana": "かい",
+    "romaji": "kai",
+    "indo": "kerang",
+    "inggris": "shellfish",
+    "onyomi": [
+      {
+        "kana": "カイ",
+        "romaji": "(kai)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "該",
+    "furigana": "がい",
+    "romaji": "gai",
+    "indo": "terkait",
+    "inggris": "relevant",
+    "onyomi": [
+      {
+        "kana": "ガイ",
+        "romaji": "(gai)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "概",
+    "furigana": "がい",
+    "romaji": "gai",
+    "indo": "garis besar",
+    "inggris": "outline",
+    "onyomi": [
+      {
+        "kana": "ガイ",
+        "romaji": "(gai)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "おおむね",
+        "romaji": "(oomune)"
+      }
+    ],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "拡",
+    "furigana": "かく",
+    "romaji": "kaku",
+    "indo": "perluasan",
+    "inggris": "expansion",
+    "onyomi": [
+      {
+        "kana": "カク",
+        "romaji": "(kaku)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "ひろげる",
+        "romaji": "(hirogeru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "核",
+    "furigana": "かく",
+    "romaji": "kaku",
+    "indo": "inti",
+    "inggris": "nucleus, core",
+    "onyomi": [
+      {
+        "kana": "カク",
+        "romaji": "(kaku)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "隔",
+    "furigana": "かく",
+    "romaji": "kaku",
+    "indo": "pemisahan",
+    "inggris": "separation",
+    "onyomi": [
+      {
+        "kana": "カク",
+        "romaji": "(kaku)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "へだてる",
+        "romaji": "(hedateru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "閣",
+    "furigana": "かく",
+    "romaji": "kaku",
+    "indo": "kabinet",
+    "inggris": "cabinet",
+    "onyomi": [
+      {
+        "kana": "カク",
+        "romaji": "(kaku)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "括",
+    "furigana": "くくる",
+    "romaji": "kukuru",
+    "indo": "mengikat",
+    "inggris": "to tie up",
+    "onyomi": [
+      {
+        "kana": "カツ",
+        "romaji": "(katsu)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "くく.る",
+        "romaji": "(kukuru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "渇",
+    "furigana": "かわく",
+    "romaji": "kawaku",
+    "indo": "haus",
+    "inggris": "thirst",
+    "onyomi": [
+      {
+        "kana": "カツ",
+        "romaji": "(katsu)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "かわ.く",
+        "romaji": "(kawaku)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "滑",
+    "furigana": "すべる",
+    "romaji": "suberu",
+    "indo": "licin",
+    "inggris": "slippery",
+    "onyomi": [
+      {
+        "kana": "カツ",
+        "romaji": "(katsu)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "すべ.る",
+        "romaji": "(suberu)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "株",
+    "furigana": "かぶ",
+    "romaji": "kabu",
+    "indo": "saham",
+    "inggris": "stock, share",
+    "onyomi": [
+      {
+        "kana": "シュ",
+        "romaji": "(shu)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "かぶ",
+        "romaji": "(kabu)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "刈",
+    "furigana": "かる",
+    "romaji": "karu",
+    "indo": "memotong",
+    "inggris": "to cut, to mow",
+    "onyomi": [
+      {
+        "kana": "ガイ",
+        "romaji": "(gai)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "か.る",
+        "romaji": "(karu)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "刊",
+    "furigana": "かん",
+    "romaji": "kan",
+    "indo": "publikasi",
+    "inggris": "publication",
+    "onyomi": [
+      {
+        "kana": "カン",
+        "romaji": "(kan)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "缶",
+    "furigana": "かん",
+    "romaji": "kan",
+    "indo": "kaleng",
+    "inggris": "can",
+    "onyomi": [
+      {
+        "kana": "カン",
+        "romaji": "(kan)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "肝",
+    "furigana": "きも",
+    "romaji": "kimo",
+    "indo": "hati (organ)",
+    "inggris": "liver",
+    "onyomi": [
+      {
+        "kana": "カン",
+        "romaji": "(kan)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "きも",
+        "romaji": "(kimo)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "看",
+    "furigana": "かん",
+    "romaji": "kan",
+    "indo": "pengawasan",
+    "inggris": "observation",
+    "onyomi": [
+      {
+        "kana": "カン",
+        "romaji": "(kan)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "乾",
+    "furigana": "かわく",
+    "romaji": "kawaku",
+    "indo": "kering",
+    "inggris": "dry",
+    "onyomi": [
+      {
+        "kana": "カン",
+        "romaji": "(kan)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "かわ.く",
+        "romaji": "(kawaku)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "勧",
+    "furigana": "すすめる",
+    "romaji": "susumeru",
+    "indo": "merekomendasikan",
+    "inggris": "to recommend",
+    "onyomi": [
+      {
+        "kana": "カン",
+        "romaji": "(kan)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "すす.める",
+        "romaji": "(susumeru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "幹",
+    "furigana": "みき",
+    "romaji": "miki",
+    "indo": "batang pohon",
+    "inggris": "tree trunk",
+    "onyomi": [
+      {
+        "kana": "カン",
+        "romaji": "(kan)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "みき",
+        "romaji": "(miki)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "緩",
+    "furigana": "ゆるい",
+    "romaji": "yurui",
+    "indo": "longgar",
+    "inggris": "loose",
+    "onyomi": [
+      {
+        "kana": "カン",
+        "romaji": "(kan)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "ゆる.い",
+        "romaji": "(yurui)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "環",
+    "furigana": "かん",
+    "romaji": "kan",
+    "indo": "lingkaran",
+    "inggris": "ring, loop",
+    "onyomi": [
+      {
+        "kana": "カン",
+        "romaji": "(kan)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "簡",
+    "furigana": "かん",
+    "romaji": "kan",
+    "indo": "sederhana",
+    "inggris": "simple",
+    "onyomi": [
+      {
+        "kana": "カン",
+        "romaji": "(kan)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "含",
+    "furigana": "ふくむ",
+    "romaji": "fukumu",
+    "indo": "mengandung",
+    "inggris": "to contain",
+    "onyomi": [
+      {
+        "kana": "ガン",
+        "romaji": "(gan)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "ふく.む",
+        "romaji": "(fukumu)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "岩",
+    "furigana": "いわ",
+    "romaji": "iwa",
+    "indo": "batu besar",
+    "inggris": "rock",
+    "onyomi": [
+      {
+        "kana": "ガン",
+        "romaji": "(gan)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "いわ",
+        "romaji": "(iwa)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "眼",
+    "furigana": "め",
+    "romaji": "me",
+    "indo": "mata (organ)",
+    "inggris": "eye",
+    "onyomi": [
+      {
+        "kana": "ガン",
+        "romaji": "(gan)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "め",
+        "romaji": "(me)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "企",
+    "furigana": "くわだてる",
+    "romaji": "kuwadateru",
+    "indo": "merencanakan",
+    "inggris": "to plan",
+    "onyomi": [
+      {
+        "kana": "キ",
+        "romaji": "(ki)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "くわだ.てる",
+        "romaji": "(kuwadateru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "希",
+    "furigana": "き",
+    "romaji": "ki",
+    "indo": "harapan",
+    "inggris": "hope",
+    "onyomi": [
+      {
+        "kana": "キ",
+        "romaji": "(ki)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Emosi / Perasaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "汽",
+    "furigana": "き",
+    "romaji": "ki",
+    "indo": "uap",
+    "inggris": "steam",
+    "onyomi": [
+      {
+        "kana": "キ",
+        "romaji": "(ki)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "紀",
+    "furigana": "き",
+    "romaji": "ki",
+    "indo": "catatan sejarah",
+    "inggris": "chronicle",
+    "onyomi": [
+      {
+        "kana": "キ",
+        "romaji": "(ki)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "既",
+    "furigana": "すでに",
+    "romaji": "sude ni",
+    "indo": "sudah",
+    "inggris": "already",
+    "onyomi": [
+      {
+        "kana": "キ",
+        "romaji": "(ki)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "すで.に",
+        "romaji": "(sude ni)"
+      }
+    ],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "貴",
+    "furigana": "き",
+    "romaji": "ki",
+    "indo": "mulia",
+    "inggris": "precious",
+    "onyomi": [
+      {
+        "kana": "キ",
+        "romaji": "(ki)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "たっと.い",
+        "romaji": "(tattoi)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "輝",
+    "furigana": "かがやく",
+    "romaji": "kagayaku",
+    "indo": "bersinar",
+    "inggris": "to shine",
+    "onyomi": [
+      {
+        "kana": "キ",
+        "romaji": "(ki)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "かがや.く",
+        "romaji": "(kagayaku)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "義",
+    "furigana": "ぎ",
+    "romaji": "gi",
+    "indo": "keadilan",
+    "inggris": "justice",
+    "onyomi": [
+      {
+        "kana": "ギ",
+        "romaji": "(gi)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "疑",
+    "furigana": "うたがう",
+    "romaji": "utagau",
+    "indo": "keraguan",
+    "inggris": "doubt",
+    "onyomi": [
+      {
+        "kana": "ギ",
+        "romaji": "(gi)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "うたが.う",
+        "romaji": "(utagau)"
+      }
+    ],
+    "kategori": "Emosi / Perasaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "詰",
+    "furigana": "つめる",
+    "romaji": "tsumeru",
+    "indo": "mengisi",
+    "inggris": "to pack",
+    "onyomi": [
+      {
+        "kana": "キツ",
+        "romaji": "(kitsu)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "つ.める",
+        "romaji": "(tsumeru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "脚",
+    "furigana": "あし",
+    "romaji": "ashi",
+    "indo": "kaki",
+    "inggris": "leg",
+    "onyomi": [
+      {
+        "kana": "キャク",
+        "romaji": "(kyaku)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "あし",
+        "romaji": "(ashi)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "弓",
+    "furigana": "ゆみ",
+    "romaji": "yumi",
+    "indo": "busur",
+    "inggris": "bow",
+    "onyomi": [
+      {
+        "kana": "キュウ",
+        "romaji": "(kyū)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "ゆみ",
+        "romaji": "(yumi)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "丘",
+    "furigana": "おか",
+    "romaji": "oka",
+    "indo": "bukit kecil",
+    "inggris": "hill",
+    "onyomi": [
+      {
+        "kana": "キュウ",
+        "romaji": "(kyū)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "おか",
+        "romaji": "(oka)"
+      }
+    ],
+    "kategori": "Lokasi / Arah",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "宮",
+    "furigana": "きゅう",
+    "romaji": "kyū",
+    "indo": "kuil",
+    "inggris": "shrine",
+    "onyomi": [
+      {
+        "kana": "キュウ",
+        "romaji": "(kyū)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "みや",
+        "romaji": "(miya)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "巨",
+    "furigana": "きょ",
+    "romaji": "kyo",
+    "indo": "besar",
+    "inggris": "huge",
+    "onyomi": [
+      {
+        "kana": "キョ",
+        "romaji": "(kyo)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "拒",
+    "furigana": "きょ",
+    "romaji": "kyo",
+    "indo": "menolak",
+    "inggris": "to refuse",
+    "onyomi": [
+      {
+        "kana": "キョ",
+        "romaji": "(kyo)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "こば.む",
+        "romaji": "(kobamu)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "漁",
+    "furigana": "りょう",
+    "romaji": "ryō",
+    "indo": "memancing, perikanan",
+    "inggris": "fishing, fishery",
+    "onyomi": [
+      {
+        "kana": "ギョ",
+        "romaji": "(gyo)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "りょう",
+        "romaji": "(ryō)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "叫",
+    "furigana": "さけ.ぶ",
+    "romaji": "sake.bu",
+    "indo": "berteriak",
+    "inggris": "to shout",
+    "onyomi": [
+      {
+        "kana": "キョウ",
+        "romaji": "(kyō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "さけ.ぶ",
+        "romaji": "(sake.bu)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "郷",
+    "furigana": "きょう",
+    "romaji": "kyō",
+    "indo": "kampung halaman",
+    "inggris": "hometown",
+    "onyomi": [
+      {
+        "kana": "キョウ",
+        "romaji": "(kyō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "さと",
+        "romaji": "(sato)"
+      }
+    ],
+    "kategori": "Lokasi / Arah",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "境",
+    "furigana": "きょう",
+    "romaji": "kyō",
+    "indo": "batas, perbatasan",
+    "inggris": "boundary",
+    "onyomi": [
+      {
+        "kana": "キョウ",
+        "romaji": "(kyō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "さかい",
+        "romaji": "(sakai)"
+      }
+    ],
+    "kategori": "Lokasi / Arah",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "競",
+    "furigana": "きそ.う",
+    "romaji": "kiso.u",
+    "indo": "bersaing",
+    "inggris": "to compete",
+    "onyomi": [
+      {
+        "kana": "キョウ",
+        "romaji": "(kyō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "きそ.う",
+        "romaji": "(kiso.u)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "驚",
+    "furigana": "おどろ.く",
+    "romaji": "odoro.ku",
+    "indo": "terkejut",
+    "inggris": "to be surprised",
+    "onyomi": [
+      {
+        "kana": "キョウ",
+        "romaji": "(kyō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "おどろ.く",
+        "romaji": "(odoro.ku)"
+      }
+    ],
+    "kategori": "Emosi / Perasaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "極",
+    "furigana": "きょく",
+    "romaji": "kyoku",
+    "indo": "ekstrim, kutub",
+    "inggris": "extreme, pole",
+    "onyomi": [
+      {
+        "kana": "キョク",
+        "romaji": "(kyoku)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "きわ.める",
+        "romaji": "(kiwa.meru)"
+      }
+    ],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "均",
+    "furigana": "きん",
+    "romaji": "kin",
+    "indo": "rata, seimbang",
+    "inggris": "equal, average",
+    "onyomi": [
+      {
+        "kana": "キン",
+        "romaji": "(kin)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "菌",
+    "furigana": "きん",
+    "romaji": "kin",
+    "indo": "bakteri, jamur",
+    "inggris": "bacteria, fungus",
+    "onyomi": [
+      {
+        "kana": "キン",
+        "romaji": "(kin)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "筋",
+    "furigana": "すじ",
+    "romaji": "suji",
+    "indo": "otot, garis",
+    "inggris": "muscle, line",
+    "onyomi": [
+      {
+        "kana": "キン",
+        "romaji": "(kin)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "すじ",
+        "romaji": "(suji)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "緊",
+    "furigana": "きん",
+    "romaji": "kin",
+    "indo": "ketat, darurat",
+    "inggris": "tight, urgent",
+    "onyomi": [
+      {
+        "kana": "キン",
+        "romaji": "(kin)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "句",
+    "furigana": "く",
+    "romaji": "ku",
+    "indo": "kalimat, frasa",
+    "inggris": "phrase, clause",
+    "onyomi": [
+      {
+        "kana": "ク",
+        "romaji": "(ku)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "掘",
+    "furigana": "ほ.る",
+    "romaji": "ho.ru",
+    "indo": "menggali",
+    "inggris": "to dig",
+    "onyomi": [
+      {
+        "kana": "クツ",
+        "romaji": "(kutsu)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "ほ.る",
+        "romaji": "(ho.ru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "訓",
+    "furigana": "くん",
+    "romaji": "kun",
+    "indo": "ajaran, makna kanji",
+    "inggris": "teaching, kanji meaning",
+    "onyomi": [
+      {
+        "kana": "クン",
+        "romaji": "(kun)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "群",
+    "furigana": "む.れる",
+    "romaji": "mu.reru",
+    "indo": "kelompok",
+    "inggris": "group, flock",
+    "onyomi": [
+      {
+        "kana": "グン",
+        "romaji": "(gun)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "む.れる",
+        "romaji": "(mu.reru)"
+      }
+    ],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "系",
+    "furigana": "けい",
+    "romaji": "kei",
+    "indo": "sistem, garis keturunan",
+    "inggris": "system, lineage",
+    "onyomi": [
+      {
+        "kana": "ケイ",
+        "romaji": "(kei)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "径",
+    "furigana": "けい",
+    "romaji": "kei",
+    "indo": "diameter, jalan pintas",
+    "inggris": "diameter, shortcut",
+    "onyomi": [
+      {
+        "kana": "ケイ",
+        "romaji": "(kei)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "景",
+    "furigana": "けい",
+    "romaji": "kei",
+    "indo": "pemandangan",
+    "inggris": "scenery",
+    "onyomi": [
+      {
+        "kana": "ケイ",
+        "romaji": "(kei)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "傾",
+    "furigana": "かたむ.ける",
+    "romaji": "katamu.keru",
+    "indo": "miring, condong",
+    "inggris": "to tilt, to lean",
+    "onyomi": [
+      {
+        "kana": "ケイ",
+        "romaji": "(kei)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "かたむ.ける",
+        "romaji": "(katamu.keru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "撃",
+    "furigana": "う.つ",
+    "romaji": "u.tsu",
+    "indo": "menyerang",
+    "inggris": "to attack",
+    "onyomi": [
+      {
+        "kana": "ゲキ",
+        "romaji": "(geki)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "う.つ",
+        "romaji": "(u.tsu)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "激",
+    "furigana": "げき",
+    "romaji": "geki",
+    "indo": "sengit, intens",
+    "inggris": "intense, violent",
+    "onyomi": [
+      {
+        "kana": "ゲキ",
+        "romaji": "(geki)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "はげ.しい",
+        "romaji": "(hage.shii)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "健",
+    "furigana": "けん",
+    "romaji": "ken",
+    "indo": "sehat",
+    "inggris": "healthy",
+    "onyomi": [
+      {
+        "kana": "ケン",
+        "romaji": "(ken)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "すこ.やか",
+        "romaji": "(suko.yaka)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "厳",
+    "furigana": "げん",
+    "romaji": "gen",
+    "indo": "ketat, serius",
+    "inggris": "strict, severe",
+    "onyomi": [
+      {
+        "kana": "ゲン",
+        "romaji": "(gen)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "きび.しい",
+        "romaji": "(kibi.shii)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "己",
+    "furigana": "こ",
+    "romaji": "ko",
+    "indo": "diri sendiri",
+    "inggris": "self",
+    "onyomi": [
+      {
+        "kana": "コ",
+        "romaji": "(ko)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "おのれ",
+        "romaji": "(onore)"
+      }
+    ],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "故",
+    "furigana": "こ",
+    "romaji": "ko",
+    "indo": "alasan, almarhum",
+    "inggris": "reason, deceased",
+    "onyomi": [
+      {
+        "kana": "コ",
+        "romaji": "(ko)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "ゆえ",
+        "romaji": "(yue)"
+      }
+    ],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "雇",
+    "furigana": "やと.う",
+    "romaji": "yato.u",
+    "indo": "mempekerjakan",
+    "inggris": "to employ",
+    "onyomi": [
+      {
+        "kana": "コ",
+        "romaji": "(ko)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "やと.う",
+        "romaji": "(yato.u)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "互",
+    "furigana": "ご",
+    "romaji": "go",
+    "indo": "saling",
+    "inggris": "mutual",
+    "onyomi": [
+      {
+        "kana": "ゴ",
+        "romaji": "(go)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "たが.い",
+        "romaji": "(taga.i)"
+      }
+    ],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "娯",
+    "furigana": "ご",
+    "romaji": "go",
+    "indo": "hiburan",
+    "inggris": "entertainment",
+    "onyomi": [
+      {
+        "kana": "ゴ",
+        "romaji": "(go)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "功",
+    "furigana": "こう",
+    "romaji": "kou",
+    "indo": "prestasi",
+    "inggris": "achievement",
+    "onyomi": [
+      {
+        "kana": "コウ",
+        "romaji": "(kou)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "甲",
+    "furigana": "こう",
+    "romaji": "kou",
+    "indo": "cangkang, pertama",
+    "inggris": "shell, first",
+    "onyomi": [
+      {
+        "kana": "コウ",
+        "romaji": "(kou)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "かぶと",
+        "romaji": "(kabuto)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "江",
+    "furigana": "こう",
+    "romaji": "kou",
+    "indo": "sungai kecil",
+    "inggris": "inlet, river",
+    "onyomi": [
+      {
+        "kana": "コウ",
+        "romaji": "(kou)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "え",
+        "romaji": "(e)"
+      }
+    ],
+    "kategori": "Lokasi / Arah",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "抗",
+    "furigana": "こう",
+    "romaji": "kou",
+    "indo": "melawan",
+    "inggris": "to resist",
+    "onyomi": [
+      {
+        "kana": "コウ",
+        "romaji": "(kou)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "あらが.う",
+        "romaji": "(aragau)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "攻",
+    "furigana": "こう",
+    "romaji": "kou",
+    "indo": "menyerang",
+    "inggris": "to attack",
+    "onyomi": [
+      {
+        "kana": "コウ",
+        "romaji": "(kou)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "せ.める",
+        "romaji": "(se.meru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "厚",
+    "furigana": "あつ.い",
+    "romaji": "atsu.i",
+    "indo": "tebal",
+    "inggris": "thick",
+    "onyomi": [
+      {
+        "kana": "コウ",
+        "romaji": "(kou)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "あつ.い",
+        "romaji": "(atsu.i)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "皇",
+    "furigana": "こう",
+    "romaji": "kou",
+    "indo": "kaisar",
+    "inggris": "emperor",
+    "onyomi": [
+      {
+        "kana": "コウ",
+        "romaji": "(kou)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "荒",
+    "furigana": "こう",
+    "romaji": "kou",
+    "indo": "kasar, liar",
+    "inggris": "rough, wild",
+    "onyomi": [
+      {
+        "kana": "コウ",
+        "romaji": "(kou)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "あら.い",
+        "romaji": "(ara.i)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "郊",
+    "furigana": "こう",
+    "romaji": "kou",
+    "indo": "pinggiran kota",
+    "inggris": "suburbs",
+    "onyomi": [
+      {
+        "kana": "コウ",
+        "romaji": "(kou)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Lokasi / Arah",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "香",
+    "furigana": "こう",
+    "romaji": "kou",
+    "indo": "aroma",
+    "inggris": "fragrance",
+    "onyomi": [
+      {
+        "kana": "コウ",
+        "romaji": "(kou)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "かお.り",
+        "romaji": "(kaori)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "候",
+    "furigana": "こう",
+    "romaji": "kou",
+    "indo": "musim, menunggu",
+    "inggris": "season, to wait",
+    "onyomi": [
+      {
+        "kana": "コウ",
+        "romaji": "(kou)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "そうろう",
+        "romaji": "(sourou)"
+      }
+    ],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "耕",
+    "furigana": "こう",
+    "romaji": "kou",
+    "indo": "bercocok tanam",
+    "inggris": "to cultivate",
+    "onyomi": [
+      {
+        "kana": "コウ",
+        "romaji": "(kou)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "たがや.す",
+        "romaji": "(tagayasu)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "航",
+    "furigana": "こう",
+    "romaji": "kou",
+    "indo": "pelayaran",
+    "inggris": "navigation",
+    "onyomi": [
+      {
+        "kana": "コウ",
+        "romaji": "(kou)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "康",
+    "furigana": "こう",
+    "romaji": "kou",
+    "indo": "kesehatan",
+    "inggris": "health",
+    "onyomi": [
+      {
+        "kana": "コウ",
+        "romaji": "(kou)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "控",
+    "furigana": "こう",
+    "romaji": "kou",
+    "indo": "menahan diri",
+    "inggris": "to refrain",
+    "onyomi": [
+      {
+        "kana": "コウ",
+        "romaji": "(kou)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "ひか.える",
+        "romaji": "(hikaeru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "慌",
+    "furigana": "こう",
+    "romaji": "kou",
+    "indo": "panik",
+    "inggris": "flustered",
+    "onyomi": [
+      {
+        "kana": "コウ",
+        "romaji": "(kou)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "あわ.てる",
+        "romaji": "(awa.teru)"
+      }
+    ],
+    "kategori": "Emosi / Perasaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "硬",
+    "furigana": "こう",
+    "romaji": "kou",
+    "indo": "keras",
+    "inggris": "hard",
+    "onyomi": [
+      {
+        "kana": "コウ",
+        "romaji": "(kou)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "かた.い",
+        "romaji": "(kata.i)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "項",
+    "furigana": "こう",
+    "romaji": "kou",
+    "indo": "butir, pasal",
+    "inggris": "clause, item",
+    "onyomi": [
+      {
+        "kana": "コウ",
+        "romaji": "(kou)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "鉱",
+    "furigana": "こう",
+    "romaji": "kou",
+    "indo": "mineral",
+    "inggris": "mineral",
+    "onyomi": [
+      {
+        "kana": "コウ",
+        "romaji": "(kou)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "興",
+    "furigana": "こう",
+    "romaji": "kou",
+    "indo": "minat",
+    "inggris": "interest",
+    "onyomi": [
+      {
+        "kana": "コウ",
+        "romaji": "(kou)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "きょう",
+        "romaji": "(kyou)"
+      }
+    ],
+    "kategori": "Emosi / Perasaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "講",
+    "furigana": "こう",
+    "romaji": "kou",
+    "indo": "kuliah",
+    "inggris": "lecture",
+    "onyomi": [
+      {
+        "kana": "コウ",
+        "romaji": "(kou)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "購",
+    "furigana": "こう",
+    "romaji": "kou",
+    "indo": "membeli",
+    "inggris": "to purchase",
+    "onyomi": [
+      {
+        "kana": "コウ",
+        "romaji": "(kou)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "魂",
+    "furigana": "たましい",
+    "romaji": "tamashii",
+    "indo": "jiwa",
+    "inggris": "soul",
+    "onyomi": [
+      {
+        "kana": "コン",
+        "romaji": "(kon)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "たましい",
+        "romaji": "(tamashii)"
+      }
+    ],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "佐",
+    "furigana": "さ",
+    "romaji": "sa",
+    "indo": "asisten",
+    "inggris": "assistant",
+    "onyomi": [
+      {
+        "kana": "サ",
+        "romaji": "(sa)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "査",
+    "furigana": "-",
+    "romaji": "sa",
+    "indo": "investigasi",
+    "inggris": "inspection",
+    "onyomi": [
+      {
+        "kana": "サ",
+        "romaji": "(sa)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "砂",
+    "furigana": "すな",
+    "romaji": "suna",
+    "indo": "pasir",
+    "inggris": "sand",
+    "onyomi": [
+      {
+        "kana": "サ",
+        "romaji": "(sa)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "すな",
+        "romaji": "(suna)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "災",
+    "furigana": "さい",
+    "romaji": "sai",
+    "indo": "bencana",
+    "inggris": "disaster",
+    "onyomi": [
+      {
+        "kana": "サイ",
+        "romaji": "(sai)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "わざわい",
+        "romaji": "(wazawai)"
+      }
+    ],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "彩",
+    "furigana": "さい",
+    "romaji": "sai",
+    "indo": "warna",
+    "inggris": "coloring",
+    "onyomi": [
+      {
+        "kana": "サイ",
+        "romaji": "(sai)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "いろどる",
+        "romaji": "(irodoru)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "裁",
+    "furigana": "さば.く",
+    "romaji": "saba.ku",
+    "indo": "mengadili",
+    "inggris": "to judge",
+    "onyomi": [
+      {
+        "kana": "サイ",
+        "romaji": "(sai)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "さばく",
+        "romaji": "(sabaku)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "催",
+    "furigana": "もよお.す",
+    "romaji": "moyoo.su",
+    "indo": "menyelenggarakan",
+    "inggris": "to hold (an event)",
+    "onyomi": [
+      {
+        "kana": "サイ",
+        "romaji": "(sai)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "もよおす",
+        "romaji": "(moyoosu)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "剤",
+    "furigana": "ざい",
+    "romaji": "zai",
+    "indo": "obat",
+    "inggris": "medicine",
+    "onyomi": [
+      {
+        "kana": "ザイ",
+        "romaji": "(zai)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "崎",
+    "furigana": "さき",
+    "romaji": "saki",
+    "indo": "tanjung",
+    "inggris": "cape",
+    "onyomi": [],
+    "kunyomi": [
+      {
+        "kana": "さき",
+        "romaji": "(saki)"
+      }
+    ],
+    "kategori": "Lokasi / Arah",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "削",
+    "furigana": "けず.る",
+    "romaji": "kezu.ru",
+    "indo": "mengukir",
+    "inggris": "to carve",
+    "onyomi": [
+      {
+        "kana": "サク",
+        "romaji": "(saku)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "けずる",
+        "romaji": "(kezuru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "策",
+    "furigana": "さく",
+    "romaji": "saku",
+    "indo": "rencana",
+    "inggris": "plan",
+    "onyomi": [
+      {
+        "kana": "サク",
+        "romaji": "(saku)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "酢",
+    "furigana": "す",
+    "romaji": "su",
+    "indo": "cuka",
+    "inggris": "vinegar",
+    "onyomi": [
+      {
+        "kana": "サク",
+        "romaji": "(saku)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "す",
+        "romaji": "(su)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "咲",
+    "furigana": "さ.く",
+    "romaji": "sa.ku",
+    "indo": "mekar",
+    "inggris": "to bloom",
+    "onyomi": [],
+    "kunyomi": [
+      {
+        "kana": "さく",
+        "romaji": "(saku)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "札",
+    "furigana": "ふだ",
+    "romaji": "fuda",
+    "indo": "tiket",
+    "inggris": "ticket",
+    "onyomi": [
+      {
+        "kana": "サツ",
+        "romaji": "(satsu)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "ふだ",
+        "romaji": "(fuda)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "撮",
+    "furigana": "と.る",
+    "romaji": "to.ru",
+    "indo": "memotret",
+    "inggris": "to take (a photo)",
+    "onyomi": [
+      {
+        "kana": "サツ",
+        "romaji": "(satsu)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "とる",
+        "romaji": "(toru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "酸",
+    "furigana": "さん",
+    "romaji": "san",
+    "indo": "asam",
+    "inggris": "acid",
+    "onyomi": [
+      {
+        "kana": "サン",
+        "romaji": "(san)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "すい",
+        "romaji": "(sui)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "賛",
+    "furigana": "さん",
+    "romaji": "san",
+    "indo": "pujian",
+    "inggris": "praise",
+    "onyomi": [
+      {
+        "kana": "サン",
+        "romaji": "(san)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "矢",
+    "furigana": "や",
+    "romaji": "ya",
+    "indo": "panah",
+    "inggris": "arrow",
+    "onyomi": [
+      {
+        "kana": "シ",
+        "romaji": "(shi)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "や",
+        "romaji": "(ya)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "糸",
+    "furigana": "いと",
+    "romaji": "ito",
+    "indo": "benang",
+    "inggris": "thread",
+    "onyomi": [
+      {
+        "kana": "シ",
+        "romaji": "(shi)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "いと",
+        "romaji": "(ito)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "至",
+    "furigana": "いた.る",
+    "romaji": "ita.ru",
+    "indo": "sampai",
+    "inggris": "to reach",
+    "onyomi": [
+      {
+        "kana": "シ",
+        "romaji": "(shi)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "いたる",
+        "romaji": "(itaru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "志",
+    "furigana": "こころざし",
+    "romaji": "kokorozashi",
+    "indo": "ambisi",
+    "inggris": "ambition",
+    "onyomi": [
+      {
+        "kana": "シ",
+        "romaji": "(shi)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "こころざし",
+        "romaji": "(kokorozashi)"
+      }
+    ],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "刺",
+    "furigana": "さ.す",
+    "romaji": "sa.su",
+    "indo": "menusuk",
+    "inggris": "to stab",
+    "onyomi": [
+      {
+        "kana": "シ",
+        "romaji": "(shi)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "さす",
+        "romaji": "(sasu)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "枝",
+    "furigana": "えだ",
+    "romaji": "eda",
+    "indo": "cabang pohon",
+    "inggris": "branch",
+    "onyomi": [
+      {
+        "kana": "シ",
+        "romaji": "(shi)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "えだ",
+        "romaji": "(eda)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "姿",
+    "furigana": "すがた",
+    "romaji": "sugata",
+    "indo": "penampilan",
+    "inggris": "appearance",
+    "onyomi": [
+      {
+        "kana": "シ",
+        "romaji": "(shi)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "すがた",
+        "romaji": "(sugata)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "脂",
+    "furigana": "あぶら",
+    "romaji": "abura",
+    "indo": "lemak",
+    "inggris": "fat/oil",
+    "onyomi": [
+      {
+        "kana": "シ",
+        "romaji": "(shi)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "あぶら",
+        "romaji": "(abura)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "視",
+    "furigana": "し",
+    "romaji": "shi",
+    "indo": "penglihatan",
+    "inggris": "vision",
+    "onyomi": [
+      {
+        "kana": "シ",
+        "romaji": "(shi)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "詞",
+    "furigana": "し",
+    "romaji": "shi",
+    "indo": "kata-kata",
+    "inggris": "words",
+    "onyomi": [
+      {
+        "kana": "シ",
+        "romaji": "(shi)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "飼",
+    "furigana": "か.う",
+    "romaji": "ka.u",
+    "indo": "memelihara",
+    "inggris": "to keep (animals)",
+    "onyomi": [
+      {
+        "kana": "シ",
+        "romaji": "(shi)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "かう",
+        "romaji": "(kau)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "侍",
+    "furigana": "さむらい",
+    "romaji": "samurai",
+    "indo": "samurai",
+    "inggris": "samurai",
+    "onyomi": [
+      {
+        "kana": "ジ",
+        "romaji": "(ji)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "さむらい",
+        "romaji": "(samurai)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "磁",
+    "furigana": "じ",
+    "romaji": "ji",
+    "indo": "magnet",
+    "inggris": "magnet",
+    "onyomi": [
+      {
+        "kana": "ジ",
+        "romaji": "(ji)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "識",
+    "furigana": "しき",
+    "romaji": "shiki",
+    "indo": "kesadaran",
+    "inggris": "awareness",
+    "onyomi": [
+      {
+        "kana": "シキ",
+        "romaji": "(shiki)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "湿",
+    "furigana": "しめ.る",
+    "romaji": "shime.ru",
+    "indo": "lembab",
+    "inggris": "damp",
+    "onyomi": [
+      {
+        "kana": "シツ",
+        "romaji": "(shitsu)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "しめる",
+        "romaji": "(shimeru)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "芝",
+    "furigana": "しば",
+    "romaji": "shiba",
+    "indo": "rumput",
+    "inggris": "lawn",
+    "onyomi": [
+      {
+        "kana": "シバ",
+        "romaji": "(shiba)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "舎",
+    "furigana": "しゃ",
+    "romaji": "sha",
+    "indo": "asrama",
+    "inggris": "dormitory",
+    "onyomi": [
+      {
+        "kana": "シャ",
+        "romaji": "(sha)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "射",
+    "furigana": "い.る",
+    "romaji": "i.ru",
+    "indo": "menembak",
+    "inggris": "to shoot",
+    "onyomi": [
+      {
+        "kana": "シャ",
+        "romaji": "(sha)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "いる",
+        "romaji": "(iru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "斜",
+    "furigana": "しゃ",
+    "romaji": "sha",
+    "indo": "miring",
+    "inggris": "diagonal",
+    "onyomi": [
+      {
+        "kana": "シャ",
+        "romaji": "(sha)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "ななめ",
+        "romaji": "(naname)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "煮",
+    "furigana": "に.る",
+    "romaji": "ni.ru",
+    "indo": "merebus",
+    "inggris": "to boil",
+    "onyomi": [
+      {
+        "kana": "シャ",
+        "romaji": "(sha)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "にる",
+        "romaji": "(niru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "邪",
+    "furigana": "じゃ",
+    "romaji": "ja",
+    "indo": "jahat",
+    "inggris": "evil",
+    "onyomi": [
+      {
+        "kana": "ジャ",
+        "romaji": "(ja)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "蛇",
+    "furigana": "へび",
+    "romaji": "hebi",
+    "indo": "ular",
+    "inggris": "snake",
+    "onyomi": [
+      {
+        "kana": "ジャ",
+        "romaji": "(ja)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "へび",
+        "romaji": "(hebi)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "寂",
+    "furigana": "じゃく",
+    "romaji": "jaku",
+    "indo": "sepi",
+    "inggris": "lonely",
+    "onyomi": [
+      {
+        "kana": "ジャク",
+        "romaji": "(jaku)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "さびしい",
+        "romaji": "(sabishii)"
+      }
+    ],
+    "kategori": "Emosi / Perasaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "狩",
+    "furigana": "か.る",
+    "romaji": "ka.ru",
+    "indo": "berburu",
+    "inggris": "to hunt",
+    "onyomi": [
+      {
+        "kana": "シュ",
+        "romaji": "(shu)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "かる",
+        "romaji": "(karu)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "授",
+    "furigana": "じゅ",
+    "romaji": "ju",
+    "indo": "memberikan",
+    "inggris": "to grant",
+    "onyomi": [
+      {
+        "kana": "ジュ",
+        "romaji": "(ju)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "さずける",
+        "romaji": "(sazukeru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "臭",
+    "furigana": "くさい",
+    "romaji": "kusai",
+    "indo": "bau",
+    "inggris": "smell",
+    "onyomi": [
+      {
+        "kana": "シュウ",
+        "romaji": "(shū)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "くさい",
+        "romaji": "(kusai)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "修",
+    "furigana": "しゅう",
+    "romaji": "shū",
+    "indo": "memperbaiki",
+    "inggris": "repair",
+    "onyomi": [
+      {
+        "kana": "シュウ",
+        "romaji": "(shū)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "おさめる",
+        "romaji": "(osameru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "就",
+    "furigana": "しゅう",
+    "romaji": "shū",
+    "indo": "bekerja",
+    "inggris": "employment",
+    "onyomi": [
+      {
+        "kana": "シュウ",
+        "romaji": "(shū)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "つく",
+        "romaji": "(tsuku)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "汁",
+    "furigana": "しる",
+    "romaji": "shiru",
+    "indo": "kuah, sup",
+    "inggris": "soup, juice",
+    "onyomi": [
+      {
+        "kana": "ジュウ",
+        "romaji": "(jū)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "しる",
+        "romaji": "(shiru)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "充",
+    "furigana": "じゅう",
+    "romaji": "jū",
+    "indo": "memenuhi",
+    "inggris": "fill, supply",
+    "onyomi": [
+      {
+        "kana": "ジュウ",
+        "romaji": "(jū)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "あてる",
+        "romaji": "(ateru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "柔",
+    "furigana": "じゅう",
+    "romaji": "jū",
+    "indo": "lembut",
+    "inggris": "soft, gentle",
+    "onyomi": [
+      {
+        "kana": "ジュウ",
+        "romaji": "(jū)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "やわらかい",
+        "romaji": "(yawarakai)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "従",
+    "furigana": "じゅう",
+    "romaji": "jū",
+    "indo": "mengikuti",
+    "inggris": "obey, follow",
+    "onyomi": [
+      {
+        "kana": "ジュウ",
+        "romaji": "(jū)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "したがう",
+        "romaji": "(shitagau)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "縦",
+    "furigana": "たて",
+    "romaji": "tate",
+    "indo": "vertikal, memanjang",
+    "inggris": "vertical, lengthwise",
+    "onyomi": [
+      {
+        "kana": "ジュウ",
+        "romaji": "(jū)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "たて",
+        "romaji": "(tate)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "縮",
+    "furigana": "ちぢむ",
+    "romaji": "chijimu",
+    "indo": "menyusut, mengerut",
+    "inggris": "shrink, contract",
+    "onyomi": [
+      {
+        "kana": "シュク",
+        "romaji": "(shuku)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "ちぢむ",
+        "romaji": "(chijimu)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "塾",
+    "furigana": "じゅく",
+    "romaji": "juku",
+    "indo": "sekolah bimbingan",
+    "inggris": "cram school",
+    "onyomi": [
+      {
+        "kana": "ジュク",
+        "romaji": "(juku)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "熟",
+    "furigana": "じゅく",
+    "romaji": "juku",
+    "indo": "matang, masak",
+    "inggris": "ripe, mature",
+    "onyomi": [
+      {
+        "kana": "ジュク",
+        "romaji": "(juku)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "瞬",
+    "furigana": "またたく",
+    "romaji": "matataku",
+    "indo": "sekejap, berkedip",
+    "inggris": "blink, instant",
+    "onyomi": [
+      {
+        "kana": "シュン",
+        "romaji": "(shun)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "またたく",
+        "romaji": "(matataku)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "旬",
+    "furigana": "じゅん",
+    "romaji": "jun",
+    "indo": "periode 10 hari",
+    "inggris": "10-day period",
+    "onyomi": [
+      {
+        "kana": "ジュン",
+        "romaji": "(jun)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "巡",
+    "furigana": "めぐる",
+    "romaji": "meguru",
+    "indo": "berkeliling",
+    "inggris": "patrol, circulate",
+    "onyomi": [
+      {
+        "kana": "ジュン",
+        "romaji": "(jun)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "めぐる",
+        "romaji": "(meguru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "純",
+    "furigana": "じゅん",
+    "romaji": "jun",
+    "indo": "murni",
+    "inggris": "pure",
+    "onyomi": [
+      {
+        "kana": "ジュン",
+        "romaji": "(jun)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "準",
+    "furigana": "じゅん",
+    "romaji": "jun",
+    "indo": "standar, persiapan",
+    "inggris": "standard, prepare",
+    "onyomi": [
+      {
+        "kana": "ジュン",
+        "romaji": "(jun)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "諸",
+    "furigana": "しょ",
+    "romaji": "sho",
+    "indo": "berbagai, banyak",
+    "inggris": "various, many",
+    "onyomi": [
+      {
+        "kana": "ショ",
+        "romaji": "(sho)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "序",
+    "furigana": "じょ",
+    "romaji": "jo",
+    "indo": "pendahuluan",
+    "inggris": "preface, order",
+    "onyomi": [
+      {
+        "kana": "ジョ",
+        "romaji": "(jo)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "召",
+    "furigana": "めす",
+    "romaji": "mesu",
+    "indo": "memanggil, menyebut",
+    "inggris": "call, summon",
+    "onyomi": [
+      {
+        "kana": "ショウ",
+        "romaji": "(shō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "めす",
+        "romaji": "(mesu)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "床",
+    "furigana": "とこ",
+    "romaji": "toko",
+    "indo": "ranjang, lantai",
+    "inggris": "bed, floor",
+    "onyomi": [
+      {
+        "kana": "ショウ",
+        "romaji": "(shō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "とこ",
+        "romaji": "(toko)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "承",
+    "furigana": "うけたまわる",
+    "romaji": "uketamawaru",
+    "indo": "menerima, setuju",
+    "inggris": "accept, agree",
+    "onyomi": [
+      {
+        "kana": "ショウ",
+        "romaji": "(shō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "うけたまわる",
+        "romaji": "(uketamawaru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "昇",
+    "furigana": "のぼる",
+    "romaji": "noboru",
+    "indo": "naik, terbit",
+    "inggris": "rise, ascend",
+    "onyomi": [
+      {
+        "kana": "ショウ",
+        "romaji": "(shō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "のぼる",
+        "romaji": "(noboru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "松",
+    "furigana": "まつ",
+    "romaji": "matsu",
+    "indo": "pohon pinus",
+    "inggris": "pine tree",
+    "onyomi": [
+      {
+        "kana": "ショウ",
+        "romaji": "(shō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "まつ",
+        "romaji": "(matsu)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "沼",
+    "furigana": "ぬま",
+    "romaji": "numa",
+    "indo": "rawa",
+    "inggris": "swamp",
+    "onyomi": [
+      {
+        "kana": "ショウ",
+        "romaji": "(shō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "ぬま",
+        "romaji": "(numa)"
+      }
+    ],
+    "kategori": "Lokasi / Arah",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "昭",
+    "furigana": "しょう",
+    "romaji": "shō",
+    "indo": "cerah, terang",
+    "inggris": "bright, shining",
+    "onyomi": [
+      {
+        "kana": "ショウ",
+        "romaji": "(shō)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "将",
+    "furigana": "しょう",
+    "romaji": "shō",
+    "indo": "jenderal, pemimpin",
+    "inggris": "general, leader",
+    "onyomi": [
+      {
+        "kana": "ショウ",
+        "romaji": "(shō)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "症",
+    "furigana": "しょう",
+    "romaji": "shō",
+    "indo": "gejala penyakit",
+    "inggris": "symptom",
+    "onyomi": [
+      {
+        "kana": "ショウ",
+        "romaji": "(shō)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "称",
+    "furigana": "しょう",
+    "romaji": "shō",
+    "indo": "sebutan, gelar",
+    "inggris": "title, name",
+    "onyomi": [
+      {
+        "kana": "ショウ",
+        "romaji": "(shō)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "唱",
+    "furigana": "となえる",
+    "romaji": "tonaeru",
+    "indo": "menyanyikan, mengucap",
+    "inggris": "chant, recite",
+    "onyomi": [
+      {
+        "kana": "ショウ",
+        "romaji": "(shō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "となえる",
+        "romaji": "(tonaeru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "紹",
+    "furigana": "しょう",
+    "romaji": "shō",
+    "indo": "memperkenalkan",
+    "inggris": "introduce",
+    "onyomi": [
+      {
+        "kana": "ショウ",
+        "romaji": "(shō)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "晶",
+    "furigana": "しょう",
+    "romaji": "shō",
+    "indo": "kristal, berkilau",
+    "inggris": "crystal, sparkle",
+    "onyomi": [
+      {
+        "kana": "ショウ",
+        "romaji": "(shō)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "焦",
+    "furigana": "あせる",
+    "romaji": "aseru",
+    "indo": "cemas, gosong",
+    "inggris": "anxious, scorched",
+    "onyomi": [
+      {
+        "kana": "ショウ",
+        "romaji": "(shō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "あせる",
+        "romaji": "(aseru)"
+      }
+    ],
+    "kategori": "Emosi / Perasaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "傷",
+    "furigana": "きず",
+    "romaji": "kizu",
+    "indo": "luka, cedera",
+    "inggris": "wound, injury",
+    "onyomi": [
+      {
+        "kana": "ショウ",
+        "romaji": "(shō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "きず",
+        "romaji": "(kizu)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "照",
+    "furigana": "てる",
+    "romaji": "teru",
+    "indo": "menyinari, menerangi",
+    "inggris": "shine, illuminate",
+    "onyomi": [
+      {
+        "kana": "ショウ",
+        "romaji": "(shō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "てる",
+        "romaji": "(teru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "詳",
+    "furigana": "くわしい",
+    "romaji": "kuwashii",
+    "indo": "rinci, detail",
+    "inggris": "detailed",
+    "onyomi": [
+      {
+        "kana": "ショウ",
+        "romaji": "(shō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "くわしい",
+        "romaji": "(kuwashii)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "障",
+    "furigana": "しょう",
+    "romaji": "shō",
+    "indo": "penghalang, gangguan",
+    "inggris": "barrier, obstacle",
+    "onyomi": [
+      {
+        "kana": "ショウ",
+        "romaji": "(shō)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "丈",
+    "furigana": "じょう",
+    "romaji": "jō",
+    "indo": "tinggi, panjang",
+    "inggris": "height, length",
+    "onyomi": [
+      {
+        "kana": "ジョウ",
+        "romaji": "(jō)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "畳",
+    "furigana": "たたみ",
+    "romaji": "tatami",
+    "indo": "tikar tatami",
+    "inggris": "tatami mat",
+    "onyomi": [
+      {
+        "kana": "ジョウ",
+        "romaji": "(jō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "たたみ",
+        "romaji": "(tatami)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "蒸",
+    "furigana": "むす",
+    "romaji": "musu",
+    "indo": "mengukus, menguap",
+    "inggris": "steam, evaporate",
+    "onyomi": [
+      {
+        "kana": "ジョウ",
+        "romaji": "(jō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "むす",
+        "romaji": "(musu)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "殖",
+    "furigana": "ふえる",
+    "romaji": "fueru",
+    "indo": "berkembang biak",
+    "inggris": "multiply, increase",
+    "onyomi": [
+      {
+        "kana": "ショク",
+        "romaji": "(shoku)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "ふえる",
+        "romaji": "(fueru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "織",
+    "furigana": "おる",
+    "romaji": "oru",
+    "indo": "menenun",
+    "inggris": "weave",
+    "onyomi": [
+      {
+        "kana": "ショク",
+        "romaji": "(shoku)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "おる",
+        "romaji": "(oru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "臣",
+    "furigana": "しん",
+    "romaji": "shin",
+    "indo": "menteri, bawahan",
+    "inggris": "retainer, subject",
+    "onyomi": [
+      {
+        "kana": "シン",
+        "romaji": "(shin)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "侵",
+    "furigana": "おかす",
+    "romaji": "okasu",
+    "indo": "menyerang, menginvasi",
+    "inggris": "invade, violate",
+    "onyomi": [
+      {
+        "kana": "シン",
+        "romaji": "(shin)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "おかす",
+        "romaji": "(okasu)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "津",
+    "furigana": "つ",
+    "romaji": "tsu",
+    "indo": "pelabuhan, dermaga",
+    "inggris": "harbor, port",
+    "onyomi": [
+      {
+        "kana": "シン",
+        "romaji": "(shin)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "つ",
+        "romaji": "(tsu)"
+      }
+    ],
+    "kategori": "Lokasi / Arah",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "唇",
+    "furigana": "くちびる",
+    "romaji": "kuchibiru",
+    "indo": "bibir",
+    "inggris": "lips",
+    "onyomi": [
+      {
+        "kana": "シン",
+        "romaji": "(shin)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "くちびる",
+        "romaji": "(kuchibiru)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "浸",
+    "furigana": "ひたす",
+    "romaji": "hitasu",
+    "indo": "merendam, meresap",
+    "inggris": "soak, immerse",
+    "onyomi": [
+      {
+        "kana": "シン",
+        "romaji": "(shin)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "ひたす",
+        "romaji": "(hitasu)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "診",
+    "furigana": "しん",
+    "romaji": "shin",
+    "indo": "memeriksa (medis)",
+    "inggris": "examine (medical)",
+    "onyomi": [
+      {
+        "kana": "シン",
+        "romaji": "(shin)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "審",
+    "furigana": "しん",
+    "romaji": "shin",
+    "indo": "pemeriksaan, pengadilan",
+    "inggris": "examination, trial",
+    "onyomi": [
+      {
+        "kana": "シン",
+        "romaji": "(shin)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "震",
+    "furigana": "ふるえる",
+    "romaji": "furueru",
+    "indo": "gemetar, gempa",
+    "inggris": "tremble, earthquake",
+    "onyomi": [
+      {
+        "kana": "シン",
+        "romaji": "(shin)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "ふるえる",
+        "romaji": "(furueru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "刃",
+    "furigana": "は",
+    "romaji": "ha",
+    "indo": "pisau, mata pisau",
+    "inggris": "blade, edge",
+    "onyomi": [
+      {
+        "kana": "ジン",
+        "romaji": "(jin)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "は",
+        "romaji": "(ha)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "尽",
+    "furigana": "つくす",
+    "romaji": "tsukusu",
+    "indo": "menghabiskan, memenuhi",
+    "inggris": "exhaust, fulfill",
+    "onyomi": [
+      {
+        "kana": "ジン",
+        "romaji": "(jin)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "つくす",
+        "romaji": "(tsukusu)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "陣",
+    "furigana": "じん",
+    "romaji": "jin",
+    "indo": "formasi, barisan",
+    "inggris": "formation, camp",
+    "onyomi": [
+      {
+        "kana": "ジン",
+        "romaji": "(jin)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "垂",
+    "furigana": "たれる",
+    "romaji": "tareru",
+    "indo": "menggantung, menetes",
+    "inggris": "hang, drip",
+    "onyomi": [
+      {
+        "kana": "スイ",
+        "romaji": "(sui)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "たれる",
+        "romaji": "(tareru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "炊",
+    "furigana": "たく",
+    "romaji": "taku",
+    "indo": "memasak (nasi)",
+    "inggris": "cook (rice)",
+    "onyomi": [
+      {
+        "kana": "スイ",
+        "romaji": "(sui)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "たく",
+        "romaji": "(taku)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "酔",
+    "furigana": "よう",
+    "romaji": "yō",
+    "indo": "mabuk",
+    "inggris": "drunk, dizzy",
+    "onyomi": [
+      {
+        "kana": "スイ",
+        "romaji": "(sui)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "よう",
+        "romaji": "(yō)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "据",
+    "furigana": "すえ",
+    "romaji": "sue",
+    "indo": "menempatkan, memasang",
+    "inggris": "set, install",
+    "onyomi": [
+      {
+        "kana": "キョ",
+        "romaji": "(kyo)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "すえる",
+        "romaji": "(sueru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "寸",
+    "furigana": "すん",
+    "romaji": "sun",
+    "indo": "inci, ukuran kecil",
+    "inggris": "inch, measurement",
+    "onyomi": [
+      {
+        "kana": "スン",
+        "romaji": "(sun)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "星",
+    "furigana": "ほし",
+    "romaji": "hoshi",
+    "indo": "bintang",
+    "inggris": "star",
+    "onyomi": [
+      {
+        "kana": "セイ",
+        "romaji": "(sei)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "ほし",
+        "romaji": "(hoshi)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "省",
+    "furigana": "しょう",
+    "romaji": "shō",
+    "indo": "kementerian, menghemat",
+    "inggris": "ministry, save",
+    "onyomi": [
+      {
+        "kana": "セイ",
+        "romaji": "(sei)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "はぶく",
+        "romaji": "(habuku)"
+      }
+    ],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "清",
+    "furigana": "せい",
+    "romaji": "sei",
+    "indo": "jernih, bersih",
+    "inggris": "clear, pure",
+    "onyomi": [
+      {
+        "kana": "セイ",
+        "romaji": "(sei)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "きよい",
+        "romaji": "(kiyoi)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "盛",
+    "furigana": "もり",
+    "romaji": "mori",
+    "indo": "berkembang, penuh",
+    "inggris": "prosper, full",
+    "onyomi": [
+      {
+        "kana": "セイ",
+        "romaji": "(sei)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "もる",
+        "romaji": "(moru)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "勢",
+    "furigana": "せい",
+    "romaji": "sei",
+    "indo": "kekuatan, energi",
+    "inggris": "force, energy",
+    "onyomi": [
+      {
+        "kana": "セイ",
+        "romaji": "(sei)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "いきおい",
+        "romaji": "(ikioi)"
+      }
+    ],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "精",
+    "furigana": "せい",
+    "romaji": "sei",
+    "indo": "esensi, semangat",
+    "inggris": "essence, spirit",
+    "onyomi": [
+      {
+        "kana": "セイ",
+        "romaji": "(sei)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "しらげる",
+        "romaji": "(shirageru)"
+      }
+    ],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "請",
+    "furigana": "こう",
+    "romaji": "kou",
+    "indo": "meminta, mengajukan",
+    "inggris": "request, ask for",
+    "onyomi": [
+      {
+        "kana": "セイ",
+        "romaji": "(sei)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "こう",
+        "romaji": "(kou)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "整",
+    "furigana": "ととのう",
+    "romaji": "totonou",
+    "indo": "merapikan, menyusun",
+    "inggris": "arrange, organize",
+    "onyomi": [
+      {
+        "kana": "セイ",
+        "romaji": "(sei)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "ととのえる",
+        "romaji": "(totonoeru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "跡",
+    "furigana": "あと",
+    "romaji": "ato",
+    "indo": "jejak, bekas",
+    "inggris": "trace, remains",
+    "onyomi": [
+      {
+        "kana": "セキ",
+        "romaji": "(seki)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "あと",
+        "romaji": "(ato)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "績",
+    "furigana": "せき",
+    "romaji": "seki",
+    "indo": "prestasi, hasil",
+    "inggris": "achievement, record",
+    "onyomi": [
+      {
+        "kana": "セキ",
+        "romaji": "(seki)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "接",
+    "furigana": "せつ",
+    "romaji": "setsu",
+    "indo": "menyambung, menghubung",
+    "inggris": "connect, join",
+    "onyomi": [
+      {
+        "kana": "セツ",
+        "romaji": "(setsu)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "つぐ",
+        "romaji": "(tsugu)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "節",
+    "furigana": "せつ",
+    "romaji": "setsu",
+    "indo": "bagian, simpul",
+    "inggris": "section, joint",
+    "onyomi": [
+      {
+        "kana": "セツ",
+        "romaji": "(setsu)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "ふし",
+        "romaji": "(fushi)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "舌",
+    "furigana": "した",
+    "romaji": "shita",
+    "indo": "lidah",
+    "inggris": "tongue",
+    "onyomi": [
+      {
+        "kana": "ゼツ",
+        "romaji": "(zetsu)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "した",
+        "romaji": "(shita)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "絶",
+    "furigana": "ぜつ",
+    "romaji": "zetsu",
+    "indo": "memutuskan, hebat",
+    "inggris": "cut off, excellent",
+    "onyomi": [
+      {
+        "kana": "ゼツ",
+        "romaji": "(zetsu)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "たえる",
+        "romaji": "(taeru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "占",
+    "furigana": "せん",
+    "romaji": "sen",
+    "indo": "meramal, menduduki",
+    "inggris": "fortune-telling, occupy",
+    "onyomi": [
+      {
+        "kana": "セン",
+        "romaji": "(sen)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "うらなう",
+        "romaji": "(uranau)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "宣",
+    "furigana": "せん",
+    "romaji": "sen",
+    "indo": "menyatakan",
+    "inggris": "proclaim",
+    "onyomi": [
+      {
+        "kana": "セン",
+        "romaji": "(sen)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "泉",
+    "furigana": "いずみ",
+    "romaji": "izumi",
+    "indo": "mata air",
+    "inggris": "spring (water)",
+    "onyomi": [
+      {
+        "kana": "セン",
+        "romaji": "(sen)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "いずみ",
+        "romaji": "(izumi)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "浅",
+    "furigana": "あさ",
+    "romaji": "asa",
+    "indo": "dangkal",
+    "inggris": "shallow",
+    "onyomi": [
+      {
+        "kana": "セン",
+        "romaji": "(sen)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "あさい",
+        "romaji": "(asai)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "染",
+    "furigana": "せん",
+    "romaji": "sen",
+    "indo": "mewarnai, terpengaruh",
+    "inggris": "dye, be influenced",
+    "onyomi": [
+      {
+        "kana": "セン",
+        "romaji": "(sen)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "そめる",
+        "romaji": "(someru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "然",
+    "furigana": "ぜん",
+    "romaji": "zen",
+    "indo": "begitu, alami",
+    "inggris": "so, natural",
+    "onyomi": [
+      {
+        "kana": "ゼン",
+        "romaji": "(zen)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "素",
+    "furigana": "す",
+    "romaji": "su",
+    "indo": "bahan dasar, alami",
+    "inggris": "element, plain",
+    "onyomi": [
+      {
+        "kana": "ソ",
+        "romaji": "(so)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "もと",
+        "romaji": "(moto)"
+      }
+    ],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "訴",
+    "furigana": "そ",
+    "romaji": "so",
+    "indo": "mengadu, menggugat",
+    "inggris": "sue, appeal",
+    "onyomi": [
+      {
+        "kana": "ソ",
+        "romaji": "(so)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "うったえる",
+        "romaji": "(uttaeru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "双",
+    "furigana": "そう",
+    "romaji": "sō",
+    "indo": "sepasang",
+    "inggris": "pair, twin",
+    "onyomi": [
+      {
+        "kana": "ソウ",
+        "romaji": "(sō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "ふた",
+        "romaji": "(futa)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "奏",
+    "furigana": "そう",
+    "romaji": "sō",
+    "indo": "memainkan musik",
+    "inggris": "play (music)",
+    "onyomi": [
+      {
+        "kana": "ソウ",
+        "romaji": "(sō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "かなでる",
+        "romaji": "(kanaderu)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "倉",
+    "furigana": "そう",
+    "romaji": "sō",
+    "indo": "gudang",
+    "inggris": "warehouse",
+    "onyomi": [
+      {
+        "kana": "ソウ",
+        "romaji": "(sō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "くら",
+        "romaji": "(kura)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "捜",
+    "furigana": "そう",
+    "romaji": "sō",
+    "indo": "mencari",
+    "inggris": "search",
+    "onyomi": [
+      {
+        "kana": "ソウ",
+        "romaji": "(sō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "さがす",
+        "romaji": "(sagasu)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "巣",
+    "furigana": "そう",
+    "romaji": "sō",
+    "indo": "sarang",
+    "inggris": "nest",
+    "onyomi": [
+      {
+        "kana": "ソウ",
+        "romaji": "(sō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "す",
+        "romaji": "(su)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "掃",
+    "furigana": "そう",
+    "romaji": "sō",
+    "indo": "menyapu",
+    "inggris": "sweep",
+    "onyomi": [
+      {
+        "kana": "ソウ",
+        "romaji": "(sō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "はく",
+        "romaji": "(haku)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "創",
+    "furigana": "そう",
+    "romaji": "sō",
+    "indo": "menciptakan",
+    "inggris": "create",
+    "onyomi": [
+      {
+        "kana": "ソウ",
+        "romaji": "(sō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "つくる",
+        "romaji": "(tsukuru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "装",
+    "furigana": "そう",
+    "romaji": "sō",
+    "indo": "berpakaian, hiasan",
+    "inggris": "dress, decoration",
+    "onyomi": [
+      {
+        "kana": "ソウ",
+        "romaji": "(sō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "よそおう",
+        "romaji": "(yosou)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "層",
+    "furigana": "そう",
+    "romaji": "sō",
+    "indo": "lapisan",
+    "inggris": "layer",
+    "onyomi": [
+      {
+        "kana": "ソウ",
+        "romaji": "(sō)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "遭",
+    "furigana": "そう",
+    "romaji": "sō",
+    "indo": "mengalami",
+    "inggris": "encounter",
+    "onyomi": [
+      {
+        "kana": "ソウ",
+        "romaji": "(sō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "あう",
+        "romaji": "(au)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "騒",
+    "furigana": "そう",
+    "romaji": "sō",
+    "indo": "keributan, kegaduhan",
+    "inggris": "noise, disturbance",
+    "onyomi": [
+      {
+        "kana": "ソウ",
+        "romaji": "(sō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "さわぐ",
+        "romaji": "(sawagu)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "憎",
+    "furigana": "ぞう",
+    "romaji": "zō",
+    "indo": "benci",
+    "inggris": "hate",
+    "onyomi": [
+      {
+        "kana": "ゾウ",
+        "romaji": "(zō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "にくむ",
+        "romaji": "(nikumu)"
+      }
+    ],
+    "kategori": "Emosi / Perasaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "贈",
+    "furigana": "ぞう",
+    "romaji": "zō",
+    "indo": "memberi hadiah",
+    "inggris": "give (a gift)",
+    "onyomi": [
+      {
+        "kana": "ゾウ",
+        "romaji": "(zō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "おくる",
+        "romaji": "(okuru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "臓",
+    "furigana": "ぞう",
+    "romaji": "zō",
+    "indo": "organ dalam",
+    "inggris": "internal organ",
+    "onyomi": [
+      {
+        "kana": "ゾウ",
+        "romaji": "(zō)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "即",
+    "furigana": "そく",
+    "romaji": "soku",
+    "indo": "segera",
+    "inggris": "immediately",
+    "onyomi": [
+      {
+        "kana": "ソク",
+        "romaji": "(soku)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "束",
+    "furigana": "たば",
+    "romaji": "taba",
+    "indo": "ikatan, berkas",
+    "inggris": "bundle, bunch",
+    "onyomi": [
+      {
+        "kana": "ソク",
+        "romaji": "(soku)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "たば",
+        "romaji": "(taba)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "促",
+    "furigana": "うながす",
+    "romaji": "unagasu",
+    "indo": "mendorong, mempercepat",
+    "inggris": "urge, hasten",
+    "onyomi": [
+      {
+        "kana": "ソク",
+        "romaji": "(soku)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "うながす",
+        "romaji": "(unagasu)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "則",
+    "furigana": "そく",
+    "romaji": "soku",
+    "indo": "aturan, prinsip",
+    "inggris": "rule, principle",
+    "onyomi": [
+      {
+        "kana": "ソク",
+        "romaji": "(soku)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "属",
+    "furigana": "ぞく",
+    "romaji": "zoku",
+    "indo": "termasuk, milik",
+    "inggris": "belong, subordinate",
+    "onyomi": [
+      {
+        "kana": "ゾク",
+        "romaji": "(zoku)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "率",
+    "furigana": "りつ",
+    "romaji": "ritsu",
+    "indo": "tingkat, memimpin",
+    "inggris": "rate, lead",
+    "onyomi": [
+      {
+        "kana": "リツ",
+        "romaji": "(ritsu)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "妥",
+    "furigana": "だ",
+    "romaji": "da",
+    "indo": "kompromi",
+    "inggris": "compromise",
+    "onyomi": [
+      {
+        "kana": "ダ",
+        "romaji": "(da)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "耐",
+    "furigana": "たい",
+    "romaji": "tai",
+    "indo": "tahan",
+    "inggris": "endure",
+    "onyomi": [
+      {
+        "kana": "タイ",
+        "romaji": "(tai)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "たえる",
+        "romaji": "(taeru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "帯",
+    "furigana": "たい",
+    "romaji": "tai",
+    "indo": "sabuk, zona",
+    "inggris": "belt, zone",
+    "onyomi": [
+      {
+        "kana": "タイ",
+        "romaji": "(tai)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "おび",
+        "romaji": "(obi)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "袋",
+    "furigana": "たい",
+    "romaji": "tai",
+    "indo": "tas, kantong",
+    "inggris": "bag, sack",
+    "onyomi": [
+      {
+        "kana": "タイ",
+        "romaji": "(tai)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "ふくろ",
+        "romaji": "(fukuro)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "替",
+    "furigana": "たい",
+    "romaji": "tai",
+    "indo": "mengganti",
+    "inggris": "replace",
+    "onyomi": [
+      {
+        "kana": "タイ",
+        "romaji": "(tai)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "かえる",
+        "romaji": "(kaeru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "態",
+    "furigana": "たい",
+    "romaji": "tai",
+    "indo": "keadaan, bentuk",
+    "inggris": "condition, form",
+    "onyomi": [
+      {
+        "kana": "タイ",
+        "romaji": "(tai)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "滝",
+    "furigana": "たき",
+    "romaji": "taki",
+    "indo": "air terjun",
+    "inggris": "waterfall",
+    "onyomi": [
+      {
+        "kana": "ロウ",
+        "romaji": "(rou)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "たき",
+        "romaji": "(taki)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "宅",
+    "furigana": "たく",
+    "romaji": "taku",
+    "indo": "rumah, tempat tinggal",
+    "inggris": "residence",
+    "onyomi": [
+      {
+        "kana": "タク",
+        "romaji": "(taku)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "達",
+    "furigana": "たつ",
+    "romaji": "tatsu",
+    "indo": "mencapai, ahli",
+    "inggris": "attain, expert",
+    "onyomi": [
+      {
+        "kana": "タツ",
+        "romaji": "(tatsu)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "脱",
+    "furigana": "だつ",
+    "romaji": "datsu",
+    "indo": "melepaskan",
+    "inggris": "remove, escape",
+    "onyomi": [
+      {
+        "kana": "ダツ",
+        "romaji": "(datsu)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "ぬぐ",
+        "romaji": "(nugu)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "棚",
+    "furigana": "たな",
+    "romaji": "tana",
+    "indo": "rak",
+    "inggris": "shelf",
+    "onyomi": [
+      {
+        "kana": "ホウ",
+        "romaji": "(hou)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "たな",
+        "romaji": "(tana)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "端",
+    "furigana": "たん",
+    "romaji": "tan",
+    "indo": "ujung, tepi",
+    "inggris": "edge, end",
+    "onyomi": [
+      {
+        "kana": "タン",
+        "romaji": "(tan)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "はし",
+        "romaji": "(hashi)"
+      }
+    ],
+    "kategori": "Lokasi / Arah",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "弾",
+    "furigana": "だん",
+    "romaji": "dan",
+    "indo": "peluru, memantul",
+    "inggris": "bullet, bounce",
+    "onyomi": [
+      {
+        "kana": "ダン",
+        "romaji": "(dan)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "ひく",
+        "romaji": "(hiku)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "恥",
+    "furigana": "ち",
+    "romaji": "chi",
+    "indo": "malu",
+    "inggris": "shame",
+    "onyomi": [
+      {
+        "kana": "チ",
+        "romaji": "(chi)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "はじ",
+        "romaji": "(haji)"
+      }
+    ],
+    "kategori": "Emosi / Perasaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "竹",
+    "furigana": "ちく",
+    "romaji": "chiku",
+    "indo": "bambu",
+    "inggris": "bamboo",
+    "onyomi": [
+      {
+        "kana": "チク",
+        "romaji": "(chiku)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "たけ",
+        "romaji": "(take)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "築",
+    "furigana": "ちく",
+    "romaji": "chiku",
+    "indo": "membangun",
+    "inggris": "build",
+    "onyomi": [
+      {
+        "kana": "チク",
+        "romaji": "(chiku)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "きずく",
+        "romaji": "(kizuku)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "沖",
+    "furigana": "ちゅう",
+    "romaji": "chū",
+    "indo": "lepas pantai",
+    "inggris": "offshore",
+    "onyomi": [
+      {
+        "kana": "チュウ",
+        "romaji": "(chū)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "おき",
+        "romaji": "(oki)"
+      }
+    ],
+    "kategori": "Lokasi / Arah",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "宙",
+    "furigana": "ちゅう",
+    "romaji": "chū",
+    "indo": "langit, angkasa",
+    "inggris": "space, sky",
+    "onyomi": [
+      {
+        "kana": "チュウ",
+        "romaji": "(chū)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Lokasi / Arah",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "忠",
+    "furigana": "ちゅう",
+    "romaji": "chū",
+    "indo": "kesetiaan",
+    "inggris": "loyalty",
+    "onyomi": [
+      {
+        "kana": "チュウ",
+        "romaji": "(chū)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "柱",
+    "furigana": "ちゅう",
+    "romaji": "chū",
+    "indo": "pilar",
+    "inggris": "pillar",
+    "onyomi": [
+      {
+        "kana": "チュウ",
+        "romaji": "(chū)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "はしら",
+        "romaji": "(hashira)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "駐",
+    "furigana": "ちゅう",
+    "romaji": "chū",
+    "indo": "parkir",
+    "inggris": "park",
+    "onyomi": [
+      {
+        "kana": "チュウ",
+        "romaji": "(chū)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "貯",
+    "furigana": "ちょ",
+    "romaji": "cho",
+    "indo": "menabung",
+    "inggris": "save money",
+    "onyomi": [
+      {
+        "kana": "チョ",
+        "romaji": "(cho)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "たくわえる",
+        "romaji": "(takuwaeru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "丁",
+    "furigana": "ちょう",
+    "romaji": "chō",
+    "indo": "blok, seksyen",
+    "inggris": "block, section",
+    "onyomi": [
+      {
+        "kana": "チョウ",
+        "romaji": "(chō)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "兆",
+    "furigana": "ちょう",
+    "romaji": "chō",
+    "indo": "tanda, trilion",
+    "inggris": "sign, trillion",
+    "onyomi": [
+      {
+        "kana": "チョウ",
+        "romaji": "(chō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "きざし",
+        "romaji": "(kizashi)"
+      }
+    ],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "挑",
+    "furigana": "ちょう",
+    "romaji": "chō",
+    "indo": "menantang",
+    "inggris": "challenge",
+    "onyomi": [
+      {
+        "kana": "チョウ",
+        "romaji": "(chō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "いどむ",
+        "romaji": "(idomu)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "張",
+    "furigana": "ちょう",
+    "romaji": "chō",
+    "indo": "meregangkan",
+    "inggris": "stretch",
+    "onyomi": [
+      {
+        "kana": "チョウ",
+        "romaji": "(chō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "はる",
+        "romaji": "(haru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "釣",
+    "furigana": "ちょう",
+    "romaji": "chō",
+    "indo": "memancing",
+    "inggris": "fishing",
+    "onyomi": [
+      {
+        "kana": "チョウ",
+        "romaji": "(chō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "つる",
+        "romaji": "(tsuru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "頂",
+    "furigana": "ちょう",
+    "romaji": "chō",
+    "indo": "puncak, menerima",
+    "inggris": "peak, receive",
+    "onyomi": [
+      {
+        "kana": "チョウ",
+        "romaji": "(chō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "いただく",
+        "romaji": "(itadaku)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "超",
+    "furigana": "ちょう",
+    "romaji": "chō",
+    "indo": "melampaui",
+    "inggris": "exceed",
+    "onyomi": [
+      {
+        "kana": "チョウ",
+        "romaji": "(chō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "こえる",
+        "romaji": "(koeru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "腸",
+    "furigana": "ちょう",
+    "romaji": "chō",
+    "indo": "usus",
+    "inggris": "intestines",
+    "onyomi": [
+      {
+        "kana": "チョウ",
+        "romaji": "(chō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "はらわた",
+        "romaji": "(harawata)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "跳",
+    "furigana": "ちょう",
+    "romaji": "chō",
+    "indo": "melompat",
+    "inggris": "jump",
+    "onyomi": [
+      {
+        "kana": "チョウ",
+        "romaji": "(chō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "とぶ",
+        "romaji": "(tobu)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "潮",
+    "furigana": "ちょう",
+    "romaji": "chō",
+    "indo": "pasang",
+    "inggris": "tide",
+    "onyomi": [
+      {
+        "kana": "チョウ",
+        "romaji": "(chō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "しお",
+        "romaji": "(shio)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "聴",
+    "furigana": "ちょう",
+    "romaji": "chō",
+    "indo": "mendengarkan",
+    "inggris": "listen",
+    "onyomi": [
+      {
+        "kana": "チョウ",
+        "romaji": "(chō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "きく",
+        "romaji": "(kiku)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "沈",
+    "furigana": "ちん",
+    "romaji": "chin",
+    "indo": "tenggelam",
+    "inggris": "sink",
+    "onyomi": [
+      {
+        "kana": "チン",
+        "romaji": "(chin)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "しずむ",
+        "romaji": "(shizumu)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "珍",
+    "furigana": "ちん",
+    "romaji": "chin",
+    "indo": "langka",
+    "inggris": "rare",
+    "onyomi": [
+      {
+        "kana": "チン",
+        "romaji": "(chin)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "めずらしい",
+        "romaji": "(mezurashii)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "漬",
+    "furigana": "つけ",
+    "romaji": "tsuke",
+    "indo": "merendam",
+    "inggris": "soak, pickle",
+    "onyomi": [
+      {
+        "kana": "チ",
+        "romaji": "(chi)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "つける",
+        "romaji": "(tsukeru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "締",
+    "furigana": "てい",
+    "romaji": "tei",
+    "indo": "mengencangkan",
+    "inggris": "tighten",
+    "onyomi": [
+      {
+        "kana": "テイ",
+        "romaji": "(tei)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "しめる",
+        "romaji": "(shimeru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "典",
+    "furigana": "てん",
+    "romaji": "ten",
+    "indo": "aturan, buku standar",
+    "inggris": "rule, standard book",
+    "onyomi": [
+      {
+        "kana": "テン",
+        "romaji": "(ten)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "添",
+    "furigana": "てん",
+    "romaji": "ten",
+    "indo": "menambahkan",
+    "inggris": "add",
+    "onyomi": [
+      {
+        "kana": "テン",
+        "romaji": "(ten)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "そう",
+        "romaji": "(sou)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "殿",
+    "furigana": "でん",
+    "romaji": "den",
+    "indo": "bangunan, tuan",
+    "inggris": "building, lord",
+    "onyomi": [
+      {
+        "kana": "デン",
+        "romaji": "(den)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "との",
+        "romaji": "(tono)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "徒",
+    "furigana": "と",
+    "romaji": "to",
+    "indo": "pengikut, sia-sia",
+    "inggris": "follower, futile",
+    "onyomi": [
+      {
+        "kana": "ト",
+        "romaji": "(to)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "途",
+    "furigana": "と",
+    "romaji": "to",
+    "indo": "jalan",
+    "inggris": "route",
+    "onyomi": [
+      {
+        "kana": "ト",
+        "romaji": "(to)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Lokasi / Arah",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "塗",
+    "furigana": "と",
+    "romaji": "to",
+    "indo": "melapisi",
+    "inggris": "paint, coat",
+    "onyomi": [
+      {
+        "kana": "ト",
+        "romaji": "(to)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "ぬる",
+        "romaji": "(nuru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "奴",
+    "furigana": "ど",
+    "romaji": "do",
+    "indo": "budak, orang itu",
+    "inggris": "slave, that guy",
+    "onyomi": [
+      {
+        "kana": "ド",
+        "romaji": "(do)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "やつ",
+        "romaji": "(yatsu)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "凍",
+    "furigana": "とう",
+    "romaji": "tō",
+    "indo": "membeku",
+    "inggris": "freeze",
+    "onyomi": [
+      {
+        "kana": "トウ",
+        "romaji": "(tō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "こおる",
+        "romaji": "(kooru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "桃",
+    "furigana": "とう",
+    "romaji": "tō",
+    "indo": "buah persik",
+    "inggris": "peach",
+    "onyomi": [
+      {
+        "kana": "トウ",
+        "romaji": "(tō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "もも",
+        "romaji": "(momo)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "党",
+    "furigana": "とう",
+    "romaji": "tō",
+    "indo": "partai",
+    "inggris": "political party",
+    "onyomi": [
+      {
+        "kana": "トウ",
+        "romaji": "(tō)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "塔",
+    "furigana": "とう",
+    "romaji": "tō",
+    "indo": "menara",
+    "inggris": "tower",
+    "onyomi": [
+      {
+        "kana": "トウ",
+        "romaji": "(tō)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "筒",
+    "furigana": "とう",
+    "romaji": "tō",
+    "indo": "tabung",
+    "inggris": "cylinder",
+    "onyomi": [
+      {
+        "kana": "トウ",
+        "romaji": "(tō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "つつ",
+        "romaji": "(tsutsu)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "統",
+    "furigana": "とう",
+    "romaji": "tō",
+    "indo": "menyatukan",
+    "inggris": "unite",
+    "onyomi": [
+      {
+        "kana": "トウ",
+        "romaji": "(tō)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "稲",
+    "furigana": "とう",
+    "romaji": "tō",
+    "indo": "padi",
+    "inggris": "rice plant",
+    "onyomi": [
+      {
+        "kana": "トウ",
+        "romaji": "(tō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "いね",
+        "romaji": "(ine)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "闘",
+    "furigana": "とう",
+    "romaji": "tō",
+    "indo": "bertarung",
+    "inggris": "fight",
+    "onyomi": [
+      {
+        "kana": "トウ",
+        "romaji": "(tō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "たたかう",
+        "romaji": "(tatakau)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "童",
+    "furigana": "どう",
+    "romaji": "dō",
+    "indo": "anak-anak",
+    "inggris": "child",
+    "onyomi": [
+      {
+        "kana": "ドウ",
+        "romaji": "(dō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "わらべ",
+        "romaji": "(warabe)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "銅",
+    "furigana": "どう",
+    "romaji": "dō",
+    "indo": "tembaga",
+    "inggris": "copper",
+    "onyomi": [
+      {
+        "kana": "ドウ",
+        "romaji": "(dō)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "導",
+    "furigana": "どう",
+    "romaji": "dō",
+    "indo": "memandu",
+    "inggris": "guide",
+    "onyomi": [
+      {
+        "kana": "ドウ",
+        "romaji": "(dō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "みちびく",
+        "romaji": "(michibiku)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "徳",
+    "furigana": "とく",
+    "romaji": "toku",
+    "indo": "kebajikan",
+    "inggris": "virtue",
+    "onyomi": [
+      {
+        "kana": "トク",
+        "romaji": "(toku)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "突",
+    "furigana": "とつ",
+    "romaji": "totsu",
+    "indo": "menabrak",
+    "inggris": "thrust",
+    "onyomi": [
+      {
+        "kana": "トツ",
+        "romaji": "(totsu)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "つく",
+        "romaji": "(tsuku)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "豚",
+    "furigana": "とん",
+    "romaji": "ton",
+    "indo": "babi",
+    "inggris": "pig",
+    "onyomi": [
+      {
+        "kana": "トン",
+        "romaji": "(ton)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "ぶた",
+        "romaji": "(buta)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "曇",
+    "furigana": "どん",
+    "romaji": "don",
+    "indo": "mendung",
+    "inggris": "cloudy",
+    "onyomi": [
+      {
+        "kana": "ドン",
+        "romaji": "(don)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "くもる",
+        "romaji": "(kumoru)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "軟",
+    "furigana": "なん",
+    "romaji": "",
+    "indo": "lunak",
+    "inggris": "soft",
+    "onyomi": [
+      {
+        "kana": "ナン",
+        "romaji": "(nan)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "やわらかい",
+        "romaji": "(yawarakai)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "妊",
+    "furigana": "にん",
+    "romaji": "nin",
+    "indo": "hamil",
+    "inggris": "pregnant",
+    "onyomi": [
+      {
+        "kana": "ニン",
+        "romaji": "(nin)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "粘",
+    "furigana": "ねん",
+    "romaji": "nen",
+    "indo": "lengket",
+    "inggris": "sticky",
+    "onyomi": [
+      {
+        "kana": "ネン",
+        "romaji": "(nen)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "ねばる",
+        "romaji": "(nebaru)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "悩",
+    "furigana": "のう",
+    "romaji": "nō",
+    "indo": "khawatir",
+    "inggris": "worry",
+    "onyomi": [
+      {
+        "kana": "ノウ",
+        "romaji": "(nō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "なやむ",
+        "romaji": "(nayamu)"
+      }
+    ],
+    "kategori": "Emosi / Perasaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "納",
+    "furigana": "のう",
+    "romaji": "nō",
+    "indo": "membayar",
+    "inggris": "pay",
+    "onyomi": [
+      {
+        "kana": "ノウ",
+        "romaji": "(nō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "おさめる",
+        "romaji": "(osameru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "濃",
+    "furigana": "のう",
+    "romaji": "nō",
+    "indo": "pekat",
+    "inggris": "thick, concentrated",
+    "onyomi": [
+      {
+        "kana": "ノウ",
+        "romaji": "(nō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "こい",
+        "romaji": "(koi)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "拝",
+    "furigana": "はい",
+    "romaji": "hai",
+    "indo": "menyembah",
+    "inggris": "worship",
+    "onyomi": [
+      {
+        "kana": "ハイ",
+        "romaji": "(hai)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "おがむ",
+        "romaji": "(ogamu)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "俳",
+    "furigana": "はい",
+    "romaji": "hai",
+    "indo": "haiku",
+    "inggris": "haiku poet",
+    "onyomi": [
+      {
+        "kana": "ハイ",
+        "romaji": "(hai)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "排",
+    "furigana": "はい",
+    "romaji": "hai",
+    "indo": "mengeluarkan",
+    "inggris": "expel",
+    "onyomi": [
+      {
+        "kana": "ハイ",
+        "romaji": "(hai)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "廃",
+    "furigana": "はい",
+    "romaji": "hai",
+    "indo": "menghapuskan",
+    "inggris": "abolish",
+    "onyomi": [
+      {
+        "kana": "ハイ",
+        "romaji": "(hai)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "すたれる",
+        "romaji": "(sutareru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "梅",
+    "furigana": "ばい",
+    "romaji": "bai",
+    "indo": "plum",
+    "inggris": "plum",
+    "onyomi": [
+      {
+        "kana": "バイ",
+        "romaji": "(bai)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "うめ",
+        "romaji": "(ume)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "培",
+    "furigana": "ばい",
+    "romaji": "bai",
+    "indo": "menumbuhkan",
+    "inggris": "cultivate",
+    "onyomi": [
+      {
+        "kana": "バイ",
+        "romaji": "(bai)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "つちかう",
+        "romaji": "(tsuchikau)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "迫",
+    "furigana": "はく",
+    "romaji": "haku",
+    "indo": "mendekati",
+    "inggris": "approach",
+    "onyomi": [
+      {
+        "kana": "ハク",
+        "romaji": "(haku)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "せまる",
+        "romaji": "(semaru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "薄",
+    "furigana": "はく",
+    "romaji": "haku",
+    "indo": "tipis",
+    "inggris": "thin",
+    "onyomi": [
+      {
+        "kana": "ハク",
+        "romaji": "(haku)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "うすい",
+        "romaji": "(usui)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "麦",
+    "furigana": "ばく",
+    "romaji": "baku",
+    "indo": "gandum",
+    "inggris": "wheat",
+    "onyomi": [
+      {
+        "kana": "バク",
+        "romaji": "(baku)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "むぎ",
+        "romaji": "(mugi)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "爆",
+    "furigana": "ばく",
+    "romaji": "baku",
+    "indo": "meledak",
+    "inggris": "explode",
+    "onyomi": [
+      {
+        "kana": "バク",
+        "romaji": "(baku)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "畑",
+    "furigana": "はたけ",
+    "romaji": "hatake",
+    "indo": "ladang",
+    "inggris": "field",
+    "onyomi": [],
+    "kunyomi": [
+      {
+        "kana": "はたけ",
+        "romaji": "(hatake)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "肌",
+    "furigana": "はだ",
+    "romaji": "hada",
+    "indo": "kulit",
+    "inggris": "skin",
+    "onyomi": [],
+    "kunyomi": [
+      {
+        "kana": "はだ",
+        "romaji": "(hada)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "罰",
+    "furigana": "ばつ",
+    "romaji": "batsu",
+    "indo": "hukuman",
+    "inggris": "punishment",
+    "onyomi": [
+      {
+        "kana": "バツ",
+        "romaji": "(batsu)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "ばち",
+        "romaji": "(bachi)"
+      }
+    ],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "帆",
+    "furigana": "ほ",
+    "romaji": "ho",
+    "indo": "layar",
+    "inggris": "sail",
+    "onyomi": [
+      {
+        "kana": "ハン",
+        "romaji": "(han)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "ほ",
+        "romaji": "(ho)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "伴",
+    "furigana": "ともなう",
+    "romaji": "tomonau",
+    "indo": "menemani",
+    "inggris": "accompany",
+    "onyomi": [
+      {
+        "kana": "ハン",
+        "romaji": "(han)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "ともなう",
+        "romaji": "(tomonau)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "版",
+    "furigana": "はん",
+    "romaji": "han",
+    "indo": "edisi",
+    "inggris": "edition",
+    "onyomi": [
+      {
+        "kana": "ハン",
+        "romaji": "(han)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "班",
+    "furigana": "はん",
+    "romaji": "han",
+    "indo": "kelompok",
+    "inggris": "squad",
+    "onyomi": [
+      {
+        "kana": "ハン",
+        "romaji": "(han)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "般",
+    "furigana": "はん",
+    "romaji": "han",
+    "indo": "umum",
+    "inggris": "general",
+    "onyomi": [
+      {
+        "kana": "ハン",
+        "romaji": "(han)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "搬",
+    "furigana": "はん",
+    "romaji": "han",
+    "indo": "transportasi",
+    "inggris": "transport",
+    "onyomi": [
+      {
+        "kana": "ハン",
+        "romaji": "(han)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "批",
+    "furigana": "ひ",
+    "romaji": "hi",
+    "indo": "kritik",
+    "inggris": "criticism",
+    "onyomi": [
+      {
+        "kana": "ヒ",
+        "romaji": "(hi)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "肥",
+    "furigana": "ひ",
+    "romaji": "hi",
+    "indo": "pupuk",
+    "inggris": "fertilizer",
+    "onyomi": [
+      {
+        "kana": "ヒ",
+        "romaji": "(hi)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "こえる",
+        "romaji": "(koeru)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "秘",
+    "furigana": "ひ",
+    "romaji": "hi",
+    "indo": "rahasia",
+    "inggris": "secret",
+    "onyomi": [
+      {
+        "kana": "ヒ",
+        "romaji": "(hi)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "ひめる",
+        "romaji": "(himeru)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "被",
+    "furigana": "ひ",
+    "romaji": "hi",
+    "indo": "terkena",
+    "inggris": "suffer",
+    "onyomi": [
+      {
+        "kana": "ヒ",
+        "romaji": "(hi)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "こうむる",
+        "romaji": "(koumuru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "扉",
+    "furigana": "とびら",
+    "romaji": "tobira",
+    "indo": "pintu",
+    "inggris": "door",
+    "onyomi": [
+      {
+        "kana": "ヒ",
+        "romaji": "(hi)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "とびら",
+        "romaji": "(tobira)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "避",
+    "furigana": "さける",
+    "romaji": "sakeru",
+    "indo": "menghindari",
+    "inggris": "avoid",
+    "onyomi": [
+      {
+        "kana": "ヒ",
+        "romaji": "(hi)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "さける",
+        "romaji": "(sakeru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "尾",
+    "furigana": "お",
+    "romaji": "o",
+    "indo": "ekor",
+    "inggris": "tail",
+    "onyomi": [
+      {
+        "kana": "ビ",
+        "romaji": "(bi)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "お",
+        "romaji": "(o)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "備",
+    "furigana": "び",
+    "romaji": "bi",
+    "indo": "persiapan",
+    "inggris": "prepare",
+    "onyomi": [
+      {
+        "kana": "ビ",
+        "romaji": "(bi)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "そなえる",
+        "romaji": "(sonaeru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "姫",
+    "furigana": "ひめ",
+    "romaji": "hime",
+    "indo": "putri",
+    "inggris": "princess",
+    "onyomi": [],
+    "kunyomi": [
+      {
+        "kana": "ひめ",
+        "romaji": "(hime)"
+      }
+    ],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "評",
+    "furigana": "ひょう",
+    "romaji": "hyou",
+    "indo": "evaluasi",
+    "inggris": "evaluation",
+    "onyomi": [
+      {
+        "kana": "ヒョウ",
+        "romaji": "(hyou)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "標",
+    "furigana": "ひょう",
+    "romaji": "hyou",
+    "indo": "tanda",
+    "inggris": "mark, sign",
+    "onyomi": [
+      {
+        "kana": "ヒョウ",
+        "romaji": "(hyou)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "描",
+    "furigana": "びょう",
+    "romaji": "byou",
+    "indo": "menggambar",
+    "inggris": "depict",
+    "onyomi": [
+      {
+        "kana": "ビョウ",
+        "romaji": "(byou)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "えがく",
+        "romaji": "(egaku)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "浜",
+    "furigana": "はま",
+    "romaji": "hama",
+    "indo": "pantai",
+    "inggris": "beach",
+    "onyomi": [
+      {
+        "kana": "ヒン",
+        "romaji": "(hin)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "はま",
+        "romaji": "(hama)"
+      }
+    ],
+    "kategori": "Lokasi / Arah",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "瓶",
+    "furigana": "びん",
+    "romaji": "bin",
+    "indo": "botol",
+    "inggris": "bottle",
+    "onyomi": [
+      {
+        "kana": "ビン",
+        "romaji": "(bin)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "符",
+    "furigana": "ふ",
+    "romaji": "fu",
+    "indo": "simbol",
+    "inggris": "symbol",
+    "onyomi": [
+      {
+        "kana": "フ",
+        "romaji": "(fu)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "普",
+    "furigana": "ふ",
+    "romaji": "fu",
+    "indo": "umum",
+    "inggris": "universal",
+    "onyomi": [
+      {
+        "kana": "フ",
+        "romaji": "(fu)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "腐",
+    "furigana": "ふ",
+    "romaji": "fu",
+    "indo": "busuk",
+    "inggris": "rot",
+    "onyomi": [
+      {
+        "kana": "フ",
+        "romaji": "(fu)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "くさる",
+        "romaji": "(kusaru)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "敷",
+    "furigana": "ふ",
+    "romaji": "fu",
+    "indo": "menghamparkan",
+    "inggris": "spread",
+    "onyomi": [
+      {
+        "kana": "フ",
+        "romaji": "(fu)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "しく",
+        "romaji": "(shiku)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "武",
+    "furigana": "ぶ",
+    "romaji": "bu",
+    "indo": "militer",
+    "inggris": "military",
+    "onyomi": [
+      {
+        "kana": "ブ",
+        "romaji": "(bu)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "たけし",
+        "romaji": "(takeshi)"
+      }
+    ],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "舞",
+    "furigana": "ぶ",
+    "romaji": "bu",
+    "indo": "menari",
+    "inggris": "dance",
+    "onyomi": [
+      {
+        "kana": "ブ",
+        "romaji": "(bu)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "まう",
+        "romaji": "(mau)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "封",
+    "furigana": "ふう",
+    "romaji": "fuu",
+    "indo": "segel",
+    "inggris": "seal",
+    "onyomi": [
+      {
+        "kana": "フウ",
+        "romaji": "(fuu)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "ふう",
+        "romaji": "(fuu)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "幅",
+    "furigana": "はば",
+    "romaji": "haba",
+    "indo": "lebar",
+    "inggris": "width",
+    "onyomi": [
+      {
+        "kana": "フク",
+        "romaji": "(fuku)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "はば",
+        "romaji": "(haba)"
+      }
+    ],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "復",
+    "furigana": "ふく",
+    "romaji": "fuku",
+    "indo": "pemulihan",
+    "inggris": "restoration",
+    "onyomi": [
+      {
+        "kana": "フク",
+        "romaji": "(fuku)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "沸",
+    "furigana": "わく",
+    "romaji": "waku",
+    "indo": "mendidih",
+    "inggris": "boil",
+    "onyomi": [
+      {
+        "kana": "フツ",
+        "romaji": "(futsu)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "わく",
+        "romaji": "(waku)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "柄",
+    "furigana": "へい",
+    "romaji": "hei",
+    "indo": "pegangan",
+    "inggris": "handle",
+    "onyomi": [
+      {
+        "kana": "ヘイ",
+        "romaji": "(hei)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "え",
+        "romaji": "(e)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "癖",
+    "furigana": "へき",
+    "romaji": "heki",
+    "indo": "kebiasaan buruk",
+    "inggris": "habit",
+    "onyomi": [
+      {
+        "kana": "ヘキ",
+        "romaji": "(heki)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "くせ",
+        "romaji": "(kuse)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "編",
+    "furigana": "へん",
+    "romaji": "hen",
+    "indo": "menyusun",
+    "inggris": "compile",
+    "onyomi": [
+      {
+        "kana": "ヘン",
+        "romaji": "(hen)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "あむ",
+        "romaji": "(amu)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "弁",
+    "furigana": "べん",
+    "romaji": "ben",
+    "indo": "pidato",
+    "inggris": "speech",
+    "onyomi": [
+      {
+        "kana": "ベン",
+        "romaji": "(ben)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "わきまえる",
+        "romaji": "(wakimaeru)"
+      }
+    ],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "捕",
+    "furigana": "ほ",
+    "romaji": "ho",
+    "indo": "menangkap",
+    "inggris": "catch",
+    "onyomi": [
+      {
+        "kana": "ホ",
+        "romaji": "(ho)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "とらえる",
+        "romaji": "(toraeru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "補",
+    "furigana": "ほ",
+    "romaji": "ho",
+    "indo": "suplemen",
+    "inggris": "supplement",
+    "onyomi": [
+      {
+        "kana": "ホ",
+        "romaji": "(ho)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "おぎなう",
+        "romaji": "(oginau)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "募",
+    "furigana": "ぼ",
+    "romaji": "bo",
+    "indo": "merekrut",
+    "inggris": "recruit",
+    "onyomi": [
+      {
+        "kana": "ボ",
+        "romaji": "(bo)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "つのる",
+        "romaji": "(tsunoru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "暮",
+    "furigana": "く",
+    "romaji": "ku",
+    "indo": "hidup",
+    "inggris": "livelihood",
+    "onyomi": [
+      {
+        "kana": "ボ",
+        "romaji": "(bo)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "くらす",
+        "romaji": "(kurasu)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "抱",
+    "furigana": "ほう",
+    "romaji": "hou",
+    "indo": "memeluk",
+    "inggris": "embrace",
+    "onyomi": [
+      {
+        "kana": "ホウ",
+        "romaji": "(hou)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "だく",
+        "romaji": "(daku)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "豊",
+    "furigana": "ほう",
+    "romaji": "hou",
+    "indo": "melimpah",
+    "inggris": "abundant",
+    "onyomi": [
+      {
+        "kana": "ホウ",
+        "romaji": "(hou)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "ゆたか",
+        "romaji": "(yutaka)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "忙",
+    "furigana": "ぼう",
+    "romaji": "bou",
+    "indo": "sibuk",
+    "inggris": "busy",
+    "onyomi": [
+      {
+        "kana": "ボウ",
+        "romaji": "(bou)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "いそがしい",
+        "romaji": "(isogashii)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "坊",
+    "furigana": "ぼう",
+    "romaji": "bou",
+    "indo": "biarawan",
+    "inggris": "priest",
+    "onyomi": [
+      {
+        "kana": "ボウ",
+        "romaji": "(bou)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "房",
+    "furigana": "ぼう",
+    "romaji": "bou",
+    "indo": "kamar",
+    "inggris": "room",
+    "onyomi": [
+      {
+        "kana": "ボウ",
+        "romaji": "(bou)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "ふさ",
+        "romaji": "(fusa)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "肪",
+    "furigana": "ぼう",
+    "romaji": "bou",
+    "indo": "lemak",
+    "inggris": "fat",
+    "onyomi": [
+      {
+        "kana": "ボウ",
+        "romaji": "(bou)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "帽",
+    "furigana": "ぼう",
+    "romaji": "bō",
+    "indo": "topi",
+    "inggris": "hat",
+    "onyomi": [
+      {
+        "kana": "ボウ",
+        "romaji": "(bō)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "暴",
+    "furigana": "ぼう",
+    "romaji": "bō",
+    "indo": "kekerasan",
+    "inggris": "violence",
+    "onyomi": [
+      {
+        "kana": "ボウ",
+        "romaji": "(bō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "あばく",
+        "romaji": "(abaku)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "牧",
+    "furigana": "ぼく",
+    "romaji": "boku",
+    "indo": "peternakan",
+    "inggris": "pasture",
+    "onyomi": [
+      {
+        "kana": "ボク",
+        "romaji": "(boku)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "まき",
+        "romaji": "(maki)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "墨",
+    "furigana": "ぼく",
+    "romaji": "boku",
+    "indo": "tinta",
+    "inggris": "ink",
+    "onyomi": [
+      {
+        "kana": "ボク",
+        "romaji": "(boku)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "すみ",
+        "romaji": "(sumi)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "盆",
+    "furigana": "ぼん",
+    "romaji": "bon",
+    "indo": "nampan",
+    "inggris": "tray",
+    "onyomi": [
+      {
+        "kana": "ボン",
+        "romaji": "(bon)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "麻",
+    "furigana": "ま",
+    "romaji": "ma",
+    "indo": "rami",
+    "inggris": "hemp",
+    "onyomi": [
+      {
+        "kana": "マ",
+        "romaji": "(ma)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "あさ",
+        "romaji": "(asa)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "魔",
+    "furigana": "ま",
+    "romaji": "ma",
+    "indo": "iblis",
+    "inggris": "devil",
+    "onyomi": [
+      {
+        "kana": "マ",
+        "romaji": "(ma)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "埋",
+    "furigana": "まい",
+    "romaji": "mai",
+    "indo": "mengubur",
+    "inggris": "bury",
+    "onyomi": [
+      {
+        "kana": "マイ",
+        "romaji": "(mai)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "うめる",
+        "romaji": "(umeru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "幕",
+    "furigana": "まく",
+    "romaji": "maku",
+    "indo": "tirai",
+    "inggris": "curtain",
+    "onyomi": [
+      {
+        "kana": "マク",
+        "romaji": "(maku)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "密",
+    "furigana": "みつ",
+    "romaji": "mitsu",
+    "indo": "rahasia",
+    "inggris": "secret",
+    "onyomi": [
+      {
+        "kana": "ミツ",
+        "romaji": "(mitsu)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "脈",
+    "furigana": "みゃく",
+    "romaji": "myaku",
+    "indo": "nadi",
+    "inggris": "pulse",
+    "onyomi": [
+      {
+        "kana": "ミャク",
+        "romaji": "(myaku)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "免",
+    "furigana": "めん",
+    "romaji": "men",
+    "indo": "dibebaskan",
+    "inggris": "exempt",
+    "onyomi": [
+      {
+        "kana": "メン",
+        "romaji": "(men)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "まぬかれる",
+        "romaji": "(manukareru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "綿",
+    "furigana": "めん",
+    "romaji": "men",
+    "indo": "kapas",
+    "inggris": "cotton",
+    "onyomi": [
+      {
+        "kana": "メン",
+        "romaji": "(men)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "わた",
+        "romaji": "(wata)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "模",
+    "furigana": "も",
+    "romaji": "mo",
+    "indo": "pola",
+    "inggris": "pattern",
+    "onyomi": [
+      {
+        "kana": "モ",
+        "romaji": "(mo)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "黙",
+    "furigana": "もく",
+    "romaji": "moku",
+    "indo": "diam",
+    "inggris": "silent",
+    "onyomi": [
+      {
+        "kana": "モク",
+        "romaji": "(moku)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "だまる",
+        "romaji": "(damaru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "裕",
+    "furigana": "ゆう",
+    "romaji": "yū",
+    "indo": "kemakmuran",
+    "inggris": "abundance",
+    "onyomi": [
+      {
+        "kana": "ユウ",
+        "romaji": "(yū)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "ゆたか",
+        "romaji": "(yutaka)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "雄",
+    "furigana": "お",
+    "romaji": "o",
+    "indo": "jantan, pahlawan",
+    "inggris": "male, hero",
+    "onyomi": [
+      {
+        "kana": "ユウ",
+        "romaji": "(yū)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "お",
+        "romaji": "(o)"
+      }
+    ],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "与",
+    "furigana": "あた・える",
+    "romaji": "ataeru",
+    "indo": "memberikan",
+    "inggris": "to give",
+    "onyomi": [
+      {
+        "kana": "ヨ",
+        "romaji": "(yo)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "あたえる",
+        "romaji": "(ataeru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "預",
+    "furigana": "あず・ける",
+    "romaji": "azukeru",
+    "indo": "menitipkan",
+    "inggris": "to deposit",
+    "onyomi": [
+      {
+        "kana": "ヨ",
+        "romaji": "(yo)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "あずける",
+        "romaji": "(azukeru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "幼",
+    "furigana": "おさな・い",
+    "romaji": "osanai",
+    "indo": "anak-anak",
+    "inggris": "childish",
+    "onyomi": [
+      {
+        "kana": "ヨウ",
+        "romaji": "(yō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "おさない",
+        "romaji": "(osanai)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "揚",
+    "furigana": "あ・げる",
+    "romaji": "ageru",
+    "indo": "mengangkat",
+    "inggris": "to fry/hoist",
+    "onyomi": [
+      {
+        "kana": "ヨウ",
+        "romaji": "(yō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "あげる",
+        "romaji": "(ageru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "揺",
+    "furigana": "ゆ・れる",
+    "romaji": "yureru",
+    "indo": "bergoyang",
+    "inggris": "to shake",
+    "onyomi": [
+      {
+        "kana": "ヨウ",
+        "romaji": "(yō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "ゆれる",
+        "romaji": "(yureru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "溶",
+    "furigana": "と・ける",
+    "romaji": "tokeru",
+    "indo": "larut",
+    "inggris": "to dissolve",
+    "onyomi": [
+      {
+        "kana": "ヨウ",
+        "romaji": "(yō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "とける",
+        "romaji": "(tokeru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "腰",
+    "furigana": "こし",
+    "romaji": "koshi",
+    "indo": "pinggang",
+    "inggris": "waist",
+    "onyomi": [
+      {
+        "kana": "ヨウ",
+        "romaji": "(yō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "こし",
+        "romaji": "(koshi)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "養",
+    "furigana": "やしな・う",
+    "romaji": "yashinau",
+    "indo": "memelihara",
+    "inggris": "to foster",
+    "onyomi": [
+      {
+        "kana": "ヨウ",
+        "romaji": "(yō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "やしなう",
+        "romaji": "(yashinau)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "翌",
+    "furigana": "よく",
+    "romaji": "yoku",
+    "indo": "berikutnya",
+    "inggris": "next",
+    "onyomi": [
+      {
+        "kana": "ヨク",
+        "romaji": "(yoku)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "裸",
+    "furigana": "はだか",
+    "romaji": "hadaka",
+    "indo": "telanjang",
+    "inggris": "naked",
+    "onyomi": [
+      {
+        "kana": "ラ",
+        "romaji": "(ra)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "はだか",
+        "romaji": "(hadaka)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "雷",
+    "furigana": "かみなり",
+    "romaji": "kaminari",
+    "indo": "petir",
+    "inggris": "thunder",
+    "onyomi": [
+      {
+        "kana": "ライ",
+        "romaji": "(rai)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "かみなり",
+        "romaji": "(kaminari)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "絡",
+    "furigana": "から・む",
+    "romaji": "karamu",
+    "indo": "terikat",
+    "inggris": "to entangle",
+    "onyomi": [
+      {
+        "kana": "ラク",
+        "romaji": "(raku)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "からむ",
+        "romaji": "(karamu)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "乱",
+    "furigana": "みだ・れる",
+    "romaji": "midareru",
+    "indo": "kekacauan",
+    "inggris": "disorder",
+    "onyomi": [
+      {
+        "kana": "ラン",
+        "romaji": "(ran)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "みだれる",
+        "romaji": "(midareru)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "覧",
+    "furigana": "らん",
+    "romaji": "ran",
+    "indo": "melihat",
+    "inggris": "inspection",
+    "onyomi": [
+      {
+        "kana": "ラン",
+        "romaji": "(ran)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "欄",
+    "furigana": "らん",
+    "romaji": "ran",
+    "indo": "kolom",
+    "inggris": "column",
+    "onyomi": [
+      {
+        "kana": "ラン",
+        "romaji": "(ran)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "里",
+    "furigana": "さと",
+    "romaji": "sato",
+    "indo": "desa",
+    "inggris": "village",
+    "onyomi": [
+      {
+        "kana": "リ",
+        "romaji": "(ri)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "さと",
+        "romaji": "(sato)"
+      }
+    ],
+    "kategori": "Lokasi / Arah",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "裏",
+    "furigana": "うら",
+    "romaji": "ura",
+    "indo": "belakang",
+    "inggris": "reverse side",
+    "onyomi": [
+      {
+        "kana": "リ",
+        "romaji": "(ri)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "うら",
+        "romaji": "(ura)"
+      }
+    ],
+    "kategori": "Lokasi / Arah",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "離",
+    "furigana": "はな・れる",
+    "romaji": "hanareru",
+    "indo": "terpisah",
+    "inggris": "to separate",
+    "onyomi": [
+      {
+        "kana": "リ",
+        "romaji": "(ri)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "はなれる",
+        "romaji": "(hanareru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "陸",
+    "furigana": "りく",
+    "romaji": "riku",
+    "indo": "daratan",
+    "inggris": "land",
+    "onyomi": [
+      {
+        "kana": "リク",
+        "romaji": "(riku)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Lokasi / Arah",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "律",
+    "furigana": "りつ",
+    "romaji": "ritsu",
+    "indo": "hukum",
+    "inggris": "law",
+    "onyomi": [
+      {
+        "kana": "リツ",
+        "romaji": "(ritsu)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "略",
+    "furigana": "りゃく",
+    "romaji": "ryaku",
+    "indo": "singkatan",
+    "inggris": "abbreviation",
+    "onyomi": [
+      {
+        "kana": "リャク",
+        "romaji": "(ryaku)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "留",
+    "furigana": "と・める",
+    "romaji": "tomeru",
+    "indo": "menghentikan",
+    "inggris": "to stop",
+    "onyomi": [
+      {
+        "kana": "リュウ",
+        "romaji": "(ryū)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "とめる",
+        "romaji": "(tomeru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "粒",
+    "furigana": "つぶ",
+    "romaji": "tsubu",
+    "indo": "butiran",
+    "inggris": "grain",
+    "onyomi": [
+      {
+        "kana": "リュウ",
+        "romaji": "(ryū)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "つぶ",
+        "romaji": "(tsubu)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "了",
+    "furigana": "りょう",
+    "romaji": "ryō",
+    "indo": "pemahaman",
+    "inggris": "completion",
+    "onyomi": [
+      {
+        "kana": "リョウ",
+        "romaji": "(ryō)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "涼",
+    "furigana": "すず・しい",
+    "romaji": "suzushii",
+    "indo": "sejuk",
+    "inggris": "cool",
+    "onyomi": [
+      {
+        "kana": "リョウ",
+        "romaji": "(ryō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "すずしい",
+        "romaji": "(suzushii)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "僚",
+    "furigana": "りょう",
+    "romaji": "ryō",
+    "indo": "rekan kerja",
+    "inggris": "colleague",
+    "onyomi": [
+      {
+        "kana": "リョウ",
+        "romaji": "(ryō)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "領",
+    "furigana": "りょう",
+    "romaji": "ryō",
+    "indo": "wilayah",
+    "inggris": "territory",
+    "onyomi": [
+      {
+        "kana": "リョウ",
+        "romaji": "(ryō)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Lokasi / Arah",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "寮",
+    "furigana": "りょう",
+    "romaji": "ryō",
+    "indo": "asrama",
+    "inggris": "dormitory",
+    "onyomi": [
+      {
+        "kana": "リョウ",
+        "romaji": "(ryō)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "涙",
+    "furigana": "なみだ",
+    "romaji": "namida",
+    "indo": "air mata",
+    "inggris": "tears",
+    "onyomi": [
+      {
+        "kana": "ルイ",
+        "romaji": "(rui)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "なみだ",
+        "romaji": "(namida)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "令",
+    "furigana": "れい",
+    "romaji": "rei",
+    "indo": "perintah",
+    "inggris": "order",
+    "onyomi": [
+      {
+        "kana": "レイ",
+        "romaji": "(rei)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "励",
+    "furigana": "はげ・む",
+    "romaji": "hagemu",
+    "indo": "menyemangati",
+    "inggris": "to encourage",
+    "onyomi": [
+      {
+        "kana": "レイ",
+        "romaji": "(rei)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "はげむ",
+        "romaji": "(hagemu)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "鈴",
+    "furigana": "すず",
+    "romaji": "suzu",
+    "indo": "lonceng",
+    "inggris": "bell",
+    "onyomi": [
+      {
+        "kana": "レイ",
+        "romaji": "(rei)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "すず",
+        "romaji": "(suzu)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "零",
+    "furigana": "れい",
+    "romaji": "rei",
+    "indo": "nol",
+    "inggris": "zero",
+    "onyomi": [
+      {
+        "kana": "レイ",
+        "romaji": "(rei)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "こぼす",
+        "romaji": "(kobosu)"
+      }
+    ],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "齢",
+    "furigana": "れい",
+    "romaji": "rei",
+    "indo": "usia",
+    "inggris": "age",
+    "onyomi": [
+      {
+        "kana": "レイ",
+        "romaji": "(rei)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "よわい",
+        "romaji": "(yowai)"
+      }
+    ],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "劣",
+    "furigana": "おと・る",
+    "romaji": "otoru",
+    "indo": "inferior",
+    "inggris": "inferior",
+    "onyomi": [
+      {
+        "kana": "レツ",
+        "romaji": "(retsu)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "おとる",
+        "romaji": "(otoru)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "練",
+    "furigana": "ね・る",
+    "romaji": "neru",
+    "indo": "berlatih",
+    "inggris": "to practice",
+    "onyomi": [
+      {
+        "kana": "レン",
+        "romaji": "(ren)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "ねる",
+        "romaji": "(neru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "路",
+    "furigana": "ろ",
+    "romaji": "ro",
+    "indo": "jalan",
+    "inggris": "road",
+    "onyomi": [
+      {
+        "kana": "ロ",
+        "romaji": "(ro)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "みち",
+        "romaji": "(michi)"
+      }
+    ],
+    "kategori": "Lokasi / Arah",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "郎",
+    "furigana": "ろう",
+    "romaji": "rō",
+    "indo": "anak laki-laki",
+    "inggris": "son",
+    "onyomi": [
+      {
+        "kana": "ロウ",
+        "romaji": "(rō)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "朗",
+    "furigana": "ほが・らか",
+    "romaji": "hogaraka",
+    "indo": "cerah",
+    "inggris": "cheerful",
+    "onyomi": [
+      {
+        "kana": "ロウ",
+        "romaji": "(rō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "ほがらか",
+        "romaji": "(hogaraka)"
+      }
+    ],
+    "kategori": "Kualitas / Keadaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "廊",
+    "furigana": "ろう",
+    "romaji": "rō",
+    "indo": "koridor",
+    "inggris": "corridor",
+    "onyomi": [
+      {
+        "kana": "ロウ",
+        "romaji": "(rō)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Lokasi / Arah",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "漏",
+    "furigana": "も・れる",
+    "romaji": "moreru",
+    "indo": "bocor",
+    "inggris": "to leak",
+    "onyomi": [
+      {
+        "kana": "ロウ",
+        "romaji": "(rō)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "もれる",
+        "romaji": "(moreru)"
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "惑",
+    "furigana": "わく",
+    "romaji": "waku",
+    "indo": "bingung",
+    "inggris": "confusion",
+    "onyomi": [
+      {
+        "kana": "ワク",
+        "romaji": "(waku)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Emosi / Perasaan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "枠",
+    "furigana": "わく",
+    "romaji": "waku",
+    "indo": "bingkai",
+    "inggris": "frame",
+    "onyomi": [
+      {
+        "kana": "ワク",
+        "romaji": "(waku)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "湾",
+    "furigana": "わん",
+    "romaji": "wan",
+    "indo": "teluk",
+    "inggris": "bay",
+    "onyomi": [
+      {
+        "kana": "ワン",
+        "romaji": "(wan)"
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Lokasi / Arah",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "鍵",
+    "furigana": "かぎ",
+    "romaji": "kagi",
+    "indo": "kunci",
+    "inggris": "key",
+    "onyomi": [
+      {
+        "kana": "ken",
+        "romaji": ""
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "kagi",
+        "romaji": ""
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "鹿",
+    "furigana": "しか",
+    "romaji": "shika",
+    "indo": "rusa",
+    "inggris": "deer",
+    "onyomi": [
+      {
+        "kana": "roku",
+        "romaji": ""
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "shika",
+        "romaji": ""
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "袖",
+    "furigana": "そで",
+    "romaji": "sode",
+    "indo": "lengan baju",
+    "inggris": "sleeve",
+    "onyomi": [
+      {
+        "kana": "shū",
+        "romaji": ""
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "sode",
+        "romaji": ""
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "狙",
+    "furigana": "ねらう",
+    "romaji": "nerau",
+    "indo": "membidik",
+    "inggris": "aim at",
+    "onyomi": [
+      {
+        "kana": "so",
+        "romaji": ""
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "nera(u)",
+        "romaji": ""
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "爪",
+    "furigana": "つめ",
+    "romaji": "tsume",
+    "indo": "kuku, cakar",
+    "inggris": "claw, nail",
+    "onyomi": [
+      {
+        "kana": "sō",
+        "romaji": ""
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "tsume",
+        "romaji": ""
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "貼",
+    "furigana": "はる",
+    "romaji": "haru",
+    "indo": "menempel",
+    "inggris": "paste",
+    "onyomi": [
+      {
+        "kana": "chō",
+        "romaji": ""
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "ha(ru)",
+        "romaji": ""
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "鍋",
+    "furigana": "なべ",
+    "romaji": "nabe",
+    "indo": "panci",
+    "inggris": "pot",
+    "onyomi": [
+      {
+        "kana": "ka",
+        "romaji": ""
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "nabe",
+        "romaji": ""
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "謎",
+    "furigana": "なぞ",
+    "romaji": "nazo",
+    "indo": "teka-teki",
+    "inggris": "riddle",
+    "onyomi": [
+      {
+        "kana": "mei",
+        "romaji": ""
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "nazo",
+        "romaji": ""
+      }
+    ],
+    "kategori": "Konsep Abstrak",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "丼",
+    "furigana": "どんぶり",
+    "romaji": "donburi",
+    "indo": "mangkuk nasi",
+    "inggris": "rice bowl",
+    "onyomi": [
+      {
+        "kana": "ton",
+        "romaji": ""
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "donburi",
+        "romaji": ""
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "諦",
+    "furigana": "あきらめる",
+    "romaji": "akirameru",
+    "indo": "menyerah",
+    "inggris": "give up",
+    "onyomi": [
+      {
+        "kana": "tei",
+        "romaji": ""
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "akira(meru)",
+        "romaji": ""
+      }
+    ],
+    "kategori": "Tindakan",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "膝",
+    "furigana": "ひざ",
+    "romaji": "hiza",
+    "indo": "lutut",
+    "inggris": "knee",
+    "onyomi": [
+      {
+        "kana": "shitsu",
+        "romaji": ""
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "hiza",
+        "romaji": ""
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "虹",
+    "furigana": "にじ",
+    "romaji": "niji",
+    "indo": "pelangi",
+    "inggris": "rainbow",
+    "onyomi": [
+      {
+        "kana": "kō",
+        "romaji": ""
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "niji",
+        "romaji": ""
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "麺",
+    "furigana": "めん",
+    "romaji": "men",
+    "indo": "mie",
+    "inggris": "noodles",
+    "onyomi": [
+      {
+        "kana": "men",
+        "romaji": ""
+      }
+    ],
+    "kunyomi": [],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "蜂",
+    "furigana": "はち",
+    "romaji": "hachi",
+    "indo": "lebah, tawon",
+    "inggris": "bee, wasp",
+    "onyomi": [
+      {
+        "kana": "ホウ",
+        "romaji": "(hou)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "はち",
+        "romaji": "(hachi)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "餅",
+    "furigana": "もち",
+    "romaji": "mochi",
+    "indo": "kue beras",
+    "inggris": "rice cake",
+    "onyomi": [
+      {
+        "kana": "ヘイ",
+        "romaji": "(hei)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "もち",
+        "romaji": "(mochi)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "脇",
+    "furigana": "わき",
+    "romaji": "waki",
+    "indo": "samping, ketiak",
+    "inggris": "side, armpit",
+    "onyomi": [
+      {
+        "kana": "キョウ",
+        "romaji": "(kyou)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "わき",
+        "romaji": "(waki)"
+      }
+    ],
+    "kategori": "Lokasi / Arah",
+    "jlpt": "N2"
+  },
+  {
+    "kanji": "柿",
+    "furigana": "かき",
+    "romaji": "kaki",
+    "indo": "kesemek",
+    "inggris": "persimmon",
+    "onyomi": [
+      {
+        "kana": "シ",
+        "romaji": "(shi)"
+      }
+    ],
+    "kunyomi": [
+      {
+        "kana": "かき",
+        "romaji": "(kaki)"
+      }
+    ],
+    "kategori": "Benda / Objek",
+    "jlpt": "N2"
+  }
+]

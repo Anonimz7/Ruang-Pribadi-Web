@@ -1,0 +1,809 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSV Shuffler & Memorizer (URL List, Filter, dan Mode Acak)</title>
+    <style>
+        /* --- SKEMA WARNA BARU & Global Styles --- */
+        :root {
+            --bg-color: #0d1b2a; 
+            --card-color: #1b2d45; 
+            --text-color: #e0f0ff; 
+            --primary-color: #00bcd4; 
+            --secondary-color: #ff5722; 
+            --load-btn-color: #4caf50; 
+            --toggle-btn-color: #9c27b0; 
+            --shadow-dark: rgba(0, 0, 0, 0.7);
+        }
+
+        body {
+            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            box-sizing: border-box;
+            overflow-x: hidden;
+        }
+        
+        #particles-js { position: fixed; width: 100%; height: 100%; top: 0; left: 0; z-index: 1; }
+        
+        /* --- Main Content Container --- */
+        .container {
+            position: relative;
+            z-index: 10;
+            max-width: 650px;
+            width: 100%;
+            padding: 30px;
+            background: rgba(18, 41, 64, 0.95);
+            border-radius: 16px;
+            box-shadow: 0 15px 40px var(--shadow-dark), 0 0 0 1px rgba(255, 255, 255, 0.05);
+            text-align: center;
+            backdrop-filter: blur(5px);
+        }
+
+        h1 { color: var(--primary-color); font-size: 2.5em; margin-bottom: 20px; text-shadow: 0 3px 5px rgba(0, 0, 0, 0.4); font-weight: 800; }
+
+        /* --- Bagian Pemuatan (Load Section) --- */
+        #load-section {
+            background-color: #1b3a5d;
+            padding: 20px;
+            border-radius: 12px;
+            margin-bottom: 30px;
+            border: 1px solid #334e6e;
+        }
+
+        /* Input Group Styles */
+        .input-group { margin-bottom: 15px; }
+        #filterInput, #columnRangeInput, #urlInput, #search-data, #data-select {
+            display: block !important;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid var(--primary-color);
+            background-color: #0f2235; 
+            color: var(--text-color);
+            width: 100%;
+            box-sizing: border-box;
+            font-size: 1em;
+            appearance: none; 
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%2300bcd4'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 10px center;
+            background-size: 18px;
+        }
+        #data-select option {
+            background-color: #1b2d45;
+            color: var(--text-color);
+        }
+        
+        .custom-file-upload { 
+            border: 2px dashed var(--primary-color); 
+            padding: 12px 20px; 
+            border-radius: 8px; 
+            cursor: pointer; 
+            display: inline-block; 
+            margin-bottom: 15px; 
+            transition: all 0.3s; 
+            font-weight: 600; 
+            font-size: 1.1em;
+            color: var(--primary-color);
+        }
+        .custom-file-upload:hover { background-color: rgba(0, 188, 212, 0.2); }
+
+        /* --- Custom Checkbox Styling --- */
+        #load-section .mode-toggle-group {
+            text-align: left;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        #load-section input[type="checkbox"] {
+            width: 20px !important;
+            height: 20px;
+            display: inline-block;
+            margin-right: 10px;
+            vertical-align: middle;
+            cursor: pointer;
+            appearance: none;
+            border: 2px solid var(--primary-color);
+            border-radius: 4px;
+            background-color: #0f2235;
+        }
+        #load-section input[type="checkbox"]:checked {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M4 12.6111L8.92308 17.5L20 6.5' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        #load-section label[for="shuffleMode"] {
+            vertical-align: middle;
+            font-weight: 500; 
+            color: var(--text-color);
+            cursor: pointer;
+        }
+
+        /* --- Tombol Aksi --- */
+        button {
+            padding: 14px 24px; 
+            margin: 8px;
+            border-radius: 10px;
+            border: none;
+            color: white;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            min-width: 120px; 
+            box-sizing: border-box;
+            letter-spacing: 0.5px;
+            font-size: 1em;
+        }
+        
+        /* Tombol Utama Load */
+        #loadBtn { 
+            background-color: var(--load-btn-color);
+            box-shadow: 0 5px 15px rgba(76, 175, 80, 0.4);
+        }
+        #loadBtn:hover { 
+            background-color: #43a047;
+            transform: translateY(-2px);
+        }
+        
+        /* Tombol View Data */
+        #viewDataBtn {
+            background-color: #008CBA;
+            box-shadow: 0 5px 15px rgba(0, 140, 186, 0.4);
+        }
+        #viewDataBtn:hover {
+            background-color: #007399;
+            transform: translateY(-2px);
+        }
+
+        /* Tombol Navigasi Kartu */
+        .controls { display: flex; justify-content: center; flex-wrap: wrap; margin-top: 20px; }
+        
+        #nextBtn { 
+            background-color: var(--secondary-color);
+            box-shadow: 0 5px 15px rgba(255, 87, 34, 0.4);
+        }
+        #nextBtn:hover { 
+            background-color: #e64a19; 
+            transform: translateY(-2px);
+        }
+
+        #toggleBtn { 
+            background-color: var(--primary-color);
+            box-shadow: 0 5px 15px rgba(0, 188, 212, 0.4);
+        }
+        #toggleBtn:hover { 
+            background-color: #00a0b2;
+            transform: translateY(-2px);
+        }
+        
+        /* FITUR 1: Reverse Button */
+        #reverseBtn { 
+            background-color: var(--toggle-btn-color);
+            box-shadow: 0 5px 15px rgba(156, 39, 176, 0.4);
+        }
+        #reverseBtn:hover { 
+            background-color: #8e24aa;
+            transform: translateY(-2px);
+        }
+
+        /* --- Flashcard Styles & Animations --- */
+        #flashcard {
+            padding: 40px; border-radius: 16px; background-color: var(--card-color);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5), inset 0 0 15px rgba(0, 0, 0, 0.4);
+            min-height: 180px; display: none; 
+            border-bottom: 5px solid var(--secondary-color);
+            transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+            transform-origin: center center; position: relative;
+        }
+        #cardQuestion { 
+            font-size: 2.4em; 
+            font-weight: 700; 
+            color: var(--text-color); 
+            margin: 0 0 20px 0; 
+            line-height: 1.2; 
+        }
+        #cardAnswer { 
+            font-size: 1.8em; 
+            color: var(--primary-color); 
+            margin-top: 15px; 
+            font-weight: 500; 
+            text-shadow: 0 0 8px rgba(0, 188, 212, 0.6); 
+            opacity: 1; height: auto; visibility: visible;
+            transition: opacity 0.4s ease-in-out, visibility 0s, margin 0.4s ease-in-out;
+        }
+        .hidden-visual { 
+            opacity: 0 !important; height: 0 !important; visibility: hidden !important; 
+            margin-top: 0 !important; 
+            transition: opacity 0.4s ease-in-out, visibility 0s linear 0.4s, margin 0.4s ease-in-out;
+        }
+        .hidden-visual.visible { 
+            opacity: 1 !important; height: auto !important; visibility: visible !important; 
+            margin-top: 15px !important;
+            transition: opacity 0.4s ease-in-out, visibility 0s linear 0s, margin 0.4s ease-in-out;
+        }
+        
+        /* KELAS UNTUK ANIMASI */
+        .reset-transform { opacity: 0 !important; transform: scale(0.8) !important; }
+        /*.slide-out-right { opacity: 0; transform: translateX(100%) scale(0.9); }*/
+        .slide-out-left { opacity: 0; transform: translateX(-100%) scale(0.9); }
+        .zoom-out { opacity: 0; transform: scale(0.6) rotateZ(-5deg); }
+        .flip-out { opacity: 0; transform: rotateY(90deg); }
+
+        .counter { margin-top: 20px; color: #a0b0c0; font-size: 1em; font-style: italic; }
+        
+        /* FITUR 6: PROGRESS BAR */
+        #progressBarContainer {
+            width: 100%; height: 10px; background-color: #334e6e; border-radius: 5px; margin-bottom: 15px; overflow: hidden;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4);
+        }
+        #progressBar {
+            height: 100%; width: 0%; background: linear-gradient(90deg, #f44336, var(--secondary-color), var(--primary-color));
+            transition: width 0.3s ease;
+        }
+        
+        /* Menyembunyikan input file bawaan */
+        input[type="file"] {
+            display: none;
+        }
+        
+        /* --- VIEW DATA TABLE STYLES --- */
+        #dataTableContainer {
+            margin-top: 30px; 
+            text-align: left; 
+            padding: 15px; 
+            background: #1b2d45; 
+            border-radius: 10px;
+            border: 1px solid #334e6e;
+        }
+        #dataTableContainer table {
+            width: 100%; 
+            border-collapse: collapse; 
+            font-size: 0.9em;
+        }
+        #dataTableContainer th, #dataTableContainer td {
+            padding: 10px; 
+            border: 1px solid #334e6e;
+            text-align: left;
+        }
+        #dataTableContainer th {
+            background-color: #0f2235;
+            color: var(--primary-color);
+            position: sticky; /* Agar header tabel tetap terlihat saat scroll */
+            top: 0;
+            z-index: 2;
+        }
+        
+        /* Media Query untuk Mobile */
+        @media (max-width: 650px) {
+            .container { padding: 20px; }
+            h1 { font-size: 2em; }
+            #cardQuestion { font-size: 1.8em; }
+            #cardAnswer { font-size: 1.4em; }
+            button { width: 100%; margin: 6px 0; }
+            .controls { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="particles-js"></div>
+
+    <div class="container">
+        <h1>✨ Flashcard Belajar CSV</h1>
+        
+        <p style="color: #a0b0c0; margin-bottom: 25px;">Pilih data dari daftar, atau masukkan URL/unggah file.</p>
+        
+        <div id="load-section">
+            
+            <div class="input-group">
+                <input type="text" id="search-data" placeholder="Cari atau pilih set data dari daftar...">
+            </div>
+            <div class="input-group">
+                <select id="data-select" onchange="updateUrlFromSelect()">
+                    <option value="">-- Pilih Set Data Tersimpan --</option>
+                </select>
+            </div>
+            
+            <div class="input-group">
+                <input type="text" id="urlInput" placeholder="URL CSV publik Sheets (diisi otomatis dari daftar atau manual)">
+            </div>
+
+            <div class="input-group">
+                <input type="text" id="filterInput" placeholder="Filter teks: Pisahkan dengan koma jika lebih dari satu (opsional)">
+            </div>
+            
+            <div class="input-group">
+                <input type="text" id="columnRangeInput" placeholder="Rentang Baris Data: Contoh 1-20 (Baris A2/B2 hingga A21/B21)">
+            </div>
+            
+            <div class="mode-toggle-group">
+                <input type="checkbox" id="shuffleMode" checked>
+                <label for="shuffleMode">Mode Acak (Hilangkan centang untuk urutan sequential)</label>
+            </div>
+
+            <label for="csvFile" class="custom-file-upload">
+                📂 Pilih File CSV
+            </label>
+            <input type="file" id="csvFile" accept=".csv">
+            <span id="fileNameDisplay" style="display: block; margin-bottom: 15px; font-style: italic; color: #a0b0c0;">Belum ada file dipilih atau URL dimasukkan.</span>
+
+            <button id="loadBtn" onclick="processCSV()">▶️ Muat Data</button>
+            <button id="viewDataBtn" onclick="toggleDataTable()" style="background-color: #008CBA; margin-top: 10px;">📋 Lihat Data Tabel</button>
+        </div>
+        
+        <div id="dataTableContainer" style="display:none;">
+            <h3 style="color: var(--primary-color); margin-top: 0;">Preview Data CSV (Baris Data)</h3>
+            <p style="color: #a0b0c0; font-size: 0.9em;">Gunakan nomor baris ini untuk kolom 'Rentang Baris Data' (misalnya 1-10).</p>
+            <div style="max-height: 400px; overflow-y: auto;">
+                <table id="dataTable">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Kolom 1 (Q)</th>
+                            <th>Kolom 2 (A)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        </tbody>
+                </table>
+            </div>
+            <button onclick="toggleDataTable()" style="background-color: #cc0000; margin-top: 15px; width: 100%;">Tutup Tabel</button>
+        </div>
+        
+        <div id="message" style="color: var(--secondary-color); margin-top: 20px; font-weight: bold;"></div>
+        
+        <div id="progressBarContainer">
+            <div id="progressBar"></div>
+        </div>
+
+        <div id="flashcard">
+            <div id="cardDisplay">
+                <p id="cardQuestion">Unggah data untuk memulai sesi belajar.</p>
+                <p id="cardAnswer" class="hidden-visual"></p>
+            </div>
+            
+            <div class="controls">
+                <button id="toggleBtn" onclick="toggleCard()">Tampilkan Jawaban</button> 
+                <button id="reverseBtn" onclick="toggleReverseMode()">Balik Mode (Q/A)</button>
+                <button id="nextBtn" onclick="nextCard()">Kartu Berikutnya &raquo;</button>
+            </div>
+            <p class="counter">Kartu ke: <span id="cardCounter">0</span> dari <span id="totalCards">0</span></p>
+        </div>
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof particlesJS !== 'undefined') {
+                particlesJS('particles-js', {
+                  "particles": { "number": { "value": 80, "density": { "enable": true, "value_area": 800 } }, "color": { "value": "#00bcd4" }, "shape": { "type": "circle" }, "opacity": { "value": 0.5 }, "size": { "value": 3, "random": true }, "line_linked": { "enable": true, "distance": 150, "color": "#ff5722", "opacity": 0.4, "width": 1 }, "move": { "enable": true, "speed": 2, "out_mode": "out", "bounce": false } },
+                  "interactivity": { "detect_on": "canvas", "events": { "onhover": { "enable": true, "mode": "grab" }, "onclick": { "enable": true, "mode": "push" }, "resize": true } },
+                  "retina_detect": true
+                });
+            }
+            
+            loadDataList();
+            document.getElementById('search-data').addEventListener('input', filterDataList);
+        });
+    </script>
+
+<script>
+    let rawData = [];
+    let shuffledData = [];
+    let currentCardIndex = 0;
+    let isReversed = false; 
+    let globalDataList = []; 
+    
+	// --'slide-out-right',-- 
+    const animationEffects = ['slide-out-left', 'zoom-out', 'flip-out'];
+    
+    // --- Data List Functions ---
+    async function loadDataList() {
+        const messageDiv = document.getElementById('message');
+        try {
+            const response = await fetch('data.json');
+            if (!response.ok) {
+                return;
+            }
+            globalDataList = await response.json();
+            filterDataList(); 
+        } catch (error) {
+            messageDiv.textContent = `❌ Error memuat daftar data: ${error.message}`;
+            document.getElementById('data-select').style.display = 'none';
+        }
+    }
+    
+    function filterDataList() {
+        const selectEl = document.getElementById('data-select');
+        const searchInput = document.getElementById('search-data').value.toLowerCase();
+        
+        selectEl.innerHTML = '<option value="">-- Pilih Set Data Tersimpan --</option>';
+        
+        const filteredList = globalDataList.filter(item => 
+            item.nama.toLowerCase().includes(searchInput)
+        );
+        
+        filteredList.forEach(item => {
+            const option = document.createElement('option');
+            option.value = item.url;
+            option.textContent = item.nama;
+            selectEl.appendChild(option);
+        });
+        
+        if (filteredList.length === 0 && searchInput.length > 0) {
+            const option = document.createElement('option');
+            option.value = '';
+            option.textContent = 'Tidak ada hasil.';
+            selectEl.appendChild(option);
+        }
+    }
+    
+    function updateUrlFromSelect() {
+        const selectEl = document.getElementById('data-select');
+        const urlInput = document.getElementById('urlInput');
+        
+        urlInput.value = selectEl.value;
+        document.getElementById('search-data').value = '';
+        
+        if (selectEl.value) {
+            processCSV();
+        }
+    }
+
+    // --- Helper Functions ---
+    function displayFileName() {
+        const fileInput = document.getElementById('csvFile');
+        const display = document.getElementById('fileNameDisplay');
+        const file = fileInput.files[0];
+        const url = document.getElementById('urlInput').value.trim();
+
+        if (file) {
+            display.textContent = `File terpilih: ${file.name}`;
+            document.getElementById('urlInput').value = ''; 
+        } else if (url) {
+             const selectedData = globalDataList.find(item => item.url === url);
+             display.textContent = selectedData 
+                 ? `Menggunakan data: ${selectedData.nama} (dari URL)`
+                 : `Menggunakan data dari URL: ${url.substring(0, 30)}...`;
+        } else {
+            display.textContent = "Belum ada file dipilih atau URL dimasukkan.";
+        }
+    }
+
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+    }
+    
+    function updateProgress() {
+        const total = shuffledData.length;
+        let percentage = (currentCardIndex / total) * 100;
+        
+        document.getElementById('progressBar').style.width = percentage.toFixed(2) + '%';
+        
+        if (currentCardIndex === 0 && total > 0) {
+             const shouldShuffle = document.getElementById('shuffleMode').checked;
+             document.getElementById('message').textContent = shouldShuffle 
+                ? "🎉 Sesi belajar selesai! File diacak ulang dan diulang dari awal."
+                : "🎉 Sesi belajar selesai! File diulang dari awal (sequential).";
+        } else if (currentCardIndex !== 0) {
+             document.getElementById('message').textContent = "";
+        }
+    }
+    
+    // --- VIEW DATA TABLE FUNCTIONS (BARU) ---
+    
+    /**
+     * FUNGSI UNTUK MENAMPILKAN/MENYEMBUNYIKAN TABEL
+     */
+    function toggleDataTable() {
+        const container = document.getElementById('dataTableContainer');
+        const messageDiv = document.getElementById('message');
+
+        if (container.style.display === 'block') {
+            container.style.display = 'none';
+            messageDiv.textContent = "";
+            return;
+        }
+
+        if (rawData.length === 0) {
+            messageDiv.textContent = "❗ Muat data CSV terlebih dahulu sebelum melihat tabel.";
+            container.style.display = 'none';
+            return;
+        }
+
+        displayDataTableContent();
+    }
+
+    /**
+     * FUNGSI BARU: Menampilkan data mentah (rawData) dalam bentuk tabel bernomor.
+     */
+    function displayDataTableContent() {
+        const container = document.getElementById('dataTableContainer');
+        const tbody = document.getElementById('dataTable').querySelector('tbody');
+        
+        tbody.innerHTML = '';
+        
+        // Iterasi melalui rawData
+        rawData.forEach((item, index) => {
+            const row = tbody.insertRow();
+            const rowNumber = row.insertCell();
+            const colQ = row.insertCell();
+            const colA = row.insertCell();
+
+            rowNumber.textContent = index + 1; 
+            
+            // Tampilkan konten
+            colQ.textContent = item[0] || '—';
+            colA.textContent = item[1] || '—';
+
+            // Styling baris bergantian
+            if (index % 2 === 1) {
+                row.style.backgroundColor = '#254467';
+            }
+        });
+
+        // Tampilkan kontainer tabel
+        container.style.display = 'block';
+        document.getElementById('message').textContent = `Tabel menampilkan ${rawData.length} baris data yang valid.`;
+        
+        // Gulir ke atas agar tabel terlihat (optional)
+        container.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+    // ------------------------------------------
+
+    /**
+     * FUNGSI UTAMA UNTUK MEMPROSES TEXT CSV
+     */
+    function handleCSVText(text, messageDiv, isFilteredByRow, rowStart, rowEnd, filters) {
+        let lines = text.trim().split('\n').filter(line => line.trim() !== '');
+
+        if (lines.length === 0) {
+             messageDiv.textContent = "❗ Data CSV kosong.";
+             document.getElementById('flashcard').style.display = 'none';
+             return;
+        }
+
+        const firstLine = lines[0];
+        let delimiter = ',';
+        if (firstLine.includes(';')) {
+            delimiter = ';';
+        }
+
+        // --- Hapus Baris Header (Baris 1) ---
+        if (lines.length > 0) {
+            lines.shift(); 
+        }
+        
+        // --- Parsing Awal (sebelum filter baris) ---
+        let tempRawData = lines.map(line => {
+            const columns = line.split(delimiter).map(c => c.trim().replace(/^"|"$/g, ''));
+            
+            // Pastikan kolom 1 dan 2 ada
+            if (columns.length > 0 && columns.length > 1) {
+                const question = columns[0];
+                const answer = columns[1];
+                return [question, answer];
+            }
+            return ['', '']; 
+        });
+        
+        // --- Terapkan Filter Baris (Vertikal) pada tempRawData ---
+        if (isFilteredByRow) {
+            // Input '1' (Baris Data ke-1, yaitu A2/B2) kini menjadi index 0
+            const correctedRowStart = Math.max(0, rowStart - 1); // Jika input 1, 1-1 = 0
+            const correctedRowEnd = rowEnd === Infinity ? Infinity : rowEnd; 
+            
+            tempRawData = tempRawData.slice(correctedRowStart, correctedRowEnd); 
+        }
+        
+        // --- PEMBERSIHAN AKHIR: Filter baris kosong ---
+        rawData = tempRawData.filter(item => item[0] !== '' && item[1] !== ''); 
+        
+        
+        // --- LOGIKA MODE ACAK/SEQUENTIAL & Filter Teks ---
+        let filteredData = rawData;
+        
+        // Terapkan Filter Teks
+        if (filters.length > 0) {
+            filteredData = rawData.filter(item => {
+                const itemText = (item[0] + ' ' + item[1]).toLowerCase();
+                return filters.some(filter => itemText.includes(filter));
+            });
+        }
+        
+        const shouldShuffle = document.getElementById('shuffleMode').checked;
+        if (shouldShuffle) {
+            shuffleArray(filteredData);
+        }
+
+        shuffledData = filteredData;
+        currentCardIndex = 0;
+        
+        if (shuffledData.length === 0) {
+             messageDiv.textContent = filters.length > 0
+                ? `❗ Data kosong atau tidak ada yang cocok dengan filter.`
+                : "❗ Data CSV kosong atau rentang baris tidak valid.";
+             document.getElementById('flashcard').style.display = 'none';
+             return;
+        }
+
+        document.getElementById('totalCards').textContent = shuffledData.length;
+        document.getElementById('flashcard').style.display = 'block';
+        
+        const modeStatus = shouldShuffle ? "acak" : "sequential";
+        const displayStart = isFilteredByRow ? rowStart : 1;
+        const rowMessage = isFilteredByRow ? ` dari Baris Data ${displayStart} hingga ${rowEnd === Infinity ? 'akhir' : rowEnd}` : '';
+        messageDiv.textContent = `✅ Berhasil memuat ${shuffledData.length} pasangan data dalam mode ${modeStatus}${rowMessage}.`;
+        
+        displayCard(false); 
+        updateProgress();
+    }
+
+
+    // --- Core Logic ---
+
+    function processCSV() {
+        const fileInput = document.getElementById('csvFile');
+        const url = document.getElementById('urlInput').value.trim();
+        const filterTextRaw = document.getElementById('filterInput').value.trim().toLowerCase();
+        const filters = filterTextRaw ? filterTextRaw.split(',').map(f => f.trim()).filter(f => f.length > 0) : [];
+        const messageDiv = document.getElementById('message');
+        
+        // Sembunyikan tabel preview saat proses baru dimulai
+        document.getElementById('dataTableContainer').style.display = 'none';
+
+        const rangeInput = document.getElementById('columnRangeInput').value.trim();
+        let rowStart = 1; 
+        let rowEnd = Infinity; 
+        let isFilteredByRow = false;
+
+        if (rangeInput) {
+            const parts = rangeInput.split('-');
+            if (parts.length === 2 && !isNaN(parseInt(parts[0])) && !isNaN(parseInt(parts[1]))) {
+                rowStart = Math.max(1, parseInt(parts[0])); 
+                rowEnd = parseInt(parts[1]); 
+                if (rowStart > rowEnd) [rowStart, rowEnd] = [rowEnd, rowStart]; 
+                isFilteredByRow = true;
+            } else if (parts.length === 1 && !isNaN(parseInt(parts[0]))) {
+                rowStart = Math.max(1, parseInt(parts[0])); 
+                rowEnd = Infinity;
+                isFilteredByRow = true;
+            }
+        }
+        
+
+        displayFileName(); 
+        
+        // --- KASUS 1: Pemuatan dari URL ---
+        if (url) {
+            messageDiv.textContent = "⏳ Memuat data dari URL...";
+            fetch(url)
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error(`Gagal memuat: ${response.statusText} (${response.status})`);
+                    }
+                    return response.text();
+                })
+                .then(text => {
+                    handleCSVText(text, messageDiv, isFilteredByRow, rowStart, rowEnd, filters);
+                })
+                .catch(error => {
+                    messageDiv.textContent = `❌ Error memuat URL: ${error.message}. Pastikan URL publik dan CORS diizinkan.`;
+                    document.getElementById('flashcard').style.display = 'none';
+                });
+            return;
+        }
+
+        // --- KASUS 2: Pemuatan dari File Lokal ---
+        const file = fileInput.files[0];
+        if (!file) {
+            messageDiv.textContent = "❗ Pilih file CSV atau masukkan URL/pilih dari daftar!";
+            return;
+        }
+
+        const reader = new FileReader();
+
+        reader.onload = function(e) {
+            handleCSVText(e.target.result, messageDiv, isFilteredByRow, rowStart, rowEnd, filters);
+        };
+
+        reader.onerror = function() {
+            messageDiv.textContent = "❌ Error saat membaca file.";
+        };
+
+        reader.readAsText(file);
+    }
+
+    // FITUR 1: Toggle Reverse Mode
+    function toggleReverseMode() {
+        isReversed = !isReversed;
+        document.getElementById('reverseBtn').textContent = isReversed ? "Mode: Jawaban (A/Q)" : "Mode: Pertanyaan (Q/A)";
+        displayCard(false);
+    }
+    
+    function displayCard(showAnswer) {
+        if (shuffledData.length === 0) return;
+
+        const data = shuffledData[currentCardIndex];
+        const answerEl = document.getElementById('cardAnswer');
+        const toggleButton = document.getElementById('toggleBtn');
+
+        let q = data[0]; 
+        let a = data[1]; 
+
+        if (isReversed) [q, a] = [a, q];
+
+        document.getElementById('cardQuestion').textContent = q || "Kosong";
+        answerEl.textContent = a || "Kosong";
+
+        if (showAnswer) {
+            answerEl.classList.remove('hidden-visual');
+            answerEl.classList.add('visible');
+            toggleButton.textContent = "Sembunyikan Jawaban";
+        } else {
+            answerEl.classList.remove('visible');
+            answerEl.classList.add('hidden-visual');
+            toggleButton.textContent = "Tampilkan Jawaban";
+        }
+        
+        document.getElementById('cardCounter').textContent = currentCardIndex + 1;
+    }
+
+    function toggleCard() {
+        const answerEl = document.getElementById('cardAnswer');
+        const isVisible = answerEl.classList.contains('visible'); 
+        
+        displayCard(!isVisible); 
+    }
+
+    /**
+     * Logika Next Card dengan Animasi dan Looping (FIXED SCROLL)
+     */
+    function nextCard() {
+        if (shuffledData.length === 0) return;
+
+        const flashcardEl = document.getElementById('flashcard');
+
+        const randomEffect = animationEffects[Math.floor(Math.random() * animationEffects.length)];
+        
+        flashcardEl.classList.add(randomEffect);
+        
+        setTimeout(() => {
+            flashcardEl.classList.remove(randomEffect);
+
+            currentCardIndex = (currentCardIndex + 1) % shuffledData.length;
+
+            displayCard(false); 
+            
+            flashcardEl.classList.add('reset-transform');
+            
+            void flashcardEl.offsetHeight; 
+            
+            flashcardEl.classList.remove('reset-transform');
+            
+            updateProgress();
+        }, 500); 
+    }
+</script>
+
+</body>
+</html>
+
+

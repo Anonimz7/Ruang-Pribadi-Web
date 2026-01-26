@@ -1,0 +1,1271 @@
+{
+  "hiragana": [
+    {
+      "kategori": "standar",
+      "karakter": "あ",
+      "romaji": "a"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "い",
+      "romaji": "i"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "う",
+      "romaji": "u"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "え",
+      "romaji": "e"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "お",
+      "romaji": "o"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "か",
+      "romaji": "ka"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "き",
+      "romaji": "ki"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "く",
+      "romaji": "ku"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "け",
+      "romaji": "ke"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "こ",
+      "romaji": "ko"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "さ",
+      "romaji": "sa"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "し",
+      "romaji": "shi"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "す",
+      "romaji": "su"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "せ",
+      "romaji": "se"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "そ",
+      "romaji": "so"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "た",
+      "romaji": "ta"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "ち",
+      "romaji": "chi"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "つ",
+      "romaji": "tsu"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "て",
+      "romaji": "te"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "と",
+      "romaji": "to"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "な",
+      "romaji": "na"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "に",
+      "romaji": "ni"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "ぬ",
+      "romaji": "nu"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "ね",
+      "romaji": "ne"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "の",
+      "romaji": "no"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "は",
+      "romaji": "ha"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "ひ",
+      "romaji": "hi"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "ふ",
+      "romaji": "fu"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "へ",
+      "romaji": "he"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "ほ",
+      "romaji": "ho"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "ま",
+      "romaji": "ma"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "み",
+      "romaji": "mi"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "む",
+      "romaji": "mu"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "め",
+      "romaji": "me"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "も",
+      "romaji": "mo"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "や",
+      "romaji": "ya"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "ゆ",
+      "romaji": "yu"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "よ",
+      "romaji": "yo"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "ら",
+      "romaji": "ra"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "り",
+      "romaji": "ri"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "る",
+      "romaji": "ru"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "れ",
+      "romaji": "re"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "ろ",
+      "romaji": "ro"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "わ",
+      "romaji": "wa"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "を",
+      "romaji": "wo/o"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "ん",
+      "romaji": "n"
+    },
+    {
+      "kategori": "arkais",
+      "karakter": "ゐ",
+      "romaji": "wi"
+    },
+    {
+      "kategori": "arkais",
+      "karakter": "ゑ",
+      "romaji": "we"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "が",
+      "romaji": "ga"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "ぎ",
+      "romaji": "gi"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "ぐ",
+      "romaji": "gu"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "げ",
+      "romaji": "ge"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "ご",
+      "romaji": "go"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "ざ",
+      "romaji": "za"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "じ",
+      "romaji": "ji"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "ず",
+      "romaji": "zu"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "ぜ",
+      "romaji": "ze"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "ぞ",
+      "romaji": "zo"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "だ",
+      "romaji": "da"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "ぢ",
+      "romaji": "ji"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "づ",
+      "romaji": "zu"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "で",
+      "romaji": "de"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "ど",
+      "romaji": "do"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "ば",
+      "romaji": "ba"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "び",
+      "romaji": "bi"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "ぶ",
+      "romaji": "bu"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "べ",
+      "romaji": "be"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "ぼ",
+      "romaji": "bo"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "ぱ",
+      "romaji": "pa"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "ぴ",
+      "romaji": "pi"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "ぷ",
+      "romaji": "pu"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "ぺ",
+      "romaji": "pe"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "ぽ",
+      "romaji": "po"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "きゃ",
+      "romaji": "kya"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "きゅ",
+      "romaji": "kyu"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "きょ",
+      "romaji": "kyo"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "しゃ",
+      "romaji": "sha"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "しゅ",
+      "romaji": "shu"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "しょ",
+      "romaji": "sho"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "ちゃ",
+      "romaji": "cha"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "ちゅ",
+      "romaji": "chu"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "ちょ",
+      "romaji": "cho"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "にゃ",
+      "romaji": "nya"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "にゅ",
+      "romaji": "nyu"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "にょ",
+      "romaji": "nyo"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "ひゃ",
+      "romaji": "hya"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "ひゅ",
+      "romaji": "hyu"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "ひょ",
+      "romaji": "hyo"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "みゃ",
+      "romaji": "mya"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "みゅ",
+      "romaji": "myu"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "みょ",
+      "romaji": "myo"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "りゃ",
+      "romaji": "rya"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "りゅ",
+      "romaji": "ryu"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "りょ",
+      "romaji": "ryo"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "ぎゃ",
+      "romaji": "gya"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "ぎゅ",
+      "romaji": "gyu"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "ぎょ",
+      "romaji": "gyo"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "じゃ",
+      "romaji": "ja"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "じゅ",
+      "romaji": "ju"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "じょ",
+      "romaji": "jo"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "ぢゃ",
+      "romaji": "ja"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "ぢゅ",
+      "romaji": "ju"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "ぢょ",
+      "romaji": "jo"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "びゃ",
+      "romaji": "bya"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "びゅ",
+      "romaji": "byu"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "びょ",
+      "romaji": "byo"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "ぴゃ",
+      "romaji": "pya"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "ぴゅ",
+      "romaji": "pyu"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "ぴょ",
+      "romaji": "pyo"
+    },
+    {
+      "kategori": "sokuon",
+      "karakter": "っ",
+      "romaji": ""
+    }
+  ],
+  "katakana": [
+    {
+      "kategori": "standar",
+      "karakter": "ア",
+      "romaji": "a"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "イ",
+      "romaji": "i"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "ウ",
+      "romaji": "u"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "エ",
+      "romaji": "e"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "オ",
+      "romaji": "o"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "カ",
+      "romaji": "ka"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "キ",
+      "romaji": "ki"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "ク",
+      "romaji": "ku"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "ケ",
+      "romaji": "ke"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "コ",
+      "romaji": "ko"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "サ",
+      "romaji": "sa"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "シ",
+      "romaji": "shi"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "ス",
+      "romaji": "su"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "セ",
+      "romaji": "se"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "ソ",
+      "romaji": "so"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "タ",
+      "romaji": "ta"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "チ",
+      "romaji": "chi"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "ツ",
+      "romaji": "tsu"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "テ",
+      "romaji": "te"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "ト",
+      "romaji": "to"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "ナ",
+      "romaji": "na"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "ニ",
+      "romaji": "ni"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "ヌ",
+      "romaji": "nu"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "ネ",
+      "romaji": "ne"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "ノ",
+      "romaji": "no"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "ハ",
+      "romaji": "ha"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "ヒ",
+      "romaji": "hi"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "フ",
+      "romaji": "fu"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "ヘ",
+      "romaji": "he"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "ホ",
+      "romaji": "ho"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "マ",
+      "romaji": "ma"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "ミ",
+      "romaji": "mi"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "ム",
+      "romaji": "mu"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "メ",
+      "romaji": "me"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "モ",
+      "romaji": "mo"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "ヤ",
+      "romaji": "ya"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "ユ",
+      "romaji": "yu"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "ヨ",
+      "romaji": "yo"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "ラ",
+      "romaji": "ra"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "リ",
+      "romaji": "ri"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "ル",
+      "romaji": "ru"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "レ",
+      "romaji": "re"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "ロ",
+      "romaji": "ro"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "ワ",
+      "romaji": "wa"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "ヲ",
+      "romaji": "wo/o"
+    },
+    {
+      "kategori": "standar",
+      "karakter": "ン",
+      "romaji": "n"
+    },
+    {
+      "kategori": "arkais",
+      "karakter": "ヰ",
+      "romaji": "wi"
+    },
+    {
+      "kategori": "arkais",
+      "karakter": "ヱ",
+      "romaji": "we"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "ガ",
+      "romaji": "ga"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "ギ",
+      "romaji": "gi"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "グ",
+      "romaji": "gu"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "ゲ",
+      "romaji": "ge"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "ゴ",
+      "romaji": "go"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "ザ",
+      "romaji": "za"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "ジ",
+      "romaji": "ji"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "ズ",
+      "romaji": "zu"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "ゼ",
+      "romaji": "ze"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "ゾ",
+      "romaji": "zo"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "ダ",
+      "romaji": "da"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "ヂ",
+      "romaji": "ji"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "ヅ",
+      "romaji": "zu"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "デ",
+      "romaji": "de"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "ド",
+      "romaji": "do"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "バ",
+      "romaji": "ba"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "ビ",
+      "romaji": "bi"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "ブ",
+      "romaji": "bu"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "ベ",
+      "romaji": "be"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "ボ",
+      "romaji": "bo"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "パ",
+      "romaji": "pa"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "ピ",
+      "romaji": "pi"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "プ",
+      "romaji": "pu"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "ペ",
+      "romaji": "pe"
+    },
+    {
+      "kategori": "tenten_maru",
+      "karakter": "ポ",
+      "romaji": "po"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "キャ",
+      "romaji": "kya"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "キュ",
+      "romaji": "kyu"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "キョ",
+      "romaji": "kyo"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "シャ",
+      "romaji": "sha"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "シュ",
+      "romaji": "shu"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "ショ",
+      "romaji": "sho"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "チャ",
+      "romaji": "cha"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "チュ",
+      "romaji": "chu"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "チョ",
+      "romaji": "cho"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "ニャ",
+      "romaji": "nya"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "ニュ",
+      "romaji": "nyu"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "ニョ",
+      "romaji": "nyo"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "ヒャ",
+      "romaji": "hya"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "ヒュ",
+      "romaji": "hyu"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "ヒョ",
+      "romaji": "hyo"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "ミャ",
+      "romaji": "mya"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "ミュ",
+      "romaji": "myu"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "ミョ",
+      "romaji": "myo"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "リャ",
+      "romaji": "rya"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "リュ",
+      "romaji": "ryu"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "リョ",
+      "romaji": "ryo"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "ギャ",
+      "romaji": "gya"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "ギュ",
+      "romaji": "gyu"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "ギョ",
+      "romaji": "gyo"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "ジャ",
+      "romaji": "ja"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "ジュ",
+      "romaji": "ju"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "ジョ",
+      "romaji": "jo"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "ビャ",
+      "romaji": "bya"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "ビュ",
+      "romaji": "byu"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "ビョ",
+      "romaji": "byo"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "ピャ",
+      "romaji": "pya"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "ピュ",
+      "romaji": "pyu"
+    },
+    {
+      "kategori": "yoon",
+      "karakter": "ピョ",
+      "romaji": "pyo"
+    },
+    {
+      "kategori": "sokuon",
+      "karakter": "ッ",
+      "romaji": ""
+    },
+    {
+      "kategori": "tambahan",
+      "karakter": "イェ",
+      "romaji": "ye"
+    },
+    {
+      "kategori": "tambahan",
+      "karakter": "ウィ",
+      "romaji": "wi"
+    },
+    {
+      "kategori": "tambahan",
+      "karakter": "ウェ",
+      "romaji": "we"
+    },
+    {
+      "kategori": "tambahan",
+      "karakter": "ウォ",
+      "romaji": "wo"
+    },
+    {
+      "kategori": "tambahan",
+      "karakter": "ヴァ",
+      "romaji": "va"
+    },
+    {
+      "kategori": "tambahan",
+      "karakter": "ヴィ",
+      "romaji": "vi"
+    },
+    {
+      "kategori": "tambahan",
+      "karakter": "ヴ",
+      "romaji": "vu"
+    },
+    {
+      "kategori": "tambahan",
+      "karakter": "ヴェ",
+      "romaji": "ve"
+    },
+    {
+      "kategori": "tambahan",
+      "karakter": "ヴォ",
+      "romaji": "vo"
+    },
+    {
+      "kategori": "tambahan",
+      "karakter": "シェ",
+      "romaji": "she"
+    },
+    {
+      "kategori": "tambahan",
+      "karakter": "ジェ",
+      "romaji": "je"
+    },
+    {
+      "kategori": "tambahan",
+      "karakter": "チェ",
+      "romaji": "che"
+    },
+    {
+      "kategori": "tambahan",
+      "karakter": "ティ",
+      "romaji": "ti"
+    },
+    {
+      "kategori": "tambahan",
+      "karakter": "トゥ",
+      "romaji": "tu"
+    },
+    {
+      "kategori": "tambahan",
+      "karakter": "テュ",
+      "romaji": "tyu"
+    },
+    {
+      "kategori": "tambahan",
+      "karakter": "ディ",
+      "romaji": "di"
+    },
+    {
+      "kategori": "tambahan",
+      "karakter": "ドゥ",
+      "romaji": "du"
+    },
+    {
+      "kategori": "tambahan",
+      "karakter": "デュ",
+      "romaji": "dyu"
+    },
+    {
+      "kategori": "tambahan",
+      "karakter": "ツァ",
+      "romaji": "tsa"
+    },
+    {
+      "kategori": "tambahan",
+      "karakter": "ツィ",
+      "romaji": "tsi"
+    },
+    {
+      "kategori": "tambahan",
+      "karakter": "ツェ",
+      "romaji": "tse"
+    },
+    {
+      "kategori": "tambahan",
+      "karakter": "ツォ",
+      "romaji": "tso"
+    },
+    {
+      "kategori": "tambahan",
+      "karakter": "ファ",
+      "romaji": "fa"
+    },
+    {
+      "kategori": "tambahan",
+      "karakter": "フィ",
+      "romaji": "fi"
+    },
+    {
+      "kategori": "tambahan",
+      "karakter": "フェ",
+      "romaji": "fe"
+    },
+    {
+      "kategori": "tambahan",
+      "karakter": "フォ",
+      "romaji": "fo"
+    },
+    {
+      "kategori": "tambahan",
+      "karakter": "フュ",
+      "romaji": "fyu"
+    },
+    {
+      "kategori": "tambahan",
+      "karakter": "クァ",
+      "romaji": "kwa"
+    },
+    {
+      "kategori": "tambahan",
+      "karakter": "クィ",
+      "romaji": "kwi"
+    },
+    {
+      "kategori": "tambahan",
+      "karakter": "クェ",
+      "romaji": "kwe"
+    },
+    {
+      "kategori": "tambahan",
+      "karakter": "クォ",
+      "romaji": "kwo"
+    },
+    {
+      "kategori": "tambahan",
+      "karakter": "グァ",
+      "romaji": "gwa"
+    },
+    {
+      "kategori": "tambahan",
+      "karakter": "グィ",
+      "romaji": "gwi"
+    },
+    {
+      "kategori": "tambahan",
+      "karakter": "グェ",
+      "romaji": "gwe"
+    },
+    {
+      "kategori": "tambahan",
+      "karakter": "グォ",
+      "romaji": "gwo"
+    },
+    {
+      "kategori": "tambahan",
+      "karakter": "リェ",
+      "romaji": "rye"
+    }
+  ]
+}

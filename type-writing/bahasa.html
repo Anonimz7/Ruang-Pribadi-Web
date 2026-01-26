@@ -1,0 +1,1069 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Natural Typewriter - Enhanced</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: "Segoe UI", "Hiragino Sans GB", "Microsoft YaHei", "Meiryo", "Apple SD Gothic Neo", sans-serif;
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f9fa;
+            color: #212529;
+            box-sizing: border-box;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        #chat-container {
+            background-color: white;
+            border-radius: 12px;
+            padding: 25px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+            display: flex;
+            flex-direction: column;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        h2 {
+            color: #2b2d42;
+            margin-top: 0;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #edf2f4;
+            transition: color 0.3s ease, border-color 0.3s ease;
+            font-size: 24px;
+        }
+        #response {
+            min-height: 200px;
+            max-height: 400px;
+            border: 1px solid #e9ecef;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            white-space: pre-wrap;
+            background-color: #f8fafc;
+            font-size: 18px;
+            overflow-y: auto;
+            line-height: 1.7;
+            flex-grow: 1;
+            transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+        }
+        #user-input {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #e9ecef;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            font-size: 16px;
+            resize: vertical;
+            min-height: 100px;
+            font-family: inherit;
+            transition: border 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+            box-sizing: border-box;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+        }
+        #user-input:focus {
+            border-color: #4361ee;
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.1);
+        }
+        .button-group {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+        button {
+            background-color: #4361ee;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            flex-grow: 1;
+            text-align: center;
+        }
+        button:hover:not(:disabled) {
+            background-color: #3a56d4;
+            transform: translateY(-1px);
+        }
+        button:active:not(:disabled) {
+            transform: translateY(0);
+        }
+        button:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+
+         button#stop-button {
+            background-color: #e53935;
+        }
+         button#stop-button:hover:not(:disabled) {
+            background-color: #c62828;
+         }
+
+         button#pause-resume-button {
+             background-color: #ffb300;
+         }
+         button#pause-resume-button:hover:not(:disabled) {
+             background-color: #ffa000;
+         }
+
+
+        .cursor {
+            display: inline-block;
+            width: 7px;
+            height: 20px;
+            background-color: #2b2d42;
+            animation: blink 1.1s infinite;
+            vertical-align: middle;
+            margin-left: 2px;
+            opacity: 0.8;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 0.8; }
+            50% { opacity: 0.2; }
+        }
+        .language-indicator {
+            font-size: 14px;
+            color: #6c757d;
+            margin-bottom: 12px;
+            font-style: italic;
+            display: flex;
+            align-items: center;
+        }
+        .language-indicator::before {
+            content: "🌐";
+            margin-right: 6px;
+            font-style: normal;
+        }
+        .typing-indicator {
+            font-size: 13px;
+            color: #6c757d;
+            margin-top: 8px;
+            display: flex;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .typing-indicator::before {
+            content: "✍️";
+            margin-right: 6px;
+            font-style: normal;
+        }
+        .typing-indicator.visible {
+            opacity: 1;
+        }
+
+        /* Progress Bar Styling */
+        #progress-bar-container {
+            width: 100%;
+            height: 6px;
+            background-color: #e9ecef;
+            border-radius: 3px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            transition: background-color 0.3s ease;
+        }
+        #progress-bar {
+            width: 0%;
+            height: 100%;
+            background-color: #4361ee;
+            transition: width 0.1s ease-out, background-color 0.3s ease;
+        }
+
+        /* Config Toggle Button Styling (Sticky in corner) */
+        #config-toggle-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: #4361ee;
+            color: white;
+            border: none;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+            z-index: 1000;
+        }
+        #config-toggle-button:hover {
+            background-color: #3a56d4;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+         #config-toggle-button:active {
+            transform: translateY(0);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+         }
+
+
+        /* Modal Backdrop */
+        #modal-backdrop {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            backdrop-filter: blur(4px);
+            z-index: 990;
+            display: none;
+            transition: opacity 0.3s ease-in-out;
+            opacity: 0;
+        }
+         #modal-backdrop.visible {
+             display: block;
+             opacity: 1;
+         }
+
+
+        /* Config Popup Styling (Centered Modal - Wider Rectangle, Minimalist Scroll) */
+        #config-popup {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 450px; /* Width adjusted for a more stacked look */
+            max-width: 95%; /* Ensure it doesn't exceed screen width */
+            background-color: white;
+            border-radius: 16px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+            padding: 30px;
+            display: flex; /* Always flex */
+            flex-direction: column;
+            z-index: 999;
+            /* --- Re-enabled scrollbar with minimalist styling --- */
+            overflow-y: auto;
+            overflow-x: hidden; /* Hide horizontal scroll */
+            /* --- Scrollbar Styling --- */
+            scrollbar-width: thin; /* Firefox */
+            scrollbar-color: #adb5bd #f1f1f1; /* Firefox */
+            /* --- */
+
+            transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+            opacity: 0; /* Start hidden */
+            pointer-events: none; /* Disable interaction when hidden */
+
+            box-sizing: border-box;
+            max-height: 95vh; /* Adjusted max-height for responsiveness */
+            position: fixed;
+            z-index: 1000;
+        }
+
+        /* Webkit (Chrome, Safari) scrollbar styling */
+        #config-popup::-webkit-scrollbar {
+            width: 6px;
+        }
+        #config-popup::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        #config-popup::-webkit-scrollbar-thumb {
+            background: #adb5bd;
+            border-radius: 10px;
+        }
+        #config-popup::-webkit-scrollbar-thumb:hover {
+            background: #9ca3aa;
+        }
+        /* --- */
+
+        #config-popup.visible {
+            opacity: 1; /* Make visible */
+            pointer-events: auto; /* Enable interaction when visible */
+            transform: translate(-50%, -50%);
+        }
+
+
+        #config-popup h3 {
+            margin-top: 0;
+            margin-bottom: 25px;
+            color: #2b2d42;
+            border-bottom: 1px solid #e0e0e0;
+            padding-bottom: 15px;
+            font-size: 20px;
+            transition: color 0.3s ease, border-color 0.3s ease;
+        }
+
+        /* Layout for config items within the popup - Flex container for vertical stacking of rows */
+        #language-configs {
+             display: flex;
+             flex-direction: column; /* Stack language rows vertically */
+             gap: 10px; /* Space between language rows */
+             margin-bottom: 20px;
+             padding-bottom: 10px;
+        }
+
+        /* Style for each language config row (now acts as a block) */
+        #language-configs > div {
+            display: flex;
+            flex-direction: column; /* Stack elements vertically within each language block */
+            align-items: flex-start; /* Align items to the start */
+            gap: 8px; /* Space between elements within a block (label, speed group, pause group) */
+            background-color: #f2f2f2;
+            padding: 15px 20px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+            width: 100%; /* Take full width of the popup */
+            box-sizing: border-box;
+        }
+
+         /* Style for the Language Name Label */
+         #language-configs > div > label:first-child {
+             flex: unset;
+             margin-bottom: 5px;
+             font-size: 15px;
+             color: #343a40;
+             white-space: normal;
+             overflow: visible;
+             text-overflow: clip;
+             font-weight: 600;
+         }
+
+         /* Container for Base Speed inputs */
+         .speed-input-group {
+             display: flex;
+             align-items: center;
+             gap: 8px;
+             flex-grow: 0;
+             flex-basis: auto;
+             width: 100%;
+             justify-content: space-between;
+         }
+         /* Container for Pause Multiplier inputs */
+          .pause-input-group {
+             display: flex;
+             align-items: center;
+             gap: 8px;
+             flex-grow: 0;
+             flex-basis: auto;
+             width: 100%;
+             justify-content: space-between;
+             margin-top: 5px;
+         }
+
+
+        .speed-input-group label,
+        .pause-input-group label {
+            margin-bottom: 0;
+            font-size: 14px;
+            color: #555;
+            flex-shrink: 0;
+             white-space: nowrap;
+        }
+
+        #language-configs input[type="number"] {
+            flex: 0 0 50px; /* Input width */
+            padding: 5px 8px;
+            border: 1px solid #ced4da;
+            border-radius: 6px;
+            font-size: 14px;
+             background-color: #ffffff;
+             color: #212121;
+             transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+             box-sizing: border-box;
+             text-align: center;
+        }
+         #language-configs input[type="number"]:focus {
+              border-color: #4361ee;
+              box-shadow: 0 0 0 2px rgba(67, 97, 238, 0.1);
+              outline: none;
+         }
+
+        /* Description text styling */
+         #config-popup p {
+             font-size: 12px;
+             color: #6c757d;
+             margin-top: 0;
+             margin-bottom: 20px;
+             line-height: 1.4;
+         }
+
+         /* Dark Mode Toggle styling */
+         #config-popup .dark-mode-toggle {
+             margin-top: 20px;
+             padding-top: 20px;
+             border-top: 1px solid #e0e0e0;
+             text-align: center;
+             display: flex;
+             justify-content: center;
+             align-items: center;
+             gap: 10px;
+         }
+
+          #config-popup .dark-mode-toggle button {
+             padding: 10px 20px;
+             font-size: 15px;
+             background-color: #adb5bd;
+             color: #212121;
+             flex-grow: 0;
+             width: auto;
+             border-radius: 8px;
+             font-weight: normal;
+             transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+             display: flex;
+             align-items: center;
+             justify-content: center;
+          }
+          #config-popup .dark-mode-toggle button:hover:not(:disabled) {
+              background-color: #9ca3aa;
+          }
+           #config-popup .dark-mode-toggle button i {
+               margin-right: 8px;
+           }
+
+           /* Close Button Styling */
+           #config-popup .close-button {
+               position: absolute;
+               top: 15px;
+               right: 15px;
+               background: none;
+               border: none;
+               font-size: 20px;
+               color: #6c757d;
+               cursor: pointer;
+               padding: 5px;
+               line-height: 1;
+               transition: color 0.2s ease;
+               z-index: 10;
+           }
+            #config-popup .close-button:hover {
+                color: #212529;
+            }
+
+
+        /* Dark Mode Styling for Main Page */
+        body.dark-mode {
+            background-color: #1a1a2e;
+            color: #e0e0e0;
+        }
+        body.dark-mode #chat-container {
+            background-color: #2a2a4a;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+        }
+         body.dark-mode h2 {
+            color: #9b86f0;
+            border-color: #4f3a8c;
+        }
+        body.dark-mode #response {
+            background-color: #3a3a5a;
+            border-color: #4f3a8c;
+            color: #e0e0e0;
+        }
+        body.dark-mode #user-input {
+            background-color: #2a2a4a;
+            border-color: #4f3a8c;
+            color: #e0e0e0;
+        }
+         body.dark-mode #user-input::placeholder {
+            color: #b0b0b0;
+         }
+         body.dark-mode #user-input:focus {
+            border-color: #8a6fef;
+            box-shadow: 0 0 0 3px rgba(138, 111, 239, 0.3);
+        }
+         body.dark-mode .cursor {
+            background-color: #8a6fef;
+        }
+        body.dark-mode .language-indicator,
+        body.dark-mode .typing-indicator {
+            color: #b0b0b0;
+        }
+        body.dark-mode #progress-bar-container {
+            background-color: #4f3a8c;
+         }
+         body.dark-mode #progress-bar {
+             background-color: #8a6fef;
+         }
+         body.dark-mode .button-group button:not(:disabled) {
+             background-color: #8a6fef;
+             color: #ffffff;
+         }
+          body.dark-mode .button-group button:not(:disabled):hover {
+             background-color: #7b5ae9;
+         }
+         body.dark-mode button#stop-button:not(:disabled) {
+             background-color: #e76f51;
+         }
+         body.dark-mode button#stop-button:not(:disabled):hover {
+             background-color: #d65f42;
+         }
+         body.dark-mode button#pause-resume-button:not(:disabled) {
+             background-color: #fca311;
+             color: #212121;
+         }
+          body.dark-mode button#pause-resume-button:not(:disabled):hover {
+              background-color: #eb9300;
+         }
+         body.dark-mode button:disabled {
+             background-color: #555555;
+             color: #b0b0b0;
+         }
+
+
+        /* Dark Mode Styling for Popup and Backdrop */
+         body.dark-mode #config-toggle-button {
+            background-color: #8a6fef;
+            color: #ffffff;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+        }
+         body.dark-mode #config-toggle-button:hover {
+            background-color: #7b5ae9;
+         }
+
+         body.dark-mode #modal-backdrop {
+             background-color: rgba(0, 0, 0, 0.85);
+             backdrop-filter: blur(5px);
+         }
+
+        body.dark-mode #config-popup {
+            background-color: #2a2a4a;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.6);
+            scrollbar-color: #4f3a8c #2a2a4a; /* Firefox dark mode scrollbar */
+        }
+         body.dark-mode #config-popup::-webkit-scrollbar-track {
+            background: #2a2a4a; /* Webkit dark mode scrollbar track */
+         }
+         body.dark-mode #config-popup::-webkit-scrollbar-thumb {
+            background: #8a6fef; /* Webkit dark mode scrollbar thumb */
+         }
+         body.dark-mode #config-popup::-webkit-scrollbar-thumb:hover {
+             background: #7b5ae9;
+         }
+
+         body.dark-mode #config-popup h3 {
+            color: #9b86f0;
+            border-color: #4f3a8c;
+        }
+         body.dark-mode #language-configs > div {
+             background-color: #3a3a5a;
+             border-color: #4f3a8c;
+         }
+         body.dark-mode #language-configs label {
+             color: #e0e0e0;
+         }
+          body.dark-mode .speed-input-group label,
+          body.dark-mode .pause-input-group label {
+              color: #b0b0b0;
+          }
+          body.dark-mode #language-configs input[type="number"] {
+             background-color: #2a2a4a;
+             border-color: #555;
+             color: #e0e0e0;
+         }
+         body.dark-mode #config-popup p {
+             color: #b0b0b0;
+         }
+         body.dark-mode #config-popup .dark-mode-toggle {
+             border-color: #4f3a8c;
+         }
+         body.dark-mode #config-popup .dark-mode-toggle button:not(:disabled) {
+             background-color: #fca311;
+             color: #212121;
+         }
+         body.dark-mode #config-popup .dark-mode-toggle button:hover:not(:disabled) {
+             background-color: #eb9300;
+         }
+
+         /* Dark Mode Close Button Style */
+         body.dark-mode #config-popup .close-button {
+             color: #b0b0b0;
+         }
+         body.dark-mode #config-popup .close-button:hover {
+            color: #e0e0e0;
+         }
+
+
+        /* Responsive adjustments */
+        /* Styles for wider screens (desktop/tablet) */
+        @media (min-width: 501px) { /* Apply these styles for screens wider than 500px */
+             #config-popup {
+                width: 450px; /* Consistent width for wider screens */
+                max-width: 95%;
+                padding: 25px;
+                max-height: 90vh;
+             }
+              #config-popup h3 {
+                 font-size: 18px;
+                 margin-bottom: 20px;
+                 padding-bottom: 10px;
+             }
+
+             #language-configs {
+                 gap: 10px;
+                 margin-bottom: 15px;
+                 flex-direction: column; /* Stack rows */
+             }
+
+              #language-configs > div {
+                 padding: 12px 15px;
+                 gap: 6px; /* Adjusted gap */
+                 flex-direction: column; /* Stack elements within block */
+              }
+
+               #language-configs > div > label:first-child {
+                   font-size: 14px;
+                   margin-bottom: 4px;
+               }
+
+              .speed-input-group,
+              .pause-input-group {
+                  gap: 6px; /* Adjusted gap */
+                  flex-direction: row; /* Elements in row */
+                  justify-content: space-between; /* Space between label/input */
+              }
+
+              .speed-input-group label,
+              .pause-input-group label {
+                  font-size: 13px;
+                  white-space: nowrap;
+                  flex-shrink: 0;
+              }
+
+              #language-configs input[type="number"] {
+                 width: 50px;
+                 font-size: 13px;
+                 padding: 4px 6px;
+                 flex: unset;
+              }
+               #config-popup p {
+                   font-size: 11px;
+                   margin-bottom: 15px;
+               }
+               #config-popup .dark-mode-toggle {
+                   margin-top: 15px;
+                   padding-top: 15px;
+                   gap: 8px;
+               }
+               #config-popup .dark-mode-toggle button {
+                   width: auto;
+                   font-size: 14px;
+               }
+                #config-popup .close-button {
+                    top: 10px;
+                    right: 10px;
+                    font-size: 18px;
+                }
+        }
+
+         /* Styles for smaller screens (mobile) */
+         @media (max-width: 500px) {
+            #config-popup {
+                 width: calc(100% - 30px);
+                 padding: 15px;
+                 max-height: 95vh;
+            }
+             #config-popup h3 {
+                font-size: 17px;
+                 margin-bottom: 15px;
+                 padding-bottom: 10px;
+             }
+
+              #language-configs {
+                 gap: 8px;
+                 margin-bottom: 15px;
+                 flex-direction: column;
+             }
+              #language-configs > div {
+                  padding: 10px 12px;
+                  gap: 5px;
+                  flex-direction: column;
+              }
+
+               #language-configs > div > label:first-child {
+                    font-size: 14px;
+                    margin-bottom: 3px;
+               }
+
+               .speed-input-group,
+               .pause-input-group {
+                   gap: 5px;
+                   flex-direction: row;
+                   justify-content: space-between;
+               }
+
+               .speed-input-group label,
+               .pause-input-group label {
+                   font-size: 12px;
+                   white-space: nowrap;
+                   flex-shrink: 0;
+               }
+
+                #language-configs input[type="number"] {
+                   width: 45px;
+                   font-size: 12px;
+                   padding: 3px 5px;
+                   flex: unset;
+                }
+                #config-popup p {
+                   font-size: 10px;
+                   margin-bottom: 10px;
+                }
+                 #config-popup .dark-mode-toggle {
+                     margin-top: 10px;
+                     padding-top: 10px;
+                     gap: 6px;
+                 }
+                  #config-popup .dark-mode-toggle button {
+                      font-size: 12px;
+                      padding: 8px 15px;
+                      width: 100%;
+                  }
+                   #config-popup .dark-mode-toggle button i {
+                      margin-right: 5px;
+                   }
+                  #config-popup .close-button {
+                       top: 8px;
+                       right: 8px;
+                       font-size: 16px;
+                   }
+         }
+
+          @media (max-width: 380px) { /* Adjustments for very small screens */
+             #config-toggle-button {
+                bottom: 15px;
+                right: 15px;
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+             #config-popup {
+                 padding: 8px;
+            }
+              #config-popup h3 {
+                 font-size: 15px;
+                 margin-bottom: 8px;
+                 padding-bottom: 6px;
+             }
+             #language-configs {
+                 gap: 6px;
+                 margin-bottom: 8px;
+             }
+              #language-configs > div {
+                   padding: 8px 10px;
+                   gap: 4px;
+              }
+
+               #language-configs > div > label:first-child {
+                   font-size: 12px;
+                    margin-bottom: 2px;
+               }
+
+
+               .speed-input-group,
+               .pause-input-group {
+                   gap: 4px;
+                   flex-direction: row; /* Keep in row */
+                   justify-content: space-between;
+               }
+
+               .speed-input-group label,
+               .pause-input-group label {
+                   font-size: 11px;
+                   white-space: nowrap;
+               }
+
+                #language-configs input[type="number"] {
+                   width: 40px;
+                   font-size: 11px;
+                   padding: 3px 5px;
+                }
+                #config-popup p {
+                   font-size: 9px;
+                   margin-bottom: 8px;
+                }
+                 #config-popup .dark-mode-toggle {
+                     margin-top: 8px;
+                     padding-top: 8px;
+                     gap: 4px;
+                 }
+                  #config-popup .dark-mode-toggle button {
+                      font-size: 11px;
+                      padding: 6px 12px;
+                  }
+                   #config-popup .dark-mode-toggle button i {
+                      margin-right: 4px;
+                   }
+                   #config-popup .close-button {
+                        top: 5px;
+                        right: 5px;
+                        font-size: 14px;
+                   }
+         }
+    </style>
+</head>
+<body>
+    <div id="chat-container">
+        <h2>Ultimate Natural Typewriter - Enhanced</h2>
+
+        <div id="progress-bar-container">
+            <div id="progress-bar"></div>
+        </div>
+
+        <div id="response"></div>
+        <div id="typing-status" class="typing-indicator">Thinking and typing...</div>
+        <textarea id="user-input" placeholder="Type your message here... (Supports multiple lines and languages)"></textarea>
+
+        <div class="button-group">
+             <button onclick="generateResponse()">Send Message</button>
+             <button id="pause-resume-button" onclick="togglePauseResume()" disabled>Pause Typing</button>
+             <button id="stop-button" onclick="stopTyping()" disabled>Stop Typing</button>
+        </div>
+
+        <button id="config-toggle-button" onclick="toggleConfigPopup()">
+            <i class="fas fa-cog"></i> </button>
+
+         <div id="modal-backdrop"></div>
+
+        <div id="config-popup">
+             <button class="close-button" onclick="toggleConfigPopup()">
+                <i class="fas fa-times"></i> </button>
+
+            <h3>Typing Speed Configuration (ms)</h3>
+            <div id="language-configs">
+                </div>
+            <p style="font-size: 12px; color: #6c757d; margin-top: 0; margin-bottom: 15px; line-height: 1.4;">Adjust these values to change typing speed per character and pauses for punctuation/symbols.</p>
+
+            <div class="dark-mode-toggle">
+                <button onclick="toggleDarkMode()"><i class="fas fa-moon"></i> Toggle Dark Mode</button> </div>
+        </div>
+
+    </div>
+    <script>
+        const GLOBAL_TYPING_CONFIG = {
+            name: 'Global',
+            baseSpeed: 60,
+            punctuationPauseMultiplier: 7.0,
+            languageSpeeds: {
+                'JAPANESE': 180,
+                'CHINESE': 180,
+                'KOREAN': 150,
+                'ENGLISH': 60,
+                'LATIN': 60
+            }
+        };
+    
+        let isTyping = false;
+        let isPaused = false;
+        let currentTypingTimeout = null;
+        let totalTextLength = 0;
+        let typedTextLength = 0;
+        let currentResponseText = '';
+        let currentCharacterIndex = 0;
+    
+        const responseElement = document.getElementById('response');
+        const typingIndicator = document.getElementById('typing-status');
+        const userInputElement = document.getElementById('user-input');
+        const languageConfigsDiv = document.getElementById('language-configs');
+        const stopButton = document.getElementById('stop-button');
+        const sendButton = document.querySelector('.button-group button:not(#stop-button):not(#pause-resume-button)');
+        const pauseResumeButton = document.getElementById('pause-resume-button');
+        const progressBar = document.getElementById('progress-bar');
+        const configPopup = document.getElementById('config-popup');
+        const modalBackdrop = document.getElementById('modal-backdrop');
+    
+        stopButton.disabled = true;
+        pauseResumeButton.disabled = true;
+    
+        function populateConfigPanel() {
+            languageConfigsDiv.innerHTML = '';
+            const config = GLOBAL_TYPING_CONFIG;
+    
+            const div = document.createElement('div');
+            div.innerHTML = `
+                <label>${config.name} Configuration:</label>
+                <div class="speed-input-group">
+                    <label for="global-baseSpeed">Base Speed (ms per char):</label>
+                    <input type="number" id="global-baseSpeed" value="${config.baseSpeed}" min="10">
+                </div>
+                <div class="pause-input-group">
+                    <label for="global-punctuationPauseMultiplier">Punctuation Pause Multiplier:</label>
+                    <input type="number" id="global-punctuationPauseMultiplier" value="${config.punctuationPauseMultiplier}" step="0.1" min="0.1">
+                </div>
+            `;
+            languageConfigsDiv.appendChild(div);
+    
+            document.getElementById('global-baseSpeed').addEventListener('change', (e) => {
+                const value = parseInt(e.target.value);
+                if (!isNaN(value)) GLOBAL_TYPING_CONFIG.baseSpeed = value;
+            });
+    
+            document.getElementById('global-punctuationPauseMultiplier').addEventListener('change', (e) => {
+                const value = parseFloat(e.target.value);
+                if (!isNaN(value)) GLOBAL_TYPING_CONFIG.punctuationPauseMultiplier = value;
+            });
+        }
+    
+        populateConfigPanel();
+    
+        function resetProgressVariables() {
+            isTyping = false;
+            isPaused = false;
+            if (currentTypingTimeout) clearTimeout(currentTypingTimeout);
+            currentTypingTimeout = null;
+            currentResponseText = '';
+            currentCharacterIndex = 0;
+            totalTextLength = 0;
+            typedTextLength = 0;
+    
+            progressBar.style.width = '0%';
+            typingIndicator.classList.remove('visible');
+            typingIndicator.textContent = 'Thinking and typing...';
+            stopButton.disabled = true;
+            pauseResumeButton.disabled = true;
+            pauseResumeButton.textContent = 'Pause Typing';
+            sendButton.disabled = false;
+        }
+    
+        function generateResponse() {
+            const userInput = userInputElement.value.trim();
+            if (!userInput || isTyping) return;
+    
+            resetProgressVariables();
+    
+            currentResponseText = userInput;
+            totalTextLength = currentResponseText.length;
+    
+            typingIndicator.classList.add('visible');
+            isTyping = true;
+            stopButton.disabled = false;
+            pauseResumeButton.disabled = false;
+            pauseResumeButton.textContent = 'Pause Typing';
+            sendButton.disabled = true;
+            userInputElement.value = '';
+    
+            setTimeout(() => {
+                typeCharacter(responseElement, currentResponseText, currentCharacterIndex, () => {
+                    resetProgressVariables();
+                });
+            }, 800);
+        }
+    
+        function stopTyping() {
+            resetProgressVariables();
+        }
+    
+        function togglePauseResume() {
+            if (!isTyping) return;
+            isPaused ? resumeTyping() : pauseTyping();
+        }
+    
+        function pauseTyping() {
+            if (currentTypingTimeout) clearTimeout(currentTypingTimeout);
+            isPaused = true;
+            typingIndicator.textContent = 'Paused...';
+            pauseResumeButton.textContent = 'Resume Typing';
+        }
+    
+        function resumeTyping() {
+            isPaused = false;
+            typingIndicator.textContent = 'Typing...';
+            pauseResumeButton.textContent = 'Pause Typing';
+    
+            typeCharacter(responseElement, currentResponseText, currentCharacterIndex, () => {
+                resetProgressVariables();
+            });
+        }
+    
+        function typeCharacter(element, text, index, callback) {
+            if (isPaused) return;
+            if (index >= text.length) {
+                typedTextLength = totalTextLength;
+                element.innerHTML = text;
+                updateProgressBar();
+                if (callback) callback();
+                return;
+            }
+    
+            currentCharacterIndex = index;
+            typedTextLength = index + 1;
+            element.innerHTML = text.substring(0, typedTextLength) + '<span class="cursor"></span>';
+            scrollToBottom(element);
+            updateProgressBar();
+    
+            const char = text[index];
+            let delay = GLOBAL_TYPING_CONFIG.baseSpeed;
+    
+            if (/[a-zA-Z]/.test(char)) {
+                delay = GLOBAL_TYPING_CONFIG.languageSpeeds['LATIN'];
+            } else if (/[0-9]/.test(char)) {
+                delay *= 1.1;
+            } else if (/[。、，．！？.,!?]/.test(char)) {
+                delay *= GLOBAL_TYPING_CONFIG.punctuationPauseMultiplier;
+            } else if (/[はがのをにでへと]/.test(char)) {
+                delay *= 1.2;
+            } else if (/[가-힣]/.test(char)) {
+                delay = GLOBAL_TYPING_CONFIG.languageSpeeds['KOREAN'];
+            } else if (char === '\n') {
+                delay *= 4; // Lebih lama untuk ganti baris
+            } else if (text.slice(index, index + 2) === '  ') {
+                delay *= 2.5; // Jeda tambahan untuk dua spasi
+            }
+
+
+    
+            if (Math.random() < 0.08) {
+                delay += GLOBAL_TYPING_CONFIG.baseSpeed * (0.5 + Math.random());
+            }
+    
+            currentTypingTimeout = setTimeout(() => {
+                typeCharacter(element, text, index + 1, callback);
+            }, delay);
+        }
+    
+        function scrollToBottom(element) {
+            element.scrollTop = element.scrollHeight;
+        }
+    
+        function updateProgressBar() {
+            const progress = totalTextLength > 0
+                ? (typedTextLength / totalTextLength) * 100
+                : 0;
+            progressBar.style.width = `${progress}%`;
+        }
+    
+        function toggleDarkMode() {
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('darkMode', document.body.classList.contains('dark-mode') ? 'enabled' : 'disabled');
+            updateDarkModeButtonIcon();
+        }
+    
+        function updateDarkModeButtonIcon() {
+            const darkModeButton = document.querySelector('#config-popup .dark-mode-toggle button');
+            if (!darkModeButton) return;
+    
+            darkModeButton.innerHTML = document.body.classList.contains('dark-mode')
+                ? '<i class="fas fa-sun"></i> Toggle Light Mode'
+                : '<i class="fas fa-moon"></i> Toggle Dark Mode';
+        }
+    
+        function toggleConfigPopup() {
+            configPopup.classList.toggle('visible');
+            modalBackdrop.classList.toggle('visible');
+            if (configPopup.classList.contains('visible')) updateDarkModeButtonIcon();
+        }
+    
+        if (localStorage.getItem('darkMode') === 'enabled') {
+            document.body.classList.add('dark-mode');
+        }
+    
+        updateDarkModeButtonIcon();
+    
+        modalBackdrop.addEventListener('click', () => {
+            if (configPopup.classList.contains('visible')) toggleConfigPopup();
+        });
+    </script>
+    
+</body>
+</html>

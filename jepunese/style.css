@@ -1,0 +1,674 @@
+/* Menggunakan SEMUA bobot dan gaya font lokal Poppins yang Anda punya */
+  /* Asumsi file font Poppins berada di folder 'fonts/poppins/' */
+  @font-face { font-family: 'Poppins'; src: url('fonts/poppins/Poppins-Thin.ttf') format('truetype'); font-weight: 100; font-style: normal; }
+  @font-face { font-family: 'Poppins'; src: url('fonts/poppins/Poppins-ThinItalic.ttf') format('truetype'); font-weight: 100; font-style: italic; }
+  @font-face { font-family: 'Poppins'; src: url('fonts/poppins/Poppins-ExtraLight.ttf') format('truetype'); font-weight: 200; font-style: normal; }
+  @font-face { font-family: 'Poppins'; src: url('fonts/poppins/Poppins-ExtraLightItalic.ttf') format('truetype'); font-weight: 200; font-style: italic; }
+  @font-face { font-family: 'Poppins'; src: url('fonts/poppins/Poppins-Light.ttf') format('truetype'); font-weight: 300; font-style: normal; }
+  @font-face { font-family: 'Poppins'; src: url('fonts/poppins/Poppins-LightItalic.ttf') format('truetype'); font-weight: 300; font-style: italic; }
+  @font-face { font-family: 'Poppins'; src: url('fonts/poppins/Poppins-Regular.ttf') format('truetype'); font-weight: normal; /* 400 */ font-style: normal; }
+   @font-face { font-family: 'Poppins'; src: url('fonts/poppins/Poppins-Italic.ttf') format('truetype'); font-weight: normal; /* 400 */ font-style: italic; }
+  @font-face { font-family: 'Poppins'; src: url('fonts/poppins/Poppins-Medium.ttf') format('truetype'); font-weight: 500; font-style: normal; }
+   @font-face { font-family: 'Poppins'; src: url('fonts/poppins/Poppins-MediumItalic.ttf') format('truetype'); font-weight: 500; font-style: italic; }
+  @font-face { font-family: 'Poppins'; src: url('fonts/poppins/Poppins-SemiBold.ttf') format('truetype'); font-weight: 600; font-style: normal; }
+   @font-face { font-family: 'Poppins'; src: url('fonts/poppins/Poppins-SemiBoldItalic.ttf') format('truetype'); font-weight: 600; font-style: italic; }
+  @font-face { font-family: 'Poppins'; src: url('fonts/poppins/Poppins-Bold.ttf') format('truetype'); font-weight: bold; /* 700 */ font-style: normal; }
+   @font-face { font-family: 'Poppins'; src: url('fonts/poppins/Poppins-BoldItalic.ttf') format('truetype'); font-weight: bold; /* 700 */ font-style: italic; }
+  @font-face { font-family: 'Poppins'; src: url('fonts/poppins/Poppins-ExtraBold.ttf') format('truetype'); font-weight: 800; font-style: normal; }
+   @font-face { font-family: 'Poppins'; src: url('fonts/poppins/Poppins-ExtraBoldItalic.ttf') format('truetype'); font-weight: 800; font-style: italic; }
+  @font-face { font-family: 'Poppins'; src: url('fonts/poppins/Poppins-Black.ttf') format('truetype'); font-weight: 900; font-style: normal; }
+   @font-face { font-family: 'Poppins'; src: url('fonts/poppins/Poppins-BlackItalic.ttf') format('truetype'); font-weight: 900; font-style: italic; }
+
+
+  /* Menambahkan SEMUA bobot font lokal Noto Sans JP yang Anda punya */
+  /* Asumsi file font Noto Sans JP berada di folder 'fonts/notosansjp/' */
+  @font-face { font-family: 'Noto Sans JP'; src: url('fonts/notosansjp/NotoSansJP-Thin.ttf') format('truetype'); font-weight: 100; font-style: normal; }
+  @font-face { font-family: 'Noto Sans JP'; src: url('fonts/notosansjp/NotoSansJP-ExtraLight.ttf') format('truetype'); font-weight: 200; font-style: normal; }
+  @font-face { font-family: 'Noto Sans JP'; src: url('fonts/notosansjp/NotoSansJP-Light.ttf') format('truetype'); font-weight: 300; font-style: normal; }
+  @font-face { font-family: 'Noto Sans JP'; src: url('fonts/notosansjp/NotoSansJP-Regular.ttf') format('truetype'); font-weight: normal; /* 400 */ font-style: normal; }
+  @font-face { font-family: 'Noto Sans JP'; src: url('fonts/notosansjp/NotoSansJP-Medium.ttf') format('truetype'); font-weight: 500; font-style: normal; }
+   @font-face { font-family: 'Noto Sans JP'; src: url('fonts/notosansjp/NotoSansJP-SemiBold.ttf') format('truetype'); font-weight: 600; font-style: normal; }
+   @font-face { font-family: 'Noto Sans JP'; src: url('fonts/notosansjp/NotoSansJP-Bold.ttf') format('truetype'); font-weight: bold; /* 700 */ font-style: normal; }
+   @font-face { font-family: 'Noto Sans JP'; src: url('fonts/notosansjp/NotoSansJP-ExtraBold.ttf') format('truetype'); font-weight: 800; font-style: normal; }
+   @font-face { font-family: 'Noto Sans JP'; src: url('fonts/notosansjp/NotoSansJP-Black.ttf') format('truetype'); font-weight: 900; font-style: normal; }
+
+
+  /* Root Variables */
+  :root { --primary: #4f46e5; --secondary: #fbbf24; --bg: #f8fafc; --text: #1e293b; --card-bg: #ffffff; --border: #e2e8f0; }
+  [data-theme="dark"] { --primary: #818cf8; --secondary: #f59e0b; --bg: #1e293b; --text: #f8fafc; --card-bg: #334155; --border: #475569; }
+
+  /* Global Styles */
+  * { margin: 0; padding: 0; box-sizing: border-box; transition: background 0.3s, color 0.1s; }
+  body {
+   background: var(--bg);
+   color: var(--text);
+   padding: 20px; /* Padding di body untuk mencegah konten menempel di tepi layar */
+   min-height: 100vh;
+   /* Update font stack: Poppins (Latin) -> Noto Sans JP (Japanese) -> Fallbacks */
+   font-family: 'Poppins', 'Noto Sans JP', 'Meiryo', 'Yu Gothic', 'Arial Unicode MS', sans-serif;
+   position: relative; /* Tambahkan ini untuk konteks positioning absolute */
+  }
+
+  /* Header */
+  header { text-align: center; margin-bottom: 30px; position: relative; }
+  h1 { color: var(--primary); font-weight: 600; margin-bottom: 10px; }
+
+  /* Controls */
+  .controls {
+   max-width: 1000px;
+   margin: 0 auto 20px;
+   display: flex;
+   flex-wrap: wrap;
+   gap: 15px;
+   align-items: center;
+   justify-content: center;
+  }
+
+  .level-selector {
+    display: flex;
+    flex-wrap: wrap; /* Tambahkan wrap agar tombol level bisa membungkus */
+    gap: 5px;
+    background: var(--card-bg);
+    padding: 5px;
+    border-radius: 8px;
+    border: 1px solid var(--border);
+    justify-content: center; /* Tengahkan tombol level jika membungkus */
+  }
+  .level-btn { padding: 8px 15px; border: none; border-radius: 5px; cursor: pointer; font-weight: 500; background: transparent; color: var(--text); }
+  .level-btn.active { background: var(--primary); color: white; }
+
+  #searchInput {
+    flex: 1 0 250px; /* Mengubah flex shorthand: grow=1, shrink=0, basis=250px */
+    min-width: 200px; /* Tetap pertahankan min-width */
+    padding: 12px;
+    background: var(--card-bg); color: var(--text);
+    border: 2px solid var(--border); border-radius: 8px; font-size: 1rem; outline: none;
+    font-weight: normal;
+  }
+
+  /* Pagination Controls */
+  .pagination-controls {
+    display: flex;
+    gap: 10px; /* Gap antara .perPage dan .pagination-buttons di desktop */
+    align-items: center;
+    justify-content: center; /* Tengahkan kontrol paginasi */
+    margin-top: 30px; /* Tambahkan jarak di atas paginasi */
+    margin-bottom: 20px; /* Tambahkan jarak di bawah paginasi jika diperlukan */
+    flex-direction: row; /* Default layout: row di desktop */
+  }
+
+  /* Style untuk kontainer baru .pagination-buttons */
+  .pagination-buttons {
+      display: flex; /* Gunakan flexbox untuk children (tombol & span) */
+      align-items: center; /* Tengahkan secara vertikal */
+      gap: 10px; /* Jarak antara tombol dan info halaman */
+  }
+
+
+  select, button {
+    padding: 10px 15px;
+    background: var(--card-bg);
+    color: var(--text);
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: normal;
+  }
+
+  button:disabled { opacity: 0.5; cursor: not-allowed; }
+
+  /* Status & Message */
+  .status { text-align: center; margin: 20px 0; color: var(--primary); font-weight: normal; }
+  .message { text-align: center; grid-column: 1 / -1; padding: 20px; color: var(--text); font-weight: normal; }
+
+  /* Theme Toggle (Menggunakan absolute, tidak lagi di dalam .controls) */
+  .theme-toggle {
+    position: absolute; /* Menggunakan absolute */
+    top: 20px; /* Jarak dari atas dokumen */
+    right: 20px; /* Jarak dari kanan dokumen */
+
+    background: var(--card-bg);
+    border: 2px solid var(--border);
+    border-radius: 50%;
+    width: 40px; /* Ukuran standar desktop */
+    height: 40px; /* Ukuran standar desktop */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 99; /* Sedikit di bawah FAB jika FAB z-index 100 */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: background 0.3s, color 0.1s, opacity 0.3s ease-out;
+    /* Hapus properti positioning atau margin/float dari percobaan sebelumnya */
+  }
+
+.theme-toggle i {
+    font-size: 1.2rem; /* Ukuran ikon standar desktop */
+    color: var(--text);
+}
+
+/* Floating Display Toggle (Tetap fixed) */
+.display-toggle-fab {
+  position: fixed; /* Tetap menggunakan fixed */
+  right: 20px; /* Posisi di kanan untuk desktop */
+
+  /* Posisi vertikal di tengah untuk desktop */
+  top: 50%;
+  transform: translateY(-50%);
+
+  background: var(--card-bg);
+  border: 2px solid var(--border);
+  border-radius: 50%;
+  width: 40px; /* Ukuran standar desktop */
+  height: 40px; /* Ukuran standar desktop */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 100;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: background 0.3s, color 0.1s, opacity 0.3s ease-out; /* Tambahkan transisi opacity */
+}
+
+.display-fab-btn {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.display-fab-btn i {
+    font-size: 1.2rem; /* Samakan ukuran ikon dengan theme toggle desktop */
+    color: var(--text);
+}
+
+.display-toggle-fab:hover {
+    background-color: var(--border);
+}
+
+/* Class to hide the FABs (used by JavaScript) */
+.hide-fab {
+    opacity: 0;
+    pointer-events: none; /* Prevent clicks when hidden */
+}
+
+
+  #categoryFilter {
+    min-width: 180px;
+    background: var(--card-bg); color: var(--text);
+    border: 2px solid var(--border); border-radius: 8px; font-size: 1rem; outline: none;
+    appearance: none; cursor: pointer; padding: 10px 15px; font-weight: normal;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20width%3D'14'%20height%3D'10'%20viewBox%3D'0%200%2014%2010'%20xmlns%3D'http%3A//www.w3.org/2000/svg'%3E%3Cpath%20d%3D'M1%201l6%206%206-6'%20stroke%3D'%23666'%20stroke-width%3D'2'%20fill%3D'none'%20fill-rule%3D'evenodd'/%3E%3C/svg%3E");
+    background-repeat: no-repeat; background-position: right 12px center; background-size: 12px;
+    padding-right: 35px;
+  }
+  #categoryFilter:disabled { opacity: 0.6; cursor: not-allowed; }
+
+  .display-toggle {
+    display: flex; align-items: center; gap: 10px;
+    background: var(--card-bg); padding: 8px 12px;
+    border-radius: 8px; border: 1px solid var(--border);
+    flex-shrink: 0; font-weight: normal;
+  }
+
+  /* Media Query for Mobile */
+  @media (max-width: 768px) {
+    .controls { flex-direction: column; align-items: stretch; gap: 10px; }
+    #searchInput { width: 100%; flex: 1 0 auto; }
+    .display-toggle, #categoryFilter { width: 100%; justify-content: center; }
+
+    /* Modifikasi pagination-controls di mobile */
+    .pagination-controls {
+      flex-direction: column; /* Stack children (#perPage dan .pagination-buttons) */
+      gap: 15px; /* Jarak antara select dan grup tombol */
+      align-items: center; /* Tengahkan item secara horizontal */
+    }
+
+    /* Atur tampilan select#perPage di mobile */
+     .pagination-controls select#perPage {
+         width: auto; /* Atau atur lebar spesifik jika perlu */
+         min-width: 150px; /* Contoh min-width */
+     }
+
+
+    /* Style untuk kontainer grup tombol .pagination-buttons di mobile */
+    .pagination-buttons {
+        display: flex; /* Agar tombol & info halaman berdampingan */
+        align-items: center; /* Tengahkan secara vertikal */
+        justify-content: center; /* Tengahkan grup tombol secara horizontal */
+        gap: 10px; /* Jarak antar item di dalam grup tombol */
+        width: 100%; /* Agar grup tombol bisa ditengahkan di dalam flex column parent */
+    }
+
+    /* Media query for FAB position on smaller screens */
+    /* Theme Toggle (menggunakan absolute di mobile juga) */
+     .theme-toggle {
+         top: 15px; /* Jarak dari atas dokumen di mobile */
+         right: 15px; /* Jarak dari kanan dokumen di mobile */
+         width: 35px; height: 35px; /* Ukuran di mobile */
+     }
+      .theme-toggle i { font-size: 1rem; } /* Ikon lebih kecil di mobile */
+
+
+    .display-toggle-fab {
+        /* Override desktop vertical centering for mobile */
+        top: 80%; /* Pastikan tetap di tengah vertikal di mobile */
+        transform: translateY(-50%); /* Pastikan penengahan vertikal di mobile */
+        right: 15px; /* Posisi di kanan di mobile */
+        width: 50px; height: 50px; /* Ukuran di mobile */
+    }
+     .display-fab-btn i {
+         font-size: 1rem; /* Samakan ukuran ikon dengan theme toggle mobile */
+     }
+  }
+
+  .display-toggle-btn { background: transparent; border: none; color: var(--text); cursor: pointer; font-weight: 500; padding: 6px 10px; border-radius: 4px; transition: all 0.2s; }
+  .display-toggle-btn.active { background: var(--primary); color: white; font-weight: 600; }
+
+
+  /* Grid Layout */
+  .kanji-grid { /* Container Grid */
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); /* Default grid untuk card */
+    gap: 15px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  /* Card Style - Mengganti kanji-card menjadi character-card */
+  .character-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 24px 16px; /* Default padding */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    will-change: transform;
+    display: flex; /* Default flex untuk konten card */
+    flex-direction: column;
+    justify-content: center; /* Tengahkan konten secara default */
+    align-items: center;
+  }
+
+  .character-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    border-color: rgba(79, 70, 229, 0.2);
+  }
+
+  .character-card::after {
+    content: "";
+    position: absolute; inset: 0;
+    background: radial-gradient(circle at 20% 80%, rgba(79, 70, 229, 0.03), transparent 60%);
+    opacity: 0; transition: opacity 0.3s ease; pointer-events: none;
+  }
+  .character-card:hover::after { opacity: 1; }
+
+
+  /* Konten dalam Card */
+  .character-card .primary-char {
+    font-size: 2.6rem; font-weight: 600; color: var(--primary); line-height: 1;
+    margin-bottom: 10px; /* Default margin */
+  }
+  .character-card .secondary-text {
+     font-size: 0.9rem; font-weight: 500; color: var(--text); /* Default style */
+  }
+
+  /* Styles Khusus untuk Card Kanji */
+  .character-card.type-kanji {
+    /* Sesuaikan padding jika perlu berbeda dari default character-card */
+    padding: 24px 16px;
+    display: block; /* Kanji Card defaultnya block layout, bukan flex item */
+    /* Sesuaikan tinggi minimal jika perlu */
+    min-height: auto;
+  }
+  .character-card.type-kanji .primary-char { /* Untuk Kanji */
+     font-size: 2.6rem; font-weight: 600; margin-bottom: 16px; /* Kembalikan style kanji lama */
+     /* Color dan line-height sudah di .primary-char */
+  }
+   .character-card.type-kanji .secondary-text { /* Untuk Furigana, Romaji, Meaning di Kanji Card */
+     font-weight: normal; /* Default weight */
+   }
+
+
+  /* Styles Khusus untuk Card Hiragana */
+  .character-card.type-hiragana {
+     height: 160px; /* Tinggi tetap untuk hiragana card */
+     display: flex; /* Gunakan flexbox untuk menengahkan */
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     padding: 15px; /* Padding disesuaikan */
+     cursor: default;
+     border-color: var(--secondary); /* Contoh: border warna kuning untuk Hiragana */
+  }
+
+  .character-card.type-hiragana .primary-char { /* Untuk Karakter Hiragana */
+     font-size: 3.5rem; /* Ukuran karakter hiragana lebih besar */
+     font-weight: 600; /* Bobot hiragana */
+     margin-bottom: 5px; /* Jarak dengan romaji */
+     color: var(--primary); /* Warna */
+     line-height: 1;
+  }
+
+   .character-card.type-hiragana .secondary-text { /* Untuk Romaji Hiragana */
+     font-size: 1rem; /* Ukuran romaji hiragana */
+     font-weight: normal; /* Bobot romaji */
+     color: #888; /* Warna romaji */
+     font-style: italic; /* Romaji italic */
+   }
+
+   /* Styles Khusus untuk Card Katakana (Sama seperti Hiragana tapi beda warna border) */
+  .character-card.type-katakana {
+     height: 160px; /* Tinggi tetap */
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     padding: 15px;
+     cursor: default;
+     border-color: #4d96ff; /* Contoh: border warna biru untuk Katakana */
+  }
+
+  .character-card.type-katakana .primary-char { /* Untuk Karakter Katakana */
+     font-size: 3.5rem;
+     font-weight: 600;
+     margin-bottom: 5px;
+     color: var(--primary);
+     line-height: 1;
+  }
+
+   .character-card.type-katakana .secondary-text { /* Untuk Romaji Katakana */
+     font-size: 1rem;
+     font-weight: normal;
+     color: #888;
+     font-style: italic;
+   }
+
+
+  /* Struktur detail lama dari kanji card (di-inline rendering atau display none) */
+  .kanji-card-details { /* Container untuk furigana, romaji, meaning di Kanji Card */
+      display: block; /* Defaultnya tampil di Full mode */
+  }
+  .kanji-card-details .furigana {
+    font-size: 0.85rem; font-weight: 500; letter-spacing: 0.5px; color: var(--primary); margin-bottom: 4px;
+  }
+  .kanji-card-details .romaji {
+    font-size: 0.75rem; font-style: italic; color: #888; margin-bottom: 8px;
+  }
+  .kanji-card-details .meaning {
+    font-size: 0.85rem; font-weight: normal; color: var(--text); line-height: 1.5;
+  }
+  .kanji-card-details .meaning .indo { color: #ff6b6b; margin-top: 2px; }
+  .kanji-card-details .meaning .inggris { color: #4d96ff; margin-top: 2px; }
+
+
+  /* --- Minimal Mode Styles - Terapkan ke kanji-grid container --- */
+  /* Perubahan display mode akan mempengaruhi .kanji-grid */
+
+  .kanji-grid.display-minimal .character-card.type-kanji {
+     /* Kanji Minimal Mode: Sembunyikan detail, ubah layout */
+     height: 160px;
+     display: flex; /* Gunakan flexbox */
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     padding: 10px;
+  }
+
+  .kanji-grid.display-minimal .character-card.type-kanji .kanji-card-details {
+      display: none; /* Sembunyikan detail di minimal mode */
+  }
+
+   /* Di mode minimal, karakter Hiragana & Katakana tetap tampil, romaji disembunyikan */
+  .kanji-grid.display-minimal .character-card.type-hiragana .secondary-text,
+  .kanji-grid.display-minimal .character-card.type-katakana .secondary-text {
+      display: none; /* Sembunyikan romaji di mode minimal hiragana/katakana */
+   }
+
+
+  /* --- Full Mode Styles - Terapkan ke kanji-grid container --- */
+   .kanji-grid.display-full .character-card.type-kanji {
+    /* Kanji Full Mode: Tampilkan detail */
+    display: block; /* Kembalikan ke block */
+    padding: 24px 16px; /* Kembalikan padding */
+    min-height: auto;
+   }
+
+   .kanji-grid.display-full .character-card.type-kanji .kanji-card-details {
+      display: block; /* Pastikan detail terlihat di mode full kanji */
+   }
+
+  /* Di mode full, karakter Hiragana & Katakana tetap tampil, romaji juga tampil */
+   .kanji-grid.display-full .character-card.type-hiragana .secondary-text,
+    .kanji-grid.display-full .character-card.type-katakana .secondary-text {
+      display: block; /* Pastikan romaji terlihat di mode full hiragana/katakana */
+   }
+
+
+  /* Responsive Card Styles */
+  @media (max-width: 768px) {
+    .kanji-grid { grid-template-columns: repeat(auto-fill, minmax(90px, 1fr)); }
+    .character-card { padding: 15px; }
+    .character-card .primary-char { font-size: 2rem; }
+    .character-card.type-hiragana .primary-char,
+    .character-card.type-katakana .primary-char { font-size: 3rem; } /* Hiragana/Katakana size di mobile */
+    .character-card .secondary-text { font-size: 0.8rem; }
+    .character-card.type-hiragana .secondary-text,
+    .character-card.type-katakana .secondary-text { font-size: 0.9rem; } /* Romaji hiragana/katakana di mobile */
+  }
+
+
+  /* --- Styles untuk Modal Flashcard (Hanya untuk Kanji) --- */
+  .kanji-modal {
+    display: none; /* Sembunyikan secara default */
+    position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6); backdrop-filter: blur(5px); -webkit-backdrop-filter: blur(5px);
+    justify-content: center; align-items: center; animation: fadeIn 0.3s ease-out;
+  }
+  .kanji-modal.visible { display: flex; }
+  .modal-content {
+    background: var(--card-bg); color: var(--text); margin: auto; padding: 30px; border-radius: 15px;
+    border: 2px solid var(--border); max-width: 500px; width: 90%; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    position: relative; animation: scaleUp 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: flex; flex-direction: column; gap: 15px;
+  }
+  .close-button { color: #aaa; position: absolute; top: 15px; right: 25px; font-size: 28px; font-weight: bold; cursor: pointer; transition: color 0.3s ease; }
+  .close-button:hover, .close-button:focus { color: var(--primary); text-decoration: none; }
+
+  /* Konten Modal (Hanya untuk Detail Kanji) */
+  .modal-kanji { font-size: 4rem; font-weight: bold; text-align: center; color: var(--primary); margin-bottom: 5px; }
+  .modal-furigana { font-size: 1.2rem; text-align: center; color: var(--primary); margin-bottom: 10px; }
+  .modal-romaji { font-size: 1rem; text-align: center; font-style: italic; color: #888; margin-bottom: 15px; }
+  .modal-meaning { border-top: 1px solid var(--border); padding-top: 15px; text-align: center; }
+  .modal-meaning div { margin-bottom: 5px; font-size: 1.1rem; }
+  .modal-meaning .modal-indo { color: #ff6b6b; }
+  .modal-meaning .modal-inggris { color: #4d96ff; }
+  .modal-readings { border-top: 1px solid var(--border); padding-top: 15px; display: flex; justify-content: space-around; gap: 10px; }
+  .modal-onyomi, .modal-kunyomi { flex: 1; }
+  .modal-readings strong { display: block; margin-bottom: 5px; color: var(--primary); }
+  .modal-readings ul { list-style: none; padding: 0; margin: 0; font-size: 0.95rem; }
+  .modal-readings li { margin-bottom: 3px; }
+  .modal-info { border-top: 1px solid var(--border); padding-top: 15px; display: flex; justify-content: space-between; font-size: 0.9rem; color: #666; }
+  .modal-kategori::before { content: "Kategori: "; font-weight: 600; }
+  .modal-jlpt::before { content: "Level: "; font-weight: 600; } /* Mengubah label JLPT */
+
+/* Kontainer untuk tombol aksi di modal */
+.modal-actions {
+  border-top: 1px solid var(--border); /* Garis pemisah di atas tombol */
+  padding-top: 15px; /* Jarak dari konten di atasnya */
+  text-align: center; /* Tengahkan tombol */
+}
+
+/* Tombol aksi di modal (styled like a button) */
+.modal-button {
+  display: inline-block; /* Agar padding dan margin bekerja */
+  padding: 10px 20px;
+  background: var(--primary); /* Warna primary */
+  color: white; /* Teks putih */
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  text-decoration: none; /* Hapus garis bawah default link */
+  transition: background 0.3s ease;
+}
+
+.modal-button:hover {
+  background: #6366f1; /* Efek hover: warna sedikit lebih terang */
+}
+
+.modal-button i {
+  margin-right: 8px; /* Jarak antara ikon dan teks */
+}
+
+/* Opsional: Sesuaikan di layar kecil */
+@media (max-width: 600px) {
+.modal-button { padding: 8px 15px; font-size: 0.9rem; } /* Sesuaikan ukuran tombol di mobile */
+.modal-button i { margin-right: 4px; }
+}
+
+  /* Animations */
+  @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes scaleUp { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+
+  /* Media Query untuk Modal Responsif */
+  @media (max-width: 600px) {
+    .modal-content { padding: 20px; width: 95%; }
+    .modal-kanji { font-size: 3rem; }
+    .modal-furigana { font-size: 1rem; }
+    .modal-romaji { font-size: 0.9rem; }
+    .modal-meaning div { font-size: 1rem; }
+    .modal-readings { flex-direction: column; gap: 15px; }
+  }
+
+ /* Styles untuk Footer */
+ footer {
+  margin-top: 40px; /* Beri sedikit jarak dari konten di atasnya */
+  padding: 20px;
+  text-align: center;
+  background: var(--card-bg); /* Gunakan warna background kartu */
+  color: var(--text); /* Gunakan warna teks utama */
+  border-top: 1px solid var(--border); /* Tambahkan garis di atas footer */
+  font-size: 0.9rem;
+ }
+
+ footer p {
+  margin: 0; /* Hapus margin default dari paragraf di dalam footer */
+ }
+
+/* --- New styles for select mode UI --- */
+
+/* Style for the select controls container */
+#selectControls {
+    /* Basic styling, adjust as needed */
+    margin: 20px auto 15px; /* Space above and below */
+    max-width: 1000px; /* Match grid container width */
+    text-align: center;
+    font-size: 1rem;
+    color: var(--text); /* Inherit text color */
+    display: flex; /* Use flexbox for button alignment */
+    justify-content: center; /* Center the flex items */
+    align-items: center;
+    flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+    gap: 10px; /* Space between items */
+}
+
+/* Style for the count span */
+#selectControls #selectedCountInfo {
+    font-weight: normal;
+    color: var(--text);
+}
+
+#selectControls #selectedCount {
+    font-weight: bold;
+    color: var(--primary); /* Highlight the count */
+}
+
+
+/* Style for buttons within select controls */
+#selectControls button {
+    padding: 8px 12px; /* Adjust padding */
+    background: var(--card-bg); /* Button background */
+    color: var(--text); /* Button text color */
+    border: 1px solid var(--border); /* Button border */
+    border-radius: 5px; /* Button corner radius */
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+#selectControls button:hover {
+    background-color: var(--border); /* Hover effect */
+}
+
+#selectControls button#cancelSelectBtn {
+    color: #ff6b6b; /* Color for cancel button */
+    border-color: #ff6b6b;
+}
+#selectControls button#cancelSelectBtn:hover {
+    background-color: rgba(255, 107, 107, 0.1);
+}
+
+#selectControls button#shuffleBtn {
+    color: #f59e0b; /* Color for shuffle button (secondary color) */
+    border-color: #f59e0b;
+}
+#selectControls button#shuffleBtn:hover {
+     background-color: rgba(245, 158, 11, 0.1);
+}
+
+/* New style for the Focus button */
+#selectControls button#focusBtn {
+    color: #4d96ff; /* Example color for focus button (blue) */
+    border-color: #4d96ff;
+}
+#selectControls button#focusBtn:hover {
+     background-color: rgba(77, 150, 255, 0.1);
+}
+
+
+/* Style for the select indicator on the card */
+.character-card .select-indicator {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    font-size: 1.3rem;
+    color: #ccc; /* Default color */
+    z-index: 5; /* Above other card content */
+     /* Ensure pointer events go through to the card */
+    pointer-events: none;
+}
+
+/* Style for the select indicator when the card is selected */
+.character-card.selected .select-indicator {
+    color: var(--primary); /* Primary color when selected */
+}
+
+/* Optional: Add a border or background change for selected cards */
+.character-card.selected {
+    border-color: var(--primary); /* Highlight border when selected */
+    /* background-color: rgba(79, 70, 229, 0.05); /* Optional: subtle background change */
+}
+
+/* Hide the original status text when select controls are shown */
+.status[style*="display: none"] {
+    display: none;
+}
+
+/* Style to hide non-selected cards in focus mode */
+.kanji-grid.focus-mode .character-card:not(.selected) {
+    display: none !important; /* Hide non-selected cards when focus-mode class is active */
+}

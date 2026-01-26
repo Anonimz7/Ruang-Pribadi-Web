@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Belajar Karakter Jepang</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="/fonts/fontawesome/css/all.min.css">
+</head>
+<body>
+ <div class="theme-toggle" id="themeToggle">
+  <i class="fas fa-moon"></i>
+ </div>
+
+ <div class="display-toggle-fab" id="displayToggleFab">
+     <button id="displayModeFabToggle" class="display-fab-btn">
+         <i class="fas fa-grip-horizontal"></i>
+     </button>
+ </div>
+
+ <header>
+  <h1>Belajar Karakter Jepang</h1> <div class="level-selector" id="levelSelector">
+   <button class="level-btn active" data-level="n5">N5</button>
+   <button class="level-btn" data-level="n4">N4</button>
+   <button class="level-btn" data-level="n3">N3</button>
+   <button class="level-btn" data-level="n2">N2</button>
+   <button class="level-btn" data-level="n1">N1</button>
+   <button class="level-btn" data-level="hiragana">Hiragana</button>
+    <button class="level-btn" data-level="katakana">Katakana</button>
+  </div>
+ </header>
+
+ <div class="controls">
+  <input
+   type="text"
+   id="searchInput"
+   placeholder="Cari (Karakter, Romaji, Makna...)" autocomplete="off"
+  >
+
+    <select id="categoryFilter" class="category-filter" disabled>
+        <option value="">Pilih Kategori</option>
+        </select>
+
+  <div class="display-toggle">
+    <span>Tampilan:</span>
+    <button id="minimalBtn" class="display-toggle-btn active">Minimal</button>
+    <button id="fullBtn" class="display-toggle-btn">Lengkap</button>
+   </div>
+ </div>
+ <div class="status" id="statusInfo">Memuat data...</div>
+ <div class="kanji-grid" id="kanjiContainer"> <div class="message">Memuat data...</div> </div>
+
+ <div class="pagination-controls">
+    <select id="perPage">
+     <option value="3">3 per halaman</option>
+     <option value="4">4 per halaman</option>
+     <option value="5">5 per halaman</option>
+     <option value="10">10 per halaman</option>
+     <option value="14">14 per halaman</option>
+     <option value="28">28 per halaman</option>
+     <option value="56">56 per halaman</option>
+     <option value="0">Tampilkan Semua</option>
+    </select>
+
+    <div class="pagination-buttons">
+        <button id="prevBtn"><i class="fas fa-chevron-left"></i></button>
+        <span id="pageInfo">Halaman 1</span>
+        <button id="nextBtn"><i class="fas fa-chevron-right"></i></button>
+    </div>
+
+ </div>
+ <div id="kanjiModal" class="kanji-modal">
+  <div class="modal-content">
+   <span class="close-button">&times;</span>
+   <div class="modal-kanji"></div>
+   <div class="modal-furigana"></div>
+   <div class="modal-romaji"></div>
+   <div class="modal-meaning">
+    <div class="modal-indo"></div>
+    <div class="modal-inggris"></div>
+   </div>
+   <div class="modal-readings">
+    <div class="modal-onyomi">
+     <strong>Onyomi:</strong> <ul class="onyomi-list"></ul>
+    </div>
+    <div class="modal-kunyomi">
+     <strong>Kunyomi:</strong> <ul class="kunyomi-list"></ul>
+    </div>
+  </div>
+  <div class="modal-actions">
+    <a id="googleSearchButton" href="#" target="_blank" class="modal-button">
+        <i class="fas fa-search"></i> Cari di Google
+    </a>
+   </div>
+   <div class="modal-info">
+    <div class="modal-kategori"></div>
+    <div class="modal-jlpt"></div> </div>
+  </div>
+ </div>
+
+  <footer>
+    <p>&copy; <span id="currentYear"></span> Belajar Karakter Jepang. Dibuat dengan &#x2764;&#xfe0f;.</p>
+  </footer>
+  <script src="script.js"></script>
+</body>
+</html>

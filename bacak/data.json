@@ -1,0 +1,9 @@
+[
+  { "nama": "Hiragana [あ]", "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSwzfL_VBpt6CxuDNvVWfS67YrolNeCwLWcqtWOjrs876pZuvKyhreBMpKuMlp7bhlhMjGz9eDGS4rc/pub?gid=0&single=true&output=csv" },
+  { "nama": "Katakana [ア]", "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSnkDuW4phRIfnCDqrYRaSzee4l_CWStwIDI4L4Ld3-Hof-zNL1lqdaHS1Q_xZuJcVevjDCOLZ62Izm/pub?gid=0&single=true&output=csv" },
+  { "nama": "Perkalian [X]", "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTRi1MGPWz6RjyCaFa_86_YvriUjL-chF4H5U13CfkPhqCDlzgdT5MQAcjFYs5Cy3CCeqPNeEsKENQ7/pub?output=csv" },
+  { "nama": "Pembagian [:]", "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vSg10JptFcg9N7YP3o9ziEA1yLwadpIDrPM8UWNTQWepWrBiLXh0VK5LgQqKZVa2Nv0B4NKYsZ0wA0e/pub?output=csv" },
+  { "nama": "Penjumlahan [+]", "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTMjdh6IVt8pI1EuZTVATIuPB3AP2YYXqp2zAZTal5Q5-zb6A1uAz5tvIVgDE5cVYAnx99fuWRpxD4-/pub?output=csv" },
+  { "nama": "Pengurangan [-]", "url": "https://docs.google.com/spreadsheets/d/e/2PACX-1vTMjdh6IVt8pI1EuZTVATIuPB3AP2YYXqp2zAZTal5Q5-zb6A1uAz5tvIVgDE5cVYAnx99fuWRpxD4-/pub?output=csv" }
+]
+

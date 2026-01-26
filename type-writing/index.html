@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilih Mode Pengetik Alami</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 40px 20px;
+            /* Hapus background gradient, akan diganti oleh particles.js */
+            background-color: #2d3a4b; /* Warna fallback atau warna dasar untuk partikel */
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
+            position: relative; /* Diperlukan agar z-index bekerja relatif terhadap body */
+            overflow: hidden; /* Hindari scrollbar jika partikel sedikit melebihi batas */
+        }
+
+        /* Gaya untuk container partikel */
+        #particles-js {
+            position: fixed; /* Mengisi seluruh layar dan tetap saat scroll */
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1; /* Pastikan partikel di belakang konten */
+            background-color: #2d3a4b; /* Sesuaikan dengan warna dasar atau warna partikel */
+            background-image: url(''); /* Jika Anda ingin gambar latar belakang */
+            background-size: cover;
+            background-position: 50% 50%;
+        }
+
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.95); /* Latar belakang putih semi-transparan */
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3); /* Bayangan lebih kuat karena latar belakang lebih gelap */
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+            position: relative; /* Pastikan konten di atas partikel */
+            z-index: 1; /* Lebih tinggi dari z-index partikel */
+        }
+
+        h1 {
+            color: #4361ee;
+            margin-top: 0;
+            margin-bottom: 30px;
+            font-size: 2em;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .navigation-links {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .nav-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #4361ee;
+            color: white;
+            text-decoration: none;
+            padding: 15px 25px;
+            border-radius: 8px;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 44px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .nav-button i {
+            margin-right: 12px;
+            font-size: 1.3em;
+        }
+
+        .nav-button:hover {
+            background-color: #3a56d4;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .nav-button:active {
+            transform: translateY(0);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+         footer {
+             margin-top: 30px;
+             font-size: 0.9em;
+             color: #555;
+         }
+
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .container {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 1.8em;
+                margin-bottom: 25px;
+            }
+
+            .nav-button {
+                padding: 12px 20px;
+                font-size: 1em;
+            }
+
+            .nav-button i {
+                margin-right: 8px;
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="particles-js"></div>
+
+    <div class="container">
+        <h1>Pilih Mode Pengetik Alami</h1>
+
+        <div class="navigation-links">
+            <a href="bahasa.html" class="nav-button language-mode">
+                <i class="fas fa-language"></i> Mode Bahasa
+            </a>
+
+            <a href="coder.html" class="nav-button coder-mode">
+                <i class="fas fa-code"></i> Mode Coder
+            </a>
+
+            </div>
+
+        <footer>
+            <p>&copy; 2025 Natural Typewriter. All rights reserved.</p>
+        </footer>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script>
+        /* Inisialisasi particles.js dengan konfigurasi langsung */
+        particlesJS('particles-js', {
+            "particles": {
+                "number": {
+                    "value": 80, // Jumlah partikel
+                    "density": {
+                        "enable": true,
+                        "value_area": 800
+                    }
+                },
+                "color": {
+                    "value": "#ffffff" // Warna partikel (putih)
+                },
+                "shape": {
+                    "type": "circle", // Bentuk partikel
+                    "stroke": {
+                        "width": 0,
+                        "color": "#000000"
+                    },
+                    "polygon": {
+                        "nb_sides": 5
+                    }
+                },
+                "opacity": {
+                    "value": 0.5, // Opacity partikel
+                    "random": false,
+                    "anim": {
+                        "enable": false,
+                        "speed": 1,
+                        "opacity_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "size": {
+                    "value": 3, // Ukuran partikel
+                    "random": true,
+                    "anim": {
+                        "enable": false,
+                        "speed": 40,
+                        "size_min": 0.1,
+                        "sync": false
+                    }
+                },
+                "line_linked": {
+                    "enable": true,
+                    "distance": 150, // Jarak antar partikel agar terhubung garis
+                    "color": "#ffffff", // Warna garis penghubung (putih)
+                    "opacity": 0.4, // Opacity garis
+                    "width": 1
+                },
+                "move": {
+                    "enable": true,
+                    "speed": 3, // Kecepatan gerak partikel
+                    "direction": "none",
+                    "random": false,
+                    "straight": false,
+                    "out_mode": "out",
+                    "bounce": false,
+                    "attract": {
+                        "enable": false,
+                        "rotateX": 600,
+                        "rotateY": 1200
+                    }
+                }
+            },
+            "interactivity": {
+                "detect_on": "canvas", // Deteksi interaksi di atas area kanvas partikel
+                "events": {
+                    "onhover": {
+                        "enable": true, // Aktifkan interaksi saat kursor di atasnya
+                        "mode": "grab" // Mode interaksi: "grab" (menangkap/menghubungkan)
+                    },
+                    "onclick": {
+                        "enable": true, // Aktifkan interaksi saat diklik
+                        "mode": "push" // Mode interaksi saat diklik: "push" (menambah partikel baru)
+                    },
+                    "resize": true // Responsif terhadap perubahan ukuran jendela browser
+                },
+                "modes": {
+                    "grab": { // Konfigurasi detail untuk mode "grab"
+                        "distance": 150, // Jarak dalam pixel di mana partikel akan terhubung ke kursor
+                        "line_linked": {
+                            "opacity": 1 // Opacity garis saat terhubung ke kursor
+                        }
+                    },
+                    "bubble": { // Konfigurasi detail untuk mode "bubble" (opsional, jika digunakan)
+                        "distance": 400,
+                        "size": 40,
+                        "duration": 2,
+                        "opacity": 8,
+                        "speed": 3
+                    },
+                    "repulse": { // Konfigurasi detail untuk mode "repulse" (opsional, jika digunakan)
+                        "distance": 100,
+                        "duration": 0.4
+                    },
+                    "push": { // Konfigurasi detail untuk mode "push" (opsional, jika digunakan)
+                        "particles_nb": 4
+                    },
+                    "remove": { // Konfigurasi detail untuk mode "remove" (opsional, jika digunakan)
+                        "particles_nb": 2
+                    }
+                }
+            },
+            "retina_detect": true
+        });
+    </script>
+
+</body>
+</html>

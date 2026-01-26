@@ -1,0 +1,1391 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pembelajaran Bahasa Interaktif (Responsif & UX)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        /* Global Reset and Box Sizing */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --primary-blue: #007bff;
+            --primary-dark-blue: #0056b3;
+            --secondary-yellow: #ffc107;
+            --secondary-dark-yellow: #e0a800;
+            --success-green: #28a745;
+            --success-dark-green: #218838;
+            --info-cyan: #17a2b8;
+            --info-dark-cyan: #138496;
+            --danger-red: #dc3545;
+            --text-light: #333; /* Dark text for light mode */
+            --text-dark: #ecf0f1; /* Light text for dark mode */
+            --bg-light: #f4f7f6;
+            --bg-dark: #2c3e50;
+            --container-light: #ffffff;
+            --container-dark: #34495e;
+            --input-light: #ffffff;
+            --input-dark: #4a607a;
+            --border-light: #ced4da;
+            --border-dark: #5e728d;
+            --card-light: #ffffff;
+            --card-dark: #5e728d; /* Card background in dark mode */
+            --placeholder-light: #f0f0f0;
+            --placeholder-dark: #5e728d;
+            --shadow-light: rgba(0, 0, 0, 0.1);
+            --shadow-dark: rgba(0, 0, 0, 0.3);
+
+            /* New: Color for cards inside dragItemsContainer in dark mode */
+            --drag-card-text-dark: #ecf0f1; /* Light text for cards in drag container */
+            --drag-card-bg-dark: #5e728d; /* Slightly different background for cards */
+            --drag-container-bg-dark: #3f546a; /* Darker background for drag container */
+
+            /* Responsive Font Sizes (base for rem) */
+            font-size: 16px; /* Base for desktop */
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 1.5rem; /* ~24px */
+            background-color: var(--bg-light);
+            color: var(--text-light);
+            transition: background-color 0.3s ease, color 0.3s ease;
+            min-height: 100vh;
+        }
+
+        .main-wrapper {
+            display: grid; /* Tetap grid, tapi kita atur kolomnya */
+            gap: 1.5rem; /* ~24px gap between sections */
+            width: 90%;
+            max-width: 1200px;
+            margin-bottom: 1.5rem;
+            grid-template-columns: 1fr; /* Default ke satu kolom (atas-bawah) */
+        }
+
+        /* Desktop layout (always single column as requested) */
+        @media (min-width: 992px) {
+            .main-wrapper {
+                grid-template-columns: 1fr; /* Tetap satu kolom di desktop */
+            }
+            .exercise-display {
+                margin-top: 1.5rem; /* Beri margin atas saat menumpuk */
+            }
+        }
+
+        .container {
+            background-color: var(--container-light);
+            padding: 2rem; /* ~32px */
+            border-radius: 12px;
+            box-shadow: 0 6px 20px var(--shadow-light);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        h1 {
+            color: var(--text-light); /* Will be overridden by dark mode */
+            margin-bottom: 1rem;
+            text-align: center;
+            font-size: 2.2rem; /* ~35.2px */
+            transition: color 0.3s ease;
+        }
+        p {
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            font-size: 1rem; /* Base font size */
+        }
+        #inputHtml {
+            width: calc(100% - 1.25rem); /* Adjust for padding */
+            min-height: 10rem; /* ~160px */
+            padding: 1rem; /* ~16px */
+            margin-bottom: 1.25rem; /* ~20px */
+            border: 1px solid var(--border-light);
+            border-radius: 8px;
+            font-size: 0.95rem; /* ~15.2px */
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+            word-wrap: break-word;
+            white-space: pre-wrap; /* Penting untuk menampilkan spasi dan baris baru */
+            text-align: left;
+            cursor: text;
+            background-color: var(--input-light);
+            color: var(--text-light);
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        #inputHtml b {
+            font-weight: bold;
+            color: var(--primary-dark-blue);
+            transition: color 0.3s ease;
+        }
+
+        .text-input-controls, .controls {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem; /* ~12px */
+            margin-bottom: 1rem;
+            justify-content: center;
+        }
+        .text-input-controls button, .controls button {
+            padding: 0.6rem 1rem; /* ~9.6px 16px */
+            font-size: 0.9rem; /* ~14.4px */
+            background-color: #f0f0f0;
+            color: var(--text-light);
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+        }
+        .text-input-controls button:hover, .controls button:hover {
+            background-color: #e0e0e0;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 1.25rem; /* ~20px */
+            align-items: center;
+        }
+        .radio-group label {
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem; /* ~8px */
+            transition: color 0.3s ease;
+        }
+        .radio-group input[type="radio"] {
+            transform: scale(1.3);
+            cursor: pointer;
+            accent-color: var(--primary-blue);
+        }
+
+        button {
+            padding: 0.75rem 1.5rem; /* ~12px 24px */
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem; /* ~16px */
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px var(--shadow-light);
+            font-weight: 600;
+        }
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px var(--shadow-light);
+        }
+        #processInputBtn {
+            background-color: var(--primary-blue);
+            color: white;
+        }
+        #processInputBtn:hover {
+            background-color: var(--primary-dark-blue);
+        }
+        #resetExerciseBtn {
+            background-color: var(--secondary-yellow);
+            color: var(--text-light);
+        }
+        #resetExerciseBtn:hover {
+            background-color: var(--secondary-dark-yellow);
+        }
+        #checkAnswerBtn {
+            background-color: var(--success-green);
+            color: white;
+        }
+        #checkAnswerBtn:hover {
+            background-color: var(--success-dark-green);
+        }
+        #shuffleCardsBtn {
+            background-color: var(--info-cyan);
+            color: white;
+        }
+        #shuffleCardsBtn:hover {
+            background-color: var(--info-dark-cyan);
+        }
+
+        /* Dark Mode Toggle Button Specific Styles */
+        #darkModeToggle {
+            position: fixed;
+            top: 1.25rem;
+            right: 1.25rem;
+            width: 40px; /* Fixed width */
+            height: 40px; /* Fixed height */
+            border-radius: 50%; /* Circle shape */
+            background-color: #6c757d;
+            color: white;
+            cursor: pointer;
+            font-size: 1.2rem; /* Icon size */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+            border: none; /* Ensure no default button border */
+        }
+        #darkModeToggle:hover {
+            background-color: #5a6268;
+            transform: scale(1.05);
+        }
+        #darkModeToggle i {
+            font-size: 1em; /* Icon size relative to button font-size */
+        }
+
+        /* Exercise Display */
+        .exercise-display {
+            background-color: #e9ecef;
+            padding: 1.5rem; /* ~24px */
+            border-radius: 10px;
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.08);
+            margin-top: 1.25rem; /* ~20px */
+            text-align: center;
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .exercise-info, .exercise-question {
+            color: var(--text-light); /* Will be overridden by dark mode */
+            transition: color 0.3s ease;
+            font-size: 1.1rem;
+        }
+        .exercise-question {
+            color: #2c3e50;
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+        .sentence-context {
+            font-size: 1.8rem; /* ~28.8px */
+            font-weight: 500;
+            margin-top: 1rem;
+            margin-bottom: 1.5rem; /* ~24px */
+            text-align: center;
+            color: var(--text-light); /* Will be overridden by dark mode */
+            white-space: normal;
+            word-break: break-word;
+            min-height: 3.5rem; /* ~56px */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            line-height: 1.8;
+            gap: 0.8rem 0.4rem; /* row-gap 12.8px, column-gap 6.4px */
+            padding: 0.6rem 0; /* ~9.6px */
+            transition: color 0.3s ease;
+        }
+        .sentence-context span.text-segment {
+            display: inline-block;
+            vertical-align: middle;
+            padding: 0.125rem 0; /* ~2px */
+            white-space: pre-wrap; /* Penting untuk mempertahankan spasi */
+            box-sizing: border-box;
+            transition: color 0.3s ease;
+        }
+        /* --- Penting untuk baris baru dari <br> --- */
+        .sentence-context span.text-segment.line-break {
+            width: 100%; /* Memaksa elemen ini untuk mengambil seluruh lebar */
+            height: 0; /* Hindari tinggi yang tidak perlu */
+            margin-top: 0.5em; /* Jarak antar baris */
+            margin-bottom: 0.5em; /* Jarak antar baris */
+            padding: 0; /* Hapus padding yang mungkin mengganggu */
+            line-height: 0; /* Hapus line-height yang mungkin mengganggu */
+            flex-shrink: 0; /* Pastikan tidak menyusut */
+        }
+        /* End of line break styling */
+
+
+        .placeholder-target {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 4rem; /* ~64px */
+            min-height: 3.2rem; /* ~51.2px */
+            border: 2px dashed #a0a0a0;
+            background-color: var(--placeholder-light);
+            border-radius: 5px;
+            padding: 0.3rem; /* ~4.8px */
+            vertical-align: middle;
+            font-weight: normal;
+            color: var(--text-light); /* Will be overridden by dark mode */
+            opacity: 0.8;
+            box-sizing: border-box;
+            transition: background-color 0.3s, border-color 0.3s, transform 0.3s, color 0.3s, opacity 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer; /* Indicate it's clickable */
+        }
+        /* Tap-to-place active placeholder (empty placeholder when card is selected) */
+        .placeholder-target.active-placeholder {
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+            opacity: 1;
+            transform: scale(1.02);
+        }
+        /* Desktop drag-over placeholder */
+        .placeholder-target.drag-over {
+            background-color: #cce5ff;
+            border-color: var(--primary-blue);
+        }
+        /* Placeholder when a card is dropped inside */
+        .placeholder-target .card.dropped {
+            margin: 0;
+            box-shadow: none;
+            font-size: 0.9em; /* Relative to parent (.placeholder-target) */
+            padding: 0.15rem 0.5rem; /* ~2.4px 8px */
+            line-height: 1.2;
+            white-space: nowrap;
+            max-width: 100%;
+            height: auto;
+            box-sizing: border-box;
+            z-index: 1;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+
+        /* Placeholder Number */
+        .placeholder-target::before {
+            content: attr(data-placeholder-num);
+            position: absolute;
+            top: 0.125rem; /* ~2px */
+            right: 0.125rem; /* ~2px */
+            font-size: 0.6em; /* Relative to parent (.placeholder-target) */
+            font-weight: bold;
+            color: #6c757d;
+            background-color: rgba(255, 255, 255, 0.7);
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 4px;
+            padding: 0 0.25rem; /* ~4px */
+            z-index: 20;
+            min-width: 1rem; /* ~16px */
+            text-align: center;
+            line-height: 1.2;
+            opacity: 0;
+            transition: opacity 0.3s ease, color 0.3s ease, background-color 0.3s ease, border-color 0.3s ease;
+        }
+        .placeholder-target.show-number::before {
+            opacity: 1;
+        }
+
+        /* Error Highlight */
+        .placeholder-target.error-highlight {
+            border: 3px dashed var(--danger-red);
+            background-color: #fff0f0;
+            animation: pulse-error 0.5s infinite alternate;
+        }
+        @keyframes pulse-error {
+            from {
+                box-shadow: 0 0 0 0 rgba(220, 53, 69, 0.4);
+            }
+            to {
+                box-shadow: 0 0 0 8px rgba(220, 53, 69, 0);
+            }
+        }
+        .placeholder-target.error-highlight.show-number::before {
+            color: var(--danger-red);
+            border-color: var(--danger-red);
+            background-color: #ffeaea;
+        }
+
+        /* --- DRAG ITEMS CONTAINER (KARTU BAWAH) --- */
+        #dragItemsContainer {
+            display: flex;
+            flex-wrap: wrap; /* Pastikan kartu tetap membungkus ke baris baru jika terlalu banyak */
+            flex-direction: row; /* Atur arah tumpukan menjadi baris (horizontal) */
+            justify-content: center; /* Pusatkan kartu di tengah secara horizontal */
+            align-items: flex-start; /* Mengatur item dari awal secara vertikal */
+            gap: 0.75rem; /* Menjaga jarak antar kartu */
+            padding: 1rem;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+            min-height: 5rem;
+            margin-top: 1.25rem;
+            border: 1px solid #e0e0e0;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+            max-height: none; /* Hapus batasan tinggi yang sebelumnya ditambahkan */
+            overflow-y: visible; /* Hapus overflow yang sebelumnya ditambahkan */
+        }
+        #dragItemsContainer.drag-over {
+            background-color: #e6f7ff;
+            border-color: #91d5ff;
+        }
+
+        .card {
+            background-color: var(--card-light);
+            border: 1px solid #dee2e6;
+            border-radius: 8px;
+            padding: 0.75rem 1.25rem; /* ~12px 20px */
+            box-shadow: 0 3px 10px var(--shadow-light);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.5rem; /* ~24px */
+            font-weight: 700;
+            color: var(--text-light); /* Will be overridden by dark mode */
+            cursor: grab; /* Cursor for desktop drag */
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, opacity 0.2s ease-out, background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+            box-sizing: border-box;
+            white-space: nowrap;
+            /* Hapus properti lebar yang membatasi */
+            min-width: unset; /* Hapus min-width */
+            width: auto; /* Biarkan lebar menyesuaikan konten */
+        }
+        .card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px var(--shadow-light);
+        }
+        /* Specific for desktop drag: when dragging, make it transparent */
+        .card.dragging {
+            opacity: 0.2;
+        }
+        /* For tap-to-place selected card */
+        .card.selected-for-tap {
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.7); /* Stronger shadow/highlight */
+            transform: scale(1.05);
+            cursor: pointer;
+            animation: pulse-selected 0.7s infinite alternate; /* New: pulse animation */
+        }
+        @keyframes pulse-selected {
+            from {
+                box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.7);
+            }
+            to {
+                box-shadow: 0 0 0 6px rgba(0, 123, 255, 0.3);
+            }
+        }
+
+
+        .feedback {
+            margin-top: 1.25rem;
+            padding: 1rem;
+            border-radius: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-align: center;
+            display: none;
+            transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+        }
+        .feedback.correct {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            display: block;
+        }
+        .feedback.incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+            display: block;
+        }
+        .feedback.info {
+             background-color: #cfe2ff;
+             color: #052c65;
+             border: 1px solid #b6d4fe;
+             display: block;
+        }
+        .feedback ul {
+            text-align: left;
+            list-style-type: disc;
+            margin: 0.6rem auto 0;
+            padding-left: 1.25rem;
+            max-width: 37.5rem; /* ~600px */
+        }
+        .feedback ul li {
+            margin-bottom: 0.3rem;
+        }
+
+
+        /* --- DARK MODE STYLES --- */
+        body.dark-mode {
+            background-color: var(--bg-dark);
+            color: var(--text-dark);
+        }
+        body.dark-mode .container {
+            background-color: var(--container-dark);
+            box-shadow: 0 6px 20px var(--shadow-dark);
+        }
+        body.dark-mode h1,
+        body.dark-mode .exercise-info,
+        body.dark-mode .sentence-context,
+        body.dark-mode .sentence-context span.text-segment,
+        body.dark-mode .card { /* Apply text-dark to card for contrast */
+            color: var(--text-dark);
+        }
+        body.dark-mode #inputHtml {
+            background-color: var(--input-dark);
+            color: var(--text-dark);
+            border-color: var(--border-dark);
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.4);
+        }
+        body.dark-mode #inputHtml b {
+            color: #89cff0; /* Lighter blue for bold text */
+        }
+
+        body.dark-mode .text-input-controls button,
+        body.dark-mode .controls button {
+            background-color: #5e728d;
+            color: var(--text-dark);
+            border-color: #7f8c8d;
+        }
+        body.dark-mode .text-input-controls button:hover,
+        body.dark-mode .controls button:hover {
+            background-color: #6a829e;
+        }
+
+        body.dark-mode .radio-group label {
+            color: var(--text-dark);
+        }
+        body.dark-mode .radio-group input[type="radio"] {
+            accent-color: #89cff0;
+        }
+
+        body.dark-mode #processInputBtn { background-color: var(--primary-blue); color: white; }
+        body.dark-mode #processInputBtn:hover { background-color: var(--primary-dark-blue); }
+        body.dark-mode #resetExerciseBtn { background-color: #e6b300; color: white; }
+        body.dark-mode #resetExerciseBtn:hover { background-color: #cc9900; }
+        body.dark-mode #checkAnswerBtn { background-color: var(--success-green); color: white; }
+        body.dark-mode #checkAnswerBtn:hover { background-color: var(--success-dark-green); }
+        body.dark-mode #shuffleCardsBtn { background-color: var(--info-cyan); color: white; }
+        body.dark-mode #shuffleCardsBtn:hover { background-color: var(--info-dark-cyan); }
+
+        body.dark-mode #darkModeToggle {
+            background-color: #4a607a;
+        }
+        body.dark-mode #darkModeToggle:hover {
+            background-color: #3f546a;
+        }
+
+        body.dark-mode .exercise-display {
+            background-color: var(--input-dark);
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+        body.dark-mode .exercise-question {
+            color: var(--text-dark);
+        }
+        body.dark-mode .placeholder-target {
+            border: 2px dashed var(--border-dark);
+            background-color: var(--placeholder-dark);
+            color: #bdc3c7; /* Color for placeholder text itself */
+            opacity: 1;
+        }
+        body.dark-mode .placeholder-target.active-placeholder {
+            border-color: #89cff0; /* Lighter blue for dark mode */
+            box-shadow: 0 0 0 3px rgba(137, 207, 240, 0.5);
+        }
+        body.dark-mode .placeholder-target.drag-over {
+            background-color: #6a829e;
+            border-color: var(--primary-blue);
+        }
+        body.dark-mode .placeholder-target .card.dropped {
+            background-color: var(--card-dark); /* Card background in placeholder dark mode */
+            border-color: #8bc34a;
+            color: var(--drag-card-text-dark); /* Ensure text color is light */
+        }
+
+        body.dark-mode .placeholder-target::before {
+            color: #bdc3c7;
+            background-color: rgba(74, 96, 122, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        body.dark-mode .placeholder-target.error-highlight {
+            border: 3px dashed var(--danger-red);
+            background-color: #721c24;
+        }
+        body.dark-mode .placeholder-target.error-highlight.show-number::before {
+            color: #f8d7da;
+            background-color: #721c24;
+            border-color: var(--danger-red);
+        }
+
+        body.dark-mode #dragItemsContainer {
+            background-color: var(--drag-container-bg-dark); /* Darker background for drag container */
+            border: 1px solid var(--border-dark);
+        }
+        body.dark-mode .card {
+            background-color: var(--drag-card-bg-dark); /* Card background in drag container dark mode */
+            border-color: var(--border-dark);
+            color: var(--drag-card-text-dark); /* Card text color in dark mode */
+        }
+        body.dark-mode .card.selected-for-tap {
+            border-color: #89cff0;
+            box-shadow: 0 0 0 3px rgba(137, 207, 240, 0.5);
+            animation-name: pulse-selected-dark; /* Use a dark mode specific pulse */
+        }
+        @keyframes pulse-selected-dark {
+            from {
+                box-shadow: 0 0 0 3px rgba(137, 207, 240, 0.7);
+            }
+            to {
+                box-shadow: 0 0 0 6px rgba(137, 207, 240, 0.3);
+            }
+        }
+
+
+        body.dark-mode .feedback.correct {
+            background-color: #198754;
+            color: #d4edda;
+            border: 1px solid #146c43;
+        }
+        body.dark-mode .feedback.incorrect {
+            background-color: var(--danger-red);
+            color: #f8d7da;
+            border: 1px solid #b02a37;
+        }
+        body.dark-mode .feedback.info {
+             background-color: #0d6efd;
+             color: #cfe2ff;
+             border: 1px solid #0a58ca;
+        }
+
+        /* --- MOBILE SPECIFIC STYLES --- */
+        @media (max-width: 768px) {
+            :root {
+                font-size: 14px; /* Reduce base font size for smaller screens */
+            }
+            body {
+                padding: 1rem; /* ~14px */
+            }
+            .main-wrapper {
+                grid-template-columns: 1fr; /* Single column layout */
+                gap: 1rem;
+            }
+            .container {
+                padding: 1rem; /* ~14px */
+                margin-bottom: 0.5rem; /* ~7px */
+            }
+            h1 {
+                font-size: 1.8rem; /* ~25.2px */
+            }
+            p {
+                font-size: 0.9rem; /* ~12.6px */
+            }
+            #inputHtml {
+                min-height: 8rem; /* ~112px */
+                padding: 0.8rem; /* ~11.2px */
+                font-size: 0.85rem; /* ~11.9px */
+            }
+            .text-input-controls, .controls {
+                gap: 0.6rem; /* ~8.4px */
+                margin-bottom: 0.8rem; /* ~11.2px */
+            }
+            .text-input-controls button, .controls button {
+                padding: 0.5rem 0.8rem; /* ~7px 11.2px */
+                font-size: 0.8rem; /* ~11.2px */
+            }
+            .radio-group {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.8rem;
+            }
+            button:not(#darkModeToggle) { /* Exclude dark mode toggle from full width */
+                padding: 0.7rem 1.2rem; /* ~9.8px 16.8px */
+                font-size: 0.95rem; /* ~13.3px */
+                width: 100%;
+                margin-bottom: 0.5rem;
+            }
+            #processInputBtn, #shuffleCardsBtn, #resetExerciseBtn, #checkAnswerBtn {
+                margin-bottom: 0.8rem;
+            }
+
+            .exercise-display {
+                padding: 1rem;
+                margin-top: 0.8rem;
+            }
+            .exercise-info, .exercise-question {
+                font-size: 0.9rem;
+            }
+            .sentence-context {
+                font-size: 1.3rem; /* ~18.2px */
+                line-height: 1.6;
+                gap: 0.6rem 0.3rem; /* ~8.4px 4.2px */
+                padding: 0.5rem 0;
+            }
+            .sentence-context span.text-segment,
+            .placeholder-target {
+                 font-size: 0.9em; /* Relative to .sentence-context */
+            }
+            .placeholder-target {
+                min-width: 3.5rem; /* ~49px */
+                min-height: 2.8rem; /* ~39.2px */
+                padding: 0.2rem; /* ~2.8px */
+            }
+            .placeholder-target::before {
+                font-size: 0.5em;
+                top: 0.05rem; /* ~0.7px */
+                right: 0.05rem; /* ~0.7px */
+                padding: 0 0.2rem; /* ~2.8px */
+            }
+            #dragItemsContainer {
+                padding: 0.8rem;
+                gap: 0.8rem; /* ~11.2px */
+                min-height: 4rem; /* ~56px; */
+            }
+            .card {
+                font-size: 1.2rem; /* ~16.8px */
+                padding: 0.6rem 1rem; /* ~8.4px 14px */
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+            }
+            .card:hover { /* Disable hover effects for touch devices */
+                transform: none;
+                box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+            }
+            /* Dark mode toggle specific for mobile */
+            #darkModeToggle {
+                top: 0.8rem;
+                right: 0.8rem;
+                width: 36px; /* Slightly smaller for mobile */
+                height: 36px;
+                font-size: 1rem;
+            }
+            .feedback {
+                font-size: 1rem;
+                padding: 0.8rem;
+            }
+            .feedback ul {
+                padding-left: 1rem;
+            }
+        }
+        @media (max-width: 480px) {
+            :root {
+                font-size: 13px; /* Even smaller base font for very small screens */
+            }
+            h1 {
+                font-size: 1.6rem; /* ~20.8px */
+            }
+            .sentence-context {
+                font-size: 1.1rem; /* ~14.3px */
+                line-height: 1.5;
+            }
+            .card {
+                font-size: 1rem; /* ~13px */
+                padding: 0.5rem 0.8rem; /* ~6.5px 10.4px */
+            }
+        }
+    </style>
+</head>
+<body>
+    <button id="darkModeToggle">
+        <i class="fas fa-moon"></i>
+    </button>
+
+    <div class="main-wrapper">
+        <div class="container">
+            <h1>Pengaturan Latihan</h1>
+            <p>Ketik kalimat Anda di sini. Tandai **kata atau huruf** yang ingin Anda acak dan susun dengan tag <code>&lt;b&gt;</code>.</p>
+            <p>Tanda baca dan spasi yang menempel pada kata yang di-bold (misal: <b>Budi.</b> atau <b>ini adalah</b>) akan dipisahkan secara otomatis menjadi teks biasa.</p>
+            <div id="inputHtml" contenteditable="true">
+                Saya <b>punya</b> kucing.<br><div>Saya <b>suka</b> kopi.</div><p>Ini adalah <b>buku</b>.</p>
+            </div>
+
+            <div class="text-input-controls">
+                <button id="boldSelectionBtn">Bold Pilihan</button>
+            </div>
+
+            <div class="controls">
+                <div class="radio-group">
+                    <label>
+                        <input type="radio" name="splitMode" value="character" id="radioCharacter"> Per Huruf
+                    </label>
+                    <label>
+                        <input type="radio" name="splitMode" value="word" id="radioWord" checked> Per Kata
+                    </label>
+                </div>
+                <div>
+                    <button id="processInputBtn">Muat Latihan</button>
+                    <button id="shuffleCardsBtn">Acak Kartu</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="container exercise-display">
+            <h1>Latihan Anda</h1>
+            <p class="exercise-info" id="exerciseInfo">Lengkapi Kalimat</p>
+            <p class="exercise-question" id="exerciseQuestion">Seret kata/huruf dari bawah ke tempat yang kosong di kalimat:</p>
+            <div class="sentence-context" id="sentenceContext">
+                </div>
+            <div id="dragItemsContainer">
+                </div>
+            <div class="controls" style="margin-top: 1.5rem;">
+                <button id="resetExerciseBtn">Ulangi Latihan</button>
+                <button id="checkAnswerBtn">Periksa Jawaban</button>
+            </div>
+            <div id="feedback" class="feedback"></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const inputHtml = document.getElementById('inputHtml');
+            const boldSelectionBtn = document.getElementById('boldSelectionBtn');
+            const processInputBtn = document.getElementById('processInputBtn');
+            const shuffleCardsBtn = document.getElementById('shuffleCardsBtn');
+            const resetExerciseBtn = document.getElementById('resetExerciseBtn');
+            const checkAnswerBtn = document.getElementById('checkAnswerBtn');
+            const radioCharacter = document.getElementById('radioCharacter');
+            const radioWord = document.getElementById('radioWord');
+
+            const sentenceContext = document.getElementById('sentenceContext');
+            const dragItemsContainer = document.getElementById('dragItemsContainer');
+            const feedback = document.getElementById('feedback');
+
+            const darkModeToggle = document.getElementById('darkModeToggle');
+            const body = document.body;
+            const darkModeIcon = darkModeToggle.querySelector('i');
+
+            let draggedItem = null; // For desktop drag-and-drop
+            let selectedCardForTap = null; // For mobile tap-to-place
+            let correctOrderDetails = [];
+            let initialDragItemsContent = [];
+            let placeholderCounter = 0;
+
+            const PUNCTUATION_REGEX = /([.,!?;:]+)$/;
+
+            // --- Mobile Device Detection ---
+            const isMobileDevice = /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || (navigator.maxTouchPoints > 0);
+
+            // --- Dark Mode Logic ---
+            function applyDarkMode(isDark) {
+                if (isDark) {
+                    body.classList.add('dark-mode');
+                    darkModeIcon.classList.remove('fa-moon');
+                    darkModeIcon.classList.add('fa-sun');
+                    localStorage.setItem('darkMode', 'enabled');
+                } else {
+                    body.classList.remove('dark-mode');
+                    darkModeIcon.classList.remove('fa-sun');
+                    darkModeIcon.classList.add('fa-moon');
+                    localStorage.setItem('darkMode', 'disabled');
+                }
+            }
+
+            // Check saved preference on load
+            if (localStorage.getItem('darkMode') === 'enabled') {
+                applyDarkMode(true);
+            } else {
+                applyDarkMode(false);
+            }
+
+            darkModeToggle.addEventListener('click', () => {
+                applyDarkMode(!body.classList.contains('dark-mode'));
+            });
+            // --- End Dark Mode Logic ---
+
+
+            boldSelectionBtn.addEventListener('click', () => {
+                inputHtml.focus();
+                document.execCommand('bold', false, null);
+            });
+
+            function processInputText() {
+                console.log("processInputText: Memulai pemrosesan input.");
+                let rawHtml = inputHtml.innerHTML;
+                const splitMode = document.querySelector('input[name="splitMode"]:checked').value;
+
+                sentenceContext.innerHTML = '';
+                dragItemsContainer.innerHTML = '';
+                feedback.style.display = 'none';
+                correctOrderDetails = [];
+                initialDragItemsContent = [];
+                placeholderCounter = 0;
+                resetInteractionStates(); // Reset all selection/active states
+
+                // Clean up unwanted <div>, <p> tags from contenteditable and consolidate <br>
+                rawHtml = rawHtml.replace(/<div\s*>/g, '<div>');
+                rawHtml = rawHtml.replace(/<\/div>/g, '</div>');
+                rawHtml = rawHtml.replace(/<p\s*>/g, '<p>');
+                rawHtml = rawHtml.replace(/<\/p>/g, '</p>');
+
+                // Convert all block-level tags to <br> for consistent processing
+                rawHtml = rawHtml.replace(/<div>/g, '<br>');
+                rawHtml = rawHtml.replace(/<\/div>/g, '');
+                rawHtml = rawHtml.replace(/<p>/g, '<br>');
+                rawHtml = rawHtml.replace(/<\/p>/g, '');
+
+                // Reduce multiple consecutive <br> to a single one
+                rawHtml = rawHtml.replace(/(<br>){2,}/g, '<br>');
+
+                // Trim leading/trailing <br> if any
+                if (rawHtml.startsWith('<br>')) {
+                    rawHtml = rawHtml.substring(4);
+                }
+                if (rawHtml.endsWith('<br>')) {
+                    rawHtml = rawHtml.substring(0, rawHtml.length - 4);
+                }
+
+                const segments = rawHtml.split(/(<b>.*?<\/b>|<br>)/); // Split by <b>...</b> or <br>
+
+                segments.forEach(segment => {
+                    if (segment.startsWith('<b>') && segment.endsWith('</b>')) {
+                        let boldContent = segment.substring(3, segment.length - 4);
+
+                        let trimmedBoldContent = boldContent.trim();
+
+                        if (trimmedBoldContent.length === 0) {
+                            const span = document.createElement('span');
+                            span.classList.add('text-segment');
+                            span.textContent = boldContent;
+                            sentenceContext.appendChild(span);
+                            correctOrderDetails.push({ type: 'static', value: boldContent });
+                        } else {
+                            let word = trimmedBoldContent;
+                            let trailingPunctuation = '';
+
+                            const match = word.match(PUNCTUATION_REGEX);
+                            if (match) {
+                                trailingPunctuation = match[0];
+                                word = word.replace(PUNCTUATION_REGEX, '');
+                            }
+
+                            if (word.length > 0) {
+                                if (splitMode === 'character') {
+                                    Array.from(word).forEach(char => {
+                                        placeholderCounter++;
+                                        const placeholder = document.createElement('span');
+                                        placeholder.classList.add('placeholder-target');
+                                        placeholder.dataset.correctValue = char;
+                                        placeholder.dataset.placeholderNum = placeholderCounter;
+                                        setupPlaceholderEvents(placeholder);
+                                        sentenceContext.appendChild(placeholder);
+
+                                        correctOrderDetails.push({ type: 'target', value: char });
+                                        initialDragItemsContent.push(char);
+                                    });
+                                } else {
+                                    placeholderCounter++;
+                                    const placeholder = document.createElement('span');
+                                    placeholder.classList.add('placeholder-target');
+                                    placeholder.dataset.correctValue = word;
+                                    placeholder.dataset.placeholderNum = placeholderCounter;
+                                    setupPlaceholderEvents(placeholder);
+                                    sentenceContext.appendChild(placeholder);
+
+                                    correctOrderDetails.push({ type: 'target', value: word });
+                                    initialDragItemsContent.push(word);
+                                }
+                            }
+
+                            if (trailingPunctuation.length > 0) {
+                                const span = document.createElement('span');
+                                span.classList.add('text-segment');
+                                span.textContent = trailingPunctuation;
+                                sentenceContext.appendChild(span);
+                                correctOrderDetails.push({ type: 'static', value: trailingPunctuation });
+                            }
+                        }
+                    } else if (segment === '<br>') { // Handle <br> explicitly
+                        const span = document.createElement('span');
+                        span.classList.add('text-segment', 'line-break'); // Add line-break class
+                        // No text content or innerHTML = '<br>' needed, CSS handles the break
+                        sentenceContext.appendChild(span);
+                        correctOrderDetails.push({ type: 'static', value: '\n' }); // Store newline for check
+                    } else { // Handle plain text and spaces
+                        // Split by spaces to handle multiple spaces, but keep them
+                        let parts = segment.split(/(\s+)/);
+
+                        parts.forEach(part => {
+                            if (part.length > 0) {
+                                const span = document.createElement('span');
+                                span.classList.add('text-segment');
+                                span.textContent = part;
+                                sentenceContext.appendChild(span);
+                                correctOrderDetails.push({ type: 'static', value: part });
+                            }
+                        });
+                    }
+                });
+
+                renderDragItems(initialDragItemsContent);
+                console.log("processInputText: Selesai memproses input.");
+            }
+
+            function renderDragItems(itemsToDisplay) {
+                console.log("renderDragItems: Merender kartu seret.");
+                dragItemsContainer.innerHTML = '';
+                shuffleArray(itemsToDisplay);
+
+                itemsToDisplay.forEach(itemText => {
+                    const card = document.createElement('div');
+                    card.classList.add('card');
+                    card.textContent = itemText;
+
+                    if (!isMobileDevice) {
+                        card.setAttribute('draggable', 'true');
+                        setupCardDesktopDragEvents(card);
+                    } else {
+                        setupCardMobileTapEvents(card);
+                    }
+
+                    dragItemsContainer.appendChild(card);
+                });
+                console.log("renderDragItems: Kartu selesai dirender.");
+            }
+
+            // --- Desktop Drag-and-Drop Events ---
+            function setupCardDesktopDragEvents(card) {
+                card.addEventListener('dragstart', (e) => {
+                    draggedItem = card;
+                    if (card.parentNode && card.parentNode.classList.contains('placeholder-target')) {
+                        draggedItem.originalParent = card.parentNode;
+                    } else {
+                        draggedItem.originalParent = null;
+                    }
+
+                    setTimeout(() => {
+                        card.classList.add('dragging');
+                    }, 0);
+                    e.dataTransfer.setData('text/plain', card.textContent);
+                    e.dataTransfer.effectAllowed = 'move';
+                });
+
+                card.addEventListener('dragend', () => {
+                    if (draggedItem) {
+                        draggedItem.classList.remove('dragging');
+                    }
+                    draggedItem = null;
+                    document.querySelectorAll('.placeholder-target.drag-over').forEach(pt => pt.classList.remove('drag-over'));
+                    dragItemsContainer.classList.remove('drag-over');
+                });
+            }
+
+            function setupPlaceholderEvents(placeholder) {
+                if (!isMobileDevice) {
+                    placeholder.addEventListener('dragenter', (e) => {
+                        e.preventDefault();
+                        if (draggedItem && !placeholder.querySelector('.card')) {
+                            placeholder.classList.add('drag-over');
+                        }
+                    });
+
+                    placeholder.addEventListener('dragleave', () => {
+                        placeholder.classList.remove('drag-over');
+                    });
+
+                    placeholder.addEventListener('dragover', (e) => {
+                        e.preventDefault();
+                        if (draggedItem && !placeholder.querySelector('.card')) {
+                             e.dataTransfer.dropEffect = 'move';
+                             placeholder.classList.add('drag-over');
+                        } else {
+                             e.dataTransfer.dropEffect = 'none';
+                        }
+                    });
+
+                    placeholder.addEventListener('drop', (e) => {
+                        e.preventDefault();
+                        placeholder.classList.remove('drag-over');
+
+                        if (draggedItem && !placeholder.querySelector('.card')) {
+                            const droppedCard = draggedItem;
+
+                            if (droppedCard.originalParent) {
+                                droppedCard.originalParent.innerHTML = '';
+                            }
+
+                            droppedCard.classList.add('dropped');
+                            droppedCard.classList.remove('dragging');
+
+                            placeholder.appendChild(droppedCard);
+                            draggedItem = null;
+                            feedback.style.display = 'none';
+                        }
+                    });
+                } else { // Mobile tap-to-place events for placeholder
+                    // Single click for placing a card (if one is selected)
+                    placeholder.addEventListener('click', () => {
+                        // Case 1: A card is currently selected for tap-to-place
+                        if (selectedCardForTap) {
+                            if (placeholder.querySelector('.card')) {
+                                // Placeholder already has a card, so we swap them
+                                const existingCard = placeholder.querySelector('.card');
+                                existingCard.classList.remove('dropped');
+                                dragItemsContainer.appendChild(existingCard); // Return existing card to container
+                            }
+                            
+                            // Place the selected card into the placeholder
+                            selectedCardForTap.classList.remove('selected-for-tap');
+                            selectedCardForTap.classList.add('dropped');
+                            placeholder.appendChild(selectedCardForTap);
+
+                            resetInteractionStates(); // Clear all highlights/selections
+                            feedback.style.display = 'none';
+
+                        }
+                        // If no card is selected, single tap on an empty or filled placeholder does nothing.
+                        // Filled placeholder will use dblclick to return its card.
+                        // Empty placeholder, no card selected, no action.
+                    });
+
+                    // Double click for returning a card from placeholder to container
+                    placeholder.addEventListener('dblclick', () => {
+                        if (placeholder.querySelector('.card')) {
+                            const cardToReturn = placeholder.querySelector('.card');
+                            cardToReturn.classList.remove('dropped');
+                            dragItemsContainer.appendChild(cardToReturn);
+                            feedback.style.display = 'none';
+                            resetInteractionStates(); // Ensure any active selection is cleared
+                        }
+                    });
+                }
+            }
+
+            // --- Mobile Tap-to-Place Events for Cards ---
+            function setupCardMobileTapEvents(card) {
+                card.addEventListener('click', () => {
+                    // Check if this card is currently in a placeholder
+                    const isCardInPlaceholder = card.closest('.placeholder-target');
+
+                    // If this card is already selected, deselect it
+                    if (card === selectedCardForTap) {
+                        resetInteractionStates(); // Deselect the card and clear active placeholders
+                    } else {
+                        // Clear previous selection and active placeholders
+                        resetInteractionStates();
+
+                        // Select this card only if it's from dragItemsContainer
+                        if (!isCardInPlaceholder) {
+                            selectedCardForTap = card;
+                            card.classList.add('selected-for-tap');
+                            // Highlight empty placeholders as potential targets
+                            document.querySelectorAll('.placeholder-target:empty').forEach(p => {
+                                p.classList.add('active-placeholder');
+                            });
+                        }
+                        // If card is already in a placeholder, tapping it does not select it.
+                        // User must double-click the placeholder to return the card.
+                    }
+                });
+            }
+
+
+            // Reset all interaction related visual states and variables
+            function resetInteractionStates() {
+                if (selectedCardForTap) {
+                    selectedCardForTap.classList.remove('selected-for-tap');
+                    selectedCardForTap = null;
+                }
+                document.querySelectorAll('.placeholder-target').forEach(p => {
+                    p.classList.remove('active-placeholder');
+                    p.classList.remove('error-highlight'); // Also reset error highlights
+                    p.classList.remove('show-number'); // And number visibility
+                });
+                feedback.style.display = 'none';
+            }
+
+
+            // These events handle dropping a card back to the main container (for desktop)
+            if (!isMobileDevice) {
+                dragItemsContainer.addEventListener('dragenter', (e) => {
+                    e.preventDefault();
+                    if (draggedItem && draggedItem.originalParent) {
+                        dragItemsContainer.classList.add('drag-over');
+                    }
+                });
+
+                dragItemsContainer.addEventListener('dragleave', () => {
+                    dragItemsContainer.classList.remove('drag-over');
+                });
+
+                dragItemsContainer.addEventListener('dragover', (e) => {
+                    e.preventDefault();
+                    if (draggedItem && draggedItem.originalParent) {
+                        e.dataTransfer.dropEffect = 'move';
+                        dragItemsContainer.classList.add('drag-over');
+                    } else {
+                        e.dataTransfer.dropEffect = 'none';
+                    }
+                });
+
+                dragItemsContainer.addEventListener('drop', (e) => {
+                    e.preventDefault();
+                    dragItemsContainer.classList.remove('drag-over');
+
+                    if (draggedItem && draggedItem.originalParent) {
+                        const returnedCard = draggedItem;
+
+                        returnedCard.originalParent.innerHTML = '';
+
+                        returnedCard.classList.remove('dropped');
+                        returnedCard.classList.remove('dragging');
+
+                        dragItemsContainer.appendChild(returnedCard);
+                        draggedItem = null;
+                        feedback.style.display = 'none';
+                    }
+                });
+            }
+
+
+            function checkAnswer() {
+                console.log("checkAnswer: Memulai pemeriksaan jawaban.");
+                const placeholders = sentenceContext.querySelectorAll('.placeholder-target');
+                let isCorrect = true;
+                let errorDetails = [];
+                let currentPlaceholderIndex = 0;
+
+                resetInteractionStates(); // Clear all selection/active states and error highlights
+
+                if (placeholders.length === 0) {
+                    showFeedback('Tidak ada bagian yang perlu diisi. Pastikan Anda sudah menandai kata dengan <b>bold</b>.', 'info');
+                    console.log("checkAnswer: Tidak ada placeholder, keluar.");
+                    return;
+                }
+
+                for (const placeholder of placeholders) {
+                    if (!placeholder.querySelector('.card')) {
+                        showFeedback('Lengkapi semua bagian kosong!', 'info');
+                        placeholder.classList.add('error-highlight');
+                        placeholder.classList.add('show-number');
+                        return;
+                    }
+                }
+                console.log("checkAnswer: Semua placeholder terisi.");
+
+                for (let i = 0; i < correctOrderDetails.length; i++) {
+                    const expected = correctOrderDetails[i];
+
+                    if (expected.type === 'target') {
+                        if (currentPlaceholderIndex >= placeholders.length) {
+                             console.error("Error: currentPlaceholderIndex melebihi jumlah placeholders.");
+                             isCorrect = false;
+                             break;
+                        }
+
+                        const droppedCard = placeholders[currentPlaceholderIndex].querySelector('.card');
+                        if (droppedCard.textContent !== expected.value) {
+                            isCorrect = false;
+                            errorDetails.push({
+                                placeholderElement: placeholders[currentPlaceholderIndex],
+                                placeholderNum: placeholders[currentPlaceholderIndex].dataset.placeholderNum,
+                                expectedValue: expected.value,
+                                actualValue: droppedCard.textContent
+                            });
+                            console.log(`checkAnswer: Kesalahan ditemukan pada bagian ${placeholders[currentPlaceholderIndex].dataset.placeholderNum}. Expected: ${expected.value}, Actual: ${droppedCard.textContent}`);
+                        }
+                        currentPlaceholderIndex++;
+                    }
+                }
+
+                if (isCorrect) {
+                    showFeedback('Jawaban Benar!', 'correct');
+                    console.log("checkAnswer: Jawaban Benar.");
+                } else {
+                    errorDetails.forEach(error => {
+                        error.placeholderElement.classList.add('error-highlight');
+                        error.placeholderElement.classList.add('show-number');
+                    });
+                    console.log("checkAnswer: Jawaban Salah. Menerapkan highlight dan menampilkan detail.");
+
+                    let feedbackMessage = 'Jawaban Salah. Ada beberapa kesalahan:<br><ul>';
+                    errorDetails.forEach(error => {
+                        feedbackMessage += `<li>Pada bagian ke-${error.placeholderNum}: Seharusnya <strong>"${error.expectedValue}"</strong>, tetapi Anda memasukkan <strong>"${error.actualValue}"</strong>.</li>`;
+                    });
+                    feedbackMessage += '</ul><br>Coba periksa lagi susunannya.';
+
+                    let fullCorrectSentence = '';
+                    correctOrderDetails.forEach(detail => {
+                        // For line breaks, add a visual <br> tag for feedback, otherwise just the value
+                        if (detail.value === '\n') {
+                            fullCorrectSentence += '<br>';
+                        } else {
+                            fullCorrectSentence += detail.value;
+                        }
+                    });
+                    feedbackMessage += `<p>Kalimat yang seharusnya lengkap adalah: <br><strong>${fullCorrectSentence}</strong></p>`;
+
+                    showFeedback(feedbackMessage, 'incorrect');
+                }
+                console.log("checkAnswer: Pemeriksaan jawaban selesai.");
+            }
+
+
+            function showFeedback(message, type) {
+                feedback.innerHTML = message;
+                feedback.className = `feedback ${type}`;
+                feedback.style.display = 'block';
+            }
+
+            function resetExercise() {
+                console.log("resetExercise: Memulai reset latihan.");
+                const droppedCards = Array.from(sentenceContext.querySelectorAll('.placeholder-target .card'));
+                droppedCards.forEach(card => {
+                    card.classList.remove('dropped');
+                    if (!isMobileDevice) {
+                        card.setAttribute('draggable', 'true');
+                    } else {
+                        // Re-attach tap event listeners if they were removed (though they shouldn't be for tap-to-place)
+                        setupCardMobileTapEvents(card);
+                    }
+                    dragItemsContainer.appendChild(card);
+                    card.parentNode.innerHTML = '';
+                });
+
+                renderDragItems(initialDragItemsContent); // Re-render to ensure proper shuffling and re-attachment of events
+
+                resetInteractionStates(); // Clear all visual states
+
+                feedback.style.display = 'none';
+                console.log("resetExercise: Latihan berhasil direset.");
+            }
+
+function shuffleCards() {
+                console.log("shuffleCards: Mengacak kartu di list saja.");
+
+                // 1. Kumpulkan hanya kartu-kartu yang ada di dragItemsContainer
+                const cardsInDragContainer = Array.from(dragItemsContainer.querySelectorAll('.card'));
+                
+                // 2. Kosongkan dragItemsContainer
+                dragItemsContainer.innerHTML = ''; 
+                
+                // 3. Acak array kartu yang hanya berasal dari container bawah
+                shuffleArray(cardsInDragContainer);
+
+                // 4. Masukkan kembali kartu-kartu yang sudah diacak ke dragItemsContainer
+                cardsInDragContainer.forEach(card => {
+                    // Pastikan kartu tidak memiliki kelas 'dropped' jika masih di container
+                    card.classList.remove('dropped', 'selected-for-tap', 'dragging'); 
+                    // Pastikan draggable attribute dikembalikan untuk desktop
+                    if (!isMobileDevice) {
+                        card.setAttribute('draggable', 'true');
+                    }
+                    // Setup kembali event listener untuk mobile
+                    if (isMobileDevice) {
+                        setupCardMobileTapEvents(card);
+                    }
+                    dragItemsContainer.appendChild(card);
+                });
+
+                // Penting: Jangan sentuh placeholder atau kartu di dalamnya
+                // Hapus highlight dan feedback yang mungkin muncul
+                document.querySelectorAll('.placeholder-target').forEach(p => {
+                    p.classList.remove('active-placeholder', 'error-highlight', 'show-number');
+                });
+                resetInteractionStates(); // Bersihkan status interaksi yang mungkin aktif
+                feedback.style.display = 'none'; // Sembunyikan feedback
+                
+                console.log("shuffleCards: Kartu di list berhasil diacak. Kartu di placeholder tetap di tempatnya.");
+            }
+
+            function shuffleArray(array) {
+                for (let i = array.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [array[i], array[j]] = [array[j], array[i]];
+                }
+            }
+
+            // --- INISIALISASI AWAL ---
+            processInputBtn.addEventListener('click', processInputText);
+            shuffleCardsBtn.addEventListener('click', shuffleCards);
+            resetExerciseBtn.addEventListener('click', resetExercise);
+            checkAnswerBtn.addEventListener('click', checkAnswer);
+
+            radioCharacter.addEventListener('change', processInputText);
+            radioWord.addEventListener('change', processInputText);
+
+            // Initial content for the input editor
+            inputHtml.innerHTML = `Saya <b>punya</b> kucing.<br>Saya <b>suka</b> kopi.<br>Ini adalah <b>buku</b>.`;
+            processInputText();
+            console.log("DOM content loaded. Initial setup complete.");
+        });
+    </script>
+</body>
+</html>

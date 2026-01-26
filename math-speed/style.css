@@ -1,0 +1,523 @@
+        /* Poppins Font Face */
+        @font-face {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 400;
+            src: url('fonts/poppins/Poppins-Regular.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 600;
+            src: url('fonts/poppins/Poppins-SemiBold.ttf') format('truetype');
+        }
+        @font-face {
+            font-family: 'Poppins';
+            font-style: normal;
+            font-weight: 700;
+            src: url('fonts/poppins/Poppins-Bold.ttf') format('truetype');
+        }
+
+        :root {
+            --primary: #4361ee;
+            --secondary: #3f37c9;
+            --accent: #4895ef;
+            --danger: #f72585;
+            --success: #4cc9f0;
+            --light: #f8f9fa;
+            --dark: #212529;
+            --gray: #6c757d;
+            --warning: #ff9e00;
+            --super-hard: #9d4edd;
+            --monster: #ff5400;
+            
+            /* Light mode colors */
+            --bg-color: #f5f7fa;
+            --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            --card-bg: white;
+            --text-color: #212529;
+            --input-bg: white;
+            --input-border: #e9ecef;
+            --stat-bg: white;
+            --result-stat-bg: #f8f9fa;
+        }
+
+        .dark-mode {
+            /* Dark mode colors */
+            --bg-color: #121212;
+            --bg-gradient: linear-gradient(135deg, #121212 0%, #1e1e1e 100%);
+            --card-bg: #1e1e1e;
+            --text-color: #f8f9fa;
+            --input-bg: #2d2d2d;
+            --input-border: #444;
+            --stat-bg: #2d2d2d;
+            --result-stat-bg: #2d2d2d;
+            --light: #2d2d2d;
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg-gradient);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            color: var(--text-color);
+        }
+        
+        .container {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 800px;
+            overflow: hidden;
+            margin: 20px 0;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 25px;
+            text-align: center;
+            position: relative;
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+        
+        .game-area {
+            padding: 30px;
+        }
+        
+        .settings {
+            background-color: var(--light);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 30px;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+        
+        .setting-group {
+            margin-bottom: 10px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        select, input[type="number"] {
+            width: 100%;
+            padding: 12px 15px;
+            background-color: var(--input-bg);
+            border: 2px solid var(--input-border);
+            border-radius: 8px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s;
+            color: var(--text-color);
+        }
+        
+        select:focus, input[type="number"]:focus {
+            border-color: var(--accent);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(67, 97, 238, 0.2);
+        }
+        
+        .game-mode {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .mode-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 10px;
+        }
+        
+        .mode-option {
+            flex: 1;
+        }
+        
+        .mode-radio {
+            display: none;
+        }
+        
+        .mode-label {
+            display: block;
+            padding: 12px;
+            background-color: var(--card-bg);
+            border: 2px solid var(--input-border);
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            font-size: 0.9rem;
+            color: var(--text-color);
+        }
+        
+        .mode-radio:checked + .mode-label {
+            border-color: var(--accent);
+            background-color: rgba(72, 149, 239, 0.1);
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        .mode-input {
+            margin-top: 10px;
+            display: none;
+        }
+        
+        .problem-container {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+        
+        .problem {
+            font-size: clamp(2.5rem, 8vw, 4rem);
+            font-weight: 700;
+            margin: 20px 0;
+            color: var(--text-color);
+            min-height: 80px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            word-break: break-all;
+        }
+        
+        .answer-input {
+            font-size: 1.8rem;
+            padding: 15px;
+            width: 100%;
+            max-width: 200px;
+            text-align: center;
+            background-color: var(--input-bg);
+            border: 3px solid var(--input-border);
+            border-radius: 10px;
+            margin: 0 auto 25px;
+            display: block;
+            transition: all 0.3s;
+            color: var(--text-color);
+        }
+        
+        .answer-input:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 4px rgba(67, 97, 238, 0.2);
+        }
+        
+        .btn {
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            font-size: 1rem;
+            font-weight: 600;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: inline-block;
+            min-width: 120px;
+            margin: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+        }
+        
+        .btn-warning {
+            background: linear-gradient(135deg, var(--warning) 0%, #ff6d00 100%);
+        }
+        
+        .btn-danger {
+            background: linear-gradient(135deg, var(--danger) 0%, #b5179e 100%);
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+        }
+        
+        .btn:active {
+            transform: translateY(0);
+        }
+        
+        .btn:disabled {
+            background: var(--input-border);
+            color: var(--gray);
+            cursor: not-allowed;
+            box-shadow: none;
+            transform: none;
+        }
+        
+        .btn-group {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-top: 30px;
+        }
+        
+        .stat-card {
+            background-color: var(--stat-bg);
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            text-align: center;
+        }
+        
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .stat-label {
+            font-size: 0.8rem;
+            color: var(--gray);
+        }
+        
+        .timer {
+            color: var(--danger);
+        }
+        
+        .score {
+            color: var(--primary);
+        }
+        
+        .streak {
+            color: var(--success);
+        }
+        
+        .progress-container {
+            margin-top: 20px;
+            height: 8px;
+            background-color: var(--input-border);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent) 0%, var(--success) 100%);
+            width: 0%;
+            transition: width 0.3s;
+        }
+        
+        .pause-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(30, 30, 30, 0.9);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            z-index: 10;
+            border-radius: 12px;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s;
+        }
+        
+        .dark-mode .pause-overlay {
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+        
+        .pause-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+        
+        .pause-text {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--warning);
+            margin-bottom: 20px;
+        }
+        
+        .results-container {
+            text-align: center;
+            padding: 20px;
+            display: none;
+        }
+        
+        .results-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .results-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .result-stat {
+            background-color: var(--result-stat-bg);
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .result-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .result-label {
+            font-size: 0.9rem;
+            color: var(--gray);
+        }
+        
+        .difficulty-label {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        
+        .easy {
+            background-color: rgba(76, 201, 240, 0.2);
+            color: var(--success);
+        }
+        
+        .medium {
+            background-color: rgba(255, 193, 7, 0.2);
+            color: #ffc107;
+        }
+        
+        .hard {
+            background-color: rgba(244, 67, 54, 0.2);
+            color: #f44336;
+        }
+        
+        .super-hard {
+            background-color: rgba(157, 78, 221, 0.2);
+            color: var(--super-hard);
+        }
+        
+        .monster {
+            background-color: rgba(255, 84, 0, 0.2);
+            color: var(--monster);
+        }
+
+        /* Dark mode toggle */
+        .dark-mode-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            color: white;
+        }
+
+        .dark-mode-toggle:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .dark-mode-toggle i {
+            font-size: 1.2rem;
+        }
+
+        /* Animation for timer */
+        @keyframes pulse {
+            0% { opacity: 1; }
+            50% { opacity: 0.5; }
+            100% { opacity: 1; }
+        }
+        
+        @media (max-width: 600px) {
+            .container {
+                margin: 10px;
+                border-radius: 10px;
+            }
+            
+            .header {
+                padding: 20px 15px;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            .game-area {
+                padding: 20px 15px;
+            }
+            
+            .settings {
+                padding: 15px;
+            }
+            
+            .mode-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .btn {
+                padding: 10px 15px;
+                min-width: 100px;
+                font-size: 0.9rem;
+            }
+            
+            .stats {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+            
+            .results-stats {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .dark-mode-toggle {
+                top: 15px;
+                right: 15px;
+                width: 35px;
+                height: 35px;
+            }
+        }

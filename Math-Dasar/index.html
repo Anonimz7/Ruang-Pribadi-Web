@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabel Matematika Interaktif</title>
+    <style>
+        :root {
+            --primary-color: #4a6bff;
+            --secondary-color: #f8f9fa;
+            --accent-color: #ff6b6b;
+            --text-color: #333;
+            --light-color: #fff;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            --bg-color: #f5f7ff;
+            --table-bg: #fff;
+            --table-border: #ddd;
+            --header-bg: #4a6bff;
+            --header-color: #fff;
+            --row-even: #f8f9fa;
+            --answer-cell: #e8f4ff;
+            --correct-color: #48bb78;
+            --incorrect-color: #f56565;
+            /* Warna Partikel */
+            --particle-color: #cccccc;
+        }
+
+        .dark-mode {
+            --primary-color: #6b8cff;
+            --secondary-color: #2d3748;
+            --accent-color: #ff6b6b;
+            --text-color: #f0f0f0;
+            --light-color: #1a202c;
+            --shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            --bg-color: #1a202c;
+            --table-bg: #2d3748;
+            --table-border: #4a5568;
+            --header-bg: #4a6bff;
+            --header-color: #fff;
+            --row-even: #4a5568;
+            --answer-cell: #2c5282;
+            --correct-color: #68d391;
+            --incorrect-color: #fc8181;
+            /* Warna Partikel untuk Dark Mode */
+            --particle-color: #4a5568; 
+        }
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+            /* Tambahkan relative untuk referensi posisi */
+            position: relative; 
+        }
+
+        /* CSS Partikel Baru */
+        #particles-js {
+            position: fixed; /* Gunakan fixed agar menutupi seluruh viewport */
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 0; /* Pastikan di belakang konten utama */
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            position: relative; /* Pastikan konten utama berada di atas partikel */
+            z-index: 1; 
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            background-color: var(--primary-color);
+            color: var(--light-color);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+        
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+        
+        .theme-toggle {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: none;
+            border: none;
+            color: var(--light-color);
+            font-size: 1.5rem;
+            cursor: pointer;
+            padding: 5px;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .theme-toggle:hover {
+            background-color: rgba(255, 255, 255, 0.2);
+        }
+        
+        .controls {
+            background-color: var(--table-bg);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            box-shadow: var(--shadow);
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+        
+        .control-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        label {
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+        
+        select, input, button {
+            padding: 10px 15px;
+            border: 2px solid var(--table-border);
+            border-radius: 5px;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            background-color: var(--light-color);
+            color: var(--text-color);
+        }
+        
+        select:focus, input:focus {
+            border-color: var(--primary-color);
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(74, 107, 255, 0.2);
+        }
+        
+        button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-top: auto;
+        }
+        
+        button:hover {
+            background-color: #3a5bef;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+        }
+        
+        .tables-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .math-table {
+            background-color: var(--table-bg);
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .math-table:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .table-title {
+            text-align: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-color);
+            color: var(--primary-color);
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+        }
+        
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 1px solid var(--table-border);
+        }
+        
+        th {
+            background-color: var(--header-bg);
+            color: var(--header-color);
+            font-weight: 600;
+        }
+        
+        tr:nth-child(even) {
+            background-color: var(--row-even);
+        }
+        
+        .answer-cell {
+            background-color: var(--answer-cell);
+        }
+        
+        .user-answer {
+            width: 60px;
+            padding: 6px;
+            border: 1px solid var(--table-border);
+            border-radius: 4px;
+            text-align: center;
+            background-color: var(--light-color);
+            color: var(--text-color);
+            font-size: 0.95rem;
+        }
+        
+        .validate-container {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+        }
+        
+        .validate-btn {
+            padding: 12px 24px;
+            background-color: var(--accent-color);
+            font-size: 0.95rem;
+            margin: 0 auto;
+        }
+        
+        .validate-btn:hover {
+            background-color: #e05555;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .modal-content {
+            background-color: var(--table-bg);
+            padding: 25px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 500px;
+            max-height: 80vh;
+            overflow-y: auto;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            animation: modalFadeIn 0.3s;
+            
+            /* Custom Scrollbar hanya untuk modal */
+            scrollbar-width: thin;
+            scrollbar-color: rgba(74, 107, 255, 0.5) rgba(0, 0, 0, 0.05);
+        }
+        
+        /* Custom Scrollbar untuk modal (WebKit) */
+        .modal-content::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .modal-content::-webkit-scrollbar-track {
+            background: rgba(0, 0, 0, 0.05);
+            border-radius: 10px;
+        }
+        
+        .modal-content::-webkit-scrollbar-thumb {
+            background-color: rgba(74, 107, 255, 0.5);
+            border-radius: 10px;
+        }
+        
+        .modal-content::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(74, 107, 255, 0.7);
+        }
+        
+        .dark-mode .modal-content::-webkit-scrollbar-thumb {
+            background-color: rgba(107, 140, 255, 0.5);
+        }
+        
+        .dark-mode .modal-content::-webkit-scrollbar-thumb:hover {
+            background-color: rgba(107, 140, 255, 0.7);
+        }
+        
+        @keyframes modalFadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .modal-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--primary-color);
+        }
+        
+        .modal-title {
+            color: var(--primary-color);
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 0;
+        }
+        
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--text-color);
+        }
+        
+        .result-summary {
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+        
+        .correct-answer {
+            color: var(--correct-color);
+            font-weight: 600;
+        }
+        
+        .incorrect-answer {
+            color: var(--incorrect-color);
+            font-weight: 600;
+        }
+        
+        .mistakes-list {
+            margin-top: 15px;
+        }
+        
+        .mistake-item {
+            padding: 8px 0;
+            border-bottom: 1px solid var(--table-border);
+        }
+        
+        .mistake-item:last-child {
+            border-bottom: none;
+        }
+        
+        .total-score {
+            margin-top: 20px;
+            padding-top: 15px;
+            border-top: 2px solid var(--primary-color);
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-align: center;
+        }
+        
+        .modal-actions {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 20px;
+            gap: 10px;
+        }
+        
+        .modal-btn {
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+        
+        .close-btn {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        @media (max-width: 768px) {
+            .controls {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+                padding-right: 40px;
+            }
+            
+            .tables-container {
+                grid-template-columns: 1fr;
+            }
+            
+            .modal-content {
+                width: 95%;
+                padding: 15px;
+            }
+        }
+        
+        @media print {
+            .controls, button, .theme-toggle, .validate-btn {
+                display: none;
+            }
+            
+            .tables-container {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .math-table {
+                page-break-inside: avoid;
+            }
+            
+            .user-answer {
+                border: none;
+                background-color: transparent;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div> 
+
+    <div class="container">
+        <header>
+            <h1>Tabel Matematika Interaktif</h1>
+            <p>Buat tabel perhitungan seperti di dinding sekolah</p>
+            <button class="theme-toggle" onclick="window.open('https://ms.thoutes.my.id/', '_blank')" title="Uji kecepatan aritmatika" style="right: 70px;">⚡</button>
+            <button class="theme-toggle" id="themeToggle" title="Toggle dark mode">🌓</button>
+        </header>
+        
+        <div class="controls">
+            <div class="control-group">
+                <label for="operation">Jenis Operasi</label>
+                <select id="operation">
+                    <option value="addition">Penjumlahan (+)</option>
+                    <option value="subtraction">Pengurangan (-)</option>
+                    <option value="multiplication">Perkalian (×)</option>
+                    <option value="division">Pembagian (÷)</option>
+                    <option value="random">Acak Semua Operasi</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label for="minValue">Nilai Minimum</label>
+                <input type="number" id="minValue" value="1" min="0">
+            </div>
+            
+            <div class="control-group">
+                <label for="maxValue">Nilai Maksimum</label>
+                <input type="number" id="maxValue" value="10" min="1">
+            </div>
+            
+            <div class="control-group">
+                <label for="questionsPerTable">Jumlah Soal per Tabel</label>
+                <select id="questionsPerTable">
+                    <option value="5">5 Soal (20 tabel)</option>
+                    <option value="10" selected>10 Soal (10 tabel)</option>
+                    <option value="20">20 Soal (5 tabel)</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label for="randomize">Acak Soal</label>
+                <select id="randomize">
+                    <option value="yes">Ya</option>
+                    <option value="no">Tidak</option>
+                </select>
+            </div>
+            
+            <div class="control-group">
+                <label for="showAnswers">Tampilkan Jawaban</label>
+                <select id="showAnswers">
+                    <option value="yes">Ya</option>
+                    <option value="no">Tidak (isi manual)</option>
+                </select>
+            </div>
+            
+            <button id="generateBtn">Buat Tabel</button>
+        </div>
+        
+        <div class="tables-container" id="tablesContainer">
+            </div>
+    </div>
+    
+    <div class="modal" id="resultModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Hasil Validasi</h3>
+                <button class="close-modal" id="closeModal">&times;</button>
+            </div>
+            <div class="result-summary" id="resultSummary">
+                </div>
+            <div class="mistakes-list" id="mistakesList">
+                </div>
+            <div class="total-score" id="totalScore">
+                </div>
+            <div class="modal-actions">
+                <button class="modal-btn close-btn" id="modalCloseBtn">Tutup</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    
+    <script>
+        // Inisialisasi particles.js
+        particlesJS('particles-js', {
+            "particles": {
+                "number": { "value": 80, "density": { "enable": true, "value_area": 800 } },
+                "color": { "value": document.body.classList.contains('dark-mode') ? "#4a5568" : "#cccccc" }, // Menggunakan warna dari CSS
+                "shape": { "type": "circle" },
+                "opacity": { "value": 0.5, "random": false },
+                "size": { "value": 3, "random": true },
+                "line_linked": { "enable": true, "distance": 150, "color": document.body.classList.contains('dark-mode') ? "#4a5568" : "#cccccc", "opacity": 0.4, "width": 1 },
+                "move": { "enable": true, "speed": 4, "direction": "none", "out_mode": "out" }
+            },
+            "interactivity": {
+                "events": { "onhover": { "enable": true, "mode": "repulse" }, "onclick": { "enable": true, "mode": "push" } },
+                "modes": { "repulse": { "distance": 150 }, "push": { "particles_nb": 4 } }
+            }
+        });
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const generateBtn = document.getElementById('generateBtn');
+            const themeToggle = document.getElementById('themeToggle');
+            const resultModal = document.getElementById('resultModal');
+            const closeModal = document.getElementById('closeModal');
+            const modalCloseBtn = document.getElementById('modalCloseBtn');
+            
+            // Toggle dark mode
+            themeToggle.addEventListener('click', function() {
+                document.body.classList.toggle('dark-mode');
+                const isDarkMode = document.body.classList.contains('dark-mode');
+                localStorage.setItem('darkMode', isDarkMode);
+                themeToggle.textContent = isDarkMode ? '🌞' : '🌓';
+                themeToggle.title = isDarkMode ? 'Toggle light mode' : 'Toggle dark mode';
+                
+                // Reload particles untuk menerapkan warna baru
+                window.pJSDom[0].pJS.particles.array.forEach(p => {
+                    p.color.rgb = p.c.hexToRgb(isDarkMode ? '#4a5568' : '#cccccc');
+                });
+                window.pJSDom[0].pJS.fn.particlesDraw();
+            });
+            
+            // Cek preferensi dark mode dari localStorage
+            if (localStorage.getItem('darkMode') === 'true') {
+                document.body.classList.add('dark-mode');
+                themeToggle.textContent = '🌞';
+                themeToggle.title = 'Toggle light mode';
+            }
+            
+            // Tutup modal
+            closeModal.addEventListener('click', function() {
+                resultModal.style.display = 'none';
+            });
+            
+            modalCloseBtn.addEventListener('click', function() {
+                resultModal.style.display = 'none';
+            });
+            
+            // Tutup modal ketika klik di luar konten modal
+            window.addEventListener('click', function(event) {
+                if (event.target === resultModal) {
+                    resultModal.style.display = 'none';
+                }
+            });
+            
+            generateBtn.addEventListener('click', generateTables);
+            
+            // Generate tabel saat pertama kali dimuat
+            generateTables();
+            
+            function generateTables() {
+                const operation = document.getElementById('operation').value;
+                const minValue = parseInt(document.getElementById('minValue').value);
+                const maxValue = parseInt(document.getElementById('maxValue').value);
+                const questionsPerTable = parseInt(document.getElementById('questionsPerTable').value);
+                const randomize = document.getElementById('randomize').value === 'yes';
+                const showAnswers = document.getElementById('showAnswers').value === 'yes';
+                
+                // Hitung berapa tabel yang dibutuhkan
+                const totalQuestions = 100; // Total 100 soal seperti tabel biasa
+                const tableCount = totalQuestions / questionsPerTable;
+                
+                // Bersihkan container
+                const tablesContainer = document.getElementById('tablesContainer');
+                tablesContainer.innerHTML = '';
+                
+                // Buat array angka untuk operasi
+                let numbers = [];
+                for (let i = minValue; i <= maxValue; i++) {
+                    numbers.push(i);
+                }
+                
+                // Acak jika diperlukan
+                if (randomize) {
+                    numbers = shuffleArray(numbers);
+                }
+                
+                // Buat tabel
+                for (let tableIndex = 0; tableIndex < tableCount; tableIndex++) {
+                    const tableDiv = document.createElement('div');
+                    tableDiv.className = 'math-table';
+                    
+                    const tableTitle = document.createElement('h3');
+                    tableTitle.className = 'table-title';
+                    tableTitle.textContent = `Tabel ${tableIndex + 1}`;
+                    tableDiv.appendChild(tableTitle);
+                    
+                    const table = document.createElement('table');
+                    
+                    // Buat header tabel
+                    const thead = document.createElement('thead');
+                    const headerRow = document.createElement('tr');
+                    
+                    const noHeader = document.createElement('th');
+                    noHeader.textContent = 'No';
+                    headerRow.appendChild(noHeader);
+                    
+                    const questionHeader = document.createElement('th');
+                    questionHeader.textContent = 'Soal';
+                    headerRow.appendChild(questionHeader);
+                    
+                    const answerHeader = document.createElement('th');
+                    answerHeader.textContent = 'Jawaban';
+                    headerRow.appendChild(answerHeader);
+                    
+                    thead.appendChild(headerRow);
+                    table.appendChild(thead);
+                    
+                    // Buat isi tabel
+                    const tbody = document.createElement('tbody');
+                    const questions = [];
+                    
+                    for (let i = 0; i < questionsPerTable; i++) {
+                        const questionIndex = tableIndex * questionsPerTable + i;
+                        if (questionIndex >= numbers.length * numbers.length) continue;
+                        
+                        const row = document.createElement('tr');
+                        
+                        // Nomor
+                        const noCell = document.createElement('td');
+                        noCell.textContent = questionIndex + 1;
+                        row.appendChild(noCell);
+                        
+                        // Soal
+                        const questionCell = document.createElement('td');
+                        
+                        let a, b;
+                        if (randomize) {
+                            a = numbers[Math.floor(Math.random() * numbers.length)];
+                            b = numbers[Math.floor(Math.random() * numbers.length)];
+                        } else {
+                            a = numbers[Math.floor(questionIndex / numbers.length)];
+                            b = numbers[questionIndex % numbers.length];
+                        }
+                        
+                        let questionText = '';
+                        let correctAnswer;
+                        let currentOperation = operation;
+                        
+                        // Jika operasi diatur ke random, pilih operasi secara acak
+                        if (operation === 'random') {
+                            const operations = ['addition', 'subtraction', 'multiplication', 'division'];
+                            currentOperation = operations[Math.floor(Math.random() * operations.length)];
+                        }
+                        
+                        switch (currentOperation) {
+                            case 'addition':
+                                questionText = `${a} + ${b} =`;
+                                correctAnswer = a + b;
+                                break;
+                            case 'subtraction':
+                                // Pastikan hasil pengurangan tidak negatif
+                                const maxNum = Math.max(a, b);
+                                const minNum = Math.min(a, b);
+                                questionText = `${maxNum} - ${minNum} =`;
+                                correctAnswer = maxNum - minNum;
+                                a = maxNum;
+                                b = minNum;
+                                break;
+                            case 'multiplication':
+                                questionText = `${a} × ${b} =`;
+                                correctAnswer = a * b;
+                                break;
+                            case 'division':
+                                // Pastikan pembagian menghasilkan bilangan bulat
+                                questionText = `${a * b} ÷ ${a} =`;
+                                correctAnswer = b;
+                                a = a * b;
+                                break;
+                        }
+                        
+                        questionCell.textContent = questionText;
+                        row.appendChild(questionCell);
+                        
+                        // Jawaban
+                        const answerCell = document.createElement('td');
+                        answerCell.className = 'answer-cell';
+                        
+                        if (showAnswers) {
+                            answerCell.textContent = correctAnswer;
+                        } else {
+                            const input = document.createElement('input');
+                            input.type = 'number';
+                            input.className = 'user-answer';
+                            input.dataset.correctAnswer = correctAnswer;
+                            input.dataset.question = questionText;
+                            input.dataset.questionNumber = questionIndex + 1;
+                            answerCell.appendChild(input);
+                        }
+                        
+                        row.appendChild(answerCell);
+                        tbody.appendChild(row);
+                        
+                        // Simpan pertanyaan untuk validasi nanti
+                        questions.push({
+                            questionNumber: questionIndex + 1,
+                            questionText: questionText,
+                            correctAnswer: correctAnswer,
+                            operation: currentOperation,
+                            userInput: showAnswers ? null : answerCell.querySelector('input')
+                        });
+                    }
+                    
+                    table.appendChild(tbody);
+                    tableDiv.appendChild(table);
+                    
+                    // Tambahkan tombol validasi jika jawaban disembunyikan
+                    if (!showAnswers) {
+                        const validateContainer = document.createElement('div');
+                        validateContainer.className = 'validate-container';
+                        
+                        const validateBtn = document.createElement('button');
+                        validateBtn.className = 'validate-btn';
+                        validateBtn.textContent = 'Validasi Jawaban';
+                        
+                        validateBtn.addEventListener('click', function() {
+                            validateAnswers(questions, tableIndex + 1);
+                        });
+                        
+                        validateContainer.appendChild(validateBtn);
+                        tableDiv.appendChild(validateContainer);
+                    }
+                    
+                    tablesContainer.appendChild(tableDiv);
+                }
+            }
+            
+            function validateAnswers(questions, tableNumber) {
+                let correctCount = 0;
+                let mistakes = [];
+                
+                questions.forEach(q => {
+                    if (q.userInput) {
+                        const userAnswer = parseInt(q.userInput.value);
+                        const isCorrect = userAnswer === q.correctAnswer;
+                        
+                        if (isCorrect) {
+                            correctCount++;
+                            q.userInput.style.backgroundColor = 'var(--correct-color)';
+                            q.userInput.style.color = 'white';
+                        } else {
+                            q.userInput.style.backgroundColor = 'var(--incorrect-color)';
+                            q.userInput.style.color = 'white';
+                            mistakes.push({
+                                number: q.questionNumber,
+                                question: q.questionText,
+                                userAnswer: isNaN(userAnswer) ? '(kosong)' : userAnswer,
+                                correctAnswer: q.correctAnswer,
+                                operation: q.operation
+                            });
+                        }
+                    }
+                });
+                
+                // Tampilkan modal dengan hasil validasi
+                showResultModal(correctCount, questions.length, mistakes, tableNumber);
+            }
+            
+            function showResultModal(correctCount, totalQuestions, mistakes, tableNumber) {
+                const resultSummary = document.getElementById('resultSummary');
+                const mistakesList = document.getElementById('mistakesList');
+                const totalScore = document.getElementById('totalScore');
+                
+                // Hitung persentase
+                const percentage = Math.round((correctCount / totalQuestions) * 100);
+                
+                // Tampilkan ringkasan
+                resultSummary.innerHTML = `
+                    <p>Hasil validasi untuk <strong>Tabel ${tableNumber}</strong>:</p>
+                    <p>Anda menjawab <span class="correct-answer">${correctCount} benar</span> dan 
+                    <span class="incorrect-answer">${totalQuestions - correctCount} salah</span> dari ${totalQuestions} soal.</p>
+                    <p>Nilai: <strong>${percentage}%</strong></p>
+                `;
+                
+                // Tampilkan daftar kesalahan
+                mistakesList.innerHTML = '';
+                if (mistakes.length > 0) {
+                    const mistakesTitle = document.createElement('p');
+                    mistakesTitle.innerHTML = '<strong>Detail Kesalahan:</strong>';
+                    mistakesList.appendChild(mistakesTitle);
+                    
+                    mistakes.forEach(mistake => {
+                        const item = document.createElement('div');
+                        item.className = 'mistake-item';
+                        
+                        let operationSymbol = '';
+                        switch(mistake.operation) {
+                            case 'addition': operationSymbol = '+'; break;
+                            case 'subtraction': operationSymbol = '-'; break;
+                            case 'multiplication': operationSymbol = '×'; break;
+                            case 'division': operationSymbol = '÷'; break;
+                        }
+                        
+                        item.innerHTML = `
+                            <p><strong>No. ${mistake.number}:</strong> ${mistake.question.replace(/[+\-×÷]/, operationSymbol)}</p>
+                            <p>Jawaban Anda: <span class="incorrect-answer">${mistake.userAnswer}</span></p>
+                            <p>Jawaban benar: <span class="correct-answer">${mistake.correctAnswer}</span></p>
+                        `;
+                        mistakesList.appendChild(item);
+                    });
+                } else {
+                    const noMistakes = document.createElement('p');
+                    noMistakes.innerHTML = '<span class="correct-answer">Semua jawaban benar! 👍</span>';
+                    mistakesList.appendChild(noMistakes);
+                }
+                
+                // Tampilkan total skor
+                totalScore.innerHTML = `
+                    <p>Total Skor: <span style="color: var(--primary-color); font-size: 1.3rem;">${correctCount}/${totalQuestions}</span></p>
+                    <p>Persentase: <span style="color: ${percentage >= 80 ? 'var(--correct-color)' : 'var(--incorrect-color)'}">${percentage}%</span></p>
+                `;
+                
+                // Tampilkan modal
+                resultModal.style.display = 'flex';
+            }
+            
+            // Fungsi untuk mengacak array
+            function shuffleArray(array) {
+                const newArray = [...array];
+                for (let i = newArray.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [newArray[i], newArray[j]] = [newArray[j], newArray[i]];
+                }
+                return newArray;
+            }
+        });
+    </script>
+</body>
+</html>

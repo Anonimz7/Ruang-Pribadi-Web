@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gacha Keberuntungan Hari Ini</title>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <style>
+        /* CSS Variabel untuk Dark/Light Mode */
+        :root {
+            --bg-color: #f4f4f9;
+            --text-color: #333;
+            --container-bg: #fff;
+            --button-bg: #4CAF50;
+            --button-hover: #45a049;
+            --gacha-box-bg: #e0e0e0;
+            --shadow-color: rgba(0, 0, 0, 0.1);
+            --header-color: #007bff;
+        }
+
+        .dark-mode {
+            --bg-color: #121212;
+            --text-color: #e0e0e0;
+            --container-bg: #1e1e1e;
+            --button-bg: #1e88e5;
+            --button-hover: #1565c0;
+            --gacha-box-bg: #333;
+            --shadow-color: rgba(255, 255, 255, 0.05);
+            --header-color: #90caf9;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        #particles-js-perayaan {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 10; /* Di atas konten lain saat aktif */
+            pointer-events: none; /* Penting agar tidak menghalangi klik */
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+        .container {
+            background-color: var(--container-bg);
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px var(--shadow-color);
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+            z-index: 20; /* Di atas particles-js */
+        }
+
+        h1 {
+            color: var(--header-color);
+            margin-bottom: 25px;
+        }
+
+        #gacha-box {
+            background-color: var(--gacha-box-bg);
+            border: 3px solid var(--header-color);
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            min-height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.2em;
+            font-weight: bold;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        #result-number {
+            font-size: 3em;
+            margin: 5px 0;
+            color: #E91E63; /* Warna default hasil */
+            transition: color 0.5s;
+        }
+
+        #result-text {
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+
+        #start-button {
+            padding: 12px 25px;
+            font-size: 1.1em;
+            background-color: var(--button-bg);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.1s;
+        }
+
+        #start-button:hover {
+            background-color: var(--button-hover);
+            transform: scale(1.02);
+        }
+
+        #start-button:disabled {
+            background-color: #999;
+            cursor: not-allowed;
+        }
+        
+        /* Toggle Dark Mode */
+        .toggle-switch {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            display: inline-block;
+            width: 60px;
+            height: 34px;
+        }
+
+        .toggle-switch input {
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .slider {
+            position: absolute;
+            cursor: pointer;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #ccc;
+            transition: .4s;
+            border-radius: 34px;
+        }
+
+        .slider:before {
+            position: absolute;
+            content: "";
+            height: 26px;
+            width: 26px;
+            left: 4px;
+            bottom: 4px;
+            background-color: white;
+            transition: .4s;
+            border-radius: 50%;
+        }
+
+        input:checked + .slider {
+            background-color: var(--button-bg);
+        }
+
+        input:focus + .slider {
+            box-shadow: 0 0 1px var(--button-bg);
+        }
+
+        input:checked + .slider:before {
+            transform: translateX(26px);
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 600px) {
+            .container {
+                width: 95%;
+                padding: 20px;
+            }
+            #result-number {
+                font-size: 2.5em;
+            }
+            .toggle-switch {
+                top: 10px;
+                right: 10px;
+            }
+        }
+    </style>
+</head>
+<body class="light-mode">
+    <div id="particles-js-perayaan"></div>
+    
+    <label class="toggle-switch">
+        <input type="checkbox" id="dark-mode-toggle">
+        <span class="slider"></span>
+    </label>
+
+    <div class="container">
+        <h1>🔮 Gacha Keberuntungan Hari Ini 🍀</h1>
+        <div id="gacha-box">
+            <p>Klik **MULAI** untuk mengetahui keberuntunganmu!</p>
+            <div id="result-number">--</div>
+            <div id="result-text"></div>
+        </div>
+        <button id="start-button">MULAI 🚀</button>
+    </div>
+
+    <script>
+        const startButton = document.getElementById('start-button');
+        const resultNumber = document.getElementById('result-number');
+        const resultText = document.getElementById('result-text');
+        const gachaBox = document.getElementById('gacha-box');
+        const particlesContainer = document.getElementById('particles-js-perayaan');
+        const darkModeToggle = document.getElementById('dark-mode-toggle');
+        const body = document.body;
+
+        // Inisialisasi Particles.js (Konfigurasi dasar)
+        function initParticles(config) {
+            particlesJS('particles-js-perayaan', config);
+        }
+        
+        // Konfigurasi Particle untuk Keberuntungan SANGAT TINGGI (Angka 1)
+        const ultraLuckConfig = {
+            "particles": {
+                "number": {"value": 150, "density": {"enable": true, "value_area": 800}},
+                "color": {"value": ["#FFD700", "#FF4500", "#ADFF2F"]}, // Emas, Merah Oranye, Hijau Neon
+                "shape": {"type": "star", "stroke": {"width": 0, "color": "#000000"}},
+                "opacity": {"value": 0.8, "random": true, "anim": {"enable": true, "speed": 1, "opacity_min": 0.1, "sync": false}},
+                "size": {"value": 10, "random": true, "anim": {"enable": true, "speed": 10, "size_min": 0.1, "sync": false}},
+                "line_linked": {"enable": false},
+                "move": {"enable": true, "speed": 8, "direction": "top", "random": true, "straight": false, "out_mode": "out", "bounce": false}
+            },
+            "interactivity": {"detect_on": "canvas", "events": {"onhover": {"enable": false}, "onclick": {"enable": false}, "resize": true}},
+            "retina_detect": true
+        };
+
+        // Konfigurasi Particle untuk Keberuntungan TINGGI (Angka 2-10)
+        const highLuckConfig = {
+            "particles": {
+                "number": {"value": 80, "density": {"enable": true, "value_area": 800}},
+                "color": {"value": "#32CD32"}, // Hijau Lime
+                "shape": {"type": "circle", "stroke": {"width": 0, "color": "#000000"}},
+                "opacity": {"value": 0.7, "random": false, "anim": {"enable": false}},
+                "size": {"value": 5, "random": true, "anim": {"enable": false}},
+                "line_linked": {"enable": true, "distance": 150, "color": "#32CD32", "opacity": 0.4, "width": 1},
+                "move": {"enable": true, "speed": 4, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false}
+            },
+            "interactivity": {"detect_on": "canvas", "events": {"onhover": {"enable": false}, "onclick": {"enable": false}, "resize": true}},
+            "retina_detect": true
+        };
+
+        // Fungsi untuk menghentikan dan menghilangkan efek particles
+        function stopParticles() {
+            if (window.pJSDom && window.pJSDom.length > 0) {
+                // Hapus canvas yang ada dan set opacity ke 0
+                particlesContainer.style.opacity = '0';
+                setTimeout(() => {
+                    particlesContainer.innerHTML = '';
+                    window.pJSDom = []; // Reset pJSDom array
+                }, 1000); // Tunggu sampai transisi opacity selesai
+            }
+        }
+
+        // Fungsi utama Gacha
+        function spinGacha() {
+            stopParticles(); // Pastikan efek sebelumnya berhenti
+            startButton.disabled = true;
+            resultNumber.textContent = '...';
+            resultText.textContent = 'Mengundi...';
+            gachaBox.style.backgroundColor = 'var(--gacha-box-bg)'; // Reset warna
+
+            let countdown = 10;
+            const spinInterval = setInterval(() => {
+                const tempNumber = Math.floor(Math.random() * 100) + 1;
+                resultNumber.textContent = tempNumber;
+                countdown--;
+                if (countdown === 0) {
+                    clearInterval(spinInterval);
+                    finalizeGacha();
+                }
+            }, 100);
+        }
+
+        // Fungsi untuk menentukan dan menampilkan hasil akhir
+        function finalizeGacha() {
+            const finalNumber = Math.floor(Math.random() * 100) + 1;
+            resultNumber.textContent = finalNumber;
+            let message = '';
+            let color = '';
+            let particleConfig = null;
+
+            if (finalNumber === 1) {
+                message = '🎉 HARI INI SANGAT BERUNTUNG! KEBERUNTUNGAN MAKSIMAL! 🎉';
+                color = '#FFD700'; // Emas
+                particleConfig = ultraLuckConfig;
+            } else if (finalNumber >= 2 && finalNumber <= 10) {
+                message = '🍀 Beruntung! Lakukan rencana besarmu hari ini.';
+                color = '#32CD32'; // Hijau Lime
+                particleConfig = highLuckConfig;
+            } else if (finalNumber >= 11 && finalNumber <= 20) {
+                message = '👍 Lumayan. Hari yang cukup baik.';
+                color = '#FF8C00'; // Oranye Tua
+            } else if (finalNumber >= 21 && finalNumber <= 30) {
+                message = '😐 Sedikit rendah. Tetap hati-hati dalam keputusanmu.';
+                color = '#FF4500'; // Merah Oranye
+            } else if (finalNumber >= 31 && finalNumber <= 40) {
+                message = '🔻 Rendah. Ambil langkah dengan bijaksana.';
+                color = '#DC143C'; // Merah Crimson
+            } else if (finalNumber >= 41 && finalNumber <= 50) {
+                message = '💔 SIAL! Hari ini mungkin penuh tantangan.';
+                color = '#800000'; // Coklat Tua
+            } else { // 51 sampai 100
+                message = '⚠️ HATI-HATI DITIMPA KEMALANGAN! Selalu waspada dan jangan ambil risiko besar.';
+                color = '#000000'; // Hitam (kontras)
+            }
+
+            resultText.textContent = message;
+            resultNumber.style.color = color;
+            startButton.disabled = false;
+
+            // Efek Perayaan
+            if (particleConfig) {
+                initParticles(particleConfig);
+                particlesContainer.style.opacity = '1';
+                setTimeout(stopParticles, finalNumber === 1 ? 8000 : 4000); // Efek lebih lama untuk keberuntungan maksimal
+            }
+        }
+
+        // Event Listener untuk tombol start
+        startButton.addEventListener('click', spinGacha);
+        
+        // Dark Mode Logic
+        function setDarkMode(isDark) {
+            if (isDark) {
+                body.classList.add('dark-mode');
+                localStorage.setItem('theme', 'dark');
+            } else {
+                body.classList.remove('dark-mode');
+                localStorage.setItem('theme', 'light');
+            }
+        }
+
+        darkModeToggle.addEventListener('change', (e) => {
+            setDarkMode(e.target.checked);
+        });
+
+        // Cek preferensi yang tersimpan saat memuat halaman
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme === 'dark') {
+            darkModeToggle.checked = true;
+            setDarkMode(true);
+        } else if (savedTheme === 'light') {
+            darkModeToggle.checked = false;
+            setDarkMode(false);
+        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            // Jika tidak ada yang tersimpan, ikuti preferensi sistem operasi
+            darkModeToggle.checked = true;
+            setDarkMode(true);
+        }
+    </script>
+</body>
+</html>

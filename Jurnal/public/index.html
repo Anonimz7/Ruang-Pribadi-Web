@@ -1,0 +1,2769 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Analyst Hub Pro</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dompurify@3/dist/purify.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap');
+
+    :root {
+      --bg: #0b1120;
+      --bg-elevated: rgba(16, 24, 40, 0.85);
+      --card: rgba(15, 23, 42, 0.9);
+      --text: #e2e8f0;
+      --muted: #94a3b8;
+      --border: rgba(148, 163, 184, 0.18);
+      --accent: #38bdf8;
+      --accent-strong: #6366f1;
+      --accent-warm: #f97316;
+      --mermaid-bg: #111827;
+      --mermaid-line: #94a3b8;
+      --mermaid-text: #e2e8f0;
+      --mermaid-node: #6366f1;
+      --shadow: 0 25px 60px rgba(15, 23, 42, 0.45);
+    }
+
+    .light-mode {
+      --bg: #f8fafc;
+      --bg-elevated: rgba(255, 255, 255, 0.9);
+      --card: rgba(255, 255, 255, 0.92);
+      --text: #0f172a;
+      --muted: #475569;
+      --border: rgba(148, 163, 184, 0.35);
+      --accent: #2563eb;
+      --accent-strong: #7c3aed;
+      --accent-warm: #f97316;
+      --mermaid-bg: #ffffff;
+      --mermaid-line: #475569;
+      --mermaid-text: #1e293b;
+      --mermaid-node: #2563eb;
+      --shadow: 0 30px 70px rgba(15, 23, 42, 0.1);
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      transition: 0.3s;
+      min-height: 100vh;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at top, rgba(56, 189, 248, 0.18), transparent 45%),
+        radial-gradient(circle at 20% 30%, rgba(124, 58, 237, 0.2), transparent 40%),
+        radial-gradient(circle at 80% 20%, rgba(249, 115, 22, 0.18), transparent 35%);
+      z-index: -2;
+      transition: 0.3s;
+    }
+
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.85), rgba(2, 6, 23, 0.9));
+      z-index: -3;
+      transition: 0.3s;
+    }
+
+    .light-mode::after {
+      background: linear-gradient(180deg, rgba(241, 245, 249, 0.9), rgba(226, 232, 240, 0.9));
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(18px);
+    }
+
+    .input-field {
+      background-color: rgba(15, 23, 42, 0.65);
+      border: 1px solid var(--border);
+      color: var(--text);
+      transition: 0.2s ease;
+    }
+
+    .light-mode .input-field {
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    .break-all {
+      word-break: break-all;
+      overflow-wrap: anywhere;
+    }
+
+    .journal-box {
+      max-height: 30rem;
+      overflow-y: auto;
+      line-height: 1.6;
+    }
+
+    .custom-scroll::-webkit-scrollbar {
+      width: 5px;
+    }
+
+    .custom-scroll::-webkit-scrollbar-thumb {
+      background: rgba(148, 163, 184, 0.5);
+      border-radius: 999px;
+    }
+
+    .light-mode .btn-reset {
+      background-color: #1e293b !important;
+      color: #ffffff !important;
+    }
+
+    .internal-link {
+      color: #3b82f6;
+      cursor: pointer;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    .page-active {
+      background-color: #2563eb !important;
+      color: white !important;
+      border-color: #2563eb !important;
+    }
+
+    .tab-btn {
+      padding-bottom: 0.75rem;
+      cursor: pointer;
+      transition: 0.3s;
+      opacity: 0.6;
+      font-weight: 700;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      position: relative;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .tab-btn.active {
+      opacity: 1;
+      color: var(--accent);
+    }
+
+    .tab-btn.active::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--accent), var(--accent-strong));
+      border-radius: 999px;
+    }
+
+    /* Modal Styles */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0, 0, 0, 0.7);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 9999;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.3s, visibility 0.3s;
+    }
+
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .modal-content {
+      background-color: var(--bg-elevated);
+      border-radius: 1rem;
+      padding: 2rem;
+      width: 90%;
+      max-width: 500px;
+      border: 1px solid var(--border);
+      transform: translateY(20px);
+      transition: transform 0.3s;
+    }
+
+    .modal-overlay.active .modal-content {
+      transform: translateY(0);
+    }
+
+    /* Mermaid Container */
+    .mermaid-container {
+      background: var(--mermaid-bg);
+      padding: 1rem;
+      border-radius: 0.75rem;
+      margin: 1rem 0;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .mermaid-pan-wrapper {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      cursor: grab;
+    }
+
+    .mermaid-pan-wrapper:active {
+      cursor: grabbing;
+    }
+
+    .mermaid-pan-layer {
+      transform-origin: 0 0;
+      transition: transform 0.05s ease-out;
+    }
+
+    .mermaid-container svg {
+      display: block;
+      margin: 0 auto;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .mermaid-toolbar {
+      position: absolute;
+      top: 0.5rem;
+      right: 0.5rem;
+      display: flex;
+      gap: 0.4rem;
+      z-index: 2;
+    }
+
+    .mermaid-toolbar button {
+      background: rgba(15, 23, 42, 0.8);
+      color: #e2e8f0;
+      border: 1px solid var(--border);
+      border-radius: 0.5rem;
+      padding: 0.25rem 0.5rem;
+      font-size: 0.75rem;
+      line-height: 1;
+      transition: background 0.2s;
+    }
+
+    .mermaid-toolbar button:hover {
+      background: rgba(30, 41, 59, 0.9);
+    }
+
+    .light-mode .mermaid-toolbar button {
+      background: rgba(255, 255, 255, 0.9);
+      color: #1e293b;
+    }
+
+    /* Loading States */
+    .loading-spinner {
+      display: inline-block;
+      width: 1rem;
+      height: 1rem;
+      border: 2px solid rgba(59, 130, 246, 0.3);
+      border-radius: 50%;
+      border-top-color: #3b82f6;
+      animation: spin 1s ease-in-out infinite;
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .card {
+      animation: slideUp 0.3s ease-out;
+    }
+
+    @keyframes slideUp {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Markdown Body */
+    .markdown-body {
+      font-size: 0.9375rem;
+      line-height: 1.6;
+    }
+
+    .markdown-body h1,
+    .markdown-body h2,
+    .markdown-body h3 {
+      margin-top: 1.5em;
+      margin-bottom: 0.5em;
+      font-weight: 600;
+    }
+
+    .markdown-body p {
+      margin-bottom: 1em;
+    }
+
+    .markdown-body ul,
+    .markdown-body ol {
+      padding-left: 1.5em;
+      margin-bottom: 1em;
+      list-style-position: outside;
+    }
+
+    .markdown-body ul {
+      list-style-type: disc;
+    }
+
+    .markdown-body ol {
+      list-style-type: decimal;
+    }
+
+    .markdown-body li {
+      margin: 0.25rem 0;
+    }
+
+    .markdown-body code {
+      background: rgba(148, 163, 184, 0.1);
+      padding: 0.2em 0.4em;
+      border-radius: 0.25rem;
+      font-size: 0.875em;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    }
+
+    .markdown-body pre {
+      background: rgba(15, 23, 42, 0.5);
+      border: 1px solid rgba(100, 116, 139, 0.2);
+      border-radius: 0.5rem;
+      padding: 1rem;
+      overflow-x: auto;
+      margin: 1rem 0;
+    }
+
+    .markdown-body pre code {
+      background: transparent;
+      padding: 0;
+    }
+
+    .markdown-body blockquote {
+      border-left: 4px solid rgba(56, 189, 248, 0.5);
+      padding-left: 1rem;
+      margin: 1rem 0;
+      color: var(--muted);
+      background: rgba(15, 23, 42, 0.4);
+      border-radius: 0.5rem;
+    }
+
+    .markdown-body hr {
+      border: 0;
+      border-top: 1px solid rgba(148, 163, 184, 0.3);
+      margin: 1.5rem 0;
+    }
+
+    .markdown-body table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+      font-size: 0.875rem;
+    }
+
+    .markdown-body th,
+    .markdown-body td {
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      padding: 0.5rem 0.75rem;
+      text-align: left;
+    }
+
+    .markdown-body thead {
+      background: rgba(30, 41, 59, 0.6);
+    }
+
+    .markdown-body input[type="checkbox"] {
+      accent-color: #38bdf8;
+      width: 1rem;
+      height: 1rem;
+      margin-right: 0.5rem;
+      vertical-align: middle;
+    }
+
+    /* Floating Action Button */
+    .fab {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--accent), var(--accent-strong));
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: 0 10px 30px rgba(56, 189, 248, 0.35);
+      transition: transform 0.3s, box-shadow 0.3s;
+      z-index: 100;
+      border: none;
+      font-size: 1.5rem;
+    }
+
+    .fab:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 16px 35px rgba(56, 189, 248, 0.45);
+    }
+
+    /* Ensure visibility */
+    #data-list>div {
+      display: block !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      animation: fadeIn 0.3s ease-in forwards;
+    }
+
+    /* Fix for any hidden containers */
+    .journal-content {
+      min-height: 100px;
+      max-height: 22rem;
+      overflow: auto;
+      padding-right: 0.5rem;
+    }
+
+    .post-card {
+      max-width: 54rem;
+      margin: 0 auto;
+      transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .post-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 25px 40px rgba(15, 23, 42, 0.4);
+    }
+
+    .attachment-field {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      padding: 0.75rem;
+      border-radius: 0.75rem;
+      border: 1px solid rgba(56, 189, 248, 0.2);
+      background: rgba(15, 23, 42, 0.55);
+    }
+
+    .attachment-button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.75rem;
+      border-radius: 0.75rem;
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(99, 102, 241, 0.1));
+      border: 1px dashed rgba(56, 189, 248, 0.6);
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #bae6fd;
+      transition: 0.2s ease-in-out;
+    }
+
+    .attachment-button:hover {
+      background: rgba(30, 64, 175, 0.25);
+      border-color: rgba(59, 130, 246, 0.9);
+    }
+
+    .attachment-summary {
+      font-size: 0.65rem;
+      color: #94a3b8;
+    }
+
+    .attachment-list {
+      display: grid;
+      gap: 0.25rem;
+      max-height: 6rem;
+      overflow: auto;
+      font-size: 0.65rem;
+    }
+
+    .page-shell {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+    }
+
+    .hero-card {
+      padding: 2rem;
+      border-radius: 1.75rem;
+      border: 1px solid rgba(59, 130, 246, 0.18);
+      background: linear-gradient(140deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.85));
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at top right, rgba(59, 130, 246, 0.2), transparent 45%);
+      pointer-events: none;
+    }
+
+    .hero-metrics {
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid rgba(59, 130, 246, 0.35);
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      color: #93c5fd;
+      background: rgba(30, 41, 59, 0.5);
+    }
+
+    .section-title {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.25em;
+      color: var(--muted);
+    }
+
+    .layout-grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .form-card {
+      padding: 2rem;
+      border-radius: 1.5rem;
+    }
+
+    .filter-card {
+      padding: 1.5rem;
+      border-radius: 1.5rem;
+      height: fit-content;
+      position: sticky;
+      top: 1.5rem;
+    }
+
+    .list-card {
+      padding: 1.5rem;
+      border-radius: 1.5rem;
+    }
+
+    .list-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.3em;
+      color: var(--muted);
+    }
+
+    .mobile-stack {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    @media (max-width: 1024px) {
+      .filter-card {
+        position: static;
+      }
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 1.25rem;
+      }
+
+      .hero-card {
+        padding: 1.5rem;
+      }
+
+      .tab-btn {
+        font-size: 0.7rem;
+        letter-spacing: 0.12em;
+      }
+
+      .post-card {
+        padding: 1.25rem;
+      }
+
+      .fab {
+        width: 48px;
+        height: 48px;
+        bottom: 1.25rem;
+        right: 1.25rem;
+      }
+    }
+  </style>
+</head>
+
+<body class="p-4 md:p-10">
+  <!-- Floating Action Button for Login -->
+  <button id="fab-login" class="fab" onclick="showAuthModal()">
+    <i class="fa-solid fa-unlock-keyhole"></i>
+  </button>
+
+  <!-- Auth Status Indicator -->
+  <div id="auth-status-indicator" class="fixed top-4 right-4 z-50 hidden">
+    <div class="flex items-center gap-2 bg-slate-800/90 backdrop-blur-sm px-3 py-2 rounded-lg border border-slate-700">
+      <div class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
+      <i class="fa-solid fa-user-astronaut text-slate-300 text-xs"></i>
+      <span id="auth-status-text" class="text-sm text-slate-300"></span>
+      <button onclick="logout()" class="text-xs text-red-400 hover:text-red-300 ml-2">Logout</button>
+    </div>
+  </div>
+
+  <!-- Auth Modal -->
+  <div id="auth-modal" class="modal-overlay">
+    <div class="modal-content">
+      <div class="flex justify-between items-center mb-6">
+        <h2 class="text-xl font-bold text-blue-400 flex items-center gap-2">
+          <i class="fa-solid fa-chart-line"></i>
+          Analyst Hub Pro
+        </h2>
+        <button onclick="hideAuthModal()" class="text-slate-400 hover:text-white text-2xl">&times;</button>
+      </div>
+
+      <div class="space-y-6">
+        <div>
+          <h3 class="text-lg font-semibold mb-2">Login</h3>
+          <p class="text-sm text-slate-400 mb-4">Masuk dengan akun lokal yang dikelola dari command line.</p>
+        </div>
+
+        <div class="space-y-4">
+          <div>
+            <label class="block text-sm font-medium text-slate-300 mb-2">Username</label>
+            <input id="auth-username" type="text"
+              class="input-field p-3 rounded-xl w-full outline-none focus:border-blue-500" placeholder="username">
+          </div>
+
+          <div>
+            <label class="block text-sm font-medium text-slate-300 mb-2">Password</label>
+            <input id="auth-password" type="password"
+              class="input-field p-3 rounded-xl w-full outline-none focus:border-blue-500" placeholder="password">
+          </div>
+        </div>
+
+        <div class="flex gap-3">
+          <button id="btn-login" onclick="login()"
+            class="flex-1 bg-blue-600 hover:bg-blue-500 text-white py-3 rounded-xl font-bold transition-colors flex items-center justify-center gap-2">
+            <i class="fa-solid fa-right-to-bracket"></i>
+            Login
+          </button>
+        </div>
+
+        <div class="text-xs text-slate-500 pt-4 border-t border-slate-800">
+          <p><strong>Catatan:</strong> Buat atau reset user lewat menu management di terminal.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-shell">
+    <header class="hero-card card">
+      <div class="grid gap-6 lg:grid-cols-[1.4fr_0.6fr] items-center relative z-10">
+        <div class="space-y-4">
+          <span class="hero-pill">
+            <i class="fa-solid fa-satellite-dish text-xs"></i>
+            Analyst Workspace
+          </span>
+          <div>
+            <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight">
+              <span class="text-blue-400 italic">ANALYST</span>
+              <span class="text-slate-300">HUB</span>
+            </h1>
+            <p class="text-sm text-slate-400 mt-3">
+              Pusat komando riset dan intel. Simpan insight, kelola arsip, dan pantau update terakhir dengan cepat.
+            </p>
+          </div>
+        </div>
+        <div class="hero-metrics">
+          <div class="card p-4 rounded-2xl border border-slate-700/60 bg-slate-900/50">
+            <p class="text-xs uppercase tracking-[0.3em] text-slate-500">Mode Aktif</p>
+            <p class="text-lg font-bold text-blue-300 mt-2">Observasi & Internal</p>
+            <p class="text-xs text-slate-500 mt-1">Sinkron dengan update terakhir.</p>
+          </div>
+          <button type="button" onclick="toggleTheme()"
+            class="p-3 rounded-full card shadow-lg hover:scale-110 transition-all flex items-center justify-center">
+            <span id="theme-icon" class="text-sm" aria-hidden="true">🌙</span>
+            <span class="sr-only">Toggle theme</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Tabs Navigation -->
+    <div class="card px-6 py-4 rounded-2xl shadow-lg flex flex-wrap gap-6 justify-between items-center">
+      <div class="flex flex-wrap gap-6">
+        <div onclick="switchTab('observation')" id="tab-obs" class="tab-btn active" data-tab="observation">
+          <i class="fa-solid fa-earth-asia text-xs"></i>
+          Observatory (External)
+        </div>
+        <div onclick="switchTab('journal')" id="tab-jrn" class="tab-btn" data-tab="journal">
+          <i class="fa-solid fa-shield-halved text-xs"></i>
+          Intelligence Journal (Internal)
+        </div>
+        <div onclick="switchTab('news')" id="tab-news" class="tab-btn" data-tab="news">
+          <i class="fa-solid fa-newspaper text-xs"></i>
+          News Hub (Public)
+        </div>
+      </div>
+      <p class="text-xs text-slate-500">Pilih kanal untuk menyesuaikan alur pencatatan.</p>
+    </div>
+
+    <div class="layout-grid lg:grid-cols-[minmax(0,2.1fr)_minmax(0,1fr)]">
+      <!-- Form Input -->
+      <div class="card form-card shadow-2xl border-blue-500/10" id="article-form-card">
+        <div class="flex items-center justify-between mb-6 flex-wrap gap-3">
+          <h2 id="form-title" class="section-title text-blue-400">Input Riset & Artikel</h2>
+          <span class="text-[10px] text-slate-500 uppercase tracking-[0.2em]">Ready to capture intel</span>
+        </div>
+        <form id="main-form" class="space-y-5">
+          <input type="hidden" id="edit-id" name="id">
+          <input type="hidden" id="entry-type" name="type" value="observation">
+          <input type="hidden" id="attachment-id" name="attachment_id">
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <input type="text" id="title" name="title" placeholder="Judul Utama"
+              class="md:col-span-2 input-field p-3 rounded-xl text-sm outline-none focus:border-blue-500" required>
+            <input type="date" id="date" name="date" class="input-field p-3 rounded-xl w-full text-sm outline-none"
+              required>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div id="url-container" class="md:col-span-2">
+              <input type="url" id="url" name="url" placeholder="URL Sumber (Unik)" required
+                class="input-field p-3 rounded-xl w-full text-sm outline-none focus:border-blue-500">
+            </div>
+            <div class="relative attachment-field">
+              <label for="attachment" class="attachment-button cursor-pointer text-center w-full">
+                <i class="fa-solid fa-folder-open"></i>
+                <span id="file-label">Upload Lampiran</span>
+              </label>
+              <input type="file" id="attachment" name="attachment" class="hidden" multiple
+                onchange="handleFileSelection()">
+              <div id="attachment-meta" class="attachment-summary"></div>
+              <div id="attachment-list" class="attachment-list"></div>
+              <button type="button" id="clear-attachments"
+                class="hidden text-[9px] text-red-400 font-bold hover:text-red-300" onclick="clearAttachments()">
+                Hapus semua lampiran
+              </button>
+            </div>
+          </div>
+
+          <div class="space-y-0">
+            <div class="flex flex-wrap gap-2 p-2 bg-slate-800/50 rounded-t-xl border-x border-t border-slate-700">
+              <button type="button" onclick="insertMarkdown('**','**')"
+                class="px-3 py-1 bg-slate-700 hover:bg-slate-600 rounded text-[10px] font-bold text-white" title="Bold">
+                <i class="fa-solid fa-bold"></i>
+              </button>
+              <button type="button" onclick="insertMarkdown('*','*')"
+                class="px-3 py-1 bg-slate-700 hover:bg-slate-600 rounded text-[10px] italic font-serif text-white"
+                title="Italic">
+                <i class="fa-solid fa-italic"></i>
+              </button>
+              <button type="button" onclick="insertMarkdown('# ')"
+                class="px-3 py-1 bg-slate-700 hover:bg-slate-600 rounded text-[10px] font-bold text-white">H1</button>
+              <button type="button" onclick="insertMarkdown('## ')"
+                class="px-3 py-1 bg-slate-700 hover:bg-slate-600 rounded text-[10px] font-bold text-white">H2</button>
+              <button type="button" onclick="insertMarkdown('- ')"
+                class="px-3 py-1 bg-slate-700 hover:bg-slate-600 rounded text-[10px] font-bold text-white">List</button>
+			  <button type="button" 
+			    onclick="insertMarkdown('- [ ] Tugas Utama (Riset Ekonomi)\n  - [x] Sub-tugas 1: Cari data inflasi\n  - [ ] Sub-tugas 2: Analisa dampak suku bunga\n- [ ] Tugas Utama (Riset Teknologi)\n  - [ ] Sub-tugas 1: Review framework baru')"
+			    class="px-3 py-1 bg-slate-700 hover:bg-slate-600 rounded text-[10px] font-bold text-white"
+			    title="To-Do List">
+			    <i class="fa-solid fa-list-check"></i>
+			  </button>
+              <button type="button" onclick="insertMarkdown('```mermaid\ngraph TD;\n  A-->B;\n```')"
+                class="px-3 py-1 bg-blue-600 hover:bg-blue-500 rounded text-[10px] font-bold text-white">Mermaid</button>
+              <button type="button" onclick="insertMarkdown('[', '](url)')"
+                class="px-3 py-1 bg-slate-700 hover:bg-slate-600 rounded text-[10px] font-bold text-white">Link</button>
+            </div>
+            <textarea id="description" name="description" rows="5"
+              placeholder="Analisa Mendalam (Markdown, Mermaid Diagram, & To-Do List Support)"
+              class="input-field p-3 rounded-b-xl rounded-t-none w-full text-sm outline-none border-t-0"></textarea>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <select id="status" name="status" class="input-field p-3 rounded-xl text-sm">
+              <option value="Final">Final</option>
+              <option value="Draft">Draft</option>
+              <option value="Need Review">Review</option>
+            </select>
+            <select id="category" name="category" class="input-field p-3 rounded-xl text-sm">
+              <option value="Umum">Umum</option>
+              <option value="Ekonomi">Ekonomi</option>
+              <option value="Teknologi">Teknologi</option>
+              <option value="Finansial">Finansial</option>
+            </select>
+            <div class="relative">
+              <input type="text" id="tags" name="tags" placeholder="Tags"
+                class="input-field p-3 rounded-xl text-sm outline-none w-full">
+              <div id="tag-suggestions"
+                class="absolute left-0 right-0 mt-2 bg-slate-900/95 border border-slate-700 rounded-xl shadow-lg hidden z-20 max-h-48 overflow-y-auto custom-scroll">
+              </div>
+            </div>
+          </div>
+          <label class="inline-flex items-center gap-2 text-xs text-slate-300">
+            <input type="checkbox" id="pinned" class="rounded border-slate-500 bg-slate-900 text-yellow-400">
+            <span>Pin/Star supaya tampil di paling atas</span>
+          </label>
+
+          <div class="space-y-3">
+            <div class="flex items-center justify-between text-xs text-slate-400 uppercase tracking-[0.2em] font-semibold">
+              <span>Tag Tersimpan</span>
+              <span id="tag-catalog-count" class="text-[10px] text-slate-500">0 tag</span>
+            </div>
+            <div id="tag-catalog"
+              class="flex flex-wrap gap-2 min-h-[44px] rounded-xl border border-slate-800/60 bg-slate-900/30 px-3 py-2 text-xs">
+            </div>
+          </div>
+
+          <button type="submit" id="btn-submit"
+            class="bg-blue-600 hover:bg-blue-500 text-white px-8 py-4 rounded-xl font-bold w-full text-xs uppercase tracking-widest shadow-lg flex items-center justify-center gap-2">
+            <i class="fa-solid fa-floppy-disk"></i>
+            <span id="submit-label">Simpan ke Database</span>
+          </button>
+        </form>
+      </div>
+
+      <!-- Filter Section -->
+      <div class="card filter-card shadow-xl space-y-6" id="article-filter-card">
+        <div class="space-y-2">
+          <p class="section-title text-blue-400">Filter Cepat</p>
+          <p class="text-xs text-slate-500">Cari data, kategori, dan status dalam satu panel.</p>
+        </div>
+        <div class="grid grid-cols-1 gap-4">
+          <input type="text" id="search-title" placeholder="Cari judul/isi..."
+            class="input-field p-2.5 rounded-xl w-full text-xs outline-none">
+          <input type="text" id="search-tag" placeholder="Cari tag (pisahkan dengan koma)"
+            class="input-field p-2.5 rounded-xl w-full text-xs outline-none">
+          <select id="filter-category" class="input-field p-2.5 rounded-xl w-full text-xs outline-none">
+            <option value="Semua">Semua Kategori</option>
+            <option value="Umum">Umum</option>
+            <option value="Ekonomi">Ekonomi</option>
+            <option value="Teknologi">Teknologi</option>
+            <option value="Finansial">Finansial</option>
+          </select>
+          <select id="filter-status" class="input-field p-2.5 rounded-xl w-full text-xs outline-none">
+            <option value="Semua">Semua Status</option>
+            <option value="Final">Final</option>
+            <option value="Draft">Draft</option>
+            <option value="Need Review">Review</option>
+          </select>
+          <button type="button" onclick="resetFilters()"
+            class="btn-reset bg-slate-800 hover:bg-slate-700 text-white py-2.5 rounded-xl text-[10px] font-black uppercase">Reset
+            Filter</button>
+        </div>
+
+        <div class="space-y-3 border-t border-slate-800 pt-5">
+          <p class="text-[10px] font-bold text-blue-400 uppercase tracking-widest italic">Rentang Waktu</p>
+          <div class="space-y-1">
+            <label class="text-[9px] text-slate-500 font-bold uppercase italic">Mulai Tanggal</label>
+            <input type="date" id="filter-start" class="input-field p-2 rounded-xl text-[10px] w-full">
+          </div>
+          <div class="space-y-1">
+            <label class="text-[9px] text-slate-500 font-bold uppercase italic">Sampai Tanggal</label>
+            <input type="date" id="filter-end" class="input-field p-2 rounded-xl text-[10px] w-full">
+          </div>
+        </div>
+      </div>
+
+      <div class="card filter-card shadow-xl space-y-6 hidden" id="news-filter-card">
+        <div class="flex flex-wrap items-start justify-between gap-4">
+          <div class="space-y-1">
+            <p class="section-title text-blue-400">Filter News</p>
+            <p class="text-xs text-slate-500">Cari berita publik, atur urutan, dan sinkronkan dari Supabase.</p>
+          </div>
+          <button type="button" onclick="resetNewsFilters()"
+            class="btn-reset bg-slate-800 hover:bg-slate-700 text-white py-2 rounded-xl text-[10px] font-black uppercase">
+            Reset Filter
+          </button>
+        </div>
+
+        <div class="rounded-2xl border border-slate-800/80 bg-slate-900/40 p-4 space-y-4">
+          <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div class="space-y-2">
+              <label class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Pencarian</label>
+              <div class="relative">
+                <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-500 text-xs"></i>
+                <input type="text" id="news-search" placeholder="Cari judul atau deskripsi..."
+                  class="input-field pl-9 pr-3 py-2.5 rounded-xl w-full text-xs outline-none">
+              </div>
+            </div>
+            <div class="space-y-2">
+              <label class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Kategori</label>
+              <select id="news-category" class="input-field p-2.5 rounded-xl w-full text-xs outline-none">
+                <option value="Semua">Semua Kategori</option>
+              </select>
+            </div>
+            <div class="space-y-2">
+              <label class="text-[10px] font-bold uppercase tracking-widest text-slate-400">Urutan</label>
+              <select id="news-order" class="input-field p-2.5 rounded-xl w-full text-xs outline-none">
+                <option value="latest">Terbaru</option>
+                <option value="oldest">Terlama</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 gap-4 md:grid-cols-2">
+          <div class="space-y-3 rounded-2xl border border-slate-800/80 bg-slate-900/40 p-4">
+            <p class="text-[10px] font-bold text-blue-400 uppercase tracking-widest italic">Rentang Publikasi</p>
+            <div class="grid grid-cols-1 gap-3 sm:grid-cols-2">
+              <div class="space-y-1">
+                <label class="text-[9px] text-slate-500 font-bold uppercase italic">Mulai Tanggal</label>
+                <input type="date" id="news-start" class="input-field p-2 rounded-xl text-[10px] w-full">
+              </div>
+              <div class="space-y-1">
+                <label class="text-[9px] text-slate-500 font-bold uppercase italic">Sampai Tanggal</label>
+                <input type="date" id="news-end" class="input-field p-2 rounded-xl text-[10px] w-full">
+              </div>
+            </div>
+          </div>
+
+          <div class="space-y-3 rounded-2xl border border-slate-800/80 bg-slate-900/40 p-4">
+            <p class="text-[10px] font-bold text-blue-400 uppercase tracking-widest italic">Sinkronisasi</p>
+            <button type="button" id="news-sync-btn" onclick="syncNews()"
+              class="bg-emerald-600 hover:bg-emerald-500 text-white py-2.5 rounded-xl text-[10px] font-black uppercase w-full">
+              Sync dari Supabase
+            </button>
+            <p id="news-sync-status" class="text-[10px] text-slate-500"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Data List Section -->
+    <div class="card list-card shadow-xl">
+      <div class="list-header mb-6">
+        <div class="h-[1px] flex-1 bg-slate-800/50"></div>
+        <h2 id="list-title">Last Post / Aktivitas Terakhir</h2>
+        <div class="h-[1px] flex-1 bg-slate-800/50"></div>
+      </div>
+
+      <div id="data-list" class="space-y-8 min-h-[400px]"></div>
+      <div id="pagination-container" class="mt-12 flex justify-center items-center gap-2 pb-10"></div>
+    </div>
+  </div>
+
+  <script>
+    // ==================== CONFIGURATION ====================
+    const API_BASE = "/api";
+    const TOKEN_STORAGE = "ahp_token_v1";
+    const THEME_STORAGE = "ahp_theme_v1";
+    const ITEMS_PER_PAGE = 5;
+
+    // ==================== STATE VARIABLES ====================
+    let allData = [];
+    let currentPage = 1;
+    let currentTab = 'observation';
+    let tagCatalog = [];
+    let sessionUser = null;
+    let isFetching = false;
+    let isInitializing = false;
+    let isRendering = false;
+    let selectedAttachments = [];
+    let pendingFiles = [];
+    let pendingEditId = null;
+    let newsCategories = [];
+    let isNewsSyncing = false;
+
+    marked.setOptions({ gfm: true, breaks: true });
+
+    const MARKDOWN_SANITIZE_CONFIG = {
+      ADD_TAGS: ['input'],
+      ADD_ATTR: ['type', 'checked', 'disabled', 'class']
+    };
+
+    function normalizeMarkdown(text) {
+      return String(text || '')
+        .replace(/\\r\\n/g, '\n')
+        .replace(/\\n/g, '\n')
+        .replace(/\\r/g, '\n')
+        .replace(/\\t/g, '\t');
+    }
+
+    // ==================== HELPER FUNCTIONS ====================
+    function getStatusColor(status) {
+      if (!status) return 'bg-slate-700 text-slate-300';
+
+      const statusLower = status.toLowerCase();
+
+      const colorMap = {
+        'draft': 'bg-slate-600 text-slate-300',
+        'pending': 'bg-yellow-600 text-yellow-300',
+        'review': 'bg-blue-600 text-blue-300',
+        'need review': 'bg-blue-600 text-blue-300',
+        'final': 'bg-green-600 text-green-300',
+        'published': 'bg-green-600 text-green-300',
+        'archived': 'bg-purple-600 text-purple-300',
+        'completed': 'bg-emerald-600 text-emerald-300'
+      };
+
+      return colorMap[statusLower] || 'bg-slate-700 text-slate-300';
+    }
+
+    function getHostname(url) {
+      try {
+        return new URL(url).hostname;
+      } catch {
+        return url || '';
+      }
+    }
+
+    function formatNewsDate(value) {
+      if (!value) return '-';
+
+      const parsedDate = new Date(value);
+      if (Number.isNaN(parsedDate.getTime())) {
+        return value;
+      }
+
+      const formatted = new Intl.DateTimeFormat('id-ID', {
+        dateStyle: 'medium',
+        timeStyle: 'short',
+        timeZone: 'Asia/Jakarta'
+      }).format(parsedDate);
+
+      return `${formatted} WIB`;
+    }
+
+    // ==================== MODAL FUNCTIONS ====================
+    function showAuthModal() {
+      document.getElementById('auth-modal').classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function hideAuthModal() {
+      document.getElementById('auth-modal').classList.remove('active');
+      document.body.style.overflow = 'auto';
+    }
+
+    // ==================== AUTH TOKEN ====================
+    function setToken(token) {
+      if (token) {
+        localStorage.setItem(TOKEN_STORAGE, token);
+      } else {
+        localStorage.removeItem(TOKEN_STORAGE);
+      }
+    }
+
+    function getToken() {
+      return localStorage.getItem(TOKEN_STORAGE) || "";
+    }
+
+    // ==================== AUTH UI FUNCTIONS ====================
+    function updateAuthUI() {
+      const fab = document.getElementById('fab-login');
+      const indicator = document.getElementById('auth-status-indicator');
+      const statusText = document.getElementById('auth-status-text');
+
+      if (sessionUser) {
+        fab.style.display = 'none';
+        indicator.classList.remove('hidden');
+        statusText.textContent = `Signed in as ${sessionUser.username}`;
+      } else {
+        fab.style.display = 'flex';
+        indicator.classList.add('hidden');
+      }
+    }
+
+    // ==================== API HELPERS ====================
+    async function apiRequest(path, options = {}) {
+      const token = getToken();
+      const headers = options.headers ? { ...options.headers } : {};
+
+      if (token) {
+        headers.Authorization = `Bearer ${token}`;
+      }
+
+      if (options.body && !options.isForm) {
+        headers["Content-Type"] = "application/json";
+      }
+
+      const response = await fetch(`${API_BASE}${path}`, {
+        ...options,
+        headers,
+        body: options.body && !options.isForm ? JSON.stringify(options.body) : options.body
+      });
+
+      if (response.status === 401) {
+        setToken("");
+        sessionUser = null;
+        updateAuthUI();
+      }
+
+      return response;
+    }
+
+    // ==================== MERMAID FUNCTIONS ====================
+    function getMermaidConfig() {
+      const isDark = !document.body.classList.contains('light-mode');
+      return {
+        startOnLoad: false,
+        theme: isDark ? 'dark' : 'neutral',
+        securityLevel: 'strict',
+        flowchart: {
+          useMaxWidth: false,
+          htmlLabels: false,
+          curve: 'basis'
+        },
+        themeVariables: {
+          background: isDark ? '#1e293b' : '#ffffff',
+          primaryColor: isDark ? '#1d4ed8' : '#2563eb',
+          primaryTextColor: isDark ? '#e2e8f0' : '#1e293b',
+          primaryBorderColor: isDark ? '#334155' : '#cbd5f5',
+          lineColor: isDark ? '#94a3b8' : '#475569',
+          textColor: isDark ? '#e2e8f0' : '#1e293b',
+          nodeBorder: isDark ? '#334155' : '#e2e8f0',
+          clusterBkg: isDark ? '#0f172a' : '#f8fafc',
+          clusterBorder: isDark ? '#334155' : '#e2e8f0'
+        }
+      };
+    }
+
+    function setupMermaidPanZoom(container) {
+      if (!container || container.dataset.panzoomReady) return;
+      const mermaidDiv = container.querySelector('.mermaid');
+      if (!mermaidDiv) return;
+
+      const panWrapper = document.createElement('div');
+      panWrapper.className = 'mermaid-pan-wrapper';
+
+      const panLayer = document.createElement('div');
+      panLayer.className = 'mermaid-pan-layer';
+
+      const toolbar = document.createElement('div');
+      toolbar.className = 'mermaid-toolbar';
+      toolbar.innerHTML = `
+    <button type="button" data-action="zoom-in">＋</button>
+    <button type="button" data-action="zoom-out">－</button>
+    <button type="button" data-action="reset">⟲</button>
+  `;
+
+      container.appendChild(toolbar);
+      panWrapper.appendChild(panLayer);
+      panLayer.appendChild(mermaidDiv);
+      container.appendChild(panWrapper);
+
+      const state = { scale: 1, x: 0, y: 0, dragging: false, startX: 0, startY: 0 };
+
+      const applyTransform = () => {
+        panLayer.style.transform = `translate(${state.x}px, ${state.y}px) scale(${state.scale})`;
+      };
+
+      const clampScale = (value) => Math.min(3, Math.max(0.5, value));
+
+      toolbar.addEventListener('click', (event) => {
+        const action = event.target?.dataset?.action;
+        if (!action) return;
+        if (action === 'zoom-in') {
+          state.scale = clampScale(state.scale + 0.2);
+        } else if (action === 'zoom-out') {
+          state.scale = clampScale(state.scale - 0.2);
+        } else if (action === 'reset') {
+          state.scale = 1;
+          state.x = 0;
+          state.y = 0;
+        }
+        applyTransform();
+      });
+
+      panWrapper.addEventListener('wheel', (event) => {
+        event.preventDefault();
+        const delta = event.deltaY > 0 ? -0.1 : 0.1;
+        state.scale = clampScale(state.scale + delta);
+        applyTransform();
+      }, { passive: false });
+
+      panWrapper.addEventListener('pointerdown', (event) => {
+        state.dragging = true;
+        state.startX = event.clientX - state.x;
+        state.startY = event.clientY - state.y;
+        panWrapper.setPointerCapture(event.pointerId);
+      });
+
+      panWrapper.addEventListener('pointermove', (event) => {
+        if (!state.dragging) return;
+        state.x = event.clientX - state.startX;
+        state.y = event.clientY - state.startY;
+        applyTransform();
+      });
+
+      panWrapper.addEventListener('pointerup', (event) => {
+        state.dragging = false;
+        panWrapper.releasePointerCapture(event.pointerId);
+      });
+
+      panWrapper.addEventListener('pointerleave', () => {
+        state.dragging = false;
+      });
+
+      applyTransform();
+      container.dataset.panzoomReady = 'true';
+    }
+
+    async function renderMermaidForElement(element) {
+      if (!element) return;
+
+      const mermaidBlocks = element.querySelectorAll('pre code.language-mermaid');
+      if (mermaidBlocks.length === 0) return;
+
+      mermaid.initialize(getMermaidConfig());
+
+      for (const block of mermaidBlocks) {
+        try {
+          const mermaidContent = block.textContent.trim();
+          if (!mermaidContent) continue;
+
+          const container = document.createElement('div');
+          container.className = 'mermaid-container';
+
+          const mermaidDiv = document.createElement('div');
+          mermaidDiv.className = 'mermaid';
+          mermaidDiv.textContent = mermaidContent;
+
+          container.appendChild(mermaidDiv);
+          block.parentElement.replaceWith(container);
+
+        } catch (err) {
+          console.error('Error processing mermaid block:', err);
+        }
+      }
+
+      try {
+        await mermaid.run({
+          nodes: document.querySelectorAll('.mermaid-container .mermaid')
+        });
+        element.querySelectorAll('.mermaid-container').forEach(setupMermaidPanZoom);
+      } catch (err) {
+        console.error('Mermaid render error:', err);
+      }
+    }
+
+    function renderMathForElement(element) {
+      if (!element || typeof renderMathInElement !== 'function') {
+        return;
+      }
+      try {
+        renderMathInElement(element, {
+          delimiters: [
+            { left: '$$', right: '$$', display: true },
+            { left: '$', right: '$', display: false }
+          ],
+          ignoredTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code'],
+          throwOnError: false
+        });
+      } catch (err) {
+        console.error('KaTeX render error:', err);
+      }
+    }
+
+    // ==================== AUTH FUNCTIONS ====================
+    async function loadSession() {
+      if (isInitializing) {
+        return;
+      }
+
+      isInitializing = true;
+
+      try {
+        const token = getToken();
+        if (!token) {
+          sessionUser = null;
+          updateAuthUI();
+          allData = [];
+          tagCatalog = [];
+          renderTagCatalog();
+          updateTagSuggestions();
+          await renderList();
+          return;
+        }
+
+        const response = await apiRequest('/session');
+        if (!response.ok) {
+          sessionUser = null;
+          updateAuthUI();
+          allData = [];
+          tagCatalog = [];
+          renderTagCatalog();
+          updateTagSuggestions();
+          if (currentTab === 'news') {
+            await loadNewsMeta();
+            await fetchNews();
+          } else {
+            await renderList();
+          }
+          return;
+        }
+
+        const data = await response.json();
+        sessionUser = data.user;
+        updateAuthUI();
+        if (currentTab === 'news') {
+          await loadNewsMeta();
+          await fetchNews();
+        } else {
+          await fetchArticles();
+          await loadTags();
+        }
+      } catch (err) {
+        console.error("loadSession error:", err);
+        sessionUser = null;
+        updateAuthUI();
+      } finally {
+        isInitializing = false;
+      }
+    }
+
+    async function login() {
+      const username = document.getElementById("auth-username").value.trim();
+      const password = document.getElementById("auth-password").value;
+      if (!username || !password) {
+        alert("Username dan password wajib diisi.");
+        return;
+      }
+
+      const response = await apiRequest('/login', {
+        method: 'POST',
+        body: { username, password }
+      });
+
+      if (!response.ok) {
+        const err = await response.json().catch(() => ({}));
+        alert(err.message || "Login failed");
+        return;
+      }
+
+      const data = await response.json();
+      setToken(data.token);
+      sessionUser = data.user;
+      hideAuthModal();
+      updateAuthUI();
+      if (currentTab === 'news') {
+        await loadNewsMeta();
+        await fetchNews();
+      } else {
+        await fetchArticles();
+        await loadTags();
+      }
+    }
+
+    async function logout() {
+      try {
+        await apiRequest('/logout', { method: 'POST' });
+      } catch (error) {
+        console.error("Logout error:", error);
+      } finally {
+        setToken("");
+        sessionUser = null;
+        allData = [];
+        tagCatalog = [];
+        renderTagCatalog();
+        updateTagSuggestions();
+        updateAuthUI();
+        if (currentTab === 'news') {
+          await loadNewsMeta();
+          await fetchNews();
+        } else {
+          await renderList();
+        }
+      }
+    }
+
+    // ==================== DATA FETCHING ====================
+    async function fetchArticles() {
+      if (isFetching) {
+        return;
+      }
+
+      if (!sessionUser) {
+        allData = [];
+        isFetching = false;
+        await renderList();
+        return;
+      }
+
+      isFetching = true;
+
+      const list = document.getElementById("data-list");
+      if (list) {
+        list.innerHTML = `
+      <div class="text-center py-20">
+        <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500 mx-auto mb-4"></div>
+        <div class="text-blue-400">Loading data...</div>
+      </div>`;
+      }
+
+      try {
+        allData = [];
+        currentPage = 1;
+
+        const searchTitle = document.getElementById("search-title")?.value.trim() || "";
+        const searchTag = document.getElementById("search-tag")?.value.trim() || "";
+        const category = document.getElementById("filter-category")?.value || "Semua";
+        const status = document.getElementById("filter-status")?.value || "Semua";
+        const start = document.getElementById("filter-start")?.value || "";
+        const end = document.getElementById("filter-end")?.value || "";
+
+        const params = new URLSearchParams({
+          type: currentTab,
+          searchTitle,
+          searchTag,
+          category,
+          status,
+          start,
+          end
+        });
+
+        const response = await apiRequest(`/articles?${params.toString()}`);
+        if (!response.ok) {
+          const err = await response.json().catch(() => ({}));
+          throw new Error(err.message || "Fetch failed");
+        }
+
+        const data = await response.json();
+        allData = data.items || [];
+
+        await renderList();
+
+        if (pendingEditId) {
+          const editId = pendingEditId;
+          pendingEditId = null;
+          await openEditFromId(editId);
+        }
+
+      } catch (err) {
+        console.error("fetchArticles error:", err);
+        const list = document.getElementById("data-list");
+        if (list) {
+          list.innerHTML = `
+        <div class="text-center py-20">
+          <div class="text-red-400 text-lg mb-4">⚠️ Error Loading Data</div>
+          <div class="text-slate-400 text-sm mb-6">${err.message}</div>
+          <button onclick="fetchArticles()" class="px-4 py-2 bg-blue-600 rounded mr-2">
+            Retry
+          </button>
+        </div>`;
+        }
+        allData = [];
+        await renderList();
+      } finally {
+        isFetching = false;
+      }
+    }
+
+    async function fetchNews() {
+      if (isFetching) {
+        return;
+      }
+
+      isFetching = true;
+
+      const list = document.getElementById("data-list");
+      if (list) {
+        list.innerHTML = `
+      <div class="text-center py-20">
+        <div class="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-blue-500 mx-auto mb-4"></div>
+        <div class="text-blue-400">Loading news...</div>
+      </div>`;
+      }
+
+      try {
+        allData = [];
+        currentPage = 1;
+
+        const search = document.getElementById("news-search")?.value.trim() || "";
+        const category = document.getElementById("news-category")?.value || "Semua";
+        const start = document.getElementById("news-start")?.value || "";
+        const end = document.getElementById("news-end")?.value || "";
+        const order = document.getElementById("news-order")?.value || "latest";
+
+        const params = new URLSearchParams({
+          search,
+          category,
+          start,
+          end,
+          order
+        });
+
+        const response = await apiRequest(`/news?${params.toString()}`);
+        if (!response.ok) {
+          const err = await response.json().catch(() => ({}));
+          throw new Error(err.message || "Fetch news failed");
+        }
+
+        const data = await response.json();
+        allData = data.items || [];
+
+        await renderList();
+      } catch (err) {
+        console.error("fetchNews error:", err);
+        if (list) {
+          list.innerHTML = `
+        <div class="text-center py-20">
+          <div class="text-red-400 text-lg mb-4">⚠️ Error Loading News</div>
+          <div class="text-slate-400 text-sm mb-6">${err.message}</div>
+          <button onclick="fetchNews()" class="px-4 py-2 bg-blue-600 rounded mr-2">
+            Retry
+          </button>
+        </div>`;
+        }
+        allData = [];
+        await renderList();
+      } finally {
+        isFetching = false;
+      }
+    }
+
+    async function loadNewsMeta() {
+      try {
+        const response = await apiRequest('/news/meta');
+        if (!response.ok) {
+          throw new Error('Failed to load news categories.');
+        }
+        const data = await response.json();
+        newsCategories = Array.isArray(data.categories) ? data.categories : [];
+      } catch (err) {
+        console.error("loadNewsMeta error:", err);
+        newsCategories = [];
+      } finally {
+        renderNewsCategories();
+      }
+    }
+
+    function renderNewsCategories() {
+      const select = document.getElementById("news-category");
+      if (!select) return;
+
+      const currentValue = select.value || "Semua";
+      select.innerHTML = '<option value="Semua">Semua Kategori</option>';
+      newsCategories.forEach(category => {
+        const option = document.createElement('option');
+        option.value = category;
+        option.textContent = category;
+        select.appendChild(option);
+      });
+      select.value = currentValue;
+    }
+
+    async function syncNews() {
+      if (isNewsSyncing) {
+        return;
+      }
+
+      const status = document.getElementById("news-sync-status");
+      const button = document.getElementById("news-sync-btn");
+      if (status) {
+        status.textContent = "Menjalankan sinkronisasi...";
+      }
+      if (button) {
+        button.disabled = true;
+        button.classList.add("opacity-60", "cursor-not-allowed");
+      }
+
+      isNewsSyncing = true;
+
+      try {
+        const response = await apiRequest('/news/sync', { method: 'POST' });
+        if (!response.ok) {
+          const err = await response.json().catch(() => ({}));
+          throw new Error(err.message || "Sync failed");
+        }
+        const data = await response.json();
+        if (status) {
+          status.textContent = `✅ Sinkron selesai. ${data.inserted} data baru, ${data.fetched} dibaca.`;
+        }
+        await loadNewsMeta();
+        await fetchNews();
+      } catch (err) {
+        console.error("syncNews error:", err);
+        if (status) {
+          status.textContent = `⚠️ ${err.message}`;
+        }
+      } finally {
+        isNewsSyncing = false;
+        if (button) {
+          button.disabled = false;
+          button.classList.remove("opacity-60", "cursor-not-allowed");
+        }
+      }
+    }
+
+    async function loadTags() {
+      if (!sessionUser) {
+        tagCatalog = [];
+        renderTagCatalog();
+        updateTagSuggestions();
+        return;
+      }
+
+      try {
+        const response = await apiRequest('/tags');
+        if (!response.ok) {
+          const err = await response.json().catch(() => ({}));
+          throw new Error(err.message || "Fetch tags failed");
+        }
+        const data = await response.json();
+        tagCatalog = Array.isArray(data.tags) ? data.tags : [];
+      } catch (err) {
+        console.error("loadTags error:", err);
+        tagCatalog = [];
+      } finally {
+        renderTagCatalog();
+        updateTagSuggestions();
+      }
+    }
+
+    function renderTagCatalog() {
+      const container = document.getElementById("tag-catalog");
+      const countLabel = document.getElementById("tag-catalog-count");
+      if (!container) return;
+
+      if (!tagCatalog.length) {
+        container.innerHTML = `<span class="text-slate-500 italic">Belum ada tag tersimpan.</span>`;
+        if (countLabel) {
+          countLabel.textContent = "0 tag";
+        }
+        return;
+      }
+
+      container.innerHTML = "";
+      tagCatalog.forEach(tag => {
+        const button = document.createElement("button");
+        button.type = "button";
+        button.dataset.tag = tag.label;
+        button.className =
+          "inline-flex items-center gap-2 px-3 py-1 rounded-full border border-indigo-500/30 text-indigo-300 bg-indigo-500/10 hover:bg-indigo-500/20 transition";
+        button.innerHTML = `#${tag.label}<span class="text-[10px] text-slate-400">${tag.count}</span>`;
+        container.appendChild(button);
+      });
+
+      if (countLabel) {
+        countLabel.textContent = `${tagCatalog.length} tag`;
+      }
+    }
+
+    function splitTags(value) {
+      return value
+        .split(',')
+        .map(tag => tag.trim().replace(/^#/, ''))
+        .filter(Boolean);
+    }
+
+    function getTagInputState(value) {
+      const lastComma = value.lastIndexOf(',');
+      if (lastComma === -1) {
+        return { prefix: "", current: value.trim() };
+      }
+      const prefix = value.slice(0, lastComma + 1);
+      const current = value.slice(lastComma + 1).trim();
+      return { prefix, current };
+    }
+
+    function appendTagToInput(tag, replaceCurrent = false) {
+      const input = document.getElementById("tags");
+      if (!input) return;
+
+      const currentValue = input.value;
+      const existing = new Set(splitTags(currentValue).map(t => t.toLowerCase()));
+      const tagKey = tag.toLowerCase();
+      if (existing.has(tagKey)) {
+        input.focus();
+        return;
+      }
+
+      if (replaceCurrent) {
+        const { prefix } = getTagInputState(currentValue);
+        let safePrefix = prefix;
+        if (safePrefix && !safePrefix.endsWith(' ')) {
+          safePrefix += ' ';
+        }
+        input.value = `${safePrefix}${tag}, `;
+      } else if (!currentValue.trim()) {
+        input.value = `${tag}, `;
+      } else {
+        let nextValue = currentValue.trimEnd();
+        if (!nextValue.endsWith(',')) {
+          nextValue += ',';
+        }
+        if (!nextValue.endsWith(', ')) {
+          nextValue += ' ';
+        }
+        input.value = `${nextValue}${tag}, `;
+      }
+
+      input.focus();
+      updateTagSuggestions();
+    }
+
+    function updateTagSuggestions() {
+      const input = document.getElementById("tags");
+      const suggestionBox = document.getElementById("tag-suggestions");
+      if (!input || !suggestionBox) return;
+
+      if (!tagCatalog.length) {
+        suggestionBox.classList.add("hidden");
+        suggestionBox.innerHTML = "";
+        return;
+      }
+
+      const { current } = getTagInputState(input.value);
+      const existing = new Set(splitTags(input.value).map(tag => tag.toLowerCase()));
+      const normalizedCurrent = current.toLowerCase();
+
+      let suggestions = tagCatalog.filter(tag => !existing.has(tag.label.toLowerCase()));
+      if (normalizedCurrent) {
+        suggestions = suggestions.filter(tag => tag.label.toLowerCase().includes(normalizedCurrent));
+      }
+      suggestions = suggestions.slice(0, 6);
+
+      if (!suggestions.length || (!input.matches(":focus") && !normalizedCurrent)) {
+        suggestionBox.classList.add("hidden");
+        suggestionBox.innerHTML = "";
+        return;
+      }
+
+      suggestionBox.innerHTML = suggestions
+        .map(tag => `
+        <button type="button" data-tag="${tag.label}"
+          class="w-full text-left px-4 py-2 text-sm text-slate-200 hover:bg-slate-800 flex items-center justify-between">
+          <span>#${tag.label}</span>
+          <span class="text-[10px] text-slate-500">${tag.count}x</span>
+        </button>
+      `)
+        .join("");
+
+      suggestionBox.classList.remove("hidden");
+    }
+
+    // ==================== RENDERING FUNCTIONS ====================
+    async function renderList() {
+      if (isRendering) {
+        return;
+      }
+
+      isRendering = true;
+
+      try {
+        const list = document.getElementById("data-list");
+        if (!list) {
+          isRendering = false;
+          return;
+        }
+
+        if (allData.length === 0) {
+          if (currentTab === 'news') {
+            list.innerHTML = `
+          <div class="text-center py-20 fade-in">
+            <div class="text-slate-400 text-lg mb-2">📭 No news data found</div>
+            <div class="text-slate-600 text-sm">Gunakan tombol sync untuk menarik data terbaru.</div>
+          </div>`;
+          } else if (sessionUser) {
+            list.innerHTML = `
+          <div class="text-center py-20 fade-in">
+            <div class="text-slate-400 text-lg mb-4">📭 No ${currentTab} data found</div>
+            <div class="text-slate-600 text-sm">Add your first entry using the form above</div>
+          </div>`;
+          } else {
+            list.innerHTML = `
+          <div class="text-center py-20 text-slate-600 italic fade-in">
+            -- PLEASE LOGIN TO VIEW DATA --
+          </div>`;
+          }
+          renderPagination();
+          isRendering = false;
+          return;
+        }
+
+        const startIdx = (currentPage - 1) * ITEMS_PER_PAGE;
+        const endIdx = startIdx + ITEMS_PER_PAGE;
+        const paginated = allData.slice(startIdx, endIdx);
+
+        while (list.firstChild) {
+          list.removeChild(list.firstChild);
+        }
+
+        for (let i = 0; i < paginated.length; i++) {
+          const item = paginated[i];
+
+          const div = document.createElement("div");
+          div.className = `card post-card p-5 sm:p-6 rounded-2xl mb-6 border border-slate-800 hover:border-blue-500/30 transition-all duration-300`;
+          div.style.opacity = "0";
+          div.style.animation = "fadeIn 0.3s ease-in forwards";
+          div.style.animationDelay = `${i * 0.05}s`;
+          div.dataset.id = item.id;
+          div.id = `item-${item.id}`;
+
+          if (currentTab === 'news') {
+            div.innerHTML = `
+          <div class="flex flex-wrap justify-between items-center mb-4 gap-2">
+            <div class="text-xs text-slate-500 font-mono">
+              <span class="inline-block px-2 py-1 bg-slate-800 rounded mr-2">${formatNewsDate(item.published_date)}</span>
+              <span>ID: ${item.id ?? '-'}</span>
+            </div>
+            <span class="px-3 py-1 text-xs font-bold uppercase text-blue-400 bg-blue-500/10 rounded-full border border-blue-500/20">
+              ${item.kategori || 'Uncategorized'}
+            </span>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-2 break-words">
+            ${item.judul || 'Untitled'}
+          </h3>
+          ${item.tautan ? `
+          <div class="mb-4">
+            <a href="${item.tautan}" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-2 text-sm text-blue-400 hover:text-blue-300 font-medium">
+              <span>🔗</span>
+              <span class="truncate max-w-xs">${getHostname(item.tautan)}</span>
+              <span>→</span>
+            </a>
+          </div>
+          ` : ''}
+          <div class="text-sm text-slate-300 mb-4">
+            <span class="text-xs uppercase tracking-widest text-slate-500">Kata deskripsi:</span>
+            <div class="mt-1">${item.kata_kunci || '-'}</div>
+          </div>
+          <div class="text-xs text-slate-500 border-t border-slate-800 pt-3">
+            Scraped: ${formatNewsDate(item.scraped_at_wib)}
+          </div>
+        `;
+          } else {
+            const contentHtml = generateItemContent(item);
+            const attachmentHtml = item.attachments?.length
+              ? `<div class="flex flex-wrap gap-2">
+            ${item.attachments.map(file => `
+              <a href="${file.url}" target="_blank" rel="noopener"
+                 class="inline-flex items-center gap-2 text-xs text-blue-400 hover:text-blue-300 font-medium">
+                📎 ${file.original_name}
+              </a>
+            `).join('')}
+          </div>`
+              : '';
+
+            div.innerHTML = `
+        <!-- Header -->
+        <div class="flex flex-wrap justify-between items-center mb-4 gap-2">
+          <div class="text-xs text-slate-500 font-mono">
+            <span class="inline-block px-2 py-1 bg-slate-800 rounded mr-2">${item.date}</span>
+            <span>ID: ${item.id}</span>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <button onclick="togglePin(${item.id})"
+                    class="px-3 py-1 text-xs rounded transition-colors flex items-center gap-2 ${item.pinned ? 'bg-yellow-500/20 text-yellow-200 hover:bg-yellow-500/30' : 'bg-slate-700 text-slate-200 hover:bg-slate-600'}">
+              <i class="${item.pinned ? 'fa-solid' : 'fa-regular'} fa-star"></i> ${item.pinned ? 'Pinned' : 'Pin'}
+            </button>
+            <button onclick="openReadingMode(${item.id})" 
+                    class="px-3 py-1 text-xs bg-emerald-600 hover:bg-emerald-700 rounded transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-book-open"></i> Read
+            </button>
+            <button onclick="copyId(${item.id})" 
+                    class="px-3 py-1 text-xs bg-blue-600 hover:bg-blue-700 rounded transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-copy"></i> Copy ID
+            </button>
+            <span class="px-3 py-1 text-xs rounded font-bold uppercase ${getStatusColor(item.status)}">
+              ${item.status || 'No Status'}
+            </span>
+            <button onclick="editItem(${item.id})" 
+                    class="px-3 py-1 text-xs bg-yellow-600 hover:bg-yellow-700 rounded transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-pen-to-square"></i> Edit
+            </button>
+            <button onclick="deleteItem(${item.id})" 
+                    class="px-3 py-1 text-xs bg-red-600 hover:bg-red-700 rounded transition-colors flex items-center gap-2">
+              <i class="fa-solid fa-trash"></i> Delete
+            </button>
+          </div>
+        </div>
+        
+        <!-- Title -->
+        <h3 class="text-xl font-bold text-white mb-3 break-words">
+          ${item.pinned ? '<span class="text-yellow-300 mr-2">★</span>' : ''}${item.title || 'Untitled'}
+        </h3>
+        
+        <!-- URL -->
+        ${item.url ? `
+          <div class="mb-4">
+            <a href="${item.url}" target="_blank" rel="noopener noreferrer"
+               class="inline-flex items-center gap-2 text-sm text-blue-400 hover:text-blue-300 font-medium">
+              <span>🔗</span>
+              <span class="truncate max-w-xs">${getHostname(item.url)}</span>
+              <span>→</span>
+            </a>
+          </div>
+        ` : ''}
+        
+        <!-- Content -->
+        <div class="journal-content mb-4 min-h-[100px] markdown-body">
+          ${contentHtml}
+        </div>
+
+        ${attachmentHtml ? `<div class="mb-4">${attachmentHtml}</div>` : ''}
+        
+        <!-- Footer -->
+        <div class="flex flex-wrap items-center gap-3 pt-4 border-t border-slate-800">
+          <span class="px-3 py-1 text-xs font-bold uppercase text-blue-400 bg-blue-500/10 rounded-full border border-blue-500/20">
+            ${item.category || 'Uncategorized'}
+          </span>
+          <div class="flex flex-wrap gap-2">
+            ${(item.tags || "").split(',').filter(Boolean).map(tag =>
+            `<span class="px-2 py-1 text-xs text-indigo-400 bg-indigo-500/10 rounded border border-indigo-500/20 italic">#${tag.trim()}</span>`
+          ).join(' ')}
+          </div>
+        </div>
+      `;
+          }
+
+          list.appendChild(div);
+        }
+
+        setTimeout(() => {
+          Array.from(list.children).forEach(child => {
+            child.style.opacity = "1";
+          });
+        }, 10);
+
+        renderPagination();
+
+        if (currentTab !== 'news') {
+          setTimeout(async () => {
+            const items = list.querySelectorAll('.journal-content');
+            for (const itemContent of items) {
+              await renderMermaidForElement(itemContent);
+              renderMathForElement(itemContent);
+            }
+          }, 100);
+        }
+
+      } catch (err) {
+        console.error("renderList error:", err);
+      } finally {
+        isRendering = false;
+      }
+    }
+
+    function generateItemContent(item) {
+      let contentHtml = "";
+
+      if (item.description) {
+        const descNormalized = normalizeMarkdown(item.description);
+        const words = descNormalized.trim().split(/\s+/).filter(Boolean);
+        const isTruncated = words.length > 100;
+        const descPreview = isTruncated ? `${words.slice(0, 100).join(" ")}…` : descNormalized;
+        const descRaw = descPreview.replace(/\[\[(\d+)\]\]/g, (m, id) =>
+          `<span class="text-blue-400 cursor-pointer hover:underline" onclick="searchById(${id})">[[Ref: #${id}]]</span>`
+        );
+
+        try {
+          contentHtml = DOMPurify.sanitize(marked.parse(descRaw), MARKDOWN_SANITIZE_CONFIG);
+        } catch (err) {
+          console.error("Markdown parse error:", err);
+          contentHtml = `<div class="text-red-400">Error parsing markdown</div>`;
+        }
+
+        if (isTruncated) {
+          contentHtml += `
+        <div class="mt-4 pt-4 border-t border-slate-700">
+          <button onclick="openReadingMode(${item.id})" 
+                  class="px-4 py-2 bg-slate-700 hover:bg-slate-600 rounded text-sm transition-colors flex items-center gap-2">
+            <span>📖</span>
+            <span>Read Full Content</span>
+          </button>
+        </div>`;
+        }
+      } else {
+        contentHtml = `<div class="text-slate-400 italic">No description available</div>`;
+      }
+
+      return contentHtml;
+    }
+
+    // ==================== PAGINATION ====================
+    function renderPagination() {
+      const container = document.getElementById("pagination-container");
+      if (!container) return;
+
+      const totalPages = Math.ceil(allData.length / ITEMS_PER_PAGE);
+      if (totalPages <= 1) {
+        container.innerHTML = "";
+        return;
+      }
+
+      const pages = [];
+      pages.push(1);
+
+      let start = Math.max(2, currentPage - 1);
+      let end = Math.min(totalPages - 1, currentPage + 1);
+
+      if (currentPage <= 3) {
+        start = 2;
+        end = Math.min(totalPages - 1, 4);
+      } else if (currentPage >= totalPages - 2) {
+        start = Math.max(2, totalPages - 3);
+        end = totalPages - 1;
+      }
+
+      if (start > 2) {
+        pages.push('ellipsis-start');
+      }
+
+      for (let i = start; i <= end; i++) {
+        pages.push(i);
+      }
+
+      if (end < totalPages - 1) {
+        pages.push('ellipsis-end');
+      }
+
+      if (totalPages > 1) {
+        pages.push(totalPages);
+      }
+
+      let html = `
+    <button onclick="changePage(${currentPage - 1})" 
+            class="px-4 py-2 rounded-l-lg border border-slate-700 text-sm 
+                   ${currentPage === 1 ? 'opacity-50 cursor-not-allowed' : 'hover:bg-slate-800'}">
+      ← Prev
+    </button>`;
+
+      pages.forEach(page => {
+        if (page === 'ellipsis-start' || page === 'ellipsis-end') {
+          html += `<span class="px-2 py-2 text-slate-500">...</span>`;
+          return;
+        }
+        html += `
+      <button onclick="changePage(${page})" 
+              class="px-3 py-2 border border-slate-700 text-sm
+                     ${page === currentPage ? 'bg-blue-600 text-white' : 'hover:bg-slate-800'}">
+        ${page}
+      </button>`;
+      });
+
+      html += `
+    <button onclick="changePage(${currentPage + 1})" 
+            class="px-4 py-2 rounded-r-lg border border-slate-700 text-sm
+                   ${currentPage === totalPages ? 'opacity-50 cursor-not-allowed' : 'hover:bg-slate-800'}">
+      Next →
+    </button>`;
+
+      container.innerHTML = html;
+    }
+
+    window.changePage = function (page) {
+      const totalPages = Math.ceil(allData.length / ITEMS_PER_PAGE);
+      if (page < 1 || page > totalPages) return;
+
+      currentPage = page;
+      renderList();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
+    // ==================== ITEM OPERATIONS ====================
+    window.searchById = function (id) {
+      const searchTitle = document.getElementById("search-title");
+      const searchTag = document.getElementById("search-tag");
+      if (searchTitle) {
+        searchTitle.value = `[[${id}]]`;
+      }
+      if (searchTag) {
+        searchTag.value = "";
+      }
+      fetchArticles();
+    };
+
+    window.copyId = function (id) {
+      navigator.clipboard.writeText(`[[${id}]]`);
+      alert(`ID ${id} copied to clipboard!`);
+    };
+
+    window.togglePin = async function (id) {
+      if (!sessionUser) {
+        alert("Please login.");
+        return;
+      }
+
+      const item = allData.find(entry => entry.id === id);
+      if (!item) return;
+
+      const attachmentIds = (item.attachments || []).map(file => file.id);
+      const payload = {
+        type: item.type || "observation",
+        title: item.title || "Untitled",
+        date: item.date,
+        url: item.url || null,
+        status: item.status || "",
+        category: item.category || "",
+        tags: item.tags || "",
+        description: item.description || "",
+        attachment_ids: attachmentIds,
+        pinned: !item.pinned
+      };
+
+      try {
+        const response = await apiRequest(`/articles/${id}`, {
+          method: 'PUT',
+          body: payload
+        });
+        if (!response.ok) {
+          const err = await response.json().catch(() => ({}));
+          throw new Error(err.message || "Failed to update pin.");
+        }
+        item.pinned = !item.pinned;
+        await fetchArticles();
+      } catch (err) {
+        console.error("togglePin error:", err);
+        alert(err.message || "Failed to update pin.");
+      }
+    };
+
+    function applyEditItem(item) {
+      if (!item) return;
+
+      resetForm();
+      document.getElementById("edit-id").value = item.id;
+      document.getElementById("title").value = item.title || "";
+      document.getElementById("date").value = item.date || "";
+      document.getElementById("url").value = item.url || "";
+      document.getElementById("status").value = item.status || "";
+      document.getElementById("category").value = item.category || "";
+      document.getElementById("tags").value = item.tags || "";
+      document.getElementById("description").value = item.description || "";
+      document.getElementById("entry-type").value = item.type || "observation";
+      document.getElementById("pinned").checked = Boolean(item.pinned);
+      updateTagSuggestions();
+      const submitLabel = document.getElementById("submit-label");
+      if (submitLabel) {
+        submitLabel.textContent = "Update";
+      }
+
+      selectedAttachments = item.attachments ? [...item.attachments] : [];
+      pendingFiles = [];
+      document.getElementById("attachment-id").value = "";
+      renderAttachmentSummary();
+
+      if (item.type !== currentTab) {
+        switchTab(item.type);
+      }
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    async function editItem(id) {
+      const item = allData.find(i => i.id === id);
+      if (!item) return;
+      applyEditItem(item);
+    }
+
+    async function openEditFromId(id) {
+      if (!sessionUser || !id) return;
+
+      try {
+        const response = await apiRequest(`/articles/${id}`);
+        if (!response.ok) {
+          const err = await response.json().catch(() => ({}));
+          throw new Error(err.message || "Failed to load item for editing.");
+        }
+
+        const data = await response.json();
+        applyEditItem(data.item);
+      } catch (err) {
+        console.error("openEditFromId error:", err);
+        alert(err.message || "Failed to open edit mode.");
+      }
+    }
+
+    async function deleteItem(id) {
+      if (!sessionUser) {
+        alert("Please login.");
+        return;
+      }
+
+      if (!confirm("Permanently delete this item?")) return;
+
+      const response = await apiRequest(`/articles/${id}`, {
+        method: 'DELETE'
+      });
+
+      if (!response.ok) {
+        alert("Delete failed.");
+        return;
+      }
+
+      allData = allData.filter(item => item.id !== id);
+      await renderList();
+      alert("✅ Item deleted");
+    }
+
+    function openReadingMode(id) {
+      window.open(`./read.html?id=${encodeURIComponent(id)}`, '_blank');
+    }
+
+    // ==================== FORM HANDLING ====================
+    function resetForm() {
+      const form = document.getElementById("main-form");
+      if (form) form.reset();
+
+      document.getElementById("edit-id").value = "";
+      document.getElementById("attachment-id").value = "";
+      const submitLabel = document.getElementById("submit-label");
+      if (submitLabel) {
+        submitLabel.textContent = "Simpan ke Database";
+      }
+      document.getElementById("date").valueAsDate = new Date();
+      document.getElementById("file-label").innerText = "Upload Lampiran";
+      selectedAttachments = [];
+      pendingFiles = [];
+      renderAttachmentSummary();
+      const pinnedInput = document.getElementById("pinned");
+      if (pinnedInput) {
+        pinnedInput.checked = false;
+      }
+
+      const typeInput = document.getElementById("entry-type");
+      if (typeInput) {
+        typeInput.value = currentTab;
+      }
+      updateTagSuggestions();
+    }
+
+    function handleFileSelection() {
+      const input = document.getElementById("attachment");
+      const label = document.getElementById("file-label");
+      const newFiles = input ? Array.from(input.files || []) : [];
+      if (newFiles.length) {
+        const merged = [...pendingFiles, ...newFiles];
+        const unique = [];
+        const seen = new Set();
+        merged.forEach(file => {
+          const key = `${file.name}|${file.size}|${file.lastModified}`;
+          if (!seen.has(key)) {
+            seen.add(key);
+            unique.push(file);
+          }
+        });
+        pendingFiles = unique;
+
+        if (input) {
+          const dataTransfer = new DataTransfer();
+          pendingFiles.forEach(file => dataTransfer.items.add(file));
+          input.files = dataTransfer.files;
+        }
+      }
+      if (pendingFiles.length) {
+        label.innerText = `${pendingFiles.length} file dipilih`;
+      } else {
+        label.innerText = "Upload Lampiran";
+      }
+      renderAttachmentSummary();
+    }
+
+    function clearAttachments() {
+      selectedAttachments = [];
+      pendingFiles = [];
+      const input = document.getElementById("attachment");
+      if (input) input.value = "";
+      document.getElementById("attachment-id").value = "";
+      document.getElementById("file-label").innerText = "Upload Lampiran";
+      renderAttachmentSummary();
+    }
+
+    function renderAttachmentSummary() {
+      const meta = document.getElementById("attachment-meta");
+      const list = document.getElementById("attachment-list");
+      const clearBtn = document.getElementById("clear-attachments");
+      if (!meta || !list || !clearBtn) return;
+
+      const totalExisting = selectedAttachments.length;
+      const totalPending = pendingFiles.length;
+      meta.textContent = totalExisting || totalPending
+        ? `${totalExisting} lampiran tersimpan • ${totalPending} file baru`
+        : 'Belum ada lampiran';
+
+      list.innerHTML = '';
+      selectedAttachments.forEach(file => {
+        const item = document.createElement('div');
+        item.className = 'text-blue-400 truncate';
+        item.textContent = `📎 ${file.original_name}`;
+        list.appendChild(item);
+      });
+      pendingFiles.forEach(file => {
+        const item = document.createElement('div');
+        item.className = 'text-emerald-400 truncate';
+        item.textContent = `⬆️ ${file.name}`;
+        list.appendChild(item);
+      });
+
+      clearBtn.classList.toggle('hidden', totalExisting === 0 && totalPending === 0);
+    }
+
+    async function uploadFiles(files) {
+      const formData = new FormData();
+      Array.from(files).forEach(file => {
+        formData.append('files', file);
+      });
+
+      const response = await apiRequest('/uploads', {
+        method: 'POST',
+        body: formData,
+        isForm: true
+      });
+
+      if (!response.ok) {
+        const err = await response.json().catch(() => ({}));
+        throw new Error(err.message || "Upload failed");
+      }
+
+      const data = await response.json();
+      return data.files || [];
+    }
+
+    async function handleFormSubmit(e) {
+      e.preventDefault();
+
+      if (!sessionUser) {
+        alert("Please login first.");
+        showAuthModal();
+        return;
+      }
+
+      const submitBtn = document.getElementById("btn-submit");
+      const submitLabel = document.getElementById("submit-label");
+
+      submitBtn.disabled = true;
+      if (submitLabel) {
+        submitLabel.textContent = "Processing...";
+      } else {
+        submitBtn.textContent = "Processing...";
+      }
+      submitBtn.classList.add("opacity-50", "cursor-not-allowed");
+
+      try {
+        const idVal = document.getElementById("edit-id").value.trim();
+        const fileInput = document.getElementById("attachment");
+        let attachmentIds = selectedAttachments.map(file => file.id);
+
+        if (fileInput && fileInput.files.length) {
+          const uploadResults = await uploadFiles(fileInput.files);
+          const duplicated = uploadResults.filter(file => file.duplicated);
+          const newIds = uploadResults.map(file => file.id);
+          attachmentIds = Array.from(new Set([...attachmentIds, ...newIds]));
+          if (duplicated.length) {
+            alert("Beberapa file sudah pernah diupload. Sistem memakai file yang lama.");
+          }
+        }
+
+        const urlValue = (document.getElementById("url")?.value || "").trim();
+        const payload = {
+          type: document.getElementById("entry-type").value || "observation",
+          title: document.getElementById("title").value.trim(),
+          date: document.getElementById("date").value,
+          url: urlValue || null,
+          status: document.getElementById("status").value,
+          category: document.getElementById("category").value,
+          tags: document.getElementById("tags").value || "",
+          description: document.getElementById("description").value || "",
+          attachment_ids: attachmentIds,
+          pinned: document.getElementById("pinned")?.checked || false
+        };
+
+        if (!payload.title || !payload.date) {
+          throw new Error("Title and date are required.");
+        }
+        if (payload.type === "observation" && !urlValue) {
+          throw new Error("URL wajib diisi untuk Observatory (External).");
+        }
+
+        let response;
+        if (idVal) {
+          response = await apiRequest(`/articles/${idVal}`, {
+            method: 'PUT',
+            body: payload
+          });
+        } else {
+          response = await apiRequest('/articles', {
+            method: 'POST',
+            body: payload
+          });
+        }
+
+        if (!response.ok) {
+          const err = await response.json().catch(() => ({}));
+          throw new Error(err.message || "Save failed");
+        }
+
+        alert(idVal ? "✅ Updated successfully!" : "✅ Saved successfully!");
+
+        resetForm();
+        await fetchArticles();
+        await loadTags();
+
+      } catch (err) {
+        console.error("Save error:", err);
+        alert(err.message || "Save failed. Check console.");
+      } finally {
+        submitBtn.disabled = false;
+        const currentEditId = document.getElementById("edit-id").value.trim();
+        const restoredLabel = currentEditId ? "Update" : "Simpan ke Database";
+        if (submitLabel) {
+          submitLabel.textContent = restoredLabel;
+        } else {
+          submitBtn.textContent = restoredLabel;
+        }
+        submitBtn.classList.remove("opacity-50", "cursor-not-allowed");
+      }
+    }
+
+    // ==================== UI CONTROLS ====================
+    function applyTabUI(tab) {
+      document.querySelectorAll(".tab-btn").forEach(btn => {
+        const isActive = btn.dataset.tab === tab;
+        btn.classList.toggle("active", isActive);
+      });
+
+      const entryType = document.getElementById("entry-type");
+      if (entryType) {
+        entryType.value = tab === 'news' ? 'observation' : tab;
+      }
+
+      const formCard = document.getElementById("article-form-card");
+      const articleFilter = document.getElementById("article-filter-card");
+      const newsFilter = document.getElementById("news-filter-card");
+      const listTitle = document.getElementById("list-title");
+
+      if (tab === 'news') {
+        formCard?.classList.add("hidden");
+        articleFilter?.classList.add("hidden");
+        newsFilter?.classList.remove("hidden");
+        if (listTitle) listTitle.textContent = "News Feed (Public)";
+        return;
+      }
+
+      formCard?.classList.remove("hidden");
+      articleFilter?.classList.remove("hidden");
+      newsFilter?.classList.add("hidden");
+      if (listTitle) listTitle.textContent = "Last Post / Aktivitas Terakhir";
+
+      const urlContainer = document.getElementById("url-container");
+      const urlInput = document.getElementById("url");
+      if (tab === "journal") {
+        urlContainer?.classList.add("hidden");
+        if (urlInput) {
+          urlInput.required = false;
+        }
+        const formTitle = document.getElementById("form-title");
+        if (formTitle) formTitle.textContent = "Intelligence Journal (Internal)";
+      } else {
+        urlContainer?.classList.remove("hidden");
+        if (urlInput) {
+          urlInput.required = true;
+        }
+        const formTitle = document.getElementById("form-title");
+        if (formTitle) formTitle.textContent = "Observatory (External Link)";
+      }
+    }
+
+    function switchTab(tab) {
+      if (currentTab === tab || isFetching) {
+        return;
+      }
+
+      currentTab = tab;
+      currentPage = 1;
+
+      applyTabUI(tab);
+
+      const editId = document.getElementById("edit-id")?.value;
+      if (!editId && tab !== 'news') {
+        resetForm();
+      }
+
+      refreshCurrentTab();
+    }
+
+    function refreshCurrentTab() {
+      if (currentTab === 'news') {
+        loadNewsMeta();
+        fetchNews();
+        return;
+      }
+      fetchArticles();
+    }
+
+    function resetFilters() {
+      ["search-title", "search-tag", "filter-start", "filter-end"].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.value = "";
+      });
+
+      ["filter-category", "filter-status"].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.value = "Semua";
+      });
+
+      fetchArticles();
+    }
+
+    function resetNewsFilters() {
+      ["news-search", "news-start", "news-end"].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) el.value = "";
+      });
+
+      const category = document.getElementById("news-category");
+      if (category) category.value = "Semua";
+
+      const order = document.getElementById("news-order");
+      if (order) order.value = "latest";
+
+      fetchNews();
+    }
+
+    async function toggleTheme() {
+      document.body.classList.toggle("light-mode");
+      const isLight = document.body.classList.contains("light-mode");
+      document.getElementById("theme-icon").innerText = isLight ? "☀️" : "🌙";
+      localStorage.setItem(THEME_STORAGE, isLight ? 'light' : 'dark');
+      await renderList();
+    }
+
+    function applySavedTheme() {
+      const savedTheme = localStorage.getItem(THEME_STORAGE) || 'dark';
+      if (savedTheme === 'light') {
+        document.body.classList.add("light-mode");
+      } else {
+        document.body.classList.remove("light-mode");
+      }
+      document.getElementById("theme-icon").innerText =
+        document.body.classList.contains("light-mode") ? "☀️" : "🌙";
+    }
+
+    function insertMarkdown(before, after = "") {
+      const textarea = document.getElementById("description");
+      const start = textarea.selectionStart;
+      const end = textarea.selectionEnd;
+      const text = textarea.value;
+      const selected = text.substring(start, end);
+      textarea.value = text.substring(0, start) + before + selected + after + text.substring(end);
+      textarea.focus();
+      textarea.setSelectionRange(start + before.length, start + before.length + selected.length);
+    }
+
+    // ==================== EVENT LISTENERS ====================
+    function setupEventListeners() {
+      const mainForm = document.getElementById("main-form");
+      if (mainForm) {
+        mainForm.addEventListener("submit", handleFormSubmit);
+      }
+
+      document.querySelectorAll(".tab-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const tab = btn.dataset.tab;
+          if (tab) {
+            switchTab(tab);
+          }
+        });
+      });
+
+      const searchTitle = document.getElementById("search-title");
+      if (searchTitle) {
+        let searchTimeout;
+        searchTitle.addEventListener("input", () => {
+          clearTimeout(searchTimeout);
+          searchTimeout = setTimeout(() => {
+            currentPage = 1;
+            if (currentTab !== 'news') {
+              fetchArticles();
+            }
+          }, 500);
+        });
+      }
+
+      const searchTag = document.getElementById("search-tag");
+      if (searchTag) {
+        let searchTimeout;
+        searchTag.addEventListener("input", () => {
+          clearTimeout(searchTimeout);
+          searchTimeout = setTimeout(() => {
+            currentPage = 1;
+            if (currentTab !== 'news') {
+              fetchArticles();
+            }
+          }, 500);
+        });
+      }
+
+      const tagInput = document.getElementById("tags");
+      if (tagInput) {
+        tagInput.addEventListener("input", updateTagSuggestions);
+        tagInput.addEventListener("focus", updateTagSuggestions);
+        tagInput.addEventListener("blur", () => {
+          setTimeout(() => {
+            const suggestionBox = document.getElementById("tag-suggestions");
+            suggestionBox?.classList.add("hidden");
+          }, 150);
+        });
+      }
+
+      const suggestionBox = document.getElementById("tag-suggestions");
+      if (suggestionBox) {
+        suggestionBox.addEventListener("mousedown", (event) => {
+          const button = event.target.closest("[data-tag]");
+          if (!button) return;
+          event.preventDefault();
+          appendTagToInput(button.dataset.tag, true);
+        });
+      }
+
+      const tagCatalogContainer = document.getElementById("tag-catalog");
+      if (tagCatalogContainer) {
+        tagCatalogContainer.addEventListener("click", (event) => {
+          const button = event.target.closest("[data-tag]");
+          if (!button) return;
+          appendTagToInput(button.dataset.tag);
+        });
+      }
+
+      ["filter-category", "filter-status", "filter-start", "filter-end"].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.addEventListener("change", () => {
+            currentPage = 1;
+            if (currentTab !== 'news') {
+              fetchArticles();
+            }
+          });
+        }
+      });
+
+      const newsSearch = document.getElementById("news-search");
+      if (newsSearch) {
+        let searchTimeout;
+        newsSearch.addEventListener("input", () => {
+          clearTimeout(searchTimeout);
+          searchTimeout = setTimeout(() => {
+            currentPage = 1;
+            if (currentTab === 'news') {
+              fetchNews();
+            }
+          }, 500);
+        });
+      }
+
+      ["news-category", "news-order", "news-start", "news-end"].forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.addEventListener("change", () => {
+            currentPage = 1;
+            if (currentTab === 'news') {
+              fetchNews();
+            }
+          });
+        }
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+          hideAuthModal();
+        }
+      });
+
+      document.getElementById('auth-modal').addEventListener('click', (e) => {
+        if (e.target.id === 'auth-modal') {
+          hideAuthModal();
+        }
+      });
+    }
+
+    // ==================== INITIALIZATION ====================
+    async function initializeApp() {
+      const dateInput = document.getElementById("date");
+      if (dateInput) {
+        dateInput.valueAsDate = new Date();
+      }
+
+      applySavedTheme();
+      renderAttachmentSummary();
+      setupEventListeners();
+
+      const params = new URLSearchParams(window.location.search);
+      const searchParam = params.get('search');
+      if (searchParam) {
+        const searchTitle = document.getElementById("search-title");
+        if (searchTitle) {
+          searchTitle.value = searchParam;
+        }
+      }
+      const tabParam = params.get('tab');
+      if (tabParam === 'journal' || tabParam === 'observation' || tabParam === 'news') {
+        currentTab = tabParam;
+        applyTabUI(tabParam);
+      }
+      const editParam = params.get('edit');
+      if (editParam) {
+        const parsedEditId = Number(editParam);
+        if (!Number.isNaN(parsedEditId)) {
+          pendingEditId = parsedEditId;
+        }
+      }
+
+      await loadSession();
+    }
+
+    // ==================== PAGE VISIBILITY HANDLING ====================
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden && !isFetching) {
+        setTimeout(() => refreshCurrentTab(), 1000);
+      }
+    });
+
+    // ==================== START APPLICATION ====================
+    document.addEventListener('DOMContentLoaded', () => {
+      initializeApp().catch(err => {
+        console.error("Initialization failed:", err);
+      });
+    });
+  </script>
+</body>
+
+</html>
