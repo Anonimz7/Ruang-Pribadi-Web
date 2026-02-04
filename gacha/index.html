@@ -3,360 +3,278 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gacha Keberuntungan Hari Ini</title>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <title>Gacha Midnight Blue</title>
     <style>
-        /* CSS Variabel untuk Dark/Light Mode */
+        @import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=JetBrains+Mono:wght@500&display=swap");
+
         :root {
-            --bg-color: #f4f4f9;
-            --text-color: #333;
-            --container-bg: #fff;
-            --button-bg: #4CAF50;
-            --button-hover: #45a049;
-            --gacha-box-bg: #e0e0e0;
-            --shadow-color: rgba(0, 0, 0, 0.1);
-            --header-color: #007bff;
+            --bg: #0a122a;
+            --bg-2: #0f1b3d;
+            --card: rgba(13, 25, 55, 0.9);
+            --ink: #e6edf7;
+            --muted: #9fb0c6;
+            --accent: #4cc9f0;
+            --accent-2: #5eead4;
+            --glow: rgba(76, 201, 240, 0.35);
+            --ok: #5eead4;
+            --warn: #fbbf24;
+            --bad: #f87171;
         }
 
-        .dark-mode {
-            --bg-color: #121212;
-            --text-color: #e0e0e0;
-            --container-bg: #1e1e1e;
-            --button-bg: #1e88e5;
-            --button-hover: #1565c0;
-            --gacha-box-bg: #333;
-            --shadow-color: rgba(255, 255, 255, 0.05);
-            --header-color: #90caf9;
+        * {
+            box-sizing: border-box;
         }
 
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             margin: 0;
-            padding: 0;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            display: flex;
-            justify-content: center;
-            align-items: center;
             min-height: 100vh;
-            transition: background-color 0.3s, color 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background:
+                radial-gradient(700px 400px at 15% 20%, rgba(76, 201, 240, 0.2), transparent 60%),
+                radial-gradient(700px 400px at 90% 80%, rgba(94, 234, 212, 0.12), transparent 55%),
+                linear-gradient(160deg, var(--bg), var(--bg-2));
+            font-family: "Archivo", "Segoe UI", Tahoma, sans-serif;
+            color: var(--ink);
+            padding: 28px;
         }
 
-        #particles-js-perayaan {
-            position: fixed;
+        .shell {
             width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: 10; /* Di atas konten lain saat aktif */
-            pointer-events: none; /* Penting agar tidak menghalangi klik */
-            opacity: 0;
-            transition: opacity 1s;
-        }
-
-        .container {
-            background-color: var(--container-bg);
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px var(--shadow-color);
+            max-width: 720px;
+            background: var(--card);
+            border-radius: 20px;
+            padding: 28px;
+            box-shadow: 0 30px 60px rgba(4, 12, 30, 0.6);
+            border: 1px solid rgba(255, 255, 255, 0.05);
             text-align: center;
-            width: 90%;
-            max-width: 400px;
-            z-index: 20; /* Di atas particles-js */
         }
 
         h1 {
-            color: var(--header-color);
-            margin-bottom: 25px;
+            margin: 0 0 10px;
+            font-size: 2.2rem;
+            letter-spacing: -0.02em;
         }
 
-        #gacha-box {
-            background-color: var(--gacha-box-bg);
-            border: 3px solid var(--header-color);
-            padding: 20px;
-            margin-bottom: 25px;
-            border-radius: 8px;
-            min-height: 100px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.2em;
-            font-weight: bold;
-            transition: background-color 0.3s, border-color 0.3s;
+        p.lead {
+            margin: 0 0 18px;
+            color: var(--muted);
+            line-height: 1.6;
         }
 
-        #result-number {
-            font-size: 3em;
-            margin: 5px 0;
-            color: #E91E63; /* Warna default hasil */
-            transition: color 0.5s;
+        .result {
+            margin: 18px 0 22px;
+            padding: 22px;
+            border-radius: 16px;
+            background: rgba(7, 17, 40, 0.7);
+            border: 1px solid rgba(76, 201, 240, 0.2);
+            display: grid;
+            gap: 8px;
+            justify-items: center;
         }
 
-        #result-text {
-            font-size: 1.1em;
-            margin-top: 10px;
+        .score {
+            font-family: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
+            font-size: 3.2rem;
+            letter-spacing: -0.04em;
         }
 
-        #start-button {
-            padding: 12px 25px;
-            font-size: 1.1em;
-            background-color: var(--button-bg);
-            color: white;
+        .tier {
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .tip {
+            color: var(--muted);
+            line-height: 1.5;
+        }
+
+        .meter {
+            width: 100%;
+            height: 10px;
+            background: rgba(255, 255, 255, 0.08);
+            border-radius: 999px;
+            overflow: hidden;
+            margin-top: 8px;
+        }
+
+        .meter-fill {
+            height: 100%;
+            width: 0%;
+            background: linear-gradient(90deg, #f87171, #fbbf24, #5eead4);
+            transition: width 0.6s ease;
+        }
+
+        .roll-button {
+            width: 100%;
+            padding: 14px 18px;
             border: none;
-            border-radius: 6px;
+            border-radius: 12px;
+            background: var(--accent);
+            color: #06142f;
+            font-size: 1.05rem;
+            font-weight: 700;
             cursor: pointer;
-            transition: background-color 0.3s, transform 0.1s;
+            box-shadow: 0 16px 28px var(--glow);
+            transition: transform 0.15s ease, box-shadow 0.15s ease;
         }
 
-        #start-button:hover {
-            background-color: var(--button-hover);
-            transform: scale(1.02);
+        .roll-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 20px 34px var(--glow);
         }
 
-        #start-button:disabled {
-            background-color: #999;
-            cursor: not-allowed;
+        .history {
+            margin-top: 20px;
+            display: grid;
+            gap: 10px;
+            text-align: left;
         }
-        
-        /* Toggle Dark Mode */
-        .toggle-switch {
-            position: absolute;
-            top: 15px;
-            right: 15px;
+
+        .history-item {
+            padding: 10px 12px;
+            border-radius: 12px;
+            background: rgba(9, 18, 42, 0.85);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.95rem;
+            color: var(--muted);
+        }
+
+        .badge {
             display: inline-block;
-            width: 60px;
-            height: 34px;
+            padding: 4px 8px;
+            border-radius: 999px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            margin-left: 8px;
         }
 
-        .toggle-switch input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
+        .badge.ok { color: var(--ok); background: rgba(94, 234, 212, 0.15); }
+        .badge.warn { color: var(--warn); background: rgba(251, 191, 36, 0.15); }
+        .badge.bad { color: var(--bad); background: rgba(248, 113, 113, 0.15); }
 
-        .slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #ccc;
-            transition: .4s;
-            border-radius: 34px;
-        }
-
-        .slider:before {
-            position: absolute;
-            content: "";
-            height: 26px;
-            width: 26px;
-            left: 4px;
-            bottom: 4px;
-            background-color: white;
-            transition: .4s;
-            border-radius: 50%;
-        }
-
-        input:checked + .slider {
-            background-color: var(--button-bg);
-        }
-
-        input:focus + .slider {
-            box-shadow: 0 0 1px var(--button-bg);
-        }
-
-        input:checked + .slider:before {
-            transform: translateX(26px);
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 600px) {
-            .container {
-                width: 95%;
-                padding: 20px;
-            }
-            #result-number {
-                font-size: 2.5em;
-            }
-            .toggle-switch {
-                top: 10px;
-                right: 10px;
-            }
+        @media (max-width: 640px) {
+            h1 { font-size: 1.9rem; }
+            .score { font-size: 2.6rem; }
         }
     </style>
 </head>
-<body class="light-mode">
-    <div id="particles-js-perayaan"></div>
-    
-    <label class="toggle-switch">
-        <input type="checkbox" id="dark-mode-toggle">
-        <span class="slider"></span>
-    </label>
+<body>
+    <main class="shell">
+        <h1>Gacha Midnight Blue</h1>
+        <p class="lead">Murni acak. Klik untuk mengundi keberuntunganmu sekarang.</p>
 
-    <div class="container">
-        <h1>🔮 Gacha Keberuntungan Hari Ini 🍀</h1>
-        <div id="gacha-box">
-            <p>Klik **MULAI** untuk mengetahui keberuntunganmu!</p>
-            <div id="result-number">--</div>
-            <div id="result-text"></div>
-        </div>
-        <button id="start-button">MULAI 🚀</button>
-    </div>
+        <section class="result">
+            <div class="score" id="score">--</div>
+            <div class="tier" id="tier">Belum ada hasil</div>
+            <div class="tip" id="tip">Tekan tombol gacha untuk mulai.</div>
+            <div class="meter"><div class="meter-fill" id="meter"></div></div>
+        </section>
+
+        <button class="roll-button" id="roll">Gacha Sekarang</button>
+
+        <div class="history" id="history"></div>
+    </main>
 
     <script>
-        const startButton = document.getElementById('start-button');
-        const resultNumber = document.getElementById('result-number');
-        const resultText = document.getElementById('result-text');
-        const gachaBox = document.getElementById('gacha-box');
-        const particlesContainer = document.getElementById('particles-js-perayaan');
-        const darkModeToggle = document.getElementById('dark-mode-toggle');
-        const body = document.body;
+        const rollButton = document.getElementById("roll");
+        const scoreEl = document.getElementById("score");
+        const tierEl = document.getElementById("tier");
+        const tipEl = document.getElementById("tip");
+        const meterEl = document.getElementById("meter");
+        const historyEl = document.getElementById("history");
 
-        // Inisialisasi Particles.js (Konfigurasi dasar)
-        function initParticles(config) {
-            particlesJS('particles-js-perayaan', config);
-        }
-        
-        // Konfigurasi Particle untuk Keberuntungan SANGAT TINGGI (Angka 1)
-        const ultraLuckConfig = {
-            "particles": {
-                "number": {"value": 150, "density": {"enable": true, "value_area": 800}},
-                "color": {"value": ["#FFD700", "#FF4500", "#ADFF2F"]}, // Emas, Merah Oranye, Hijau Neon
-                "shape": {"type": "star", "stroke": {"width": 0, "color": "#000000"}},
-                "opacity": {"value": 0.8, "random": true, "anim": {"enable": true, "speed": 1, "opacity_min": 0.1, "sync": false}},
-                "size": {"value": 10, "random": true, "anim": {"enable": true, "speed": 10, "size_min": 0.1, "sync": false}},
-                "line_linked": {"enable": false},
-                "move": {"enable": true, "speed": 8, "direction": "top", "random": true, "straight": false, "out_mode": "out", "bounce": false}
-            },
-            "interactivity": {"detect_on": "canvas", "events": {"onhover": {"enable": false}, "onclick": {"enable": false}, "resize": true}},
-            "retina_detect": true
+        const tiers = [
+            { min: 90, label: "Sangat Beruntung", color: "var(--ok)", tip: "Kesempatan bagus. Ambil langkah yakin." },
+            { min: 70, label: "Beruntung", color: "var(--ok)", tip: "Momentum bagus. Fokus eksekusi." },
+            { min: 50, label: "Stabil", color: "var(--accent-2)", tip: "Aman dan terkendali. Lanjutkan rencana." },
+            { min: 30, label: "Hati-hati", color: "var(--warn)", tip: "Cek ulang sebelum ambil keputusan." },
+            { min: 11, label: "Rendah", color: "var(--bad)", tip: "Kurangi risiko besar." },
+            { min: 0, label: "Kurang Beruntung", color: "var(--bad)", tip: "Fokus pada hal yang bisa dikontrol." }
+        ];
+
+        const state = {
+            history: []
         };
 
-        // Konfigurasi Particle untuk Keberuntungan TINGGI (Angka 2-10)
-        const highLuckConfig = {
-            "particles": {
-                "number": {"value": 80, "density": {"enable": true, "value_area": 800}},
-                "color": {"value": "#32CD32"}, // Hijau Lime
-                "shape": {"type": "circle", "stroke": {"width": 0, "color": "#000000"}},
-                "opacity": {"value": 0.7, "random": false, "anim": {"enable": false}},
-                "size": {"value": 5, "random": true, "anim": {"enable": false}},
-                "line_linked": {"enable": true, "distance": 150, "color": "#32CD32", "opacity": 0.4, "width": 1},
-                "move": {"enable": true, "speed": 4, "direction": "none", "random": false, "straight": false, "out_mode": "out", "bounce": false}
-            },
-            "interactivity": {"detect_on": "canvas", "events": {"onhover": {"enable": false}, "onclick": {"enable": false}, "resize": true}},
-            "retina_detect": true
-        };
-
-        // Fungsi untuk menghentikan dan menghilangkan efek particles
-        function stopParticles() {
-            if (window.pJSDom && window.pJSDom.length > 0) {
-                // Hapus canvas yang ada dan set opacity ke 0
-                particlesContainer.style.opacity = '0';
-                setTimeout(() => {
-                    particlesContainer.innerHTML = '';
-                    window.pJSDom = []; // Reset pJSDom array
-                }, 1000); // Tunggu sampai transisi opacity selesai
-            }
+        function pickTier(score) {
+            return tiers.find(tier => score >= tier.min) || tiers[tiers.length - 1];
         }
 
-        // Fungsi utama Gacha
-        function spinGacha() {
-            stopParticles(); // Pastikan efek sebelumnya berhenti
-            startButton.disabled = true;
-            resultNumber.textContent = '...';
-            resultText.textContent = 'Mengundi...';
-            gachaBox.style.backgroundColor = 'var(--gacha-box-bg)'; // Reset warna
-
-            let countdown = 10;
-            const spinInterval = setInterval(() => {
-                const tempNumber = Math.floor(Math.random() * 100) + 1;
-                resultNumber.textContent = tempNumber;
-                countdown--;
-                if (countdown === 0) {
-                    clearInterval(spinInterval);
-                    finalizeGacha();
+        function animateScore(target) {
+            let current = 0;
+            const steps = 20;
+            let count = 0;
+            const interval = setInterval(() => {
+                count += 1;
+                current = Math.min(target, current + target / steps);
+                scoreEl.textContent = Math.round(current);
+                meterEl.style.width = `${Math.round(current)}%`;
+                if (count >= steps) {
+                    clearInterval(interval);
+                    scoreEl.textContent = target;
+                    meterEl.style.width = `${target}%`;
                 }
-            }, 100);
+            }, 35);
         }
 
-        // Fungsi untuk menentukan dan menampilkan hasil akhir
-        function finalizeGacha() {
-            const finalNumber = Math.floor(Math.random() * 100) + 1;
-            resultNumber.textContent = finalNumber;
-            let message = '';
-            let color = '';
-            let particleConfig = null;
-
-            if (finalNumber === 1) {
-                message = '🎉 HARI INI SANGAT BERUNTUNG! KEBERUNTUNGAN MAKSIMAL! 🎉';
-                color = '#FFD700'; // Emas
-                particleConfig = ultraLuckConfig;
-            } else if (finalNumber >= 2 && finalNumber <= 10) {
-                message = '🍀 Beruntung! Lakukan rencana besarmu hari ini.';
-                color = '#32CD32'; // Hijau Lime
-                particleConfig = highLuckConfig;
-            } else if (finalNumber >= 11 && finalNumber <= 20) {
-                message = '👍 Lumayan. Hari yang cukup baik.';
-                color = '#FF8C00'; // Oranye Tua
-            } else if (finalNumber >= 21 && finalNumber <= 30) {
-                message = '😐 Sedikit rendah. Tetap hati-hati dalam keputusanmu.';
-                color = '#FF4500'; // Merah Oranye
-            } else if (finalNumber >= 31 && finalNumber <= 40) {
-                message = '🔻 Rendah. Ambil langkah dengan bijaksana.';
-                color = '#DC143C'; // Merah Crimson
-            } else if (finalNumber >= 41 && finalNumber <= 50) {
-                message = '💔 SIAL! Hari ini mungkin penuh tantangan.';
-                color = '#800000'; // Coklat Tua
-            } else { // 51 sampai 100
-                message = '⚠️ HATI-HATI DITIMPA KEMALANGAN! Selalu waspada dan jangan ambil risiko besar.';
-                color = '#000000'; // Hitam (kontras)
-            }
-
-            resultText.textContent = message;
-            resultNumber.style.color = color;
-            startButton.disabled = false;
-
-            // Efek Perayaan
-            if (particleConfig) {
-                initParticles(particleConfig);
-                particlesContainer.style.opacity = '1';
-                setTimeout(stopParticles, finalNumber === 1 ? 8000 : 4000); // Efek lebih lama untuk keberuntungan maksimal
-            }
+        function renderHistory() {
+            historyEl.innerHTML = "";
+            state.history.slice(0, 5).forEach(entry => {
+                const div = document.createElement("div");
+                div.className = "history-item";
+                div.innerHTML = `${entry.time} — ${entry.score} <span class="badge ${entry.badge}">${entry.tier}</span>`;
+                historyEl.appendChild(div);
+            });
         }
 
-        // Event Listener untuk tombol start
-        startButton.addEventListener('click', spinGacha);
-        
-        // Dark Mode Logic
-        function setDarkMode(isDark) {
-            if (isDark) {
-                body.classList.add('dark-mode');
-                localStorage.setItem('theme', 'dark');
+        function rollGacha() {
+            rollButton.disabled = true;
+            const roll = Math.random();
+            let score = 50;
+
+            if (roll < 0.01) {
+                score = Math.floor(Math.random() * 11);
+            } else if (roll < 0.02) {
+                score = 90 + Math.floor(Math.random() * 11);
             } else {
-                body.classList.remove('dark-mode');
-                localStorage.setItem('theme', 'light');
+                const min = 11;
+                const max = 89;
+                const peak = 50;
+                const u = Math.random();
+                const c = (peak - min) / (max - min);
+                if (u < c) {
+                    score = min + Math.sqrt(u * (max - min) * (peak - min));
+                } else {
+                    score = max - Math.sqrt((1 - u) * (max - min) * (max - peak));
+                }
+                score = Math.round(score);
             }
+            const tier = pickTier(score);
+
+            animateScore(score);
+            tierEl.textContent = tier.label;
+            tierEl.style.color = tier.color;
+            tipEl.textContent = tier.tip;
+
+            const badge = score >= 70 ? "ok" : score >= 30 ? "warn" : "bad";
+            const time = new Date().toTimeString().slice(0, 5);
+            state.history.unshift({
+                time,
+                score,
+                tier: tier.label,
+                badge
+            });
+            state.history = state.history.slice(0, 5);
+            renderHistory();
+
+            setTimeout(() => {
+                rollButton.disabled = false;
+            }, 500);
         }
 
-        darkModeToggle.addEventListener('change', (e) => {
-            setDarkMode(e.target.checked);
-        });
-
-        // Cek preferensi yang tersimpan saat memuat halaman
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'dark') {
-            darkModeToggle.checked = true;
-            setDarkMode(true);
-        } else if (savedTheme === 'light') {
-            darkModeToggle.checked = false;
-            setDarkMode(false);
-        } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            // Jika tidak ada yang tersimpan, ikuti preferensi sistem operasi
-            darkModeToggle.checked = true;
-            setDarkMode(true);
-        }
+        rollButton.addEventListener("click", rollGacha);
     </script>
 </body>
 </html>
